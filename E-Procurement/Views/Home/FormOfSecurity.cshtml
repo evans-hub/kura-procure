@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<E_Procurement.Models.FormOfSec>
+@{
+
+    Layout = null;
+    int n = 0;
+}
+<select class="form-control select2" id="formOfSec" name="formOfSec" data_live_search="true">
+    <option value="">--Select Form of Securiity --</option>
+    <optgroup label="Form of security">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Description</option>
+        }
+    </optgroup>
+</select>
+

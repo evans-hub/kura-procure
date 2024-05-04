@@ -1,0 +1,159 @@
+﻿@model  IEnumerable<E_Procurement.Models.IFPRequestsModel>
+@{
+    ViewBag.Title = "InvitationforPrequalifications";
+    Layout = "";
+    int tendersCounter = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+    <title>KeRRA -E-Procurement</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/CustomCss.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        @Html.Action("NavigationMenu", "Home")
+        <div class="page-wrapper job-wrapper">
+            <div class="content container" style="width:100%">
+                <div class="banner">
+                    <div class="banner-text">
+                        <img src="~/assets/img/tenders.jpg" width="1400" height="200">
+                        <h1>Welcome to Kenya Rural Roads Authority E-Procurement</h1>
+                    </div><br />
+                </div><br /><br />
+                <div class="main-wrapper">
+                    <div class="row">
+                        <div class="content container-fluid">
+                            <div class="row filter-row">
+                                <form class='filter-form'>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="form-group form-focus">
+                                            <label class="control-label">Notice No:</label>
+                                            <input type='text' value='' class='form-control floating filter' data-column-index='1'>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="form-group form-focus">
+                                            <label class="control-label">Tender No:</label>
+                                            <input type='text' value='' class='form-control floating filter' data-column-index='2'>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <div class="form-group form-focus">
+                                            <label class="control-label">Tender Name:</label>
+                                            <input type='text' value='' class='form-control floating filter' data-column-index='3'>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-xs-6">
+                                        <button type="button" class="btn btn-success btn-block">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="row">
+                                <div id="openTenderfeedback" style="display: none;"></div>
+                                @if (!Model.Any())
+                                {
+                                    <div class="alert alert-danger"><h3>Ther are no Open Invitations for Prequalifications. Kindly Check Again Later</h3></div>
+                                }
+                                else
+                                {
+                                    <div class="col-md-12" style="color:black">
+                                        <div class="table-responsive" style="color:black">
+                                            <table class="table table-striped custom-table datatable" id="table_opentenders">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Notice No</th>
+                                                        <th>Description</th>
+                                                        <th>Tender Summary</th>
+                                                        <th>Start Date</th>
+                                                        <th>Closing Date</th>
+                                                        <th>View</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var item in Model)
+                                                    {
+                                                        tendersCounter++;
+                                                        <tr>
+                                                            <td>
+                                                                @tendersCounter
+                                                            </td>
+                                                            @*<td>
+                                                                <a href="@Url.Action("ViewSingleTender", "Home", new { tendernumber = @item.Code })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                                            </td>*@
+                                                            <td>
+                                                                <a href="@Url.Action("ViewPrequalificationsAdvert", "Home", new { InvitationNumber = @item.Code })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Tender_Summary)
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Submission_Start_Date)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                                            </td>
+                                                            <td>
+                                                                <a href="@Url.Action("ViewPrequalificationsAdvert", "Home", new { InvitationNumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-eye m-r-10"></i>View</a>
+                                                            </td>
+
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript">
+                                    function View(url) {
+                                        console.log(JSON.stringify(url))
+                                        window.location.href = url;
+                                        }
+                                    </script>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        @Html.Action("NavigationFooter", "Home")
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/DataSearch.js"></script>
+    <!-- Sweet Alert Js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/DownloadTenderDocuments.js"></script>
+
+</body>
+</html>

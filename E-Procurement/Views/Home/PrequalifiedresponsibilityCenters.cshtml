@@ -1,0 +1,144 @@
+﻿@using E_Procurement.Models
+
+@{
+    ViewBag.Title = "PrequalifiedresponsibilityCenters";
+    int Counter = 0;
+}
+<div class="content container-fluid">
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="card">
+                <div class="card-header text-center" data-background-color="darkgreen">
+                    <h6><i><strong>e-Procurement </strong></i></h6>
+                </div><br />
+            </div>
+        </div>
+      
+        <div class="row">
+            <div class="panel panel-heading" style="background-color:gray">
+                <h5 class="panel-title">Responsibilitycenters</h5>
+            </div>
+
+            <div class="col-xs-8 text-right m-b-30">
+                <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_banks"><i class="fa fa-plus"></i> Add Responsibility center</a>
+            </div>
+            <h5>Please select responsibility center and consituency</h5>
+            <div id="banksfeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable" id="tbl_vendor_banks">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th> Region Code </th>
+                                    <th> Description </th>
+                                    <th> Constituency</th>
+                                 
+                                    <th> Edit </th>
+                                    <th> Delete </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (RFIResponceResponsibilityCenter item in Model.responsibility)
+                                {
+                                    Counter++;
+                                    <tr>
+                                        <td>
+                                            @Counter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.ResponsibilityCenterCode)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.constituencyCode)
+                                        </td>
+
+                                        <td>
+                                            <a class="btn btn-success" onclick="EditBankDetails('@item.ResponsibilityCenterCode','@item.Description','@item.constituencyCode')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger" onclick="DeleteBank('@Url.Action("DeleteBankDetails", "Home", new { regioncode = @item.ResponsibilityCenterCode })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary prevBtn pull-left" type="button">Previous</button>
+        @*<a href="/Home/ViewSelectedCategories" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Back </a>*@
+        @*<a href="/Home/Next" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Back </a>*@
+        </div>
+        <div id="add_banks" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog" style="width:100%">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-content modal-lg" style="width:96%">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Region</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="m-b-30">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Region Code: <span class="text-danger">*</span></label>
+                                        @Html.Action("selectRegion", "Home")
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Constituecy:</label>
+                                        @Html.Action("PrequalificationConstituencies", "Home")
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">CategoryId:</label>
+                                            <input class="form-control" type="text" id="catID" name="catID" value="@ViewBag.category">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">DocumentNo:</label>
+                                            <input class="form-control" type="text" id="docNo" name="docNo" value="@ViewBag.documentNo">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </form>
+                        <div class="m-t-20 text-center">
+                            <button class="btn btn-primary btn_submitregionDetails" id="btn_submitregionDetails" name="btn_submitregionDetails" type="button">Save Responsibility Centers Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="delete_banks_modal" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modal-md">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Bank Details</h4>
+                    </div>
+                    <div class="modal-body card-box">
+                        <p>Are you sure want to delete this Bank?</p>
+                        <div class="m-t-20">
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

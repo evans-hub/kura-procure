@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "Guarantee";
+}
+
+<div class="content container-fluid">
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="card">
+                <div class="card-header text-center" data-background-color="darkgreen">
+                    <h6><i><strong>e-procurement </strong></i></h6>
+                </div><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Performance Guarantee </a></li>
+                   
+
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-heading" style="background-color:gray">
+                <h5 class="panel-title">Performance Guarantee Application</h5>
+            </div>
+            <div id="feedback" style="display: none" data-dismiss="alert"></div>
+      
+            <br />
+          
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Purchase Contract ID: <span class="text-danger">*</span></label>
+                        @Html.Action("purchasecontractId", "Home")
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Project ID: <span class="text-danger">*</span></label>
+                        @Html.Action("Projects", "Home")
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Insurer/Guarantor Name. <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="guarantorName" name="guarantorName">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Policy/Guarantor No. <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="policyNo" name="policyNo">
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Amount Insured / Guaranteed:</label>
+                        <input class="form-control" type="number" id="amountIns" name="amountIns">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Form of Security: <span class="text-danger">*</span></label>
+                        @Html.Action("FormOfSecurity", "Home")
+                    </div>
+                </div>
+               
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Issuer institution Type : <span class="text-danger">*</span></label>
+                        <select data-live-search="true" class="form-control input-circle input-circle select2" id="institutionType" name="institutionType">
+                            <option value="">--Choose Type--</option>
+                            <option value="0">Bank</option>
+                            <option value="1">Insurance</option>
+                            <option value="2">Other Guarantor </option>
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Issuer Registered Office:</label>
+                        <input class="form-control" type="text" id="issuerRegOffice" name="issuerRegOffice">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Verified Insurer Email Address:</label>
+                        <input class="form-control" type="email" id="insurerEmail" name="insurerEmail">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Effective Date:</label>
+                        <input class="form-control" type="date" id="effectiveDate" name="effectiveDate">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Expiry Date:</label>
+                        <input class="form-control" type="date" id="expiryDate" name="expiryDate">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+     
+       
+        <div class="m-t-20 text-center">
+            <button class="btn btn-primary btn_savePerformanceGuarantee" id="btn_savePerformanceGuarantee" name="btn_savePerformanceGuarantee" type="button">Save Details</button>
+        </div>
+        @*<div class="col-xs-8 text-right m-b-30">
+
+            <a href="@Url.Action("PerfGuaranteeDocAttach", "Home", new {Response=Session["Response"] })" class="btn btn-success btn_savePerformanceGuarantee" )"><i class="fa fa arrow"></i>Documents Attachment</a>
+
+        </div>*@
+    </div>
+
+  
+</div>
+
+
+

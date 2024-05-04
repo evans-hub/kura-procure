@@ -1,0 +1,100 @@
+﻿@model  IEnumerable<E_Procurement.Models.ContractsModel>
+@{
+    ViewBag.Title = "ContractAwards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int contractCounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>Contract Awards</i></h5>
+            </div>
+        </div>
+    </div>
+        <p>
+            Following Executive order No. 2 of 2018 which emphasized publication of all procurement information including tender notices, contracts awarded, suppliers and their directors, the <a href="">Public Procurment Regulatory Authority</a> implemented a platform that would avail all this information in one place and made it possible for Procuring
+            Entities to publish it regularly. The platform is called The <a href="">Public Procurement Information Portal (PPIP)</a> <br />The section below provides information of all the contract awards made
+        </p>
+        <div class="row filter-row">
+            <div class="col-sm-3  col-xs-6">
+                <div class="form-group form-focus">
+                    <label class="control-label"> Search by Region</label>
+                    <input type="text" class="form-control floating" />
+                </div>
+            </div>
+            <div class="col-sm-3  col-xs-6">
+                <div class="form-group form-focus">
+                    <label class="control-label">Search by Tender Notice</label>
+                    <input type="text" class="form-control floating" />
+                </div>
+            </div>
+            <div class="col-sm-3  col-xs-6">
+                <div class="form-group form-focus select-focus">
+                    <label class="control-label">Search by Contract Status</label>
+                    <input type="text" class="form-control floating" />
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+                <a href="#" class="btn btn-success btn-block"> Search </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Contract No.</th>
+                                <th>Award Notice No.</th>
+                                <th>Tender Notice No</th>
+                                <th>Tender Name</th>
+                                <th>Vendor Name</th>
+                                <th>Contract Amount</th>
+                                <th>Contract EndDate</th>
+                                <th>Region</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                contractCounter++;
+                                <tr>
+                                    <td>
+                                        @contractCounter
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("ViewAwadedContracts", "Home", new { contractNumber = @item.No })"><strong>@Html.DisplayFor(modelItem => item.No)</strong></a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.No)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Invatition_for_supply)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tender_Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Buy_from_Vendor_No)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Contract_Value)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Contract_End_Date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Region_Code)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+

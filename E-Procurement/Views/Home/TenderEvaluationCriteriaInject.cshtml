@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "TenderEvaluationCriteriaInject";
+    Layout = null;
+}
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>Summarized Evaluation Criteria</u></strong></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-primary" style="background-color:antiquewhite">
+            <h4>Summarized Evaluation Criteria</h4>
+        </div>
+        <p>
+            Kindly take note of the following:
+            1. The evaluation of all tender responses shall be based on weighted average scoring of technical & financial proposals.
+            2. Preliminary evaluation, technical evaluation and financial evaluation shall strictly be done as per the guidelines provided
+            in the Public Procurement & Assets Disposal Act (PPADA).
+            3. Unless stated otherwise, the default bid selection method applicable to this Tender shall be the Quality and Cost Based
+            Selection method (QCBS).
+        </p>
+        <div class="col-md-12">
+            @*@foreach (SingleAddendumNoticeModel addendumsdetails in Model.Addendum)
+            {
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Addendum Notice No:  <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vendorno" name="vendorno" value="@addendumsdetails.Addendum_Notice_No" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Document Date:<span class="text-danger">*</span> </label>
+                            <input class="form-control" type="text" id="businessname" name="businessname" value="@addendumsdetails.Document_Date" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Tender Description: <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Tender_Description" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Invitation Notice No:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Invitation_Notice_No" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Addendum Instructions:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Addendum_Instructions" readonly>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Description:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Description" readonly>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Responsibility Center: <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@addendumsdetails.Responsibility_Center" readonly>
+                        </div>
+                    </div>
+                </div>*@
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-primary" style="background-color:antiquewhite">
+            <h4>Criteria Group Details</h4>
+        </div>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>Criteria Group ID</th>
+                            <th>Description</th>
+                            <th>Weighted Score %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @*@foreach (var item in Model)
+                            {
+                                addendumCounter++;
+                                <tr>
+                                    <td>
+                                        @addendumCounter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Addendum_Notice_No)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Document_Date)
+                                    </td>
+                                    <td>
+                                        <a href=""><strong>@Html.DisplayFor(modelItem => item.Invitation_Notice_No)</strong></a>
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tender_Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Responsibility_Center)
+                                    </td>
+                                </tr>
+                            }*@
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

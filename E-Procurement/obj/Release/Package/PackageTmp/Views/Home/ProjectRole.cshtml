@@ -1,0 +1,15 @@
+﻿@model IEnumerable<E_Procurement.Models.ProjectRole>
+@{
+    Layout = null;
+    int n = 0;
+}
+
+<select class="form-control select2" id="projectRoleCode" name="projectRoleCode" data_live_search="true">
+    <option value="">--Select Project Role Code--</option>
+    <optgroup label="Equipment Categories List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.projectroleCode">@item.description</option>
+        }
+    </optgroup>
+</select>

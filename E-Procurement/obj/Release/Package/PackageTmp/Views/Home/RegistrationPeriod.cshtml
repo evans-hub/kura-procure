@@ -1,0 +1,17 @@
+﻿
+
+@model IEnumerable<E_Procurement.Models.CountriesModel>
+
+@{
+    ViewBag.Title = "RegistrationPeriod";
+    Layout = null;
+}
+<select class="form-control select2" id="dropdownregistartionPeriod" name="dropdownregistartionPeriod" data_live_search="true">
+    <option value="">--Select Registration Period---</option>
+    <optgroup label="Registration Periods">
+        @foreach (var item in Model)
+        {
+            <option value="@item.RegistrationCode">@item.RegistrationDescription</option>
+        }
+    </optgroup>
+</select>

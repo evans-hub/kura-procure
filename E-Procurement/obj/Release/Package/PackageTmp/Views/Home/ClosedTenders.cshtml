@@ -1,0 +1,92 @@
+﻿@model  IEnumerable<E_Procurement.Models.TenderModel>
+@{
+    ViewBag.Title = "ClosedTenders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int closedtenders = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>All Cancelled and Closed Tenders</i></h5>
+            </div>
+        </div>
+    </div>
+    <p>The following Open Tender Notices are strictly reserved for Special-Group Suppliers (Youth, Women and Persons With Disabilities) under the AGPO Preference and Reservation Scheme.</p>
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">Search by Regions</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">Search by Tender Status</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="#" class="btn btn-success btn-block"> Search </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Notice No.</th>
+                            <th>External Document No.</th>
+                            <th>Tender Name</th>
+                            <th>Procurement Method</th>
+                            <th>Submission Start Date</th>
+                            <th>Submission End Date</th>
+                            <th>Project ID</th>
+                            <th>Work Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            closedtenders++;
+                            <tr>
+                                <td>
+                                    @closedtenders
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.External_Document_No)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tender_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Procurement_Method)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Submission_Start_Date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Project_ID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Works_Category)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

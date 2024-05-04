@@ -1,0 +1,487 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    ViewBag.Title = "ViewContractDetails";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int personnelCounter = 0;
+    int MeetingCounter = 0;
+    int DocumentsCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>General Contract Details</u></strong></h4>
+        </div>
+    </div>
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_overview" data-toggle="tab"><p style="color:black"><strong>General Details</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_project_team" data-toggle="tab"><p style="color:black"><strong>Project Internal Team</strong></p> </a>
+            </li>          
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_planned_meetings" data-toggle="tab"><p style="color:black"><strong>Planned Meetings</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_planned_meetings" data-toggle="tab"><p style="color:black"><strong>Site TakeOver Instructions</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_required_documents" data-toggle="tab"><p style="color:black"><strong>Required Documents</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_overview">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h3 class="panel-title"><strong><u> General Details</u></strong></h3>
+                </div>
+                @foreach (OrderToCommenceModel item in Model.GeneralDetails)
+                {
+                <div class="row">
+                    <div class="col-sm-6" >
+                        <div class="form-group">
+                            <label class="control-label">Notice No:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tenderdescription" value="@item.Notice_No" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Document Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@item.Document_Date" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Project Start Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="procurementmethod" value="@item.Project_Start_Date" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Project ID:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="invitationtype" value="@item.Project_ID" readonly>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Project Description:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="invitationtype" value="@item.Project_Name" readonly>
+                        </div>
+
+                    </div>
+                </div>  
+                @*////////////////////////////.*@            
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title"><strong><u> Contracting Vendor Details</u></strong></h3>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Contractor No:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tenderdescription" value="@item.Contractor_No" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Contractor Name:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="tendernotice"  name="tendernotice" value="@item.Contractor_Name" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Contractor Address:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="procurementmethod"  value="@item.Vendor_Address"readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Post Code:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="invitationtype" value="@item.Vendor_Post_Code" readonly>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Primary E-Mail:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="invitationtype"  value="@item.Primary_E_mail"readonly>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Contract Start Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="invitationtype" value="@item.Contract_Start_Date" readonly>
+                        </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Contract End Date:<span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="invitationtype" value="@item.Contract_End_Date" readonly>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Invitation for Supply:<span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="invitationtype" value="@item.IFS_Code" readonly>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Tender Name:<span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="invitationtype" value="@item.Tender_Name" readonly>
+                    </div>
+                   </div>
+                </div>
+                }
+            </div>
+            <div class="tab-pane fade " id="tab_project_team">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title"><strong><u>Contract Lines</u></strong></h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Resource No</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Address</th>
+                                            <th>Role</th>
+                                            <th>Designation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (ProjectinternalTeamModel item in Model.InternalTeam)
+                                        {
+                                            personnelCounter++;
+                                            <tr>
+                                                <td>
+                                                    @personnelCounter
+                                                </td>
+                                                <td>
+                                                 @Html.DisplayFor(modelItem => item.Resource_No)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Name)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Email)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Address)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Role_Code)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Designation)
+
+                                                </td>                                               
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Profile Details*@
+            <div class="tab-pane fade " id="tab_required_documents">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h3 class="panel-title"><strong><u>Contract Payment Terms </u></strong></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Document Type</th>
+                                        <th>Description.</th>
+                                        <th>Requirement Type</th>
+                                        <th>Due Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (PCORequredDocumentsModel item in Model.RequiredDocuments)
+                                {
+                                    DocumentsCounter++;
+                                    <tr>
+                                        <td>
+                                            @DocumentsCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Document_Type)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Requirement_Type)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Due_Date)
+
+                                        </td>                                        
+                                    </tr>
+                                }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_planned_meetings">
+                @*General Details*@
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title"><strong><u>Contract Milestones</u></strong></h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Meeting Type</th>
+                                        <th>Description</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Venue Location</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (PCOPlannedMeetingModel item in Model.PlannedMeetings)
+                                    {
+                                        MeetingCounter++;
+                                        <tr>
+                                            <td>
+                                                @MeetingCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Meeting_Type)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Start_Date)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.End_Date)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Venue_Location)
+
+                                            </td>                                         
+                                          
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function Respond(url, uniquetenderno) {
+            var TenderNoticeNo = $('#tendernotice').val();
+            var RespondWizardForm = '@Url.Action("FileNewWorkExecutionPlan", "Contractor")';
+            Swal.fire({
+                title: "Confirm Work Execution Plan Submission?",
+                text: "Are you sure you would like to proceed with this Submission?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Proceed!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: RespondWizardForm,
+                        cache: false,
+                        processData: false,
+                    }).done(function (status) {
+                        var tendersponse = status.split('*');
+                        status = tendersponse[0];
+                        switch (status) {
+                            case "success":
+                                Swal.fire
+                               ({
+                                   title: "Work Execution Plan Submitted!",
+                                   text: "Your Work Execution Plan  have been successfully submitted.Kindly Proceed to fill in more Details!",
+                                   type: "success"
+                               }).then(() => {
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $('#responsesfeedback').attr("class", "alert alert-success");
+                                   $("#responsesfeedback").html("Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $("#responsesfeedback").html("Your Work Execution Plan Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   window.location.href = RespondWizardForm;
+                               });
+
+                                break;
+                            case "found":
+                                Swal.fire
+                               ({
+                                   title: "Work Execution Plan already Submitted!",
+                                   text: "Your Work Execution plan had already been successfully submitted.Kindly Proceed to fill in more Details!",
+                                   type: "success"
+                               }).then(() => {
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $('#responsesfeedback').attr("class", "alert alert-success");
+                                   $("#responsesfeedback").html("Your Work Execution plan had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $("#responsesfeedback").html("Your Work Execution plan been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   window.location.href = RespondWizardForm;
+                               });
+
+                                break;
+                            default:
+                                Swal.fire
+                                ({
+                                    title: "Work Execution Plan Submission Error!!!",
+                                    text: status,
+                                    type: "error"
+                                }).then(() => {
+                                    $("#responsesfeedback").css("display", "block");
+                                    $("#responsesfeedback").css("color", "red");
+                                    $('#responsesfeedback').addClass('alert alert-danger');
+                                    $("#responsesfeedback").html("Your Work Execution plan submission Details  could not submitted.Kindly try Again!" + status + "");
+                                });
+                                break;
+                        }
+                    }
+                );
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Work Execution Plan Cancelled',
+                        'You cancelled you work execution plan submission details!',
+                        'error'
+                    );
+                }
+            });
+
+        };
+    </script>
+    <script type="text/javascript">
+        function FileExecution(url) {
+           var RespondWizardForm = '@Url.Action("FileNewWorkExecutionPlan", "Contractor")';
+            Swal.fire({
+                title: "Confirm Work Execution Plan Response?",
+                text: "Are you sure you would like to File Work Execution Plan?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Proceed!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        cache: false,
+                        processData: false,
+                    }).done(function (status) {
+                        var tendersponse = status.split('*');
+                        status = tendersponse[0];
+                        switch (status) {
+                            case "success":
+                           Swal.fire
+                          ({
+                              title: "Work Execution Plan Submitted!",
+                              text: "Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!",
+                              type: "success"
+                          }).then(() => {
+                              $("#responsesfeedback").css("display", "block");
+                              $("#responsesfeedback").css("color", "green");
+                              $('#responsesfeedback').attr("class", "alert alert-success");
+                              $("#responsesfeedback").html("Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!");
+                              $("#responsesfeedback").css("display", "block");
+                              $("#responsesfeedback").css("color", "green");
+                              $("#responsesfeedback").html("Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!");
+                               window.location.href = RespondWizardForm;
+                          });
+
+                           break;
+                            case "found":
+                                Swal.fire
+                               ({
+                                   title: "Work Execution Plan already Submitted!",
+                                   text: "Your Work Execution Plan had already been successfully submitted.Kindly Proceed to fill in more Details!",
+                                   type: "success"
+                               }).then(() => {
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $('#responsesfeedback').attr("class", "alert alert-success");
+                                   $("#responsesfeedback").html("Your TWork Execution Plan had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $("#responsesfeedback").html("Your Work Execution Plan had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   window.location.href = RespondWizardForm;
+                               });
+
+                                break;
+                            default:
+                                Swal.fire
+                                ({
+                                    title: "Work Execution Plan Response Error!!!",
+                                    text: status,
+                                    type: "error"
+                                }).then(() => {
+                                    $("#responsesfeedback").css("display", "block");
+                                    $("#responsesfeedback").css("color", "red");
+                                    $('#responsesfeedback').addClass('alert alert-danger');
+                                    $("#responsesfeedback").html("Your Work Execution Plan Details  could not submitted.Kindly try Again!" + status + "");
+                                });
+                                break;
+                        }
+                    }
+                );
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Work Execution Plan Cancelled',
+                        'You cancelled your Work Execution Plan submission details!',
+                        'error'
+                    );
+                }
+             });
+
+           };
+    </script>
+</div>

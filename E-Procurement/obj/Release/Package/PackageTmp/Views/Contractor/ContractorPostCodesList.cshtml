@@ -1,0 +1,16 @@
+﻿@model  IEnumerable<E_Procurement.Models.Contractor.DropdownListsModel>
+
+@{
+    Layout = null;
+}
+
+<select class="form-control select2" id="dropdownallcontractorpostacodes" name="dropdownallcontractorpostacodes" data_live_search="true" onchange="return getSelectedPosta30()">
+    <option value="">--Select Postal Code--</option>
+    <optgroup label="Post Codes List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Code</option>
+        }
+    </optgroup>
+</select>
+

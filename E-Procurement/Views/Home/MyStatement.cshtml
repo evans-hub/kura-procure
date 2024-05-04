@@ -1,0 +1,214 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "MyStatement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int statetementCounter = 0;
+    int detailestatementCounter = 0;
+}
+
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i><strong>Supplier Statement</strong></i></h5>
+            </div>
+        </div>
+    </div>
+    <p>We have empowered you to view your Balance, access the breakdown of the outstanding amount and allow you to request for your Supplier Statement..</p>
+    @foreach (VendorModel vendor in Model.Vendors)
+    {
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <label class="control-label">Vendor No: <strong><u>@Session["vendorNo"]</u></strong></label>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <label class="control-label">Currency Code: <strong><u>@vendor.Currency</u></strong></label>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <label class="control-label">Balance(LCY)  <strong><u>@vendor.Balance</u></strong></label>
+        </div>
+    </div>
+    }
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_statement" data-toggle="tab"><p style="color:black"><strong>Mini Statement</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_detailed_statement" data-toggle="tab"><p style="color:black"><strong>Detailed Statement</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_statement">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#8FBC8F">
+                            <h3 class="panel-title">Request For Mini Statement</h3>
+                        </div>
+                        <h5>Please find the breakdown of your Balance.</h5>
+                        <div class="row filter-row">
+                           <div class="col-sm-4 col-xs-6">
+                               <label class="control-label">Search by Document Type</label>
+                            <select data-live-search="true" class="form-control floating " id="vendortype" name="vendortype">
+                                <option value="">--Choose Document Type--</option>
+                                <option value="0">Payment</option>
+                                <option value="1">Invoice</option>
+                                <option value="2">Credit Memo</option>
+                                <option value="3">Finance Charge Memo</option>
+                                <option value="4">Reminder</option>
+                                <option value="5">Refund</option>
+                            </select>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <label class="control-label"> Search by Amounts</label>
+                                <div class="form-group form-focus">
+                                    <input type="text" class="form-control floating" placeholder="Enter Amounts" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <a href="#" class="btn btn-success btn-block"> Search </a>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Posting Date</th>
+                                            <th>Document Type</th>
+                                            <th>Document No.</th>
+                                            <th>External Document No.</th>
+                                            <th>Description</th>
+                                            <th>Amount(LCY)</th>
+                                            <th>Remaining Amount(LCY)</th>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (VendorStatementModel item in Model.Statement)
+                                        {
+                                            statetementCounter++;
+                                            <tr>
+                                                <td>
+                                                    @statetementCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Posting_Date)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Document_Type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Document_No)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.External_Document_No)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Amount_LCY)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Remaining_Amt_LCY)
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            @*//Detailed Statement*@
+            <div class="tab-pane fade" id="tab_detailed_statement">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#8FBC8F">
+                        <h3 class="panel-title">Request For Detailed Statement</h3>
+                    </div>
+                    <h5>Please find the breakdown of your Balance.</h5>
+                    <div class="row filter-row">
+                        <div class="col-sm-4 col-xs-6">
+                            <label class="control-label"> From Date</label>
+                            <div class="form-group form-focus">                             
+                                <div class="cal-icon">
+                                    <input type="text" class="form-control floating datetimepicker" />
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-6">
+                            <label class="control-label">To Date</label>
+                            <div class="form-group form-focus">                               
+                                <div class="cal-icon">
+                                    <input type="text" class="form-control floating datetimepicker" />
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-6">
+                            <a href="#" class="btn btn-success btn-block"> Search </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Posting Date</th>
+                                        <th>Document Type</th>
+                                        <th>Document No.</th>
+                                        <th>External Document No.</th>
+                                        <th>Description</th>
+                                        <th>Amount(LCY)</th>
+                                        <th>Remaining Amount(LCY)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                @foreach (VendorStatementModel item in Model.Statement)
+                                {
+                                    detailestatementCounter++;
+                                <tr>
+                                    <td>
+                                        @detailestatementCounter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Posting_Date)
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Document_Type)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Document_No)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.External_Document_No)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Amount_LCY)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Remaining_Amt_LCY)
+                                    </td>
+
+                                </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

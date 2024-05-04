@@ -1,0 +1,702 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "SupplierProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int BanksCounter = 0;
+    int LitigationCounter = 0;
+    int SharehodersCounter = 0;
+    int PastExperienceCounter = 0;
+    int balancesheetCounter = 0;
+    int IncometCounter = 0;
+    int AttachedDocumentsCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h5 class="title"><i>Registered Supplier Profile</i></h5>
+        </div>
+    </div>
+    <div class="row">
+        </div>
+            <div class="card-box">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="profile-view">
+                            <div class="profile-img-wrap">
+                                <div class="profile-img">
+                                    <a href="#"><img class="avatar" src="~/assets/img/user.jpg" alt=""></a>
+                                </div>
+                            </div>
+                            @foreach (VendorModel vendor in Model.Vendors)
+                            {
+                                <div class="profile-basic">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="profile-info-left">
+                                                <h3 class="user-name m-t-0 m-b-0">@Session["fullname"]</h3>
+                                             
+                                                <div class="staff-id">Vat Registration No:@vendor.VAT_Registration_No</div>
+                                                <div class="staff-msg"><a href="" class="btn btn-primary">Upload Logo</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <ul class="personal-info">
+                                                <li>
+                                                    <span class="title">Phone:</span>
+                                                    <span class="text"><a href="#">@vendor.Phone_No</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Email:</span>
+                                                    <span class="text"><a href="#">@vendor.E_mail</a></span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Address :</span>
+                                                    <span class="text">@vendor.Address</span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Address 2:</span>
+                                                    <span class="text">@vendor.Address_2</span>
+                                                </li>
+                                                <li>
+                                                    <span class="title">Physical Location:</span>
+                                                    <span class="text">@vendor.Physical_location</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-box tab-box">
+                <div class="panel-body">
+                    <ul class="nav nav-tabs" style="background-color:antiquewhite">
+                        <li class="nav-item"><a href="#tab_general" data-toggle="tab" class="nav-link active">General Details</a></li>
+                        <li class="nav-item"><a href="#tab_commmunication" data-toggle="tab" class="nav-link">Communication Details</a></li>
+                        <li class="nav-item"><a href="#tab_bank" data-toggle="tab" class="nav-link">Bank Profile </a></li>
+                        <li class="nav-item"><a href="#tab_shareholder" data-toggle="tab" class="nav-link">Shareholder's Details </a></li>
+                        <li class="nav-item"><a href="#tab_litigation" data-toggle="tab" class="nav-link">Litigation History </a></li>
+                        <li class="nav-item"><a href="#tab_pastexperience" data-toggle="tab" class="nav-link">Past Experience </a></li>
+                        <li class="nav-item"><a href="#tab_financials" data-toggle="tab" class="nav-link">Financial Statements </a></li>
+                        <li class="nav-item"><a href="#tab_keypersonnel" data-toggle="tab" class="nav-link">Key Personnel </a></li>
+                        <li class="nav-item"><a href="#tab_documents" data-toggle="tab" class="nav-link">Attached Documents</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab_general">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h5 class="panel-title">Supplier General Details</h5>
+                            </div><br />
+                            @foreach (VendorModel vendor in Model.Vendors)
+                            {
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Vendor No  <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="vendorno" name="vendorno" value="@vendor.Vendor_No" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Business Name<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="businessname" name="businessname" value="@vendor.Name" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">VAT Registration No  <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.VAT_Registration_No" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Business Type<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.BusinessType" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Vendor Type <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.Supplier_Type" readonly>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Ownership Type<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.Owner_Type" readonly>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Certificate of Incorporation No: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.CertofIncorporation" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Incorporation Date: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="dateofincoperation" name="dateofincoperation" value="@vendor.DateofIncorporation" readonly></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Operations Start Date:</label>
+                                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="startdateoperations" name="startdateoperations" value="@vendor.OpsDate" readonly></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Language Code:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.LanguageCode" readonly>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Vision:<span>(Max Characters: 250)</span></label>
+                                            <input class="form-control input-circle" id="companyvission" name="companyvission" value="@vendor.Vision" readonly>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Mision:<span>(Max Characters: 250)</span></label>
+                                            <input class="form-control input-circle" id="companymission" name="companymission" value="@vendor.Mision" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_commmunication">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Supplier Communication Details</h4>
+                            </div><br />
+                            @foreach (VendorModel vendor in Model.Vendors)
+                            {
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">P.O Box/Address: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="poboxaddress" name="poboxaddress" value="@vendor.Address" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Physical Location / Address 2 : <span class="text-danger">*</span></label>
+                                            <input class="form-control " type="text" id="physicallocation" name="physicallocation" value="@vendor.Address" readonly>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Postal Code:<span class="text-danger">*</span></label>
+                                            <input class="form-control " type="text" id="physicallocation" name="physicallocation" value="@vendor.Address" readonly>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">City:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="postcity" name="postcity" value="@vendor.City" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Country:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="postcity" name="postcity" value="@vendor.Country" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Website URL:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="weburl" name="weburl" value="@vendor.WebUrl" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Fixed Line Tel No:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="telephonenumber" name="telephonenumber" value="@vendor.FloorNo" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Building /House No:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="housenumber" name="housenumber" value="@vendor.HouseNo" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Floor No:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="floornumber" name="floornumber" value="@vendor.FloorNo" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Plot No:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="plotnumber" name="plotnumber" value="@vendor.PlotNo" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Street / Road:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="streetnumber" name="streetnumber" value="@vendor.StreetorRoad" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Fax No:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="faxnumber" name="faxnumber" value="@vendor.Fax" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_bank">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Supplier Bank Profile Details</h4>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+
+                                        <table class="table table-striped custom-table datatable" id="tbl_vendor_banks">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th> Bank Code </th>
+                                                    <th> Bank Name </th>
+                                                    <th> Currency Code </th>
+                                                    <th> Bank Account No </th>
+                                                    <th> Post Code </th>
+                                                    <th> City </th>
+                                                    <th> Country </th>
+                                                    <th> Phone No. </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (BankModel banks in Model.BanksDetails)
+                                                {
+                                                    BanksCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @BanksCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.BankCode)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.BankName)
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.CurrencyCode)
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.BankAccountNo)
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.Post_Code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.City)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.CountryCode)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => banks.Phone_No)
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_shareholder">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Directors/Shareholders Details</h4>
+                            </div><br />
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tbl_shareholder_Details">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th> Director Name </th>
+                                                    <th> Nationality</th>
+                                                    <th> ID Number</th>
+                                                    <th> Citizenship </th>
+                                                    <th> Ownership (%) </th>
+                                                    <th> Phone Number </th>
+                                                    <th> Address </th>
+                                                    <th> Post Code </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (DirectorModel directors in Model.StakeholdersDetails)
+                                                {
+                                                    SharehodersCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @SharehodersCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Fullname)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Nationality)
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.IdNumber)
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.CitizenshipType)
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.OwnershipPercentage)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Phonenumber)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Address)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.PostCode)
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_litigation">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Litigation History Details</h4>
+                            </div><br />
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable" id="tbl_litigation_history">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Category of Dispute </th>
+                                            <th>Description of Dispute matter</th>
+                                            <th>Dispute Amount</th>
+                                            <th>Dispute Party</th>
+                                            <th>Year</th>
+                                            <th>Award Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (LitigationModel litigations in Model.Litigations)
+                                        {
+                                            LitigationCounter++;
+                                            <tr>
+                                                <td>
+                                                    @LitigationCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => litigations.CategoryofDispute)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => litigations.DisputeDescription)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => litigations.DisputeAmount)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => litigations.TheotherDisputeparty)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => litigations.Year)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => litigations.AwardType)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_pastexperience">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Supplier Past Experience Details</h4>
+                            </div><br />
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th> Client Name </th>
+                                            <th> Address </th>
+                                            <th> Assignment / Project </th>
+                                            <th> Project Scope </th>
+                                            <th> Project Start Date </th>
+                                            <th> Project End Date </th>
+                                            <th> Project Value </th>
+                                            <th> Contract Ref </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (PastExperienceModel experience in Model.VendorPastExperience)
+                                        {
+                                            PastExperienceCounter++;
+                                            <tr>
+                                                <td>
+                                                    @PastExperienceCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Client_Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Address)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Assignment_Project_Name)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Project_Scope_Summary)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Assignment_Start_Date)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Assignment_End_Date)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Assignment_Value_LCY)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => experience.Contract_Ref_No)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_financials">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Supplier Balance Sheet Summary Details</h4>
+                            </div><br />
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th> Year Code </th>
+                                            <th> Total Current Assets</th>
+                                            <th> Total Fixed Assets</th>
+                                            <th> Total Current Liabilities </th>
+                                            <th> Total Long-Term Liabilities </th>
+                                            <th> Total Owner's Equity </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (BalanceSheetTModel balancesheet in Model.Vendorbalancesheet)
+                                        {
+                                            balancesheetCounter++;
+                                            <tr>
+                                                <td>
+                                                    @balancesheetCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => balancesheet.Audit_Year_Code_Reference)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => balancesheet.Current_Assets_LCY)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => balancesheet.Fixed_Assets_LCY)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => balancesheet.Current_Liabilities_LCY)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => balancesheet.Long_term_Liabilities_LCY)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => balancesheet.Owners_Equity_LCY)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Supplier Income Statement Summary Details</h4>
+                            </div><br />
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th> Year Code </th>
+                                            <th> Total Revenue</th>
+                                            <th> Total Cost of Goods Sold</th>
+                                            <th> Total Operating Expenses </th>
+                                            <th> Other Non-Operating Revenue/Expense </th>
+                                            <th> Interest Expense </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (IncomeStatementTModel incomestatement in Model.Vendorincomestatement)
+                                        {
+                                            IncometCounter++;
+                                            <tr>
+                                                <td>
+                                                    @IncometCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => incomestatement.Audit_Year_Code_Reference)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => incomestatement.Total_Revenue_LCY)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => incomestatement.Total_COGS_LCY)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => incomestatement.Total_Operating_Expenses_LCY)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => incomestatement.Other_Non_operating_Re_Exp_LCY)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => incomestatement.Interest_Expense_LCY)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_keypersonnel">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Details of Key Professional Staff</h4>
+                            </div><br />
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable" id="tbl_past_Experience">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Staff Number </th>
+                                            <th>Staff Name </th>
+                                            <th>Profession </th>
+                                            <th>Designation </th>
+                                            <th>Date of Birth</th>
+                                            <th>Joining Date </th>
+                                            <th>Phone No </th>
+                                            <th>Nationality </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (ProfessionalStaffModel staff in Model.VendorProfessionalStaff)
+                                        {
+                                            IncometCounter++;
+                                            <tr>
+                                                <td>
+                                                    @IncometCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.StaffNumber)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.StaffName)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.StaffProfession)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.StaffDesignation)
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.StaffDateofBirth)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.StaffJoiningDate)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.StaffPhonenumber)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => staff.Country_Region_Code)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_documents">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-heading" style="background-color:#3CB371">
+                                <h4 class="panel-title">Attached Mandatory Documents</h4>
+                            </div><br />
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>File Name</th>
+                                            <th>Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (SharePointTModel documents in Model.AttachedDocuments)
+                                        {
+                                            AttachedDocumentsCounter++;
+                                            <tr>
+                                                <td>
+                                                    @AttachedDocumentsCounter
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => documents.FileName)
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success" onclick="DowndloadTenderDocument('@documents.FileName')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

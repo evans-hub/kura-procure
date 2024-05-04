@@ -1,0 +1,1856 @@
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ApplicationInsights.config
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\csc.exe
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\vbc.exe
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\E-Procurement.dll.config
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\E-Procurement.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\E-Procurement.pdb
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Antlr3.Runtime.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\EntityFramework.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Newtonsoft.Json.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Owin.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Spatial.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Helpers.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Mvc.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Optimization.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Razor.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.WebPages.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\WebGrease.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Spatial.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Helpers.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Mvc.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Optimization.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.Razor.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.WebPages.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Newtonsoft.Json.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\EntityFramework.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\obj\Debug\E-Procurement.dll
+D:\Dynasoft Business Solutions\Dynasoft Portals\E-Procurement\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\Portal\E-Procurement\E-Procurement\bin\ApplicationInsights.config
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\csc.exe
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\vbc.exe
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\Portal\E-Procurement\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\Portal\E-Procurement\E-Procurement\bin\E-Procurement.dll.config
+D:\Portal\E-Procurement\E-Procurement\bin\E-Procurement.dll
+D:\Portal\E-Procurement\E-Procurement\bin\E-Procurement.pdb
+D:\Portal\E-Procurement\E-Procurement\bin\Antlr3.Runtime.dll
+D:\Portal\E-Procurement\E-Procurement\bin\EntityFramework.dll
+D:\Portal\E-Procurement\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Newtonsoft.Json.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Owin.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Spatial.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Helpers.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Mvc.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Optimization.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Razor.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.WebPages.dll
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\Portal\E-Procurement\E-Procurement\bin\WebGrease.dll
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Spatial.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Helpers.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Mvc.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Optimization.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.Razor.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.WebPages.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\Portal\E-Procurement\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\Portal\E-Procurement\E-Procurement\bin\Newtonsoft.Json.xml
+D:\Portal\E-Procurement\E-Procurement\bin\EntityFramework.xml
+D:\Portal\E-Procurement\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Portal\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Portal\E-Procurement\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\Portal\E-Procurement\E-Procurement\obj\Debug\E-Procurement.dll
+D:\Portal\E-Procurement\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\Portal\E-Procurement\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.WebPages.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ApplicationInsights.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\csc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\vbc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\E-Procurement.dll.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\E-Procurement.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\E-Procurement.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Antlr3.Runtime.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Newtonsoft.Json.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Spatial.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Helpers.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Mvc.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Optimization.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\WebGrease.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Spatial.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Helpers.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Mvc.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Optimization.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.WebPages.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Newtonsoft.Json.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\obj\Debug\E-Procurement.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\E-Procurement\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ApplicationInsights.config
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\csc.exe
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\E-Procurement.dll.config
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\E-Procurement.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Antlr3.Runtime.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\EntityFramework.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Newtonsoft.Json.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Owin.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Spatial.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Helpers.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Mvc.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Optimization.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Razor.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.WebPages.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\WebGrease.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Spatial.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Helpers.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Mvc.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Optimization.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.Razor.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.WebPages.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Newtonsoft.Json.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\EntityFramework.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\obj\Debug\E-Procurement.dll
+D:\C#projects\Clients\KERRA\e-procurement-v3\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ApplicationInsights.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\csc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\vbc.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\E-Procurement.dll.config
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\E-Procurement.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\E-Procurement.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Antlr3.Runtime.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Newtonsoft.Json.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Owin.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Spatial.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Helpers.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Mvc.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Optimization.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\WebGrease.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Spatial.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Helpers.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Mvc.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Optimization.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Newtonsoft.Json.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\obj\Debug\E-Procurement.dll
+D:\Dynasoft Business Solutions Ltd\Dynasoft  Clients Portals\KERRA\e-procurement-v4-kerra\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ApplicationInsights.config
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\csc.exe
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\E-Procurement.dll.config
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\E-Procurement.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Antlr3.Runtime.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Newtonsoft.Json.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Owin.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Spatial.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Helpers.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Mvc.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Optimization.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Razor.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\WebGrease.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Spatial.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Helpers.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Mvc.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Optimization.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.Razor.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Newtonsoft.Json.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\obj\Debug\E-Procurement.dll
+D:\C#projects\Clients\KERRA\e-procurement-v4-kerra\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ApplicationInsights.config
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\csc.exe
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\E-Procurement.dll.config
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\E-Procurement.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Owin.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Spatial.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Razor.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\WebGrease.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Spatial.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Razor.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.dll
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ApplicationInsights.config
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\csc.exe
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\vbc.exe
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\E-Procurement.dll.config
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\E-Procurement.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\E-Procurement.pdb
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Owin.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Spatial.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Razor.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\WebGrease.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Spatial.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.Razor.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.dll
+D:\CLIENTS PORTALS\KERRA\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ApplicationInsights.config
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\csc.exe
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\vbc.exe
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\E-Procurement.dll.config
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\E-Procurement.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\E-Procurement.pdb
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\EntityFramework.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Owin.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Spatial.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Razor.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\WebGrease.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Spatial.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.Razor.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\EntityFramework.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.dll
+D:\projects\Dynasoft\Portals\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ApplicationInsights.config
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\csc.exe
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\vbc.exe
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\E-Procurement.dll.config
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\E-Procurement.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\EntityFramework.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Owin.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Spatial.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Razor.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\WebGrease.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Spatial.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Helpers.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Mvc.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Optimization.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.Razor.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Newtonsoft.Json.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\EntityFramework.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.dll
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\C#projects\Clients\KERRA\E-Proc\e-procurementKerra\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ApplicationInsights.config
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\csc.exe
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\vbc.exe
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\E-Procurement.dll.config
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\E-Procurement.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\E-Procurement.pdb
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Antlr3.Runtime.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\EntityFramework.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Newtonsoft.Json.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Owin.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Spatial.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Helpers.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Mvc.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Optimization.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Razor.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.WebPages.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\WebGrease.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Spatial.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Helpers.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Mvc.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Optimization.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.Razor.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.WebPages.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Newtonsoft.Json.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\EntityFramework.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\obj\Debug\E-Procurement.dll
+D:\Code\KURRA Codes\e_procurement_v7\E-Procurement\obj\Debug\E-Procurement.pdb
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.pdb
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ApplicationInsights.config
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\csc.exe
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\vbc.exe
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\E-Procurement.dll.config
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\E-Procurement.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\E-Procurement.pdb
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Owin.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Spatial.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Helpers.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Http.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Mvc.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Optimization.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Razor.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\WebGrease.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.pdb
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.pdb
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Spatial.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Http.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Helpers.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Mvc.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Optimization.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Razor.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.pdb
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Amos\Desktop\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ApplicationInsights.config
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\csc.exe
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\vbc.exe
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\E-Procurement.dll.config
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\E-Procurement.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\E-Procurement.pdb
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.SharePoint.Client.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Owin.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Spatial.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Helpers.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Http.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Mvc.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Optimization.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Razor.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\WebGrease.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.pdb
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.pdb
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Spatial.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Http.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Helpers.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Mvc.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Optimization.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.Razor.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.pdb
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\de\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\es\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\fr\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\it\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ja\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ko\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\ru\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.dll
+C:\Users\Amos\Documents\Portal\Dynasoft\KURAPortals\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.pdb
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ApplicationInsights.config
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\csc.exe
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\vbc.exe
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\E-Procurement.dll.config
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\E-Procurement.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\E-Procurement.pdb
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\EntityFramework.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Owin.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Spatial.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Helpers.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Http.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Mvc.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Optimization.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Razor.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.WebPages.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\WebGrease.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.pdb
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.pdb
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Spatial.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Http.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Helpers.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Mvc.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Optimization.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.Razor.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.WebPages.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.pdb
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\EntityFramework.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\de\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\es\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\fr\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\it\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ja\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ko\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\ru\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.csproj.AssemblyReference.cache
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.csproj.CoreCompileInputs.cache
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procur.FDAA3862.Up2Date
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.dll
+D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.pdb

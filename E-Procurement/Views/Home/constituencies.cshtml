@@ -1,0 +1,14 @@
+﻿@model  IEnumerable<E_Procurement.Models.ResponsibilityCenter>
+@{
+    Layout = null;
+}
+
+<select class="form-control select2" id="constituencies" name="constituencies" data_live_search="true">
+    <option value="">--Select constituency---</option>
+    <optgroup label="Availlable Currency Codes Codes">
+        @foreach (var item in Model)
+        {
+            <option value="@item.constituencyCode">@item.constituencyDescription</option>
+        }
+    </optgroup>
+</select>

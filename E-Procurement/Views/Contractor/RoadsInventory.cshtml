@@ -1,0 +1,108 @@
+﻿@model  IEnumerable<E_Procurement.Models.Contractor.RoadsInventoryModel>
+@{
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    ViewBag.Title = "RoadsInventory";
+    int RoadsInvenrotyCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title">Welcome to i-RMS Contractors Hub</h4>
+        </div>
+    </div>
+    <div class="col-xs-4" style="width:100%">
+        <h4 class="page-title"><u><strong>Kenya Rural Roads Authority Roads Inventory</strong></u></h4>
+    </div>
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">Seacrh by  Road Name</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">Search by Road Code</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="#" class="btn btn-success btn-block"> Search </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Road Code.</th>
+                            <th>Link Name</th>
+                            <th>Road Class</th>
+                            <th>Start Chainage</th>
+                            <th>End Chainage</th>
+                            <th>Gazette Road Length(KMs)</th>
+                            <th>Road Surface Condition</th>
+                            <th>No. of Sections</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            RoadsInvenrotyCounter++;
+                            <tr>
+                                <td>
+                                    @RoadsInvenrotyCounter
+                                </td>
+                                <td>
+                                   @Html.DisplayFor(modelItem => item.Road_Code)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Link_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Road_Class_ID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Start_Chainage_KM)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.End_Chainage_KM)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Gazetted_Road_Length_KMs)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.General_Road_Surface_Condition)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.No_of_Road_Sections)
+                                </td>
+                                <td>
+                                    <a class="btn btn-success" onclick="View('@Url.Action("RoadGeneralDetails", "Contractor", new { roadLinkCode = @item.Road_Code })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function View(url) {
+            console.log(JSON.stringify(url))
+            $.ajax({
+                cache: false,
+                type: 'GET',
+                url: url,
+                success: function (response) {
+                    window.location.href = url;
+                }
+            });
+        }
+    </script>
+</div>

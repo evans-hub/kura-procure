@@ -1,0 +1,710 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNet.OData.Versioning</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder">
+            <content>
+            Provides additional implementation specific to ASP.NET Web API.
+            </content>
+            <summary>
+            Represents a versioned variant of the <see cref="T:Microsoft.AspNet.OData.Builder.ODataModelBuilder"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> class.
+            </summary>
+            <param name="configuration">The <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see> associated with the builder.</param>
+            <remarks>This constructor resolves the current <see cref="T:System.Web.Http.Dispatcher.IHttpControllerSelector"/> from the
+            <see cref="M:System.Web.Http.ServicesExtensions.GetHttpControllerSelector(System.Web.Http.Controllers.ServicesContainer)"/> extension method via the
+            <see cref="P:System.Web.Http.HttpConfiguration.Services"/>.</remarks>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.Configuration">
+            <summary>
+            Gets the associated HTTP configuration.
+            </summary>
+            <value>The <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see> associated with the builder.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.Options">
+            <summary>
+            Gets the API versioning options associated with the builder.
+            </summary>
+            <value>The configured <see cref="T:Microsoft.Web.Http.Versioning.ApiVersioningOptions">API versioning options</see>.</value>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetApiVersions">
+            <summary>
+            Gets the API versions for all known OData routes.
+            </summary>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">sequence</see> of <see cref="T:Microsoft.Web.Http.ApiVersion">API versions</see>
+            for all known OData routes.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.ConfigureMetadataController(System.Collections.Generic.IEnumerable{Microsoft.Web.Http.ApiVersion},System.Collections.Generic.IEnumerable{Microsoft.Web.Http.ApiVersion})">
+            <summary>
+            Configures the metadata controller using the specified configuration and API versions.
+            </summary>
+            <param name="supportedApiVersions">The discovered <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of
+            supported OData controller <see cref="T:Microsoft.Web.Http.ApiVersion">API versions</see>.</param>
+            <param name="deprecatedApiVersions">The discovered <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of
+            deprecated OData controller <see cref="T:Microsoft.Web.Http.ApiVersion">API versions</see>.</param>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.ModelBuilderFactory">
+            <summary>
+            Gets or sets the factory method used to create model builders.
+            </summary>
+            <value>The factory <see cref="T:System.Func`1">method</see> used to create <see cref="T:Microsoft.AspNet.OData.Builder.ODataModelBuilder">model builders</see>.</value>
+            <remarks>The default implementation creates default instances of the <see cref="T:Microsoft.AspNet.OData.Builder.ODataConventionModelBuilder"/> class.</remarks>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.DefaultModelConfiguration">
+            <summary>
+            Gets or sets the default model configuration.
+            </summary>
+            <value>The <see cref="T:System.Action`2">method</see> for the default model configuration.
+            The default value is <c>null</c>.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.ModelConfigurations">
+            <summary>
+            Gets the list of model configurations associated with the builder.
+            </summary>
+            <value>A <see cref="T:System.Collections.Generic.IList`1">list</see> of model configurations associated with the builder.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.OnModelCreated">
+            <summary>
+            Gets or sets the action that is invoked after the <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see> has been created.
+            </summary>
+            <value>The <see cref="T:System.Action`2">action</see> to run after the model has been created. The default
+            value is <c>null</c>.</value>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels">
+            <summary>
+            Builds and returns the sequence of EDM models based on the define model configurations.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see>.</returns>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.Builder.IModelConfiguration">
+            <summary>
+            Defines the behavior of a model configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Builder.IModelConfiguration.Apply(Microsoft.AspNet.OData.Builder.ODataModelBuilder,Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Applies model configurations using the provided builder for the specified API version.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNet.OData.Builder.ODataModelBuilder">builder</see> used to apply configurations.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the <paramref name="builder"/>.</param>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.LocalSR">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.LocalSR.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.LocalSR.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.LocalSR.MissingAnnotation">
+            <summary>
+              Looks up a localized string similar to The entity model (EDM) does not have the required {0} annotation..
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext">
+            <content>
+            Provides additional implementation specific to ASP.NET Web API.
+            </content>
+            <summary>
+            Represents the context used to configure OData routing conventions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.#ctor(System.Web.Http.HttpConfiguration,System.String,Microsoft.OData.Edm.IEdmModel,Microsoft.Web.Http.ApiVersion,System.Collections.Generic.IList{Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext"/> class.
+            </summary>
+            <param name="configuration">The current <see cref="T:System.Web.Http.HttpConfiguration">configuration</see>.</param>
+            <param name="routeName">The current route name.</param>
+            <param name="edmModel">The current <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see>.</param>
+            <param name="apiVersion">The current <see cref="P:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.ApiVersion">API version</see>.</param>
+            <param name="routingConventions">The initial <see cref="T:System.Collections.Generic.IList`1">list</see> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">routing conventions</see>.</param>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.Configuration">
+            <summary>
+            Gets the configuration associated with the routing conventions.
+            </summary>
+            <value>The current <see cref="T:System.Web.Http.HttpConfiguration">configuration</see>.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.RouteName">
+            <summary>
+            Gets the name of the route the conventions are being created for.
+            </summary>
+            <value>The current route name.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.EdmModel">
+            <summary>
+            Gets the entity data model (EDM) associated with the routing conventions.
+            </summary>
+            <value>The current <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see>.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.ApiVersion">
+            <summary>
+            Gets the API version associated with the routing conventions.
+            </summary>
+            <value>The current <see cref="P:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.ApiVersion">API version</see>.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext.RoutingConventions">
+            <summary>
+            Gets the initial list of routing conventions.
+            </summary>
+            <value>The initial <see cref="T:System.Collections.Generic.IList`1">list</see> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">routing conventions</see>.</value>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention">
+            <content>
+            Provides additional implementation specific to ASP.NET Web API.
+            </content>
+            <summary>
+            Represents an OData attribute routing convention with additional support for API versioning.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.#ctor(System.String,System.Web.Http.HttpConfiguration,Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention"/> class.
+            </summary>
+            <param name="routeName">The name of the route.</param>
+            <param name="configuration">The current <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="apiVersion">The <see cref="P:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ApiVersion">API version</see> associated with the convention.</param>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.#ctor(System.String,System.Web.Http.HttpConfiguration,Microsoft.AspNet.OData.Routing.IODataPathTemplateHandler,Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention"/> class.
+            </summary>
+            <param name="routeName">The name of the route.</param>
+            <param name="configuration">The current <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="pathTemplateHandler">The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathTemplateHandler">OData path template handler</see> associated with the routing convention.</param>
+            <param name="apiVersion">The <see cref="P:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ApiVersion">API version</see> associated with the convention.</param>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Web.Http.Controllers.HttpControllerDescriptor},Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention"/> class.
+            </summary>
+            <param name="routeName">The name of the route.</param>
+            <param name="controllers">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:System.Web.Http.Controllers.HttpControllerDescriptor">controller descriptors</see>.</param>
+            <param name="apiVersion">The <see cref="P:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ApiVersion">API version</see> associated with the convention.</param>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Web.Http.Controllers.HttpControllerDescriptor},Microsoft.AspNet.OData.Routing.IODataPathTemplateHandler,Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention"/> class.
+            </summary>
+            <param name="routeName">The name of the route.</param>
+            <param name="controllers">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:System.Web.Http.Controllers.HttpControllerDescriptor">controller descriptors</see>
+            associated with the routing convention.</param>
+            <param name="pathTemplateHandler">The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathTemplateHandler">OData path template handler</see> associated with the routing convention.</param>
+            <param name="apiVersion">The <see cref="P:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ApiVersion">API version</see> associated with the convention.</param>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ShouldMapController(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            Returns a value indicating whether the specified controller should be mapped using attribute routing conventions.
+            </summary>
+            <param name="controller">The <see cref="T:System.Web.Http.Controllers.HttpControllerDescriptor">controller descriptor</see> to evaluate.</param>
+            <returns>True if the <paramref name="controller"/> should be mapped as an OData controller; otherwise, false.</returns>
+            <remarks>The default implementation always returns <c>true</c>.</remarks>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ShouldMapAction(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Returns a value indicating whether the specified action should be mapped using attribute routing conventions.
+            </summary>
+            <param name="action">The <see cref="T:System.Web.Http.Controllers.HttpActionDescriptor">action descriptor</see> to evaluate.</param>
+            <returns>True if the <paramref name="action"/> should be mapped as an OData action or function; otherwise, false.</returns>
+            <remarks>This method will match any OData action that explicitly or implicitly matches the API version applied
+            to the associated <see cref="T:Microsoft.Web.Http.Versioning.ApiVersionModel">model</see>.</remarks>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.SelectController(Microsoft.AspNet.OData.Routing.ODataPath,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Selects the controller for OData requests.
+            </summary>
+            <param name="odataPath">The OData path.</param>
+            <param name="request">The request.</param>
+            <returns><c>null</c> if the request isn't handled by this convention; otherwise, the name of the selected controller.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.SelectAction(Microsoft.AspNet.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+            <summary>
+            Selects the action for OData requests.
+            </summary>
+            <param name="odataPath">The OData path.</param>
+            <param name="controllerContext">The controller context.</param>
+            <param name="actionMap">The action map.</param>
+            <returns><c>null</c> if the request isn't handled by this convention; otherwise, the name of the selected action.</returns>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ODataPathTemplateHandler">
+            <summary>
+            Gets the <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathTemplateHandler"/> to be used for parsing the route templates.
+            </summary>
+            <value>The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathTemplateHandler"/> to be used for parsing the route templates.</value>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ApiVersion">
+            <summary>
+            Gets the API version associated with the route convention.
+            </summary>
+            <value>The associated <see cref="P:Microsoft.AspNet.OData.Routing.VersionedAttributeRoutingConvention.ApiVersion">API version</see>.</value>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.Routing.VersionedMetadataRoutingConvention">
+            <summary>
+            Represents the <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing convention</see> for versioned service and metadata documents.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedMetadataRoutingConvention.SelectController(Microsoft.AspNet.OData.Routing.ODataPath,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Selects the controller for OData requests.
+            </summary>
+            <param name="odataPath">The OData path.</param>
+            <param name="request">The request.</param>
+            <returns>The name of the selected controller or <c>null</c> if the request isn't handled by this convention.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedMetadataRoutingConvention.SelectAction(Microsoft.AspNet.OData.Routing.ODataPath,System.Web.Http.Controllers.HttpControllerContext,System.Linq.ILookup{System.String,System.Web.Http.Controllers.HttpActionDescriptor})">
+            <summary>
+            Selects the action for OData requests.
+            </summary>
+            <param name="odataPath">The OData path.</param>
+            <param name="controllerContext">The controller context.</param>
+            <param name="actionMap">The action map.</param>
+            <returns>The name of the selected action or <c>null</c> if the request isn't handled by this convention.</returns>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.Routing.VersionedODataPathRouteConstraint">
+            <summary>
+            Represents an <see cref="T:Microsoft.AspNet.OData.Routing.ODataPathRouteConstraint">OData path route constraint</see> which supports versioning.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedODataPathRouteConstraint.#ctor(System.String,Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.AspNet.OData.Routing.VersionedODataPathRouteConstraint" /> class.
+            </summary>
+            <param name="routeName">The name of the route this constraint is associated with.</param>
+            <param name="apiVersion">The <see cref="P:Microsoft.AspNet.OData.Routing.VersionedODataPathRouteConstraint.ApiVersion">API version</see> associated with the route constraint.</param>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.Routing.VersionedODataPathRouteConstraint.ApiVersion">
+            <summary>
+            Gets the API version matched by the current OData path route constraint.
+            </summary>
+            <value>The <see cref="P:Microsoft.AspNet.OData.Routing.VersionedODataPathRouteConstraint.ApiVersion">API version</see> associated with the route constraint.</value>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedODataPathRouteConstraint.Match(System.Net.Http.HttpRequestMessage,System.Web.Http.Routing.IHttpRoute,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.Http.Routing.HttpRouteDirection)">
+            <summary>
+            Determines whether this instance equals a specified route.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="route">The route to compare.</param>
+            <param name="parameterName">The name of the parameter.</param>
+            <param name="values">A list of parameter values.</param>
+            <param name="routeDirection">The route direction.</param>
+            <returns>True if this instance equals a specified route; otherwise, false.</returns>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.Routing.VersionedODataRoutingConventions">
+            <summary>
+            Provides utility functions to create OData routing conventions with support for API versioning.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedODataRoutingConventions.CreateDefault">
+            <summary>
+            Creates a mutable list of the default OData routing conventions with support for API versioning.
+            </summary>
+            <returns>A mutable <see cref="T:System.Collections.Generic.IList`1">list</see> of the default <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see>.</returns>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.Routing.VersionedODataRoutingConventions.AddOrUpdate(System.Collections.Generic.IList{Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention})">
+            <summary>
+            Adds or updates the specified list of OData routing conventions to ensure the necessary API versioning conventions are present.
+            </summary>
+            <param name="routingConventions">The <see cref="T:System.Collections.Generic.IList`1"/> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see> to add to or update.</param>
+            <returns>The original <see cref="T:System.Collections.Generic.IList`1">list</see> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see>,
+            possibly with new or updated <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see>.</returns>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.VersionedMetadataController">
+            <summary>
+            Represents a <see cref="T:Microsoft.AspNet.OData.MetadataController">controller</see> for generating versioned OData service and metadata documents.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNet.OData.VersionedMetadataController.GetOptions">
+            <summary>
+            Handles a request for the HTTP OPTIONS method.
+            </summary>
+            <returns>A <see cref="T:System.Web.Http.IHttpActionResult">result</see> containing the response to the request.</returns>
+            <remarks>When a request is made with OPTIONS /$metadata, then this method will return the following
+            HTTP headers:
+            <list type="table">
+             <listheader>
+             <term>Header Name</term>
+             <description>Description</description>
+             </listheader>
+             <item>
+              <term>OData-Version</term>
+              <description>The OData version supported by the endpoint.</description>
+             </item>
+             <item>
+              <term>api-supported-versions</term>
+              <description>A comma-separated list of all supported API versions, if any.</description>
+             </item>
+             <item>
+              <term>api-deprecated-versions</term>
+              <description>A comma-separated list of all supported API versions, if any.</description>
+             </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.ODataId">
+            <summary>
+            Represents an OData identifier specified in the body of a POST or PUT OData relationship reference request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNet.OData.ODataId.Value">
+            <summary>
+            Gets or sets the identifier.
+            </summary>
+            <value>The <see cref="T:System.Uri">URL</see> representing the related entity identifier.</value>
+        </member>
+        <member name="T:Microsoft.AspNet.OData.TypeExtensions">
+            <summary>
+            Provides extension methods for the <see cref="T:System.Type"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Web.Http.Versioning.ODataApiVersionRequestProperties">
+            <summary>
+            Represents current OData API versioning request properties.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Web.Http.Versioning.ODataApiVersionRequestProperties.MatchingRoutes">
+            <summary>
+            Gets a collection of API version to route name mappings that have been matched in the current request.
+            </summary>
+            <value>A <see cref="T:System.Collections.Generic.IDictionary`2">collection</see> of key/value pairs representing the mapping
+            of <see cref="T:Microsoft.Web.Http.ApiVersion">API versions</see> to route names that have been matched in the current request.</value>
+        </member>
+        <member name="M:Microsoft.TypeExtensions.GetTypeDisplayName(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Pretty print a type name.
+            </summary>
+            <param name="type">The <see cref="T:System.Type"/>.</param>
+            <param name="fullName"><c>true</c> to print a fully qualified name.</param>
+            <param name="includeGenericParameterNames"><c>true</c> to include generic parameter names.</param>
+            <returns>The pretty printed type name.</returns>
+        </member>
+        <member name="T:Microsoft.OData.Edm.ApiVersionAnnotation">
+            <summary>
+            Represents an annotation for <see cref="P:Microsoft.OData.Edm.ApiVersionAnnotation.ApiVersion">API version</see>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.OData.Edm.ApiVersionAnnotation.#ctor(Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation"/> class.
+            </summary>
+            <param name="apiVersion">The annotated <see cref="P:Microsoft.OData.Edm.ApiVersionAnnotation.ApiVersion">API version</see>.</param>
+        </member>
+        <member name="P:Microsoft.OData.Edm.ApiVersionAnnotation.ApiVersion">
+            <summary>
+            Gets the annotated API version.
+            </summary>
+            <value>The annotated <see cref="P:Microsoft.OData.Edm.ApiVersionAnnotation.ApiVersion">API version</see>.</value>
+        </member>
+        <member name="T:Microsoft.SR">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SR.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SR.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SR.InvalidODataRouteOnAction">
+            <summary>
+              Looks up a localized string similar to The path template &apos;{0}&apos; on the action &apos;{1}&apos; in controller &apos;{2}&apos; is not a valid OData path template. {3}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SR.NullContainer">
+            <summary>
+              Looks up a localized string similar to The container built by the container builder must not be null..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SR.NullContainerBuilder">
+            <summary>
+              Looks up a localized string similar to The container builder created by the container builder factory must not be null..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SR.ObjectNotYetInitialized">
+            <summary>
+              Looks up a localized string similar to The object has not yet been initialized. Ensure that HttpConfiguration.EnsureInitialized() is called in the application&apos;s startup code after all other initialization code..
+            </summary>
+        </member>
+        <member name="P:Microsoft.SR.RoutePrefixStartsWithSlash">
+            <summary>
+              Looks up a localized string similar to The OData route prefix &apos;{0}&apos; on the controller &apos;{1}&apos; starts with a &apos;/&apos;. Route prefixes cannot start with a &apos;/&apos;..
+            </summary>
+        </member>
+        <member name="T:System.Web.Http.HttpConfigurationExtensions">
+            <summary>
+            Provides extension methods for the <see cref="T:System.Web.Http.HttpConfiguration"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel},System.Action{Microsoft.OData.IContainerBuilder})">
+            <summary>
+            Maps the specified versioned OData routes.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <param name="configureAction">The configuring action to add the services to the root container.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel},System.Action{Microsoft.OData.IContainerBuilder},Microsoft.AspNet.OData.Batch.ODataBatchHandler)">
+            <summary>
+            Maps the specified versioned OData routes.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <param name="configureAction">The configuring action to add the services to the root container.</param>
+            <param name="batchHandler">The <see cref="T:Microsoft.AspNet.OData.Batch.ODataBatchHandler">OData batch handler</see>.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel},System.Action{Microsoft.OData.IContainerBuilder},System.Action{Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext})">
+            <summary>
+            Maps the specified versioned OData routes.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <param name="configureAction">The configuring action to add the services to the root container.</param>
+            <param name="configureRoutingConventions">The configuring action to add or update routing conventions.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel},System.Action{Microsoft.OData.IContainerBuilder},System.Action{Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext},Microsoft.AspNet.OData.Batch.ODataBatchHandler)">
+            <summary>
+            Maps the specified versioned OData routes.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <param name="configureAction">The configuring action to add the services to the root container.</param>
+            <param name="configureRoutingConventions">The configuring action to add or update routing conventions.</param>
+            <param name="batchHandler">The <see cref="T:Microsoft.AspNet.OData.Batch.ODataBatchHandler">OData batch handler</see>.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel})">
+            <summary>
+            Maps the specified versioned OData routes.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel},Microsoft.AspNet.OData.Batch.ODataBatchHandler)">
+            <summary>
+            Maps the specified versioned OData routes. When the <paramref name="batchHandler"/> is provided, it will create a
+            '$batch' endpoint to handle the batch requests.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <param name="batchHandler">The <see cref="T:Microsoft.AspNet.OData.Batch.ODataBatchHandler">OData batch handler</see>.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel},Microsoft.AspNet.OData.Routing.IODataPathHandler,System.Collections.Generic.IEnumerable{Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention})">
+            <summary>
+            Maps the specified versioned OData routes.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <param name="pathHandler">The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathHandler">OData path handler</see> to use for parsing the OData path.</param>
+            <param name="routingConventions">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see>
+            to use for controller and action selection.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoutes(System.Web.Http.HttpConfiguration,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.OData.Edm.IEdmModel},Microsoft.AspNet.OData.Routing.IODataPathHandler,System.Collections.Generic.IEnumerable{Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention},Microsoft.AspNet.OData.Batch.ODataBatchHandler)">
+            <summary>
+            Maps the specified versioned OData routes. When the <paramref name="batchHandler"/> is provided, it will create a '$batch' endpoint to handle the batch requests.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="models">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM models</see> to use for parsing OData paths.</param>
+            <param name="pathHandler">The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathHandler">OData path handler</see> to use for parsing the OData path.</param>
+            <param name="routingConventions">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see>
+            to use for controller and action selection.</param>
+            <param name="batchHandler">The <see cref="T:Microsoft.AspNet.OData.Batch.ODataBatchHandler">OData batch handler</see>.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IReadOnlyList`1">read-only list</see> of added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData routes</see>.</returns>
+            <remarks>The specified <paramref name="models"/> must contain the <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see>.  This annotation is
+            automatically applied when you use the <see cref="T:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder"/> and call <see cref="M:Microsoft.AspNet.OData.Builder.VersionedODataModelBuilder.GetEdmModels"/> to
+            create the <paramref name="models"/>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.Web.Http.ApiVersion,System.Action{Microsoft.OData.IContainerBuilder})">
+            <summary>
+            Maps the specified OData route and the OData route attributes.
+            </summary>
+            <param name="configuration">The server configuration.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <param name="configureAction">The configuring action to add the services to the root container.</param>
+            <returns>The added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute"/>.</returns>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.Web.Http.ApiVersion,System.Action{Microsoft.OData.IContainerBuilder},System.Action{Microsoft.AspNet.OData.Routing.ODataConventionConfigurationContext})">
+            <summary>
+            Maps the specified OData route and the OData route attributes.
+            </summary>
+            <param name="configuration">The server configuration.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <param name="configureAction">The configuring action to add the services to the root container.</param>
+            <param name="configureRoutingConventions">The configuring action to add or update routing conventions.</param>
+            <returns>The added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute"/>.</returns>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.OData.Edm.IEdmModel,Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Maps a versioned OData route.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="model">The <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see> to use for parsing OData paths.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <returns>The mapped <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData route</see>.</returns>
+            <remarks>The <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see> will be added or updated on the specified <paramref name="model"/> using
+            the provided <paramref name="apiVersion">API version</paramref>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.OData.Edm.IEdmModel,Microsoft.Web.Http.ApiVersion,Microsoft.AspNet.OData.Batch.ODataBatchHandler)">
+            <summary>
+            Maps a versioned OData route.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="model">The <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see> to use for parsing OData paths.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <param name="batchHandler">The <see cref="T:Microsoft.AspNet.OData.Batch.ODataBatchHandler">OData batch handler</see>.</param>
+            <returns>The mapped <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData route</see>.</returns>
+            <remarks>The <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see> will be added or updated on the specified <paramref name="model"/> using
+            the provided <paramref name="apiVersion">API version</paramref>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.OData.Edm.IEdmModel,Microsoft.Web.Http.ApiVersion,System.Net.Http.HttpMessageHandler)">
+            <summary>
+            Maps the specified OData route and the OData route attributes. When the <paramref name="defaultHandler"/>
+            is non-<c>null</c>, it will map it as the default handler for the route.
+            </summary>
+            <param name="configuration">The server configuration.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="model">The EDM model to use for parsing OData paths.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <param name="defaultHandler">The default <see cref="T:System.Net.Http.HttpMessageHandler"/> for this route.</param>
+            <returns>The added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute"/>.</returns>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.OData.Edm.IEdmModel,Microsoft.Web.Http.ApiVersion,Microsoft.AspNet.OData.Routing.IODataPathHandler,System.Collections.Generic.IEnumerable{Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention})">
+            <summary>
+            Maps a versioned OData route.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="model">The <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see> to use for parsing OData paths.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <param name="pathHandler">The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathHandler">OData path handler</see> to use for parsing the OData path.</param>
+            <param name="routingConventions">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see>
+            to use for controller and action selection.</param>
+            <returns>The mapped <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData route</see>.</returns>
+            <remarks>The <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see> will be added or updated on the specified <paramref name="model"/> using
+            the provided <paramref name="apiVersion">API version</paramref>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.OData.Edm.IEdmModel,Microsoft.Web.Http.ApiVersion,Microsoft.AspNet.OData.Routing.IODataPathHandler,System.Collections.Generic.IEnumerable{Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention},Microsoft.AspNet.OData.Batch.ODataBatchHandler)">
+            <summary>
+            Maps a versioned OData route. When the <paramref name="batchHandler"/> is provided, it will create a '$batch' endpoint to handle the batch requests.
+            </summary>
+            <param name="configuration">The extended <see cref="T:System.Web.Http.HttpConfiguration">HTTP configuration</see>.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="model">The <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see> to use for parsing OData paths.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <param name="pathHandler">The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathHandler">OData path handler</see> to use for parsing the OData path.</param>
+            <param name="routingConventions">The <see cref="T:System.Collections.Generic.IEnumerable`1">sequence</see> of <see cref="T:Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention">OData routing conventions</see>
+            to use for controller and action selection.</param>
+            <param name="batchHandler">The <see cref="T:Microsoft.AspNet.OData.Batch.ODataBatchHandler">OData batch handler</see>.</param>
+            <returns>The mapped <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute">OData route</see>.</returns>
+            <remarks>The <see cref="T:Microsoft.OData.Edm.ApiVersionAnnotation">API version annotation</see> will be added or updated on the specified <paramref name="model"/> using
+            the provided <paramref name="apiVersion">API version</paramref>.</remarks>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.MapVersionedODataRoute(System.Web.Http.HttpConfiguration,System.String,System.String,Microsoft.OData.Edm.IEdmModel,Microsoft.Web.Http.ApiVersion,Microsoft.AspNet.OData.Routing.IODataPathHandler,System.Collections.Generic.IEnumerable{Microsoft.AspNet.OData.Routing.Conventions.IODataRoutingConvention},System.Net.Http.HttpMessageHandler)">
+            <summary>
+            Maps the specified OData route. When the <paramref name="defaultHandler"/> is non-<c>null</c>, it will map
+            it as the handler for the route.
+            </summary>
+            <param name="configuration">The server configuration.</param>
+            <param name="routeName">The name of the route to map.</param>
+            <param name="routePrefix">The prefix to add to the OData route's path template.</param>
+            <param name="model">The EDM model to use for parsing OData paths.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> associated with the model.</param>
+            <param name="pathHandler">The <see cref="T:Microsoft.AspNet.OData.Routing.IODataPathHandler" /> to use for parsing the OData path.</param>
+            <param name="routingConventions">The OData routing conventions to use for controller and action selection.</param>
+            <param name="defaultHandler">The default <see cref="T:System.Net.Http.HttpMessageHandler"/> for this route.</param>
+            <returns>The added <see cref="T:Microsoft.AspNet.OData.Routing.ODataRoute"/>.</returns>
+        </member>
+        <member name="M:System.Web.Http.HttpConfigurationExtensions.GetEdmModel(System.Web.Http.HttpConfiguration,Microsoft.Web.Http.ApiVersion)">
+            <summary>
+            Gets the configured entity data model (EDM) for the specified API version.
+            </summary>
+            <param name="configuration">The server configuration.</param>
+            <param name="apiVersion">The <see cref="T:Microsoft.Web.Http.ApiVersion">API version</see> to get the model for.</param>
+            <returns>The matching <see cref="T:Microsoft.OData.Edm.IEdmModel">EDM model</see> or <c>null</c>.</returns>
+        </member>
+        <member name="T:System.Web.Http.HttpRequestMessageExtensions">
+            <summary>
+            Provides extension methods for the <see cref="T:System.Net.Http.HttpRequestMessage"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Web.Http.HttpRequestMessageExtensions.ODataApiVersionProperties(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Gets the current OData API versioning request properties.
+            </summary>
+            <param name="request">The <see cref="T:System.Net.Http.HttpRequestMessage">request</see> to get the OData API versioning properties for.</param>
+            <returns>The current <see cref="T:Microsoft.Web.Http.Versioning.ODataApiVersionRequestProperties">OData API versioning properties</see>.</returns>
+        </member>
+    </members>
+</doc>

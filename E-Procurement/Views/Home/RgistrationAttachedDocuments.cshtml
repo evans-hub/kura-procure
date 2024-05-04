@@ -1,0 +1,423 @@
+﻿
+@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "RgistrationAttachedDocuments";
+    int attacheddocumentsCounter = 0;
+    int documentsRecords = 0;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content container-fluid">
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="card">
+                <div class="card-header text-center" data-background-color="darkgreen">
+                    <h6><i><strong>e-procurement </strong></i></h6>
+                </div><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Supplier Registration </a></li>
+                    <li class="breadcrumb-item active">Prequalification No= @ViewBag.prequalificationNo </li>
+                    <li class="breadcrumb-item active"> Response No = @ViewBag.invitationNo</li>
+
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-heading" style="background-color:gray">
+                <h5 class="panel-title">Documents Attachment</h5>
+            </div>
+            <div id="feedback" style="display: none" data-dismiss="alert"></div>
+
+            @*<div class="col-sm-6" style="display:none">
+                <div class="form-group">
+                    <label class="control-label">PrequalificationNo: <span class="text-danger">*</span></label>
+                    <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+                </div>
+            </div>*@
+            <br />
+            <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable" id="tbl_prequalified_documents">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Doc ID</th>
+                                <th>Description</th>
+                                @*<th>Requirement Type</th>*@
+
+                                <th>Select file</th>
+                                <td>Issue Date</td>
+                                <td>Certificate No</td>
+                                <td>Expiry Date</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (DocumentsTModel documents in Model.RequiredDocuments)
+                            {
+                                documentsRecords++;
+                                <tr>
+                                    <td>
+                                        @documentsRecords
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => documents.Description)
+                                    </td>
+                                    @*<td>
+                                            @Html.DisplayFor(modelItem => documents.Requirement_Type)
+                                        </td>*@
+                                    @*<td>
+                                            @Html.DisplayFor(modelItem => documents.SpecialGroupRequirement)
+                                        </td>*@
+                                    <td>
+                                        @*<input class="form-control" type="file">*@
+                                        <input class="form-control PrequalificationinputFileselectors" type="file" name="PrequalificationinputFileselectors[]">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" />
+
+                                    </td>
+                                    <td>
+                                        <input class="form-control" type="text">
+
+                                    </td>
+                                    <td><input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" /></td>
+                                    @*<td>
+                                            <a class="btn btn-success" onclick="EditPricing('@item.Line_No','@item.No','@item.Description','@item.Unit_of_Measure','@item.Direct_Unit_Cost','@item.Quantity')"><i class="fa fa-share m-r-10"></i>Respond</a>
+
+                                        </td>*@
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <div class="panel-footer">
+                        <br />
+                        <input type="button" id="btnSavePrequalifiedDocuments" class="btn btn-success pull-left btnSavePrequalifiedDocuments" name="btnSavePrequalifiedDocuments" value="Submit Documents" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*<button class="btn btn-primary nextBtn pull-right" type="button">Next</button>*@
+
+
+        @*<div class="panel-body">
+                <ul class="nav nav-tabs">
+                    <li class="active" style="background-color:gray">
+                        <a href="#tab_1_1" data-toggle="tab"><h3 class="panel-title" style="color:black">Required Registration Documents</h3></a>
+                    </li>
+                    <li style="background-color:gray">
+                        <a href="#tab_1_2" data-toggle="tab"><h3 class="panel-title" style="color:black">Attach Documents</h3></a>
+                    </li>
+                    <li style="background-color:gray">
+                        <a href="#tab_1_3" data-toggle="tab"><h3 class="panel-title" style="color:black">View Attached Documents</h3></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab_1_1">
+                    <div class="row">
+                        <div class="panel-heading" style="background-color:darkseagreen">
+                            <h6>Mandatory Dcouments</h6>
+                        </div>
+                        <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Doc ID</th>
+                                            <th>Description</th>
+                                            <th>Requirement Type</th>
+                                            <th>Special Group Requirement</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (DocumentsTModel documents in Model.RequiredDocuments)
+                                        {
+                                            documentsRecords++;
+                                            <tr>
+                                                <td>
+                                                    @documentsRecords
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => documents.Description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => documents.Requirement_Type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => documents.SpecialGroupRequirement)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">*@
+        <div class="panel-heading" style="background-color:darkseagreen">
+            <h6>Specific Required Docouments</h6>
+        </div>
+        <div class="col-sm-6" style="display:none">
+            <div class="form-group">
+                <label class="control-label">PrequalificationNo: <span class="text-danger">*</span></label>
+                <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+            </div>
+        </div>
+        <p>You are required to submit scanned copies of the following sets of specific documents,. Click on the Attach Documents Link</p>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Doc ID</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Select file</th>
+                            <td>Issue Date</td>
+                            <td>Certificate No</td>
+                            <td>Expiry Date</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (DocumentsTModel documents in Model.SpecificRequiredDocuments)
+                        {
+                            documentsRecords++;
+                            <tr>
+                                <td>
+                                    @documentsRecords
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => documents.Description)
+                                </td>
+                                @*<td>
+                                        @Html.DisplayFor(modelItem => documents.Requirement_Type)
+                                    </td>*@
+                                <td>
+                                    @Html.DisplayFor(modelItem => documents.category)
+                                </td>
+                                <td>
+                                    @*<input class="form-control" type="file">*@
+                                    <input class="form-control PrequalificationinputFileselectors" type="file" name="PrequalificationinputFileselectors[]">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" />
+
+                                </td>
+                                <td>
+                                    <input class="form-control" type="text">
+
+                                </td>
+                                <td><input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" /></td>
+                                @*<td>
+                                        <a class="btn btn-success" onclick="EditPricing('@item.Line_No','@item.No','@item.Description','@item.Unit_of_Measure','@item.Direct_Unit_Cost','@item.Quantity')"><i class="fa fa-share m-r-10"></i>Respond</a>
+
+                                    </td>*@
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="panel-footer">
+                    <br />
+                    <input type="button" id="btnSavePrequalifiedDocuments" class="btn btn-success pull-left btnSavePrequalifiedDocuments" name="btnSavePrequalifiedDocuments" value="Submit Documents" />
+                </div>
+            </div>
+        </div>
+        <a href="#" data-toggle="modal" data-target="#declaration_form" class="btn btn-primary  pull-right">Submit Registration Details</a>
+    </div>
+
+    @*<div class="tab-pane fade" id="tab_1_2">
+            <div class="row">
+                <div class="panel-heading" style="background-color:darkseagreen">
+                    <h6>Attach Documents </h6>
+                </div>
+                <div id="attachprequalificationdocumentsfeedback" style="display: none" data-dismiss="alert"></div>
+                <div class="col-md-12">
+                    <p>This Section enables you to upload scanned copies of the supporting documents required as part of this Registration process.</p>
+                    <div class="progress progress-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Select Document Type: <span class="text-danger">*</span></label>
+                            @Html.Action("PrequalificationDropDownListDocs", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Document No./Certificate No: <span class="text-danger">*</span></label>
+                            <input class="form-control " type="text" id="documentstxtCertNo" name="documentstxtCertNo">
+                        </div>
+                    </div>
+
+                    <div id="documentuploads">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Issue Date:<span class="text-danger">*</span></label>
+                                <div class="cal-icon">
+                                    <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" id="documentsdateOfIssues" name="documentsdateOfIssues" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">PrequalificationNo: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Expiry Date:<span class="text-danger">*</span></label>
+                                <div class="cal-icon">
+                                    <input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" id="documentsdateOfexpiries" name="documentsdateOfexpiries" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Select Document to Upload: <span class="text-danger">*</span></label>
+                            <input class="form-control" type="file" id="PrequalificationinputFileselectors" name="PrequalificationinputFileselectors[]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <center>
+                <button class="btn btn-primary btn_uploadPrequalifiationsdocuments" type="button" id="btn_uploadPrequalifiationsdocuments" name="btn_uploadPrequalifiationsdocuments">Upload Document</button>
+
+            </center>
+        </div>*@
+    <div class="tab-pane fade" id="tab_1_3">
+        <div class="row">
+            <div class="panel-heading" style="background-color:darkseagreen">
+                <h6>View Attached Documents</h6>
+            </div>
+            <p>This Section enables you to view the uploaded/Attached documents.</p>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Description</th>
+                                <th>Date Filed</th>
+                                <th>Issue Date</th>
+                                <th>Expiry Date</th>
+                                <th>File Name</th>
+                                <th>Download</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (PreQualificationRequiredDocuments item in Model.PrequalificationUploadedDocuments)
+                            {
+                                attacheddocumentsCounter++;
+                                <tr>
+                                    <td>
+                                        @attacheddocumentsCounter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Date_Filed)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Issue_Date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Expiry_Date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.File_Name)
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div id="declaration_form" class="modal custom-modal fade" role="dialog">
+    @foreach (IFPRequestsModel invitation in Model.Response)
+    {
+        <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframe", "Home", new { PrequalificationNumber = @invitation.PrequalificationNo })"></iframe>
+    }
+    <div class="modal-dialog" style="width:96%; height:50%">
+        <div class="modal-content modal-md" style="width:96%; height:50%">
+            <div class="modal-header">
+                <h3 class="modal-title"><strong>Vendor Declaration</strong></h3>
+            </div>
+            <div class="col-sm-6" style="display:none">
+                <div class="form-group">
+                    <label class="control-label">PrequalificationNo: <span class="text-danger">*</span></label>
+                    <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+                </div>
+            </div>
+            <div class="modal-body card-box">
+                <p>
+                    I certify that the information I am about to provided is true and complete to
+                    the best of my knowledge. I am aware that this self declaration statement is
+                    subject to review and verification and if such information has been falsified I
+                    may be terminated from the Registration Process for fraud
+                    and/or perjury
+                </p>
+                <br />
+                <div class="invalid-feedback">
+                    You must agree before submitting.<a href="~/Downloads/Terms and Conditions.pdf">Read Terms & Condition</a>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="checkbox" name="termsandconditions" id="termsandconditions"> <span class="text-danger">*</span><label class="control-label">Accept Terms and Conditions</label>
+
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <div class="m-t-20">
+                    <center>
+                        <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                        <button type="submit" class="btn btn-success btn_PrequalifiationsDeclaration" id="btn_PrequalifiationsDeclaration" name="btn_PrequalifiationsDeclaration">Submit Prequalification</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

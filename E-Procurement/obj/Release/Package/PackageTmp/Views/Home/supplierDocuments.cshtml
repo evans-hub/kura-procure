@@ -1,0 +1,235 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{   
+    int attacheddocumentsCounter = 0;
+    int documentsRecords = 0;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "supplierDocuments";
+    int tenderCounter = 0;
+    int bankscounter = 0;
+    int directorCounters = 0;
+    int litigationcounter = 0;
+    int balancesheet = 0;
+    int staffcounter = 0;
+    int documentsCounter = 0;
+    int i = 0;
+    int RequireddocumentsCounter = 0;
+    int pastexperiencecounter = 0;
+    
+}
+
+<div class="content container-fluid">
+    <div class="panel panel-body">       
+        <div class="row">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Supplier Registration </a></li>
+                  
+
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-heading" style="background-color:gray">
+                <h5 class="panel-title">Documents Attachment</h5>
+            </div>
+            <div id="feedback" style="display: none" data-dismiss="alert"></div>
+            <div class="col-sm-6" style="display:none">
+                <div class="form-group">
+                    <label class="control-label">RegistrationNo: <span class="text-danger">*</span></label>
+                    <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+                </div>
+            </div>
+            <br />
+            <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Procurement Document Type</th>
+                                <th>Description</th>
+                                <th>Requirement Type</th>
+                                <th>Instructions To bidders</th>
+                                <th>Attach Document</th>
+
+                        </thead>
+                        <tbody>
+                            @foreach (RegistrationRequiredDocumentsModel item in Model.RequiredDocuments)
+                            {
+                                RequireddocumentsCounter++;
+                                <tr>
+                                    <td>
+                                        @RequireddocumentsCounter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Procurement_Document_Type)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Requirement_Type)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.instructions)
+                                    </td>
+
+                                    <td>
+                                        <a class="btn btn-success" onclick="AttachSupplierDocuments('@item.Document_No','@item.Procurement_Document_Type','@item.Description','@item.Requirement_Type')"><i class="fa fa-pencil m-r-10"></i>Attach</a>
+                                        @*<a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#AttachDocuments"><i class="fa fa-plus"></i> Attach Document</a>*@
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                  
+                </div>
+            </div>
+            <div class="row">
+               
+                <div id="deletekeydocumentsuploadfeedback" style="display: none" data-dismiss="alert"></div>
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable tab_supplier_registered_Documents" id="tab_supplier_registered_Documents" name="tab_supplier_registered_Documents">
+                            <thead>
+                                <tr>
+                                    <th>Certificate No</th>
+                                    <th>Description</th>
+                                    <th>Issue Date</th>
+                                    <th>Expiry Date</th>
+                                    <th>File Name</th>
+                                    
+                                    @*<th>Delete</th>*@
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (RegistrationDocumentsModel item in Model.UploadedDocuments)
+                                {
+                                    documentsCounter++;
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Certificate_No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Issue_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Expiry_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.File_Name)
+                                        </td>
+                                     
+                                        @*<td>
+                                        <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                    </td>*@
+                                        @*<td>
+                                            <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=@item.entryNo})')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                        </td>*@
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+      
+    </div>
+   
+     <a href="@Url.Action("SupplierRegistration", "Home")" class="btn btn-primary pull-left" )">Previous</a>
+     <button class="btn btn-primary btn_submitregistration_Details  pull-right" id="btn_submitregistration_Details" name="btn_submitregistration_Details" type="button">Submit Profile </button>
+</div>
+<div id="AttachDocumentsModal" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog" style="width:100%">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <h5 class="modal-title">Attach Documents</h5>
+
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Document No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="DocNo" name="DocNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Procurement Document Type: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="ProcDocType" name="ProcDocType" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Description: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="description" name="description" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Requirement Type: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="RequirementType" name="RequirementType" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Issuance Date: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" id="issuedates" name="issuedates" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label"> Certificate No : <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="certificatenumber" name="certificatenumber">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Expiry Date<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" id="documentexpirydates" name="documentexpirydates" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Select Document to Upload: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="file" id="inputFileselector" name="inputFileselector[]">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary btn_UploadRegisterDocuments_Details" type="button" id="btn_UploadRegisterDocuments_Details" name="btn_UploadRegisterDocuments_Details">Upload Document</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+

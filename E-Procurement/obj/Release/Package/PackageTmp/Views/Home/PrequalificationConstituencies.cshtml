@@ -1,0 +1,16 @@
+﻿@model IEnumerable<E_Procurement.Models.ResponsibilityCenter>
+
+@{
+    ViewBag.Title = "PrequalificationConstituencies";
+    Layout = null;
+}
+<select class="form-control select2" id="dropdownconstituencies" name="dropdownconstituencies" data_live_search="true">
+    <option value="">--Select Constituency---</option>
+    <optgroup label="All Constituencies List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.code">@item.name</option>
+        }
+    </optgroup>
+</select>
+

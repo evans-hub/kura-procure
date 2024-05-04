@@ -1,0 +1,180 @@
+﻿@model E_Procurement.Models.SignupModel
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/logo.png">
+    <title>KURA E-Procurement</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/CustomCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/material-dashboard-new.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/ladda-themeless.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Main.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="/Home/index" class="logo">
+                    <img src="~/assets/img/seeklogo.png" width="80" height="60" alt="">
+                </a>
+            </div>
+            @*<div class="page-title-box pull-left">
+                    <h3>Kenya Rural Roads Authority</h3>
+                </div>*@
+            <ul class="nav navbar-nav navbar-right user-menu pull-right">
+                        
+                <li>
+                    <a href="/Home/Login">Login</a>
+                </li>
+               
+                <li>
+                    <a href="#">Help desk</a>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="edit-profile.html">Edit Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        @* Loader when request is being executed *@
+       <div id="divLoader" style="display:none;">
+           <div class="loading-overlay">
+               <div class="inner">
+                   <img src="~/assets/img/load.gif" title="Loading" class="img-responsive center-block" />
+               </div>
+           </div>
+       </div>
+        
+        <div class="page-wrapper job-wrapper">
+            <div class="content container" style="width:100%">
+                <h2 class="text-center">Supplier Registration Request Form<i><p class="page-title">(Provide your valid Company registration details)</p></i></h2>             
+              
+                <div class="main-wrapper">
+                    <div class="row">
+                        <div class="content container-fluid">
+                            <div class="content">
+                                <div class="card">                                    
+                                    <div class="panel-body">
+                                      @*  <div id="feedback" style="display: none" data-dismiss="alert"></div>*@
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="control-label"><b>Registered Business Name</b> <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="supplierbusinessname" id="supplierbusinessname">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="control-label"><b>Tax Registration (PIN) No</b><span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="text" name="taxregistration" id="taxregistration">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="control-label"><b>Contact Person (Name)</b> <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" name="contactperson" id="contactperson">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="control-label"><b> Primary Email Address</b> <span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="email" name="supplieremailaddress" id="supplieremailaddress">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label class="control-label"><b> Mobile Phone No</b><span class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" name="phonenumber" id="phonenumber">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    @*<div class="invalid-feedback">
+                                                        You must agree before submitting.<a href="~/Downloads/Terms and Conditions.pdf">Read Terms & Condition</a>
+                                                    </div>*@
+                                                    <label class="control-label"><b>Terms and Conditions</b></label>
+                                                    <p>@ViewBag.Terms</p>
+                                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" name="invalidCheck" required>
+                                                    <label class="control-label"> Agree to terms and conditions: <span class="text-danger">*</span></label>
+                                                  
+                                                    
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-6 col-lg-6">
+                                                    <a href="/Home/index" class="btn btn-danger">
+                                                        Cancel
+                                                    </a>
+                                                </div>
+                                                <div class="col-md-6 col-lg-6">
+                                                    <button class="btn btn-primary pull-right ladda-button btn_supplierregister" id="btn_supplierregister" name="btn_supplierregister" type="submit" data-style="slide-right" data-background-color="darkgreen">
+                                                        <span class="ladda-label">
+                                                            Submit Registration
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<center>
+                                            <button class="btn btn-primary center-modal btn_supplierregister" id="btn_supplierregister" name="btn_supplierregister" type="button">Submit Registration</button>
+                                        </center>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        @Html.Action("NavigationFooter", "Home")
+    </footer>
+    
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/supplierRegistration.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/sweetalert.min.js"></script>
+    <!-- Sweet Alert Js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+</body>
+</html>
+

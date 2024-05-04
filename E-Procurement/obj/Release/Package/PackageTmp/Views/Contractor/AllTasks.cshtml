@@ -1,0 +1,368 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    ViewBag.Title = "AllTasks";
+    int AllTasksCounter = 0;
+    int OpenTasksCounter = 0;
+    int PendingTasksCounter = 0;
+    int CompletedasksCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title">All Project Tasks</h4>
+        </div>
+    </div>
+    <div class="col-xs-4" style="width:100%">
+        <h4 class="page-title"><u>Welcome to i-RMS Systems</u></h4>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active" style="background-color:#D3D3D3">
+            <a href="#active_tasks" data-toggle="tab"><p style="color:black"><strong>All Active Tasks</strong> </p></a>
+        </li>
+        <li style="background-color:#D3D3D3">
+            <a href="#open_tasks" data-toggle="tab"><p style="color:black"><strong>All Open Tasks</strong></p></a>
+        </li>
+        <li style="background-color:#D3D3D3">
+            <a href="#pending_tasks" data-toggle="tab"><p style="color:black"><strong>All Pending/Late Tasks</strong></p></a>
+        </li>
+        <li style="background-color:#D3D3D3">
+            <a href="#completed_tasks" data-toggle="tab"><p style="color:black"><strong>All Completed Tasks</strong></p></a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="active_tasks">
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Seacrh by  Procurement Method</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Project No.</th>
+                                    <th>Region Code</th>
+                                    <th>Road Section</th>
+                                    <th>Start Point(KMs)</th>
+                                    <th>End Point(KMs)</th>
+                                    <th>Surface Types</th>
+                                    <th>Road Condition</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Completed Length(KMs)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProjectTasksModel item in Model.ActiveProjectTasksDetails)
+                                {
+                                    AllTasksCounter++;
+                                    <tr>
+                                        <td>
+                                            @AllTasksCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Job_No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Surface_Types)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Road_Condition)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Completed_Length_Km)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="open_tasks">
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by  Procurement Method</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Project No.</th>
+                                    <th>Region Code</th>
+                                    <th>Road Section</th>
+                                    <th>Start Point(KMs)</th>
+                                    <th>End Point(KMs)</th>
+                                    <th>Surface Types</th>
+                                    <th>Road Condition</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Completed Length(KMs)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProjectTasksModel item in Model.OpenProjectTasksDetails)
+                                {
+                                    OpenTasksCounter++;
+                                    <tr>
+                                        <td>
+                                            @OpenTasksCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Job_No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Surface_Types)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Road_Condition)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Completed_Length_Km)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pending_tasks">
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by  Procurement Method</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Project No.</th>
+                                    <th>Region Code</th>
+                                    <th>Road Section</th>
+                                    <th>Start Point(KMs)</th>
+                                    <th>End Point(KMs)</th>
+                                    <th>Surface Types</th>
+                                    <th>Road Condition</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Completed Length(KMs)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProjectTasksModel item in Model.PendingProjectTasksDetails)
+                                {
+                                    PendingTasksCounter++;
+                                    <tr>
+                                        <td>
+                                            @PendingTasksCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Job_No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Surface_Types)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Road_Condition)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Completed_Length_Km)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="completed_tasks">
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by  Procurement Method</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Project No.</th>
+                                    <th>Region Code</th>
+                                    <th>Road Section</th>
+                                    <th>Start Point(KMs)</th>
+                                    <th>End Point(KMs)</th>
+                                    <th>Surface Types</th>
+                                    <th>Road Condition</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Completed Length(KMs)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProjectTasksModel item in Model.CompletedProjectTasksDetails)
+                                {
+                                    CompletedasksCounter++;
+                                    <tr>
+                                        <td>
+                                            @CompletedasksCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Job_No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Point_Km)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Surface_Types)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Road_Condition)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Start_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Completed_Length_Km)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

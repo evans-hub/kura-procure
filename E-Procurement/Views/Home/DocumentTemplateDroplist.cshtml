@@ -1,0 +1,19 @@
+﻿@model IEnumerable<E_Procurement.Models.DocumentsTModel>
+
+@{
+
+
+    ViewBag.Title = "DocumentTemplateDroplist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+}
+<select class="form-control select2" id="ddldocumentdroplist_rfi" name="ddldocumentdroplist_rfi" data_live_search="true">
+    <option value="">--Select Document--</option>
+    <optgroup label="Mandatory Documents List">
+        @foreach (var item in Model)
+        {
+          <option value="@item.Procurement_Document_Type_ID">@item.Description</option>
+        }
+    </optgroup>
+</select>
+

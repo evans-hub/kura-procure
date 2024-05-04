@@ -1,0 +1,15 @@
+﻿@model IEnumerable<E_Procurement.Models.DocumentsTModel>
+@{
+    ViewBag.Title = "PrequalificationsDocumentsListdocs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
+}
+<select class="form-control select2" id="ddlprequalificationdocumentdroplist_rfi" name="ddlprequalificationdocumentdroplist_rfi" data_live_search="true" onchange="return getSelectedExpiryDatesPrequalification()">
+    <optgroup label="Mandatory Documents List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Procurement_Document_Type_ID">@item.Description</option>
+        }
+    </optgroup>
+</select>
+

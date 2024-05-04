@@ -1,0 +1,2207 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    ViewBag.Title = "FileNewWorkExecutionPlan";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int linescounter = 0;
+    int Staffcounter = 0;
+}
+<div class="content">
+    <div class="card-box tab-box">
+        <center><h2>Project Work Execution Plan</h2></center>
+        <div class="row user-tabs">
+            <div class="col-lg-12 col-md-12 col-sm-12 line-tabs">
+                <div class="stepwizard">
+                    <div class="stepwizard-row setup-panel">
+                        <div class="stepwizard-step col-xs-2">
+                            <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                            <p><small>General Details</small></p>
+                        </div>
+                        <div class="stepwizard-step col-xs-2">
+                            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                            <p><small>Work Execution Schedule</small></p>
+                        </div>
+                        <div class="stepwizard-step col-xs-2">
+                            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                            <p><small>Project Personnel</small></p>
+                        </div>
+                        <div class="stepwizard-step col-xs-2">
+                            <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                            <p><small>Equipments Register</small></p>
+                        </div>
+                        <div class="stepwizard-step col-xs-2">
+                            <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                            <p><small>Required Documents</small></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal-body" style="width:100%">
+        <form class="m-b-30" role="form">
+            <div class="panel-primary setup-content" id="step-1">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Project Work Execution Plan General Details</h3>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="tab_1_1">
+                        <div id="workexecutionplanfeedback" style="display: none" data-dismiss="alert"></div>
+                        @foreach (ProjectWorkExecutionPlanModel item in Model.GeneralDetails)
+                        {
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Document No  <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="executionplannumber" name="executionplannumber" value="@item.Document_No" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Commencement Order No  <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="ordernoticeNumber" name="ordernoticeNumber" value="@item.Commencement_Order_ID" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Country/Region No<span class="text-danger">*</span> </label>
+                                        <input class="form-control" type="text" id="contractno" name="contractno" value="@item.Region_ID" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Project No.<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="ProjectNumber" name="ProjectNumber" value="@item.Project_ID" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Project Title<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="projecttitle" name="projecttitle" value="@item.Description" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Contractor No<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="contractorNumber" name="contractorNumber" value="@item.Contractor_No" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Contractor Name<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="projecttitle" name="projecttitle" value="@item.Contractor_Name" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Road Code<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="roadclass" name="roadclass" value="@item.Road_Code" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Project Start Date<span class="text-danger">*</span></label>
+                                        <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="projectstartdate" name="projectstartdate" value="@item.Project_Start_Date" readonly></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Region:</label>
+                                        <input class="form-control " type="text" id="residentengineer" name="residentengineer" value="@item.Region_ID" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Constituency:</label>
+                                        <input class="form-control " type="text" id="residentengineer" name="residentengineer" value="@item.Constituency_ID" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Directorate:</label>
+                                        <input class="form-control " type="text" id="residentengineer" name="residentengineer" value="@item.Directorate_ID" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Department:</label>
+                                        <input class="form-control " type="text" id="residentengineer" name="residentengineer" value="@item.Department_ID" readonly>
+                                    </div>
+                                </div>
+
+                               
+                            </div>
+                                <center>
+                                    <button class="btn btn-primary nextBtn pull-right plannextbutton" id="plannextbutton" name="plannextbutton" type="button">Continue</button>
+                                </center>
+                            }
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-primary setup-content" id="step-2">
+                <div class="panel panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Project Work Execution  Schedule</h3>
+                </div>           
+                <div class="row">                  
+                    <div class="col-md-12">
+                        <div id="workexecutionplanschedulefeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable" id="tbl_projectschedule">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th> Activity No. </th>
+                                        <th> Job Task No.</th>
+                                        <th> Description </th>
+                                        <th> Duration</th>
+                                        <th> Start Date</th>
+                                        <th> End Date</th>
+                                        <th> Edit </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (WEPExecutionLinesModel item in Model.WEPLines)
+                                    {
+                                        linescounter++;
+                                        <tr>
+                                            <td>
+                                                @linescounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Job_No)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Job_Task_No)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Budget_Total_Cost)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Scheduled_Start_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Scheduled_End_Date)
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="EditWEPSchedule('@item.Job_No','@item.Job_Task_No','@item.Description')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                            </td>
+
+                                        </tr>
+                                      }
+                                </tbody>
+                            </table>
+                        </div>
+                        <button class="btn btn-primary nextBtn pull-right plannextbutton" id="plannextbutton" name="plannextbutton" type="button">Next</button>
+
+                    </div>
+                </div>
+            </div>
+            <div id="add_executionplanschedule" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog" style="width:100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Work Execution Plan Schedule</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                  @foreach (ProjectWorkExecutionPlanModel item in Model.GeneralDetails)
+                                  {
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Document No. <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="wepdocumentnumber" name="wepdocumentnumber" value="@item.Document_No" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Project ID <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="wepprojectnumber" name="wepprojectnumber" value="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Activity Description <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="wepprojectdescription" name="wepprojectdescription" value="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Project Task No <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="wepprojecttasknumber" name="wepprojecttasknumber" value="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Schedule Start Date: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" id="schedulastartdate" name="schedulastartdate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Schedule End Date: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" id="scheduleenddate" name="scheduleenddate">
+                                            </div>
+                                            </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Duration: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" id="scheduleenddate" name="scheduleenddate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                  }                                   
+                                </div>
+                                <div class="m-t-20 text-center">
+                                    <button class="btn btn-primary btn_submitexecutionplanschedule_Details" id="btn_submitexecutionplanschedule_Details" name="btn_submitexecutionplanschedule_Details" type="button">Work Execution Plan Schedule</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-3">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Contractor Project Team</h3>
+                </div>              
+                <div class="panel-body">
+                    <div class="col-xs-8 text-right m-b-30 pull-right">
+                        <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_personnel"><i class="fa fa-plus"></i> Add Contractor Personnel</a>
+                    </div>
+                    <div class="row">                     
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="personnelfeedback" style="display: none" data-dismiss="alert"></div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable" id="tbl_personel_WEP">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Staff No. </th>
+                                                <th>Name</th>
+                                                <th>Address </th>
+                                                <th>City</th>
+                                                <th>Post Code</th>
+                                                <th>Country</th>
+                                                <th>Edit </th>
+                                                <th>Delete </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (WEPContractorTeamModel item in Model.WEPTeam)
+                                            {
+                                               Staffcounter++;
+                                                <tr>
+                                                    <td>
+                                                        @Staffcounter
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Contractor_Staff_No)
+
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Name)
+
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Address)
+
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.City)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Post_Code)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Country_Region_Code)
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-success" onclick="EditBankDetails('@item.Contractor_Staff_No')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-danger" onclick="DeleteBank('@Url.Action("", "", new { items = @item.Contractor_Staff_No })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+
+                                                    </td>
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn btn-primary nextBtn pull-right plannextbutton" id="plannextbutton" name="plannextbutton" type="button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="add_personnel" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog" style="width:100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Contractor Key Personnel</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Contractor No <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="contractornumber" name="contractornumber" value="@Session["vendorNo"]" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Contractor Staff No <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="staffnumber" name="staffnumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Staff Name</label>
+                                            <input class="form-control" type="text" id="staffname" name="staffname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Staff Email Address: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="emailaddress" name="emailaddress">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Address: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="staffaddress" name="staffaddress">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Address 2: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="staffaddress2" name="staffaddress2">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">City: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="staffcity" name="staffcity">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Country/Region: <span class="text-danger">*</span></label>
+                                            @Html.Action("ContractorStaffCountryList", "Contractor")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Post Code: <span class="text-danger">*</span></label>
+                                            @Html.Action("ContractorPostCodesList", "Contractor")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Mobile Phone Number: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="mobilenumber" name="mobilenumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Role/Designation: <span class="text-danger">*</span></label>
+                                            @Html.Action("ProjectStaffRoleCodeList", "Contractor")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Staff Category: <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="staffcategory" name="staffcategory">
+                                                <option value="">--Select Staff Category Type--</option>
+                                                <option value="1">Management/Executive Staff</option>
+                                                <option value="2">Technical Staff</option>
+                                                <option value="3">Consultant</option>
+                                                <option value="4">Project Mgt Staff</option>
+                                                <option value="5">Site/Delivery Staff</option>
+                                                <option value="6">Support Staff</option>
+                                                <option value="7">Others</option>
+                                            </select>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Effective Date: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" id="staffeffectivedate" name="staffeffectivedate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-20 text-center">
+                                        <button class="btn btn-primary btn_submitcontractorteam_Details" id="btn_submitcontractorteam_Details" name="btn_submitcontractorteam_Details" type="button">Submit Staff Details</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-4">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Project Equipments Register Details</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-8 text-right m-b-30 pull-right">
+                            <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_equipments"><i class="fa fa-plus"></i> Add Project Equipments</a>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="equipementdetailsfeedback" style="display: none" data-dismiss="alert"></div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable" id="tbl_projectequipments_contractorregister">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th> Equipment No</th>
+                                                <th> Equipment Type</th>
+                                                <th> Ownership Type </th>
+                                                <th> Equipment Serial No</th>
+                                                <th> Equipment Usability </th>
+                                                <th> Year of Previous Use</th>
+                                                <th> Edit </th>
+                                                <th> Delete </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (WEPContractorEquipment item in Model.Equipment)
+                                            {
+                                                Staffcounter++;
+                                                <tr>
+                                                    <td>
+                                                        @Staffcounter
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Equipment_No)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Equipment_Type_Code)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Ownership_Type)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Equipment_Serial_No)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Equipment_Usability_Code)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Years_of_Previous_Use)
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-success" onclick="EditBankDetails('@item.Equipment_No')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-danger" onclick="DeleteBank('@Url.Action("", "", new { items = @item.Equipment_No })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn btn-primary nextBtn pull-right plannextbutton" id="plannextbutton" name="plannextbutton" type="button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                @*<div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Project Equipments Repar Plan</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-8 text-right m-b-30 pull-right">
+                            <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_equipments_repairment_plan"><i class="fa fa-plus"></i> Add Project Equipments Repair Plan</a>
+                        </div>
+                        <div id="banksfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable" id="tbl_projectequipmentsRepair_Details">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th> Equipment No</th>
+                                                <th> Equipment Type</th>
+                                                <th> Ownership Type </th>
+                                                <th> Equipment Serial No</th>
+                                                <th> Equipment Usability </th>
+                                                <th> Year of Previous Use</th>
+                                                <th> Edit </th>
+                                                <th> Delete </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+            </div>*@
+            <div id="add_equipments" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog" style="width:100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Contractor Key Equipments</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Contractor No <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="contractorNumber" name="contractorNumber" value="@Session["vendorNo"]" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment No:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="equipmentnumber" name="equipmentnumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equiment Type</label>
+                                            @Html.Action("ContractorEquipmentTypeLists", "Contractor")
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment Description: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="equipemntdescription" name="equipemntdescription">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment Ownership Type: <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="equipmentownershiptype" name="equipmentownershiptype">
+                                                <option value="">--Select Equipment Ownership Type--</option>
+                                                <option value="1">Owned</option>
+                                                <option value="2">Leased</option>
+                                                <option value="3">Purchase Proposal</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment Serial No.: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="equipmentserialnumber" name="equipmentserialnumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment Usability: <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="equipmentusabilitycode" name="equipmentusabilitycode">
+                                                <option value="">--Select Equipment Usability--</option>
+                                                <option value="1">Excellent</option>
+                                                <option value="2">Good</option>
+                                                <option value="3">Fair</option>
+                                                <option value="3">Beyond Useful Life</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Years of Previous Use: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="yearsofprevioususe" name="yearsofprevioususe">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment Condition: <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="equipmentconditiontype" name="equipmentconditiontype">
+                                                <option value="">--Select Equipment Usability--</option>
+                                                <option value="1">New Eqpm</option>
+                                                <option value="2">Reconditioned Eqpm</option>
+                                                <option value="3">Serviced Eqpm</option>
+                                            </select>
+                                        </div>
+                                    </div>                                   
+                                  
+                                </div>
+                                <div class="m-t-20 text-center">
+                                    <button class="btn btn-primary btn_submitContractorEquipment_Details" id="btn_submitContractorEquipment_Details" name="btn_submitContractorEquipment_Details" type="button">Submit Equipments Details</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            @*<div id="add_equipments_repairment_plan" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog" style="width:100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Equipments Repairment Plan</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Contractor No <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="guarantorname" name="guarantorname" value="@Session["vendorNo"]" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment No:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="issueroffices" name="issueroffices">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment Description: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="issueroffices" name="issueroffices">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Maintenance Type: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="biddescriptions" name="biddescriptions">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">To-Do Description: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="biddescriptions" name="biddescriptions">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Equipment Usability: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="biddescriptions" name="biddescriptions">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Schedule Date: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control" id="biddescriptions" name="biddescriptions">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Responsible Person: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="biddescriptions" name="biddescriptions">
+                                        </div>
+                                    </div>
+                                    <div class="m-t-20 text-center">
+                                        <button class="btn btn-primary btn_submitBidSecurity_Details" id="btn_submitBidSecurity_Details" name="btn_submitBidSecurity_Details" type="button">Submit Staff Details</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>*@
+            <div id="add_banks" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Bank Details</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bank Code: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="bankcode" name="bankcode">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bank Name:</label>
+                                            <input class="form-control" type="text" id="bankname" name="bankname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Country: <span class="text-danger">*</span></label>
+                                            @Html.Action("VendorBanksCountryList", "Home")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bank Account No. <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="bankaccountno" name="bankaccountno">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Currency Code:</label>
+                                            <input class="form-control" type="text" id="currencyCode" name="currencyCode">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bank Branch Code: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="bankbranchno" name="bankbranchno">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Phone Number: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="phonenumber" name="phonenumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Post Code: <span class="text-danger">*</span></label>
+                                            @Html.Action("PostalCodeList", "Home")
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="m-t-20 text-center">
+                                <button class="btn btn-primary btn_submitVendorBanks" id="btn_submitVendorBanks" name="btn_submitVendorBanks" type="button">Submit Bank Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="delete_banks_modal" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-md">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Delete Bank Details</h4>
+                        </div>
+                        <div class="modal-body card-box">
+                            <p>Are you sure want to delete this Bank?</p>
+                            <div class="m-t-20">
+                                <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-5">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Project Work Execution Documents</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active" style="background-color:gray">
+                            <a href="#tab_1_documents" data-toggle="tab"><p style="color:black">Required Project Works Documents </p></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_attach" data-toggle="tab"><p style="color:black">Attach Document </p></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_attached" data-toggle="tab"><p style="color:black">Attached Document </p></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab_1_documents">
+                            <div class="row">
+                                <p>You are required to submit scanned copies of the following sets of documents, as part of your Registration process. Click on the Attach Documents Link, when ready to attach the supporting documents.</p>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Procurement Document Type</th>
+                                                    <th>Description</th>
+                                                    <th>Requirement Type</th>
+
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary nextBtn pull-right" type="button">Submit Execution Plan</button>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_1_attach">
+                            <div id="keydocumentsuploadfeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="progress progress-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                            </div>
+                            <div class="row">
+                                <p>This Section enables you to upload scanned copies of the supporting documents required as part of this Registration process.</p>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Document to Upload: <span class="text-danger">*</span></label>
+                                        @Html.Action("RegisterDocumentTemplateDroplist", "Home")
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">External Document (Certificate No): <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="certificatenumber" name="certificatenumber">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Issue Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="issuedates" name="issuedates"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Expiry Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="documentexpirydates" name="documentexpirydates"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Select Document:<span class="text-danger">*</span></label>
+                                        <input type="file" class="form-control" id="inputFileselector" name="inputFileselector[]" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <center>
+                                <button class="btn btn-primary btn_UploadDocuments_Details" id="btn_UploadDocuments_Details" name="btn_UploadDocuments_Details" type="button">Upload Document </button>
+                            </center>
+                        </div>
+
+                        <div class="tab-pane fade " id="tab_1_attached">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tab_supplier_registered_Documents" name="tab_supplier_registered_Documents">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Description</th>
+                                                    <th>Date Filed</th>
+                                                    <th>Issue Date</th>
+                                                    <th>Expiry Date</th>
+                                                    <th>File Name</th>
+                                                    <th>Download</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="add_shareholders" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog" style="width:100%">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Shareholder Details</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Director Name : <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="directorname" name="directorname">
+                                        </div>
+                                    </div>
+                                    @*<div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Nationality Name:</label>
+                                                @Html.Action("CountriesList", "Home")
+                                            </div>
+                                        </div>*@
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">ID Number: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="idnumbers" name="idnumbers">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Citizenship Type <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="citizenship" name="citizenship">
+                                                <option value="">--Select Citizenship Type--</option>
+                                                <option value="1">Birth</option>
+                                                <option value="2">Naturalization</option>
+                                                <option value="3">Registration</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Ownership Percentage(%) </label>
+                                            <input class="form-control" type="text" id="ownershippercentage" name="ownershippercentage">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Phone Number: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="phonenumbers" name="phonenumbers">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Address: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="shareholderaddress" name="shareholderaddress">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Email Address: <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="emailaddress" name="emailaddress">
+                                        </div>
+                                    </div>
+                                    @*<div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">City: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="shareholdercity" name="shareholdercity">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Citizenship: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="citizenship" name="citizenship">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Entity Ownership: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="entityownership" name="entityownership">
+                                            </div>
+                                        </div>*@
+                                    @*<div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">No. of Shares: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="noofshares" name="noofshares">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Nominal Value Shares: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="nominalvalue" name="nominalvalue">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Total Nominal Value: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="totalnominalvalue" name="totalnominalvalue">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Ownership Effective Date: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="ownershipdate" name="ownershipdate">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Post Code: <span class="text-danger">*</span></label>
+                                                @Html.Action("PostalCodeList", "Home")
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">County: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="county" name="county">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Date of Birth: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control datetimepicker" id="dateofbirth" name="dateofbirth">
+                                            </div>
+                                        </div>*@
+                                    <div class="m-t-20 text-center">
+                                        <button class="btn btn-primary btn_submitShareholders_Details" id="btn_submitShareholders_Details" name="btn_submitShareholders_Details" type="button">Submit Shareholder Details</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="delete_shareholders_modal" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-md">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Delete Shareholders Details</h4>
+                        </div>
+                        <div class="modal-body card-box">
+                            <p>Are you sure want to delete this Shareholder?</p>
+                            <div class="m-t-20">
+                                <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-6">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Litigation History Details</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <h4 class="page-title"><u>Litigation History Details</u></h4>
+                        </div>
+                        <div class="col-xs-8 text-right m-b-30">
+                            <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_litigation"><i class="fa fa-plus"></i> Add Litigation History</a>
+
+                        </div>
+                        <h5>Please provide a summary of any litigation and arbitration history for your Organization</h5>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <div id="litigationfeedback" style="display: none" data-dismiss="alert"></div>
+                                    <table class="table table-striped custom-table datatable" id="tbl_litigation_history">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Category of Dispute </th>
+                                                <th>Description of Dispute matter</th>
+                                                <th>Dispute Party</th>
+                                                <th>Dispute Amount</th>
+                                                <th>Year</th>
+                                                <th>Award Type</th>
+                                                <th>Edit </th>
+                                                <th>Delete </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                <div id="add_litigation" class="modal custom-modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-content modal-lg">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Add Litigation History</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form class="m-b-30">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label"> Category of Dispute: <span class="text-danger">*</span></label>
+                                                <select data-live-search="true" class="form-control input-circle select2" id="disputecategory" name="disputecategory">
+                                                    <option value="">--Select Category of Dispute--</option>
+                                                    <option value="1">Litigation</option>
+                                                    <option value="2">Arbitration</option>
+                                                    <option value="3">Mediation</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Description of Dispute Matter:</label>
+                                                <input class="form-control" type="text" id="disputedescription" name="disputedescription">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Dispute Amount: <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="number" id="disputeamounts" name="disputeamounts">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Dispute Parties<span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" id="disputeparties" name="disputeparties">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Year</label>
+                                                <input class="form-control" type="number" id="litigationyear" name="litigationyear">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Award Type: <span class="text-danger">*</span></label>
+                                                <select data-live-search="true" class="form-control input-circle select2" id="awardtype" name="awardtype">
+                                                    <option value="">--Select Award Type--</option>
+                                                    <option value="1">Pending verdict</option>
+                                                    <option value="2">Won</option>
+                                                    <option value="3">Lost</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-20 text-center">
+                                        <button class="btn btn-primary btn_litigation_history" id="btn_litigation_history" name="btn_litigation_history" type="button">Submit Litigation History</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="delete_litigation_modal" class="modal custom-modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content modal-md">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Delete Litigation History Details</h4>
+                            </div>
+                            <div class="modal-body card-box">
+                                <p>Are you sure want to delete this Litigation History?</p>
+                                <div class="m-t-20">
+                                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-7">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title"><u>Past Experience</u></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <h4 class="page-title"><u>Past Experience Details</u></h4>
+                        </div>
+                        <div class="col-xs-8 text-right m-b-30">
+                            <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_pastexperience"><i class="fa fa-plus"></i> Add Past Experience</a>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="pastexperiencefeedback" style="display: none" data-dismiss="alert"></div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable" id="tbl_past_Experience">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th> Client Name </th>
+                                                <th> Address </th>
+                                                <th> Assignment / Project </th>
+                                                <th> Project Start Date </th>
+                                                <th> Project End Date </th>
+                                                <th> Project Value </th>
+                                                <th> Contract Ref </th>
+                                                <th> Edit </th>
+                                                <th> Delete </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+            </div>
+            <div id="add_pastexperience" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Past Experience</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Client Name: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="clientname" name="clientname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Assignment / Project: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="projectassignment" name="projectassignment">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Project Start Date:<span class="text-danger">*</span></label>
+                                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="projectstartdate" name="projectstartdate"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Address:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="experienceaddress" name="experienceaddress">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Project End Date:<span class="text-danger">*</span></label>
+                                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="projectenddate" name="projectenddate"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Project Scope Summary: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="projectscopes" name="projectscopes">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Project Value: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="projectvalue" name="projectvalue">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Contract Ref No: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="contractRef" name="contractRef">
+                                        </div>
+                                    </div>
+                                    <div class="m-t-20 text-center">
+                                        <button class="btn btn-primary btn_past_experience" id="btn_past_experience" name="btn_past_experience" type="button">Submit Past Experience</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="delete_pastexperience_modal" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-md">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Delete Litigation History Details</h4>
+                        </div>
+                        <div class="modal-body card-box">
+                            <p>Are you sure want to delete this Litigation History?</p>
+                            <div class="m-t-20">
+                                <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-8">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Audited Financial Statements</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <ul class="nav nav-tabs">
+                            <li class="active" style="background-color:#006400">
+                                <a href="#tab_balance_sheet" data-toggle="tab"><p style="color:black"> Balance Sheet Summary</p></a>
+                            </li>
+                            <li style="background-color:#006400">
+                                <a href="#tab_income_statement" data-toggle="tab"><p style="color:black">Income Statement Summary</p> </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+
+                            <div class="tab-pane fade active in" id="tab_balance_sheet">
+                                <div id="balancesheetfeedback" style="display: none" data-dismiss="alert"></div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Year Code: <span class="text-danger">*</span></label>
+                                        @Html.Action("YearCodesList", "Home")
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Current Assets: <span class="text-danger">*</span></label>
+                                        <input class="form-control " type="number" id="totalcurrentassets" name="totalcurrentassets">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Fixed Assets:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="totalfixedassets" name="totalfixedassets" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Current Liabilities:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="totalcurrentliabilities" name="totalcurrentliabilities" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Long-Term Liabilities:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="totallongtermliabilities" name="totallongtermliabilities" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Owner's Equity:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="totalownersequity" name="totalownersequity" />
+                                    </div>
+                                </div>
+                                <diV class="row">
+                                    <center><button class="btn btn-primary  pull-right btn_balancesheet_details" id="btn_balancesheet_details" name="btn_balancesheet_details" type="button">Submit Balance Sheet Details</button></center>
+                                </diV>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped custom-table datatable" id="tab_balancesheet_details">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th> Year Code </th>
+                                                        <th> Total Current Assets</th>
+                                                        <th> Total Fixed Assets</th>
+                                                        <th> Total Current Liabilities </th>
+                                                        <th> Total Long-Term Liabilities </th>
+                                                        <th>Total Owner's Equity</th>
+                                                        <th>Edit  </th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                            </div>
+
+                            <div class="tab-pane fade" id="tab_income_statement">
+                                <div id="incometstatementfeedback" style="display: none" data-dismiss="alert"></div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Year Code: <span class="text-danger">*</span></label>
+                                        @Html.Action("IncomeYearCodesList", "Home")
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Revenue: <span class="text-danger">*</span></label>
+                                        <input class="form-control " type="number" id="totalrevenue" name="totalrevenue">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Cost of Goods Sold:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="totalcogs" name="totalcogs" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Total Operating Expenses:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="totaloperatingexpenses" name="totaloperatingexpenses" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label"> Other Non-Operating Revenue/Expense:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="othernonoperatingexpenses" name="othernonoperatingexpenses" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Interest Expense:<span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="interstexpense" name="interstexpense" />
+                                    </div>
+                                </div>
+                                <diV class="row">
+                                    <center><button class="btn btn-primary  pull-right btn_incomestatement_details" id="btn_incomestatement_details" name="btn_incomestatement_details" type="button">Submit Income Statement Details</button></center>
+                                </diV>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped custom-table datatable" id="tb_incomestattement_Details">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th> Year Code </th>
+                                                        <th> Total Revenue</th>
+                                                        <th> Total Cost of Goods Sold</th>
+                                                        <th> Total Operating Expenses </th>
+                                                        <th> Other Non-Operating Revenue/Expense </th>
+                                                        <th> Interest Expense </th>
+                                                        <th>Edit</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-9">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Details of Key Professional Staff</h3>
+                </div>
+                <div id="keyprofessionalfeedback" style="display: none" data-dismiss="alert"></div>
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Staff Number: <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="staffnumber" name="staffnumber">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label"> Staff Name: <span class="text-danger">*</span></label>
+                            <input class="form-control " type="text" id="keystaffname" name="keystaffname">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label"> Profession:<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="staffprofession" name="staffprofession" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Current Designation:<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control " id="currentDesignation" name="currentDesignation" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Date of Birth:<span class="text-danger">*</span></label>
+                            <div class="cal-icon">
+                                <div class="cal-icon">
+                                    <input type="text" class="form-control datetimepicker" id="personnneldob" name="personnneldob" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Joining Date:<span class="text-danger">*</span></label>
+                            <div class="cal-icon"><input type="text" class="form-control datetimepicker" id="personneljoiningDate" name="personneljoiningDate" /></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Years with the Firm:<span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="yearswithfarm" name="yearswithfarm" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Phone No:<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="personnelphonenumber" name="personnelphonenumber" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Nationality:<span class="text-danger">*</span></label>
+                            @Html.Action("KeyStaffCountriesList", "Home")
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Email Address:<span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="personnelemailaddress" name="personnelemailaddress" />
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn_keypersonnel_Details" id="btn_keypersonnel_Details" name="btn_keypersonnel_Details" type="button">Submit Key Personnel </button>
+                    <button class="btn btn-primary nextBtn pull-right" type="button" style="display:none">Continue</button>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-10">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h3 class="panel-title">Mandatory Documents</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active" style="background-color:gray">
+                            <a href="#tab_1_documents" data-toggle="tab"><p style="color:black"><strong>Required Registration Documents</strong> </p></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_attach" data-toggle="tab"><p style="color:black">Attach Document </p></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_attached" data-toggle="tab"><p style="color:black">Attached Document </p></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab_1_documents">
+                            <div class="row">
+                                <p>You are required to submit scanned copies of the following sets of documents, as part of your Registration process. Click on the Attach Documents Link, when ready to attach the supporting documents.</p>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Procurement Document Type</th>
+                                                    <th>Description</th>
+                                                    <th>Requirement Type</th>
+
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_1_attach">
+                            <div id="keydocumentsuploadfeedback" style="display: none" data-dismiss="alert"></div>
+                            <!-- The global progress bar -->
+                            <div class="progress progress-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                            </div>
+                            <div class="row">
+                                <p>This Section enables you to upload scanned copies of the supporting documents required as part of this Registration process.</p>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Document to Upload: <span class="text-danger">*</span></label>
+                                        @Html.Action("RegisterDocumentTemplateDroplist", "Home")
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">External Document (Certificate No): <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="certificatenumber" name="certificatenumber">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Issue Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="issuedates" name="issuedates"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Expiry Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="documentexpirydates" name="documentexpirydates"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Select Document:<span class="text-danger">*</span></label>
+                                        <input type="file" class="form-control" id="inputFileselector" name="inputFileselector[]" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <center>
+                                <button class="btn btn-primary btn_UploadDocuments_Details" id="btn_UploadDocuments_Details" name="btn_UploadDocuments_Details" type="button">Upload Document </button>
+                            </center>
+                        </div>
+                        <div class="tab-pane fade " id="tab_1_attached">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tab_supplier_registered_Documents" name="tab_supplier_registered_Documents">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Description</th>
+                                                    <th>Date Filed</th>
+                                                    <th>Issue Date</th>
+                                                    <th>Expiry Date</th>
+                                                    <th>File Name</th>
+                                                    <th>Download</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        function DeleteBank(url) {
+            console.log(JSON.stringify(url))
+            Swal.fire({
+                title: "Delete Bank Details",
+                text: "Proceed to delete the selected Bank?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Delete!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                    }).done(function (status) {
+                        var registerstatus = status.split('*');
+                        status = registerstatus[0];
+                        switch (status) {
+                            case "success":
+                                Swal.fire
+                                ({
+                                    title: "Bank Deleted!",
+                                    text: "Bank Deleted Successfully!",
+                                    type: "success"
+                                }).then(() => {
+                                    $("#keydocumentsuploadfeedback").css("display", "block");
+                                    $("#keydocumentsuploadfeedback").css("color", "green");
+                                    $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                    $("#keydocumentsuploadfeedback").html("Selected Bank has been Deleted Successfully!");
+                                    $("#keydocumentsuploadfeedback").css("display", "block");
+                                    $("#keydocumentsuploadfeedback").css("color", "green");
+                                });
+                            default:
+                                Swal.fire
+                                ({
+                                    title: "Bank Deletion Error!!!",
+                                    text: "Bank Could not be deleted.Kindly Tray Again Later",
+                                    type: "error"
+                                }).then(() => {
+                                    $("#keydocumentsuploadfeedback").css("display", "block");
+                                    $("#keydocumentsuploadfeedback").html("Selected Bank Could Not be Deleted. Kindly Try Again Later!");
+                                    $("#keydocumentsuploadfeedback").css("color", "red");
+                                    $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                });
+                                break;
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Bank Deletion Cancelled',
+                        'You cancelled your bank details deletion!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function DeleteShareholder(url) {
+            Swal.fire({
+                title: "Delete Shareholdets Details",
+                text: "Proceed to delete the selected Shareholder?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Delete!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        success: function (status) {
+                            var deletes = status.split('*');
+                            status = deletes[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                    ({
+                                        title: "Shareholder Deleted!",
+                                        text: "Shareholder Deleted Successfully!",
+                                        type: "success"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                        $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                        $("#keydocumentsuploadfeedback").html("Selected Shareholder has been Deleted Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                    });
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Shareholder Deletion Error!!!",
+                                        text: "Shareholder Details Could not be deleted.Kindly Tray Again Later",
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").html("Selected Shareholder Could Not be Deleted. Kindly Try Again Later!");
+                                        $("#keydocumentsuploadfeedback").css("color", "red");
+                                        $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                    });
+                                    break;
+                            }
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Shareholder Deletion Cancelled',
+                        'You cancelled your Shareholder details deletion!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function DeleteLitigation(url) {
+            Swal.fire({
+                title: "Delete Litigation History Details",
+                text: "Proceed to delete the selected Litigation History Details?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Delete!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        success: function (status) {
+                            var deletes = status.split('*');
+                            status = deletes[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                    ({
+                                        title: "Litigation History Deleted!",
+                                        text: "Litigation History Deleted Successfully!",
+                                        type: "success"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                        $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                        $("#keydocumentsuploadfeedback").html("Selected Litigation History has been Deleted Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                    });
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Litigation History Deletion Error!!!",
+                                        text: "Litigation History Details Could not be deleted.Kindly Tray Again Later",
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").html("Selected Litigation History Could Not be Deleted. Kindly Try Again Later!");
+                                        $("#keydocumentsuploadfeedback").css("color", "red");
+                                        $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                    });
+                                    break;
+                            }
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Litigation History Deletion Cancelled',
+                        'You cancelled your Litigation History details deletion!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        function DeletePastExpeience(url) {
+            Swal.fire({
+                title: "Delete Past Experience Details",
+                text: "Proceed to delete the selected Past Experience Details?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Delete!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        success: function (status) {
+                            var deletes = status.split('*');
+                            status = deletes[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                    ({
+                                        title: "Past Experience Details Deleted!",
+                                        text: "Past Experience Details Deleted Successfully!",
+                                        type: "success"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                        $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                        $("#keydocumentsuploadfeedback").html("Selected Past Experince Details has been Deleted Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                    });
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Past Experience Deletion Error!!!",
+                                        text: "Past Experience Details Could not be deleted.Kindly Tray Again Later",
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").html("Selected Past Experience Details Could Not be Deleted. Kindly Try Again Later!");
+                                        $("#keydocumentsuploadfeedback").css("color", "red");
+                                        $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                    });
+                                    break;
+                            }
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Past Experience Deletion Cancelled',
+                        'You cancelled your Past Experinece details deletion!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function DeleteBanlanceSheet(url) {
+            console.log(JSON.stringify(url))
+            Swal.fire({
+                title: "Delete Balance Sheet Details",
+                text: "Proceed to delete the selected Balance Sheet Details?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Delete!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'POST',
+                        url: url,
+                        success: function (status) {
+                            var deletes = status.split('*');
+                            status = deletes[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                    ({
+                                        title: "Balance Sheet Details Deleted!",
+                                        text: "Balance Sheet Details Deleted Successfully!",
+                                        type: "success"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                        $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                        $("#keydocumentsuploadfeedback").html("Selected Balance Sheet Details has been Deleted Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                    });
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Balance Sheet Deletion Error!!!",
+                                        text: "Balance Sheet Details Could not be deleted.Kindly Tray Again Later",
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").html("Selected Balance Sheet  Details Could Not be Deleted. Kindly Try Again Later!");
+                                        $("#keydocumentsuploadfeedback").css("color", "red");
+                                        $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                    });
+                                    break;
+                            }
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Balance Sheet Deletion Cancelled',
+                        'You cancelled your Balance Sheet details deletion!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function DeleteIncome(url) {
+            Swal.fire({
+                title: "Delete Income Statement Details",
+                text: "Proceed to delete the selected Income Statement Details?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Delete!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        success: function (status) {
+                            var deletes = status.split('*');
+                            status = deletes[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                    ({
+                                        title: "Income Statetement Details Deleted!",
+                                        text: "Income Statement Details Deleted Successfully!",
+                                        type: "success"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                        $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                        $("#keydocumentsuploadfeedback").html("Selected Income Statetment Details has been Deleted Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                    });
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Income Statement Deletion Error!!!",
+                                        text: "Income Statement Details Could not be deleted.Kindly Tray Again Later",
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").html("Selected Income Statement Details Could Not be Deleted. Kindly Try Again Later!");
+                                        $("#keydocumentsuploadfeedback").css("color", "red");
+                                        $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                    });
+                                    break;
+                            }
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Income Statement Deletion Cancelled',
+                        'You cancelled your Income Statement details deletion!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function DownloadDocument(url) {
+            Swal.fire({
+                title: "Documents Download",
+                text: "Proceed to download the selected document?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Download!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        success: function (status) {
+                            var uploadsfs = status.split('*');
+                            status = uploadsfs[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                    ({
+                                        title: "Files Downloaded!",
+                                        text: "File Downloded Successfully!",
+                                        type: "success"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                        $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                        $("#keydocumentsuploadfeedback").html("Selected File has been Downloaded Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                    });
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Document Download Error!!!",
+                                        text: "The Document File could not be Downloaded.Kindly Try Again",
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").html("Selected File has Could not be Downloaded Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("color", "red");
+                                        $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                    });
+                                    break;
+                            }
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Document Download Cancelled',
+                        'You cancelled your documents download!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function DocumentsDelete(url) {
+            Swal.fire({
+                title: "Document Deletion",
+                text: "Proceed to delete the selected document?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Delete!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        success: function (status) {
+                            var deletes = status.split('*');
+                            status = deletes[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                    ({
+                                        title: "Files Deleted!",
+                                        text: "File Deleted Successfully!",
+                                        type: "success"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                        $('#keydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                        $("#keydocumentsuploadfeedback").html("Selected File has been Deleted Successfully!");
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").css("color", "green");
+                                    });
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Document Deletion Error!!!",
+                                        text: "File Could not be deleted.Kindly Tray Again Later",
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#keydocumentsuploadfeedback").css("display", "block");
+                                        $("#keydocumentsuploadfeedback").html("Selected File Could Not be Deleted. Kindly Try Again Later!");
+                                        $("#keydocumentsuploadfeedback").css("color", "red");
+                                        $('#keydocumentsuploadfeedback').addClass('alert alert-danger');
+                                    });
+                                    break;
+                            }
+                        }
+                    })
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Document Deletion Cancelled',
+                        'You cancelled your documents deletion!',
+                        'error'
+                    );
+                }
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function EditWEPSchedule(jobnumber, jobtasknumber, description) {
+            $("#wepprojectnumber").val(jobnumber);
+            $("#wepprojecttasknumber").val(jobtasknumber);
+            $("#wepprojectdescription").val(description);
+            $("#add_executionplanschedule").modal();
+        }
+        function EditShareholdersDetails(directorname, idnumber, citizenship, ownership, phone, address, email) {
+            $("#directorname").val(directorname);
+            $("#idnumbers").val(idnumber);
+            $("#citizenship").val(citizenship);
+            $("#ownershippercentage").val(ownership);
+            $("#phonenumbers").val(phone);
+            $("#shareholderaddress").val(address);
+            $("#emailaddress").val(email);
+            $("#add_shareholders").modal();
+        }
+        function EditLitigationsDetails(CategoryofDispute, DisputeDescription, TheotherDisputeparty, DisputeAmount, Year, AwardType) {
+            $("#disputecategory").val(CategoryofDispute);
+            $("#disputedescription").val(DisputeDescription);
+            $("#disputeamounts").val(TheotherDisputeparty);
+            $("#disputeparties").val(DisputeAmount);
+            $("#litigationyear").val(Year);
+            $("#awardtype").val(AwardType);
+            $("#add_litigation").modal();
+        }
+        function EditPastExperienceDetails(Client_Name, Address, Assignment_Project_Name, Assignment_Start_Date, Assignment_End_Date, Total_Nominal_Value, Contract_Ref_No, Project_Scope_Summary) {
+            $("#clientname").val(Client_Name);
+            $("#projectassignment").val(Assignment_Project_Name);
+            $("#projectstartdate").val(Assignment_Start_Date);
+            $("#experienceaddress").val(Address);
+            $("#projectenddate").val(Assignment_End_Date);
+            $("#projectscopes").val(Project_Scope_Summary);
+            $("#contractRef").val(Contract_Ref_No);
+            $("#projectvalue").val(Total_Nominal_Value);
+            $("#add_pastexperience").modal();
+        }
+        function EditBalanceSheetDetails(Audit_Year_Code_Reference, Current_Assets_LCY, Fixed_Assets_LCY, Current_Liabilities_LCY, Long_term_Liabilities_LCY, Owners_Equity_LCY) {
+            $("#totalrevenue").val(Assignment_Start_Date);
+            $("#totalrevenue").val(Assignment_Start_Date);
+            $("#totalcogs").val(Address);
+            $("#totaloperatingexpenses").val(Assignment_End_Date);
+            $("#othernonoperatingexpenses").val(Project_Scope_Summary);
+            $("#interstexpense").val(Contract_Ref_No);
+            $("#add_pastexperience").modal();
+        }
+    </script>
+   

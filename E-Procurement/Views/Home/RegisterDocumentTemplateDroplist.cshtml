@@ -1,0 +1,16 @@
+﻿
+@model IEnumerable<E_Procurement.Models.RegistrationRequiredDocumentsModel>
+@{
+    ViewBag.Title = "RegisterDocumentTemplateDroplist";
+    Layout = null;
+}
+<select class="form-control select2" id="vendoregdocumentdroplist" name="vendoregdocumentdroplist" data_live_search="true" onchange="return getSelectedExpiryDate()" >
+     <optgroup label="Mandatory Documents List">
+        @foreach (var item in Model)
+        {
+            
+            <option value="@item.Procurement_Document_Type">@item.Description</option>
+        }
+    </optgroup>
+</select>
+

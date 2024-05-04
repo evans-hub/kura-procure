@@ -1,0 +1,14 @@
+﻿@model IEnumerable<E_Procurement.Models.Contractor.DropdownListsModel>
+@{
+
+    Layout = null;
+}
+<select class="form-control select2" id="ddlprojectstaffroledropdown" name="ddlprojectstaffroledropdown" data_live_search="true">
+    <option value="">--Select Project Staff Role List--</option>
+    <optgroup label="Project Staff Role List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Description</option>
+        }
+    </optgroup>
+</select>

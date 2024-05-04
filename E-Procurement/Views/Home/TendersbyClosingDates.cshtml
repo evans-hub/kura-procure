@@ -1,0 +1,321 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "TendersbyClosingDates";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int TendersCounter = 0;
+    int TendersCounter1 = 0;
+    int TendersCounter2 = 0;
+    int TendersCounter3 = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>Tenders By Closing Dates</i></h5>
+            </div>
+        </div>
+    </div>
+    <p>Please note that you can view all Active Tenders by their submission due dates.</p>
+    <div class="panel-body" style="width:100%">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a href="#tab_today" data-toggle="tab"><p style="color:black"> Closing Today</p></a>
+            </li>
+            <li style="background-color:lightgray">
+                <a href="#tab_7Days" data-toggle="tab"><p style="color:black">Closing with 7 Days</p> </a>
+            </li>
+            <li style="background-color:lightgray" >
+                <a href="#tab_14Days" data-toggle="tab"><p style="color:black">Closing with 14 Days</p> </a>
+            </li>
+            <li  style="background-color:lightgray">
+                <a href="#tab_closingDates" data-toggle="tab"><p style="color:black">Specific Closing Dates</p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">         
+            <div class="tab-pane fade active in" id="tab_today">
+                <h5>The following Tenders are due for submission today:</h5>
+                <div class="row filter-row">
+                    <div class="col-sm-4 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Search by  Procurement Method</label>
+                            <input type="text" class="form-control floating" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Search by Regions</label>
+                            <input type="text" class="form-control floating" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6">
+                        <a href="#" class="btn btn-success btn-block"> Search </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Notice No.</th>
+                                        <th>External Document No.</th>
+                                        <th>Tender Name</th>
+                                        <th>Procurement Method</th>
+                                        <th>Submission Start Date</th>
+                                        <th>Submission End Date</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   @foreach (TenderModel item in Model.ClosingToday)
+                                   {
+                                       TendersCounter++;
+                                        <tr>
+                                            <td>@TendersCounter</td>
+                                            <td>
+                                                <a href="" onclick="View('@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })')"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.External_Document_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Procurement_Method)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_Start_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i> Apply</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_7Days">
+                <h5>The following Tenders are due for submission within the next 7 Days:</h5>
+                <div class="row filter-row">
+                    <div class="col-sm-4 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Search by  Procurement Method</label>
+                            <input type="text" class="form-control floating" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Search by Regions</label>
+                            <input type="text" class="form-control floating" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6">
+                        <a href="#" class="btn btn-success btn-block"> Search </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Notice No.</th>
+                                        <th>External Document No.</th>
+                                        <th>Tender Name</th>
+                                        <th>Procurement Method</th>
+                                        <th>Submission Start Date</th>
+                                        <th>Submission End Date</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                   @foreach (TenderModel item in Model.Closing7Days)
+                                   {
+                                       TendersCounter1++;
+                                        <tr>
+                                            <td>@TendersCounter1</td>
+                                            <td>
+                                                <a href="" onclick="View('@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })')"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.External_Document_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Procurement_Method)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_Start_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i> Apply</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_14Days">
+                <h5>The following Tenders are due for submission within the next 14 Days:</h5>
+                <div class="row filter-row">
+                    <div class="col-sm-4 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Search by  Procurement Method</label>
+                            <input type="text" class="form-control floating" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Search by Regions</label>
+                            <input type="text" class="form-control floating" />
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6">
+                        <a href="#" class="btn btn-success btn-block"> Search </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Notice No.</th>
+                                        <th>External Document No.</th>
+                                        <th>Tender Name</th>
+                                        <th>Procurement Method</th>
+                                        <th>Submission Start Date</th>
+                                        <th>Submission End Date</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (TenderModel item in Model.Closing14Days)
+                                    {
+                                        TendersCounter2++;
+                                        <tr>
+                                            <td>@TendersCounter2</td>
+                                            <td>
+                                                <a href="" onclick="View('@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })')"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.External_Document_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Procurement_Method)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_Start_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i> Apply</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_closingDates">
+                <div class="row filter-row">
+                    <div class="col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Search by  Bid Sumission Due Date</label>
+                            <div class="cal-icon"><input class="form-control floating datetimepicker" type="text"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-xs-6">
+                        <a href="#" class="btn btn-success btn-block"> Search </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Notice No.</th>
+                                        <th>External Document No.</th>
+                                        <th>Tender Name</th>
+                                        <th>Procurement Method</th>
+                                        <th>Submission Start Date</th>
+                                        <th>Submission End Date</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (TenderModel item in Model.Closing1SpecificDates)
+                                    {
+                                        TendersCounter3++;
+                                        <tr>
+                                            <td>
+                                                @TendersCounter3
+                                            </td>
+                                            <td>
+                                                <a href="" onclick="View('@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })')"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.External_Document_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Procurement_Method)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_Start_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i> Apply</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

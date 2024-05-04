@@ -1,0 +1,515 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewPrequalifications";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int tenderCounter = 0;
+    int addendumcounter = 0;
+    int DocumentsCounter = 0;
+    int purchaseLines = 0;
+    int CategoriesCounter = 0;
+    int tenderDocuments = 0;
+    int TenderDocuments = 0;
+    int DocumentsCounters = 0;
+    int DownloadDocumentsCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i><strong>Invitation For Registration</strong></i></h5>
+            </div><br />
+        </div>
+    </div>
+    @foreach (IFPRequestsModel invitation in Model.PrequalificationDetails)
+    {
+        <div class="row" style="background-color:#D3D3D3">
+            <div class="col-xs-8 text-right m-b-30">
+                <a href="@Url.Action("RegistrationFormResponce", "Home", new { InvitationNumber = @invitation.Code,PrequalificationNo= @invitation.PrequalificationNo })" class="btn btn-primary pull-right rounded"><i class="fa fa-plus"></i>Apply for Registration</a>
+            </div>
+        </div>
+    }
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_general_details" data-toggle="tab"><p style="color:black"><strong>General Details</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_procurement_categories" data-toggle="tab"><p style="color:black"><strong>Procurement Categories</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_procurement_scoringtemplate" data-toggle="tab"><p style="color:black"><strong>Evaluation Criteria</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_required_documents" data-toggle="tab"><p style="color:black"><strong>Documents</strong></p> </a>
+            </li>
+            @*<li style="background-color:#D3D3D3">
+                <a href="#tab_documents_downloads" data-toggle="tab"><p style="color:black"><strong>Documents</strong></p> </a>
+            </li>*@
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_general_details">
+                <div class="row">
+                    @foreach (IFPRequestsModel invitation in Model.PrequalificationDetails)
+                    {
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h6 class="panel-title"><strong><u>General Details</u></strong></h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">IFP Notice No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@invitation.Code" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">External Document No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@invitation.External_Document_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Description:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@invitation.Description" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tender Summary:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@invitation.Tender_Summary" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Registration Period Start Date.<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="mandatorymeeting" value="@invitation.Period_Start_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Registration Period End Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="documentdate" value="@invitation.Period_End_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Region Issuing Notice:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="enveloptype" value="@invitation.Region" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Application Fees(LCY):<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="externaldocumentno" value="@invitation.External_Document_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Date Published:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="sealedbids" value="@invitation.Submission_End_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Submission Start Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="responsibilitycenter" value="@invitation.Submission_Start_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Submission Start Time:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendervalidity" value="@invitation.Submission_Start_Time" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Submission End Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="locationcode" value="@invitation.Submission_End_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Submission End Time:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderexpirydate" value="@invitation.Submission_Start_Time" readonly>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h6 class="panel-title"> <strong><u>Registration Addendum Notices</u></strong></h6>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Addendum Notice No.</th>
+                                        <th>Addendum Date</th>
+                                        <th>Description</th>
+                                        <th>Addendum Instructions</th>
+                                        <th>View</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (SingleTenderAddendumModel item in Model.TenderAddendums)
+                                    {
+                                        addendumcounter++;
+                                        <tr>
+                                            <td>
+                                                @addendumcounter
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("ViewSingleAddendumNotice", "Home", new { AddendumNumber = @item.Addendum_Notice_No })"><strong>@Html.DisplayFor(modelItem => item.Addendum_Notice_No)</strong></a>
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Document_Date)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Addendum_Instructions)
+
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("ViewSingleAddendumNotice", "Home", new { AddendumNumber = @item.Addendum_Notice_No })" class="btn btn-success"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_procurement_categories">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h6 class="panel-title"><strong><u>Registration Categories</u></strong></h6>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>S.No</th>
+                                            <th>Category ID</th>
+                                            <th>Description</th>
+                                            <th>Procurement Type</th>
+                                            <th>Reserved for Special Group</th>
+                                            <th>Location</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (PrequalifiedCategoriesModel item in Model.Categories)
+                                        {
+                                            CategoriesCounter++;
+                                            <tr>
+                                                <td>
+                                                    @CategoriesCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Procurement_Category_Code)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Procurement_Type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Special_Group)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Application_Location)
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_procurement_scoringtemplate">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h6 class="panel-title"><strong><u>Evaluation Criteria</u></strong></h6>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>S.No</th>
+                                            <th>Criteria Group Id</th>
+                                            <th>Description</th>
+                                            @*<th>Evauation Type</th>
+                                            <th>Total Weight</th>*@
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (IFPRequestsModel item in Model.RFI_SCORING_TEMPLATE)
+                                        {
+                                            CategoriesCounter++;
+                                            <tr>
+                                                <td>
+                                                    @CategoriesCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.criteriaGroupId)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.templateDescription)
+                                                </td>
+                                                @*<td>
+                                                    @Html.DisplayFor(modelItem => item.evaluationType)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.totalweight)
+                                                </td>*@
+
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>s
+            <div class="tab-pane fade" id="tab_required_documents">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h6 class="panel-title"><strong><u>Required Documents</u></strong></h6>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Document Type</th>
+                                        <th>Document</th>
+                                        <th>Requirement Type</th>
+                                        <th>Special Group Requirement</th>
+                                    </tr>
+                                </thead>
+                              <tbody>
+                                        @foreach (RegistrationRequiredDocumentsModel item in Model.RequiredDocuments)
+                                        {
+                                            DocumentsCounter++;
+                                            <tr>
+                                                <td>
+                                                    @DocumentsCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Requirement_Type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.SpecialGroupRequirement)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h6 class="panel-title"><strong><u>Document Downloads</u></strong></h6>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Document Type</th>
+                                        <th>Document</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (SharePointTModel documents in Model.AttachedDocuments)
+                                    {
+                                        tenderDocuments++;
+                                        <tr>
+                                            <td>
+                                                @tenderDocuments
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => documents.FileName)
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="DowndloadTenderDocument('@documents.FileName')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="tab_documents_downloads">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h6 class="panel-title"><strong><u>Document Downloads</u></strong></h6>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Document Type</th>
+                                        <th>Document</th>
+                                    </tr>
+                                </thead>
+                               <tbody>
+                                    @foreach (SharePointTModel documents in Model.AttachedDocuments)
+                                    {
+                                        tenderDocuments++;
+                                        <tr>
+                                            <td>
+                                                @tenderDocuments
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => documents.FileName)
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="DowndloadTenderDocument('@documents.FileName')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function Respond(url, uniquetenderno) {
+        var TenderNoticeNo = $('#tendernotice').val();
+        var RespondWizardForm = '@Url.Action("RespondTenderWizard", "Home")';
+        Swal.fire({
+            title: "Confirm Tender Response?",
+            text: "Are you sure you would like to Respond to this Tender?",
+            type: "warning",
+            showCancelButton: true,
+            closeOnConfirm: true,
+            confirmButtonText: "Yes, Proceed!",
+            confirmButtonClass: "btn-success",
+            confirmButtonColor: "#008000",
+            position: "center"
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    cache: false,
+                    type: 'GET',
+                    url: url,
+                    cache: false,
+                    processData: false,
+                }).done(function (status) {
+                    var tendersponse = status.split('*');
+                    status = tendersponse[0];
+                    switch (status) {
+                        case "success":
+                            Swal.fire
+                           ({
+                               title: "Tender Response Submitted!",
+                               text: "Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!",
+                               type: "success"
+                           }).then(() => {
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $('#responsesfeedback').attr("class", "alert alert-success");
+                               $("#responsesfeedback").html("Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $("#responsesfeedback").html("Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                               window.location.href = RespondWizardForm;
+                           });
+
+                            break;
+                        case "found":
+                            Swal.fire
+                           ({
+                               title: "Tender Response already Submitted!",
+                               text: "Your Tender Response had already been successfully submitted.Kindly Proceed to fill in more Details!",
+                               type: "success"
+                           }).then(() => {
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $('#responsesfeedback').attr("class", "alert alert-success");
+                               $("#responsesfeedback").html("Your Tender Response had been successfully submitted.Kindly Proceed to fill in more Details!");
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $("#responsesfeedback").html("Your Tender Response had been successfully submitted.Kindly Proceed to fill in more Details!");
+                               window.location.href = RespondWizardForm;
+                           });
+
+                            break;
+                        default:
+                            Swal.fire
+                            ({
+                                title: "Tender Response Error!!!",
+                                text: status,
+                                type: "error"
+                            }).then(() => {
+                                $("#responsesfeedback").css("display", "block");
+                                $("#responsesfeedback").css("color", "red");
+                                $('#responsesfeedback').addClass('alert alert-danger');
+                                $("#responsesfeedback").html("Your Tender Response Details  could not submitted.Kindly try Again!" + status + "");
+                            });
+                            break;
+                    }
+                }
+            );
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Tender Response Cancelled',
+                    'You cancelled your tender Response submission details!',
+                    'error'
+                );
+            }
+        });
+
+    };
+</script>
+
+
+

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<E_Procurement.Models.Contractor.ContractorEquipmentTypeModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="ddlequipmenttypelists" name="ddlequipmenttypelists" data_live_search="true">
+    <option value="">--Select Equipment Type---</option>
+    <optgroup label="All Equipment Type List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Description</option>
+        }
+    </optgroup>
+</select>

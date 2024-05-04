@@ -1,0 +1,755 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    ViewBag.Title = "MyAccount";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int bankscounter = 0;
+    int directorCounters = 0;
+    int prequalifcationsCounter = 0;
+    int experiencecounter = 0;
+    int litigationcounter = 0;
+    int contactcounter = 0;
+    int balancesheetCounter = 0;
+    int incomestatetementCounter = 0;
+}
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>Welcome to the Contractor Self Service Portal (VSS)</u></strong></h5>
+        </div>
+    </div>
+    <p>
+        Vendor Self Service (VSS) system allows you, as a Vendor (Supplier, Service Provider, Consultant or Contractor), to manage your profile information, view your Statement (Invoices and Payments), access your transaction history (such as contract awards, LPOs and submitted bid responses/Quotes), view open tender opportunities and much more. NB: Only Registered Vendors can access the VSS.
+    </p>
+
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:lightgray">
+                <a href="#tab_business_profile" data-toggle="tab"><p style="color:black"><strong>Business Profile</strong> </p></a>
+            </li>
+            <li style="background-color:lightgray">
+                <a href="#tab_directors" data-toggle="tab"><p style="color:black"><strong>Directors & Contacts</strong></p> </a>
+            </li>
+            <li style="background-color:lightgray">
+                <a href="#tab_prequalification" data-toggle="tab"><p style="color:black"><strong>Prequalification History/Past Experience/Litigation History</strong></p> </a>
+            </li>
+            <li style="background-color:lightgray">
+                <a href="#tab_financialdetails" data-toggle="tab"><p style="color:black"><strong>Financial Capability</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_business_profile">
+                @foreach (ContractorProfileModel vendor in Model.Vendors)
+                {
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h5>Business General Details</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@vendor.Vendor_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Ownership Type:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@vendor.Owner_Type" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Registered Business Name: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.Name" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Certificate of Registration:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.CertofIncorporation" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tax Registration  No.(PIN): <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.VAT_Registration_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Language Code:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.LanguageCode" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tax Registration Country:<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.Country" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Category: <span class="text-danger">*</span></label>
+                                <input class="form-control datetimepicker" type="text" id="dateofincoperation" name="dateofincoperation" value="@vendor.Supplier_Category" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Business Type:</label>
+                                <input class="form-control datetimepicker" type="text" id="startdateoperations" name="startdateoperations" value="@vendor.Dealer_Type" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Industry Group:</label>
+                                <input class="form-control datetimepicker" type="text" id="startdateoperations" name="startdateoperations" value="@vendor.IndustryGroup" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Type:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.Supplier_Type" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Balance(LCY):</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.FloorNo" readonly>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @*Second Tabs*@
+                @foreach (ContractorProfileModel vendor in Model.Vendors)
+                {
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h5>Business Communication Details</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Address:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@vendor.Address" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Country/Region Code:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@vendor.Country" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Address 2: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.Address" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Primary Contact Person(Name):<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.Primary_Contact_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Post Code: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.PostaCode " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contact Designation:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.Dealer_Type " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">City:<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.PostaCity " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Fixed Line Tel No: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="dateofincoperation" name="dateofincoperation" value="@vendor.Telephone_No " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contact:</label>
+                                <input class="form-control" type="text" id="startdateoperations" name="startdateoperations" value="@vendor.Primary_Contact_No " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Building /House No:<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="housenumber" name="housenumber" value="@vendor.HouseNo" readonly />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Phone No:<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="phonenumber" name="phonenumber" value="@vendor.Phone_No" readonly />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Floor:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.FloorNo " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Email:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.E_mail " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Plot No:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.PlotNo " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Home Page:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.WebUrl " readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Street:</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.StreetorRoad " readonly>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @*Profile Details*@
+                @foreach (ContractorProfileModel vendor in Model.Vendors)
+                {
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h5>Business Profile Details</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Company Size Code(No. Of Employee) :<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@vendor.CompanySize" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Dealership Type:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@vendor.Dealer_Type" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Country of Incorporation/Registration: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.CountryofOrigin" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Max Value of Business LCY:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.MaxBizValue" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Registration/Incorparation/Registration: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.RegistrationNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vision Statement:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@vendor.Mision" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Operations Start Year:<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@vendor.OpsDate" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Mission Statement: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="dateofincoperation" name="dateofincoperation" value="@vendor.DateofIncorporation" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Nominal Capital LCY:</label>
+                                <input class="form-control" type="text" id="startdateoperations" name="startdateoperations" value="@vendor.NominalCap" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Nature of Business:</label>
+                                <input class="form-control" type="text" id="startdateoperations" name="startdateoperations" value="@vendor.NatureofBz" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Issued Capital LCY:</label>
+                                <input class="form-control" type="text" id="startdateoperations" name="startdateoperations" value="@vendor.NominalCap" readonly>
+                            </div>
+                        </div>
+                    </div>
+                }
+                @*Banks Details*@
+
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5>Business Bank Details</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Code.</th>
+                                        <th>Name</th>
+                                        <th>Bank Branch No</th>
+                                        <th>Bank Account Code</th>
+                                        <th>Currency Code</th>
+                                        <th>City</th>
+                                        <th>Country</th>
+                                        <th>Phone</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorBanksModel banks in Model.BanksDetails)
+                                    {
+                                        bankscounter++;
+                                        <tr>
+                                            <td>
+                                                @bankscounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.BankCode)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.BankName)
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.Bank_Branch_No)
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.BankAccountNo)
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.CurrencyCode)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.City)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.CountryCode)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => banks.Phone_No)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade " id="tab_directors">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h5>Directors & Contacts</h5>
+                </div>
+                <p>Vendor Self Service (VSS) system allows you, as a Vendor (Supplier, Service Provider, Consultant or Contractor), to view the updated list of Directors (Shareholders) of your Company as well as the Contact Persons that have been defined as the main representatives of the firm.</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>ID/Passport No.</th>
+                                        <th>Citizenship Type</th>
+                                        <th>Entinty Ownership(%)</th>
+                                        <th>Phone No.</th>
+                                        <th>Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorDirectorsModel directors in Model.StakeholdersDetails)
+                                    {
+                                        directorCounters++;
+                                        <tr>
+                                            <td>
+                                                @directorCounters
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => directors.Fullname)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => directors.IdNumber)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => directors.CitizenshipType)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => directors.OwnershipPercentage)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => directors.Phonenumber)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => directors.Address)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                @*Vendor Contacts Details*@
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5>Vendor Contact Details</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>No.</th>
+                                        <th>Name</th>
+                                        <th>Phone No.</th>
+                                        <th>Email</th>
+                                        <th>Organizational Level Code</th>
+                                        <th>Territory  Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorProfileModel vendor in Model.Vendors)
+                                    {
+                                        contactcounter++;
+                                        <tr>
+                                            <td>
+                                                @contactcounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => vendor.Vendor_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => vendor.Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => vendor.Phone_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => vendor.E_mail)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => vendor.Country)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => vendor.Country)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Vendor Prequalification History Details*@
+            <div class="tab-pane fade " id="tab_prequalification">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h5>Prequalification History, Past Experience & Litigation History</h5>
+                </div>
+                <p>
+                    Vendor Self Service (VSS) system allows you, as a Vendor (Supplier, Service Provider, Consultant or Contractor), to view your prequalification history (Summary of Procurement categories of Goods and Services that the Vendor was or is currently prequalified to supply), Past experience (A summary of any previous projects/engagements performed by a Consultant or Contractor) and Litigation History (A summary of any previous or ongoing legal matters that involve the firm).
+                </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Procurement Type</th>
+                                        <th>Procurement Category Code</th>
+                                        <th>Description</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorPrequalifiedCategoriesModel item in Model.PrequalifcationHistory)
+                                    {
+                                        prequalifcationsCounter++;
+                                        <tr>
+                                            <td>
+                                                @prequalifcationsCounter
+                                            </td>
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Procurement_Type)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Procurement_Category_Code)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Start_Date)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.End_Date)
+
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                @*Vendor Past Experience/Client References Details*@
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5> Past Experience/Client References</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Client Name</th>
+                                        <th>Primary Contact Person</th>
+                                        <th>Assignment/Project Name</th>
+                                        <th>Delivery Location</th>
+                                        <th>Assignment Value LCY</th>
+                                        <th>Assignment Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorPastExperienceModel item in Model.PastExperience)
+                                    {
+                                        experiencecounter++;
+                                        <tr>
+                                            <td>
+                                                @experiencecounter
+                                            </td>
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Client_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Primary_Contact_Person)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Assignment_Project_Name)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Delivery_Location)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Assignment_Value_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Assignment_Status)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                @*Vendor Litigation History Details*@
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5>Litigation History</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Dispute Description</th>
+                                        <th>Other Dispute Party(Lies)</th>
+                                        <th>Dispute Amount LCY</th>
+                                        <th>Category of Matter</th>
+                                        <th>Year</th>
+                                        <th>Award Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorLitigationModel item in Model.litigationhistory)
+                                    {
+                                        litigationcounter++;
+                                        <tr>
+                                            <td>
+                                                @litigationcounter
+                                            </td>
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.DisputeDescription)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.TheotherDisputeparty)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.DisputeAmount)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.CategoryofDispute)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Year)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.AwardType)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*Vendor Financial Capability Details*@
+            <div class="tab-pane fade " id="tab_financialdetails">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5>Financial Capability based on Audited Accounts</h5>
+                    </div>
+                    <p>Vendor Self Service (VSS) system allows you, as a Vendor (Supplier, Service Provider, Consultant or Contractor), to view the Audited account schedules(Balance sheet and Income Statement Summaries) for your firm.</p>
+                    <div class="col-md-12">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title">Balance Sheet Summaries</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Audited Year</th>
+                                        <th>Total Assets(LCY)</th>
+                                        <th>Total Liabilites(LCY)</th>
+                                        <th>Owners Equity(LCY)</th>
+                                        <th>Total Liabilites & Owners  Equity(LCY)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorsBalanceSheetTModel item in Model.balancesheet)
+                                    {
+                                        balancesheetCounter++;
+                                        <tr>
+                                            <td>
+                                                @balancesheetCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Audit_Year_Code_Reference)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Total_Assets_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Total_Liabilities_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Owners_Equity_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Total_Liabilities_Equity_LCY)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                @*Vendor Financial Capability Details*@
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:lightgray">
+                        <h5>Income Statement Summaries</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Audited Year</th>
+                                        <th>Total Revenue(LCY)</th>
+                                        <th>Total COGS(LCY)</th>
+                                        <th>Gross Margin(LCY)</th>
+                                        <th>Operating Income/EBIT (LCY)</th>
+                                        <th>Income Before Taxes(LCY)</th>
+                                        <th>Net Income</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ContractorIncomeStatementTModel item in Model.incomestatement)
+                                    {
+                                        incomestatetementCounter++;
+                                        <tr>
+                                            <td>
+                                                @incomestatetementCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Audit_Year_Code_Reference)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Total_Revenue_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Total_COGS_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Gross_Margin_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Operating_Income_EBIT_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Income_Before_Taxes_LCY)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Net_Income)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

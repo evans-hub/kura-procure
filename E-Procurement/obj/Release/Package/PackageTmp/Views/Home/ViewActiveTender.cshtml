@@ -1,0 +1,120 @@
+﻿@model  IEnumerable<E_Procurement.Models.ViewActiveTenderModel>
+@{
+    ViewBag.Title = "ViewActiveTender";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content container-fluid">
+    <div class="panel panel-heading" style="background-color:#D3D3D3">
+        <h3 class="panel-title"><strong><u>TENDER GENERAL DETAILS</u></strong></h3>
+    </div>
+    @foreach (var items in Model)
+    {
+    <div class="row">
+        <div class="col-md-12">
+            <div class="job-info job-widget">
+                <h3 class="job-title">@Html.DisplayFor(modelItem => items.Tender_Name)</h3>
+                <span class="job-dept">@Html.DisplayFor(modelItem => items.Code)</span>
+                <ul class="job-post-det">
+                    <li><i class="fa fa-calendar"></i> Post Date: <span class="text-blue">@Html.DisplayFor(modelItem => items.Document_Date)</span></li>
+                    <li><i class="fa fa-calendar"></i> Last Date: <span class="text-blue">@Html.DisplayFor(modelItem => items.Submission_End_Date)</span></li>
+                    <li><i class="fa fa-user-o"></i> Applications: <span class="text-blue">4</span></li>
+                    <li><i class="fa fa-eye"></i> Views: <span class="text-blue">3806</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="job-content job-widget">
+            <div class="job-desc-title"><h4>Tender Summary</h4></div>
+            <div class="job-description">
+                <p>@Html.DisplayFor(modelItem => items.Tender_Summary)</p>
+            </div>
+            <div class="job-desc-title"><h4>Tender Description</h4></div>
+            <div class="job-description">
+                <p>@Html.DisplayFor(modelItem => items.Description)</p>
+            </div>
+        </div>
+
+        </div>
+          }
+  
+        <div class="page-wrapper job-wrapper">
+            <div class="content container" style="width:100%">
+                @foreach (var item in Model)
+            {
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="job-info job-widget">
+                                <h3 class="job-title">@Html.DisplayFor(modelItem => item.Tender_Name)</h3>
+                                <span class="job-dept">@Html.DisplayFor(modelItem => item.Code)</span>
+                                <ul class="job-post-det">
+                                    <li><i class="fa fa-calendar"></i> Post Date: <span class="text-blue">@Html.DisplayFor(modelItem => item.Document_Date)</span></li>
+                                    <li><i class="fa fa-calendar"></i> Last Date: <span class="text-blue">@Html.DisplayFor(modelItem => item.Submission_End_Date)</span></li>
+                                    <li><i class="fa fa-user-o"></i> Applications: <span class="text-blue">4</span></li>
+                                    <li><i class="fa fa-eye"></i> Views: <span class="text-blue">3806</span></li>
+                                </ul>
+                            </div>
+                            <div class="job-content job-widget">
+                                <div class="job-desc-title"><h4>Tender Summary</h4></div>
+                                <div class="job-description">
+                                    <p>@Html.DisplayFor(modelItem => item.Tender_Summary)</p>
+                                </div>
+                                <div class="job-desc-title"><h4>Tender Description</h4></div>
+                                <div class="job-description">
+                                    <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="job-det-info job-widget">
+                                <a class="btn job-btn" href="/Home/TenderResponseForm"><strong>Apply For This Tender</strong></a>
+                                <div class="info-list">
+                                    <span><i class="fa fa-bar-chart"></i></span>
+                                    <h5>Tender Bidder Group </h5>
+                                    <p> @Html.DisplayFor(modelItem => item.Target_Bidder_Group)</p>
+                                </div>
+                                <div class="info-list">
+                                    <span><i class="fa fa-money"></i></span>
+                                    <h5>Start Date</h5>
+                                    <p>@Html.DisplayFor(modelItem => item.Submission_Start_Date)</p>
+                                </div>
+                                <div class="info-list">
+                                    <span><i class="fa fa-money"></i></span>
+                                    <h5>End Date</h5>
+                                    <p>@Html.DisplayFor(modelItem => item.Submission_End_Date)</p>
+                                </div>
+                                <div class="info-list">
+                                    <span><i class="fa fa-suitcase"></i></span>
+                                    <h5>Tender Box Location</h5>
+                                    <p>@Html.DisplayFor(modelItem => item.Tender_Box_Location_Code)</p>
+                                </div>
+                                <div class="info-list">
+                                    <span><i class="fa fa-ticket"></i></span>
+                                    <h5>Country</h5>
+                                    <p>@Html.DisplayFor(modelItem => item.Country_Region_Code)</p>
+                                </div>
+                                <div class="info-list">
+                                    <span><i class="fa fa-map-signs"></i></span>
+                                    <h5>Location</h5>
+                                    <p>
+                                        @Html.DisplayFor(modelItem => item.Constituency_ID)
+                                        <br> @Html.DisplayFor(modelItem => item.City),
+                                        <br> @Html.DisplayFor(modelItem => item.Phone_No),
+                                        <br> California, 91403
+                                    </p>
+                                </div>
+                                <div class="info-list">
+                                    <p>
+
+                                    </p>
+                                </div>
+                                <div class="info-list text-center">
+                                    <a class="app-ends" href="#">Application ends in 2d 7h 6m</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </div>
+

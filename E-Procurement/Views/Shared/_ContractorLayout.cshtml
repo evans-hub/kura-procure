@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -i-RMS</title>
+    <link rel="stylesheet" type="text/css" href="~/assets/css/CustomCss.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+    <title>Dashboard - E-Procurement Portal</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/line-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/plugins/morris/morris.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/CustomCss.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/AdminLTE.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/ladda-themeless.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/MaterialCards.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/Custom_tab_2.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/fullcalendar.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="~/assets/img/seeklogo.png" width="100" height="60" alt="">
+                </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);"><i class="la la-bars"></i></a>
+            <div class="page-title-box pull-left">
+                <h3>Kenya Rural Roads Authority Contractors Hub </h3>
+            </div>
+            <a id="mobile_btn" class="mobile_btn pull-left" href="#sidebar"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            <ul class="nav navbar-nav navbar-right user-menu pull-right">
+                <li class="dropdown">
+                    <a href="profile.html" class="dropdown-toggle user-link" data-toggle="dropdown" title="@Session["vendorNo"]">
+                        <span class="user-img">
+                            <img class="img-circle" src="~/assets/img/user.jpg" width="40" alt="Admin">
+                            <span class="status online"></span>
+                        </span>
+                        <span>@Session["fullname"]</span>
+                        <i class="caret"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="edit-profile.html">Edit Profile</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="/Contractor/Checkout">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="/Contractor/Checkout">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="active">
+                            <a href="/Contractor/ContractorDashboard"><i class="la la-dashboard"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="/Contractor/ContractorProfile"><i class="la la-user-plus"></i> <span>My Profile</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="la la-user"></i> <span>Self-Service</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/Contractor/MyAccount">My Account</a></li>
+                                <li><a href="/Contractor/MyStatement">My Statement</a></li>
+                                <li><a href="/Contractor/MyTransactions">My Transaction History</a></li>
+                                <li><a href="/Contractor/ActiveTenderNotices">Active Tender Notices</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-registered"></i><span>Projects Register</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/Contractor/OngoingProjectWorks">Ongoing Project Works</a></li>
+                                <li><a href="/Contractor/CompletedProjectWorks">Completed Project Works</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-file"></i> <span>All Contracts</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/Contractor/ActiveContracts">Active Contracts</a></li>
+                                <li><a href="/Contractor/CompletedContracts">Completed Contracts</a></li>
+                                <li><a href="/Contractor/CancelledContracts">Cancelled Contracts</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-road"></i> <span>Project Mobilization</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li class="submenu">
+                                    <a href="#"><span>Orders to Commence</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/FiledOrders">Orders to Commence</a></li>
+                                    </ul>
+                                </li>
+                               
+                                <li class="submenu">
+                                    <a href="#"><span>Work Execution Plan</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/DraftWorkExecutionPlans">Draft Work Execution Plans</a></li>
+                                        <li><a href="/Contractor/PendingExecutionsPlans">Pending Engineer Approvals Plans</a></li>
+                                        <li><a href="/Contractor/ApprovedExecutionsPlans">Approved Work Execution Plans</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-road"></i> <span>Project Execution</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li class="submenu">
+                                    <a href="#"><span>Daily Work Records</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        
+                                        <li><a href="/Contractor/NewDailyWorkRecords">New Daily Work Records</a></li>
+                                        <li><a href="/Contractor/DraftDailyWorksRecords">Draft Daily Work Records</a></li>
+                                        <li><a href="/Contractor/PendingEngineerDailyWorks">Pending Engineer Approvals</a></li>
+                                        <li><a href="/Contractor/ApprovedDailyWorkRecords">Approved Daily Work Records</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#"><span>Measurement Sheets</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/NewMeasurementsSheets">New Measurements Sheets</a></li>
+                                        <li><a href="/Contractor/DraftMeasurementsSheets">Draft Measurement Sheet</a></li>
+                                        <li><a href="/Contractor/SubmittedMeasurementsSheets">Submitted Measurement Sheets</a></li>
+                                        <li><a href="/Contractor/ApprovedMeasurementsSheets">Approved Measurement Sheets</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#"><span>Projects Meetings Register</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/NewProjectMeetingRegister">New Project Meetings Register</a></li>
+                                        <li><a href="/Contractor/UpcomingMeetingsAppointments">Upcoming Meetings Appointments</a></li>
+                                        <li><a href="/Controctor/ProjectsPendingMinutes">Projects Pending Minutes</a></li>
+                                        <li class="submenu">
+                                            <a href="#"><span>Previous Meetings</span> <span class="menu-arrow"></span></a>
+                                            <ul style="display: none;">
+                                                <li><a href="/Contractor/ProjectsMeetings">Project Meetings</a></li>
+                                                <li><a href="/Contractor/ExecutiveMeetings">Executive Meetings</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#"><span>Projects Status Reports</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Controctor/DraftStatusReports">New Porject Status Report</a></li>
+                                        <li><a href="/Controctor/DraftStatusReports">Draft Status Reports</a></li>
+                                        <li class="submenu">
+                                            <a href="#"><span>Submitted Project Reports</span> <span class="menu-arrow"></span></a>
+                                            <ul style="display: none;">
+                                                <li><a href="/Contractor/DailyProjectReports">Daily Reports</a></li>
+                                                <li><a href="/Contractor/DraftStatusReports">Weekly Reports</a></li>
+                                                <li><a href="/Contractor/DraftStatusReports">Monthly Reports</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#"><span>Projects TO-DOs</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/AllTasks">All Projects Tasks</a></li>
+                                        <li><a href="/Contractor/OpenTasks">Open Project Tasks</a></li>
+                                        <li><a href="/Contractor/PendingTasks">Pending/Late Tasks</a></li>
+                                        <li><a href="/Contractor/CompletedTasks">Completed Project Tasks</a></li>
+                                    </ul>
+                                </li>    
+                                <li class="submenu">
+                                    <a href="#"><span>Notice of Completed Works</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/NoticeofCompletedWorks">Notice of Completed Works</a></li>
+                                        <li><a href="/Contractor/NoticeofCompletedWorks">Approved Notices</a></li>
+                                        <li><a href="/Contractor/NoticeofCompletedWorks">Submitted Notices</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#"><span>Projects Work Inspections</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/SpecialGroupTenders">Work Confirmation Notices</a></li>
+                                        <li><a href="/Contractor/SpecialGroupTenders">Work Inspection Registers</a></li>
+                                        <li><a href="/Contractor/SpecialGroupTenders">Issued Corrective Orders</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#"><span>Projects Certificates</span> <span class="menu-arrow"></span></a>
+                                    <ul style="display: none;">
+                                        <li><a href="/Contractor/SpecialGroupTenders">Interim Payment Certificates</a></li>
+                                        <li><a href="/Contractor/SpecialGroupTenders">Final Payment Certificates</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                         </li>    
+                        <li class="submenu">
+                            <a href="#"><i class="fa fa-handshake-o"></i><span>Projects HandOver</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/Contractor/DraftStatusReports">Project CloseOut Requests</a></li>
+                                <li><a href="/Contractor/DraftStatusReports">Project Section HandOver</a></li>
+                                <li><a href="/Contractor/DraftStatusReports">Final Project HandOver</a></li>
+                                <li><a href="/Contractor/DraftStatusReports">Completed Projects</a></li>
+                                <li><a href="/Contractor/DraftStatusReports">Final Payments Certificates</a></li>
+                                <li><a href="/Contractor/DraftStatusReports">Contractor Self-Evaluation</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="la la-cog"></i> <span>Health & Safety</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/Contractor/HealthandSafetyMeetings">Work Permit Applications</a></li>
+                                <li><a href="/Contractor/WorkSiteInspections">Work Place/Site Inspection</a></li>
+                                <li><a href="/Contractor/AccidentandIncidents">Accident & Incident OB</a></li>
+                                <li><a href="/Contractor/EmergencyDrillLog">Emergency Drill Log</a></li>
+                                <li><a href="/Contractor/InductionBriefingLogs">Induction & Briefing Log</a></li>
+                                <li><a href="/Contractor/HealthandSafetyMeetings"> Health & Safety Meetings</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-download"></i> <span>Downloads</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="la la-cog"></i> <span> Settings </span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="#"> Change Password </a></li>
+                                <li><a href="/Contractor/SupplierProfile">My Profile </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-wrapper">
+            @RenderBody()
+            <hr />
+        </div>
+        <div class="notification-box">
+            <div class="msg-sidebar notifications msg-noti">
+                <div class="topnav-dropdown-header">
+                    <span>Messages</span>
+                </div>
+                <div class="drop-scroll msg-list-scroll">
+                    <ul class="list-box">
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">R</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author">Richard Miles </span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item new-message">
+                                    <div class="list-left">
+                                        <span class="avatar">J</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author">John Doe</span>
+                                        <span class="message-time">1 Aug</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">T</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author"> Tarah Shropshire </span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">M</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author">Mike Litorus</span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">C</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author"> Catherine Manseau </span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">D</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author"> Domenic Houston </span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">B</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author"> Buster Wigton </span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">R</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author"> Rolland Webber </span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">C</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author"> Claire Mapes </span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">M</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author">Melita Faucher</span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">J</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author">Jeffery Lalor</span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">L</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author">Loren Gatlin</span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chat.html">
+                                <div class="list-item">
+                                    <div class="list-left">
+                                        <span class="avatar">T</span>
+                                    </div>
+                                    <div class="list-body">
+                                        <span class="message-author">Tarah Shropshire</span>
+                                        <span class="message-time">12:28 AM</span>
+                                        <div class="clearfix"></div>
+                                        <span class="message-content">Lorem ipsum dolor sit amet, consectetur adipiscing</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topnav-dropdown-footer">
+                    <a href="chat.html">See all messages</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/morris/morris.min.js"></script>
+    <script type="text/javascript" src="~/assets/plugins/raphael/raphael-min.js"></script>
+    <script type="text/javascript" src="~/assets/js/chart.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/sweetalert.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/task.js"></script>
+    <script type="text/javascript" src="~/assets/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.fullcalendar.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery-ui.min.html"></script>
+    <script type="text/javascript" src="~/assets/js/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.fullcalendar.js"></script>
+    <!-- Sweet Alert Js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    <!-----------Custom JS fIE-->
+    <script type="text/javascript" src="~/assets/customJs/ProjectWorkExecutionPlan.js"></script>
+    <script type="text/javascript" src="~/assets/js/Customjs.js"></script>
+    @*<script type="text/javascript" src="~/assets/customJs/WorkExecutionPlans.js"></script>*@
+    <script type="text/javascript" src="~/assets/customJs/CompleteSupplierRegistration.js"></script>
+    <script type="text/javascript" src="~assets/js/task.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/NoticeofCompletedWorks.js"></script>
+
+    <!-----------CounterCounter--------->
+    <script type="text/javascript" src="~/assets/js/jquery.countdown.min.js"></script>
+</body>
+
+</html>

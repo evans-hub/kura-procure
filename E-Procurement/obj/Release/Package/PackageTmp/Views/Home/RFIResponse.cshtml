@@ -1,0 +1,65 @@
+﻿@model  IEnumerable<E_Procurement.Models.IFPRequestsModel>
+@{
+    ViewBag.Title = "RFIResponse";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int rficounter = 0;
+}
+
+<div class="content container-fluid">   
+        <div class="row">
+            <div class="col-md-12">
+                <p>Welcome to our e-Prequalification portal. You can now view all published Invitations for Prequalifications (IFPs) and submit your response online . Please ensure you select the Prequalification Invitation Notice No. that you want to respond to. The system shall automatically assign an Application tracking number for your prequalification response.</p>
+
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Notice No.</th>
+                                <th>Description</th>
+                                <th>Region Issuing Notice</th>
+                                
+                                <th>Submision End Date (dd/mm/yyyy)</th>
+                                <th>View</th>
+                                <th>Respond</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                rficounter++;
+
+                                <tr>
+                                    <td>
+                                        @rficounter
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("ViewPrequalifications", "Home", new { InvitationNumber = @item.Code,scoringTemplate=item.bidscoringTemplate })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tender_Box_Location_Code)
+                                    </td>
+                                    
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("ViewPrequalifications", "Home", new { InvitationNumber = @item.Code, scoringTemplate =  @item.bidscoringTemplate})" class="btn btn-success" )"><i class="fa fa-eye m-r-10"></i>View</a>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("ViewPrequalifications", "Home", new { InvitationNumber = @item.Code, scoringTemplate =  @item.bidscoringTemplate })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i>Apply</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+         
+        </div>
+
+    </div>

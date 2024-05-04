@@ -1,0 +1,16 @@
+﻿@model IEnumerable<E_Procurement.Models.Contractor.CountriesModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="dropdownContractorCountriesList" name="dropdownContractorCountriesList" data_live_search="true">
+    <option value="">--Select Country---</option>
+    <optgroup label="All Countries List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Name</option>
+        }
+    </optgroup>
+</select>
+
+

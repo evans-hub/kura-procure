@@ -1,0 +1,223 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewSubmittedPrequalifications";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int tenderCounter = 0;
+    int DocumentsCounter = 0;
+    int purchaseLines = 0;
+    int CategoriesCounter = 0;
+    int tenderDocuments = 0;
+    int TenderDocuments = 0;
+    int DocumentsCounters = 0;
+    int DownloadDocumentsCounter = 0;
+    int SerialCategoriesCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>Submitted Response</u></strong></h4>
+        </div>
+    </div>
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_general_details" data-toggle="tab"><p style="color:black"><strong>Response General Details</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_procurement_categories" data-toggle="tab"><p style="color:black"><strong>Submitted Procurement Categories</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_required_documents" data-toggle="tab"><p style="color:black"><strong>Attached Documents</strong></p> </a>
+            </li>          
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_general_details">
+                
+               @foreach (PrequalificationGeneralDetailsModel item in Model.PrequalificationGeneralDetails)
+               {
+                 <div class="row">
+                   
+                       <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Document No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.Document_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">IFP Notice No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.RFI_Document_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Name:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.Vendor_Name" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">External Document No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@item.RFI_Document_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Representative Name:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@item.Vendor_Representative_Name" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Representative Designation:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Vendor_Repr_Designation" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Address.<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="mandatorymeeting" value="@item.Vendor_Address" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor City.<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="mandatorymeeting" value="@item.City" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Email.<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="mandatorymeeting" value="@item.E_Mail" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Post Code.<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="mandatorymeeting" value="@item.Post_Code" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Submission Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="locationcode" value="@item.Date_Submitted" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Submission Time:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderexpirydate" value="@item.Date_Submitted" readonly>
+                            </div>
+                        </div>       
+                </div>
+               }
+            </div>
+            <div class="tab-pane fade" id="tab_procurement_categories">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>Submitted Procurement Categories</u></strong></h3>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Category ID</th>
+                                            <th>Description</th>
+                                            <th>Start  Date</th>
+                                            <th>End Date</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (SubmittedPrequalificationCategoriesModel item in Model.Categories)
+                                        {
+                                            SerialCategoriesCounter++;
+                                            <tr>
+                                                <td>
+                                                    @SerialCategoriesCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Procurement_Category)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Category_Description)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Prequalification_Start_Date)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Prequalification_End_Date)
+                                                </td>
+                                             
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab_required_documents">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h3 class="panel-title"><strong><u>Attached Response Documents</u></strong></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Document Description</th>
+                                        <th>Issue Date</th>
+                                        <th>Expiry Date</th>
+                                        <th>Certificate No</th>
+                                        <th>File Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (IfPDocumentsTModel item in Model.AttachedDocuments)
+                                    {
+                                        DocumentsCounter++;
+                                        <tr>
+                                            <td>
+                                                @DocumentsCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Issue_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Expiry_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Certificate_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.File_Name)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,205 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int tenderCounter = 0;
+    var today = DateTime.Today;
+    //var nav = NavConnection.ReturnNav();
+    //int activetendersCounter = nav.invitetoTenders.Where(x => x.Published == true && x.Document_Status == "Published" && x.Procurement_Method == "Open Tender").ToList().Count();
+    //int closedtendersCounter = nav.invitetoTenders.Where(x => x.Document_Status == "Closed" && x.Published == true && x.Status == "Released").ToList().Count();
+    //int Eprequalification =  nav.InvitationPrequalification.Where(x => x.Document_Type == "Invitation For Prequalification" && x.Status == "Released" && x.Published == true).ToList().Count();
+    //int Eregistration = nav.InvitationPrequalification.Where(x => x.Document_Type == "Invitation for Registation" && x.Status == "Released" && x.Published == true).ToList().Count();
+    //int AllBidsCounter = nav.invitetoTenders.Where(x => x.Document_Status == "Published" && x.Published == true && x.Status == "Released").ToList().Count();
+    //int ExpiredTenders = nav.invitetoTenders.Where(x => x.Document_Status == "Cancelled" && x.Published == true && x.Status == "Released").ToList().Count();
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-title">
+                Welcome <strong>@Session["fullname"]!</strong>
+
+            </h3>
+        </div>
+        <div class="progress progress-striped">
+            <div class="progress-bar progress-bar-success" style=""> Your Profile is 50% Completed.</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <a href="/Home/SupplierRegistration">
+            <div class="col-lg-3 col-md-6 ">
+                <div class="small-box bg-green">
+                    <div class="dash-widget clearfix card-box small-box bg-green">
+                        <span class="dash-widget-icon"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+
+                        <div class="dash-widget-info">
+                            @*<h4>@activetendersCounter</h4>*@
+                            <p>My Profile</p>
+                        </div>
+                    </div>
+                    <a href="/Home/SupplierRegistration" class="small-box-footer">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </a>
+        <a href="/Home/RFIResponse">
+            <div class="col-lg-3 col-md-6">
+                <div class="small-box bg-red">
+                    <div class="dash-widget clearfix card-box small-box bg-red">
+                        <span class="dash-widget-icon" style="background-color:antiquewhite"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+
+                        <div class="dash-widget-info">
+                            @*<h4>@Eprequalification</h4>*@
+                            <p>Prequalification</p>
+                        </div>
+                    </div>
+                    <a href="/Home/RFIResponse" class="small-box-footer bg-red">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </a>
+
+        <a href="/Home/RegistrationForm">
+            <div class="col-lg-3 col-md-6">
+                <div class="small-box bg-olive">
+                    <div class="dash-widget clearfix card-box small-box bg-olive">
+                        <span class="dash-widget-icon" style="background-color:antiquewhite"><i class="fa fa-cubes"></i></span>
+                        <div class="dash-widget-info">
+                           @*<h4>@Eregistration</h4>*@
+                            <p>Registration</p>
+                        </div>
+                    </div>
+                    <a href="/Home/RegistrationForm" class="small-box-footer  bg-olive">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </a>
+        <a href="/Home/ActiveTenderNotices">
+            <div class="col-lg-3 col-md-6">
+                <div class="small-box bg-purple">
+                    <div class="dash-widget clearfix card-box small-box bg-purple">
+                        <span class="dash-widget-icon" style="background-color:antiquewhite"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <div class="dash-widget-info">
+                            @*<h4>@activetendersCounter</h4>*@
+                            <p>Open Tender</p>
+                        </div>
+                    </div>
+                    <a href="/Home/ActiveTenderNotices" class="small-box-footer">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    <div class="main-wrapper">
+        <div class="row">
+            <div class="content container-fluid">
+                <div class="row filter-row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Tender No:</label>
+                            <input type='text' value='' class='form-control floating filter' id="tendernumber" data-column-index='1'>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Tender Name:</label>
+                            <input type="text"  value=''  class="form-control floating filter" id="tendernames" data-column-index='2'>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="form-group form-focus">
+                            <div class="cal-icon">
+                                <label class="control-label">Closing Date:</label>
+                                <input type="text" value=''  class="form-control floating datetimepicker filter" id="closingdate" data-column-index='4'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <button type="button" class="btn btn-success btn-block btn_search" id="btn_search">Search</button>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-12" style="color:black">
+                         <div class="table-responsive">
+                             <table class="table table-striped custom-table datatable" id="tab_dashbord_opentenders" >
+                                 <thead>
+                                     <tr>
+                                         <th>#</th>
+                                         <th>Tender No</th>
+                                         <th>Tender Name</th>
+                                         <th>Tender Description</th>
+                                         <th>Deadline Date</th>
+                                         <th>Document Date</th>
+                                         <th>Apply</th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>
+                                     @foreach (TenderModel item in Model.ActiveTenders)
+                                     {
+                                         tenderCounter++;
+                                         <tr>
+                                             <td>
+                                                 @tenderCounter
+                                             </td>
+                                             <td>
+                                                 <a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                             </td>
+                                             <td>
+                                                 @Html.DisplayFor(modelItem => item.Tender_Name)
+
+                                             </td>
+                                             <td>
+                                                 @Html.DisplayFor(modelItem => item.Tender_Summary)
+
+                                             </td>
+                                             <td>
+                                                 @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                             </td>
+                                             <td>
+                                                 @Html.DisplayFor(modelItem => item.Document_Date)
+                                             </td>
+                                             <td>
+                                                 <a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @item.Code })" data-toggle="modal" class="btn btn-success"><i class="fa fa-share m-r-10"></i> Apply</a>
+                                             </td>
+
+                                         </tr>
+                                     }
+                                 </tbody>
+                             </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  $(function () {
+    $('#tab_dashbord_opentenders').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
+<script>
+    document.getElementById("btn_search").addEventListener('click', function () {
+        var tenderNumber = document.getElementById("tendernumber").value;
+        var tenderName = document.getElementById("tendernames").value;
+        var closingDate = document.getElementById("closingdate").value;
+       var url = '@Url.Action("SearchData", "Home")' + '?tenderNumber=' + tenderNumber + '&tenderName=' + tenderName + '&closingDate=' + closingDate;
+        location.href = url;
+    });
+</script>

@@ -1,0 +1,219 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewSingleAddendumNotice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int addendumsummaryCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>Active Addendum Notices</i></h5>
+            </div>
+        </div>
+    </div>
+    <p>The latest tender addendum notices, issued by the Procuring Entity, are listed here.</p>
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">Search by Regions</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">Search by Tener Notice Number</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="#" class="btn btn-success btn-block"> Search </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-primary" style="background-color:lightgray">
+            <h5><strong>Addendum Notice General Details</strong></h5>
+           </div>
+            <div class="col-md-12">
+                @foreach (SingleAddendumNoticeModel addendumsdetails in Model.Addendum)
+            {
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Addendum Notice No:  <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@addendumsdetails.Addendum_Notice_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Document Date:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@addendumsdetails.Document_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tender Description: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Tender_Description" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Invitation Notice No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Invitation_Notice_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Addendum Instructions:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Addendum_Instructions" readonly>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Description:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendumsdetails.Description" readonly>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Responsibility Center: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@addendumsdetails.Responsibility_Center" readonly>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    <div class="row">
+        <div class="panel panel-primary"  style="background-color:lightgray">
+            <h5><strong>Ammendment Summary</strong></h5>
+        </div>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Addendum Notice No</th>
+                            <th>Ammendment Type</th>
+                            <th>Description </th>
+                            <th>Tender Document Section</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (AddendumAmmendmentModel item in Model.Summary)
+                           {
+                        addendumsummaryCounter++;
+                        <tr>
+                            <td>
+                                @addendumsummaryCounter
+                            </td>
+                            <td>
+                                <a href="@Url.Action("ViewSingleAddendumNotice", "Home", new { AddendumNumber = @item.Addendum_Notice_No })"><strong>@Html.DisplayFor(modelItem => item.Addendum_Notice_No)</strong></a>
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Amendment_Type)
+                            </td>
+                            <td>
+                             @Html.DisplayFor(modelItem => item.Amendment_Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Amended_Section_of_Tender_Doc)
+                            </td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-primary" style="background-color:lightgray">
+            <h5><strong>Addendum Critical Dates</strong></h5>
+            </div>
+            <div class="col-md-12">
+                @foreach (SingleAddendumNoticeModel addendum in Model.Addendum)
+            {
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Original Submision End Date:  <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@addendum.Original_Submission_End_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Original Submision End Time:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@addendum.Original_Submission_End_Time" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">New Submision End Date:  <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@addendum.New_Submission_End_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">New Submision End Time:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@addendum.New_Submission_End_Time" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Original Bid Opening Date: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendum.Original_Bid_Opening_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Original Bid Opening Time:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendum.Original_Bid_Opening_Time" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">New Bid Opening Date: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendum.New_Bid_Opening_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">New Bid Opening Time:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendum.New_Bid_Opening_Time" readonly>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">PreBid Meeting Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendum.New_Prebid_Meeting_Date" readonly>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">PreBid Meeting Time:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@addendum.Original_Bid_Opening_Time" readonly>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    <div class="form-actions">
+        <div class="row">
+            <div class="col-md-offset-5 col-md-8">
+                <a href="/Home/ActiveTenderAddedum" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Backwards </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

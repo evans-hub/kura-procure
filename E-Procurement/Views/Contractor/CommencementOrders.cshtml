@@ -1,0 +1,109 @@
+﻿@model  IEnumerable<E_Procurement.Models.ActiveContracts>
+@{
+    ViewBag.Title = "CommencementOrders";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int tenderCounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>Project Commencement Orders</u></strong></h4>
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active" style="background-color:#D3D3D3">
+            <a href="#commencment_orders" data-toggle="tab"><p style="color:black"><strong>Pending Project Commencement Orders</strong></p> </a>
+        </li>
+        <li style="background-color:#D3D3D3">
+            <a href="#active_contracts" data-toggle="tab"><p style="color:black"><strong>Filed Project Commencement Orders</strong> </p></a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="commencment_orders">
+            <p>The Contractor can view all the published project commencement orders that requires actions.Contractors are required to submit the Work Executions Plans in response to the Project Commencement Orders</p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Please not that you are required to submit your Work Execution Plans against the Project Commencement Orders</p>
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Document No.</th>
+                                    <th>Description</th>
+                                    <th>Date Published</th>
+                                    <th>Project Id</th>
+                                    <th>Road Code</th>
+                                    <th>Road Section</th>
+                                    <th>Contract No.</th>
+                                    <th>View</th>
+                                    <th>Submit WEP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    tenderCounter++;
+                                    <tr>
+                                        <td>
+                                            @tenderCounter
+                                        </td>
+                                        <td>
+                                           @Html.DisplayFor(modelItem => item.Code)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Tender_Name)
+
+                                        </td>
+                                        <td>
+                                            Nairobi
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Submission_End_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Document_Date)
+                                        </td>
+                                        <td>
+                                            17,000,000,000,000
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            <a href="" data-toggle="modal" class="btn btn-success"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+                                        <td>
+                                            <a href="" data-toggle="modal" class="btn btn-success"><i class="fa fa-eye m-r-10"></i> Submit WEP</a>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

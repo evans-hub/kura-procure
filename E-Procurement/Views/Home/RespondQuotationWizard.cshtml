@@ -1,0 +1,565 @@
+﻿
+@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "RespondQuotationWizard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int equipmentsCounter = 0;
+    int BalancesheetCounter = 0;
+    int IncomeStatementCounter = 0;
+    int BidPastExperienceCounter = 0;
+    int BidPricingCounter = 0;
+    int RequireddocumentsCounter = 0;
+    int bidsecurityCounter = 0;
+    int documentsCounter = 0;
+}
+<div class="content">
+    <div class="card-box tab-box">
+        <div class="row">
+            <div class="card">
+                <div class="card-header text-center" data-background-color="darkgreen">
+                    <h5 class="title"><i>Quotation Response Form</i></h5>
+                </div>
+            </div>
+        </div>
+        @foreach (BidResponseDetailsModel item in Model.BidDetails)
+        {
+            <div class="row">
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">RFQ Responses</a></li>
+                        <li class="breadcrumb-item active">Tendor No= @item.Invitation_For_Supply_No </li>
+                        <li class="breadcrumb-item active"> Bid Response No = @item.No</li>
+
+                    </ol>
+                </div>
+            </div>
+        }
+        <div class="row user-tabs">
+            <div class="col-lg-10 col-md-10 col-sm-10 line-tabs">
+                <div class="stepwizard">
+                    <div class="stepwizard-row setup-panel">
+                        <div class="stepwizard-step col-xs-6">
+                            <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                            <p><small>General Details</small></p>
+                        </div>
+                        <div class="stepwizard-step col-xs-4">
+                            <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                            <p><small>Financial Response</small></p>
+                        </div>
+                        @*<div class="stepwizard-step col-xs-2">
+                            <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                            <p><small>Documents Attachment</small></p>
+                        </div>*@
+
+                    </div>
+                    <div id="bideresponsesubmissionfeedback" style="display: none" data-dismiss="alert"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body" style="width:100%">
+        <form class="m-b-30" role="form">
+            <div class="panel-primary setup-content" id="step-1">
+                <div class="panel-heading" >
+                    <h5 class="panel-title">General Details</h5>
+                </div>
+                <div id="bideresponsefeedback" style="display: none" data-dismiss="alert"></div>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="tab_1_1">
+                        @foreach (BidResponseDetailsModel item in Model.BidDetails)
+                        {
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Bid Response No: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="bidnumber" name="bidnumber" value="@item.No" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Bidder Respresentative Name:<span class="text-danger">*</span> </label>
+                                        <input class="form-control" type="text" id="biddrerepname" name="biddrerepname" value="@item.Bidder_Representative_Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">RFQ Description: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.Tender_Description" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Bidder Representative Address:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="bidderrepaddress" name="bidderrepaddress" value="@item.Bidder_Representative_Address" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Vendor No: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="vendorno" name="vendorno" value="@Session["vendorNo"]" readonly>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">RFQ Notice No: <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="invitationnumber" name="invitationnumber" value="@item.Invitation_For_Supply_No" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Vendor Name::</label>
+                                        <input class="form-control " type="text" id="startdateoperations" name="startdateoperations" value="@item.Pay_to_Name" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Tax Registration(PIN) No:</label>
+                                        <input class="form-control " type="text" id="startdateoperations" name="startdateoperations" value="@item.VAT_Registration_No" readonly>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Bidder Representative Designation:</label>
+                                        <input class="form-control " type="text" id="bidderrepdesignations" name="bidderrepdesignations" value="@item.Bidder_Representative_Desgn" required>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <center>
+                            <center><button class="btn btn-primary btn_RFQsubmitresponsegeneralDetails" id="btn_RFQsubmitresponsegeneralDetails" type="button">Save Details</button></center>
+                            <button class="btn btn-primary nextBtn generalnextBtn pull-right" type="button" id="generalnextBtn" name="generalnextBtn" style="display:none">Continue</button>
+
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-2">
+                <div class="panel-heading">
+                    <h5 class="panel-title">Pricing Information</h5>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div id="pricingfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable" id="tbl_bidpricing_details">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                               
+                                                <th> Type</th>
+                                                <th> Bill No</th>
+                                                <th> Description</th>
+                                                <th> Quantity </th>
+                                                <th> Unit of Measure</th>
+                                                @*<th> Unit Cost Excl VAT</th>*@
+                                                @*<th> Amount Incl. VAT</th>*@
+                                                @*<th> Quantity Available</th>*@
+                                                <th> Unit Cost Incl VAT. </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (BidResponseItemLinesModel item in Model.BidPricinginformation)
+                                            {
+                                                BidPricingCounter++;
+                                                <tr>
+                                                    <td>
+                                                        @BidPricingCounter
+                                                    </td>
+                                               
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Type)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.No)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                    </td>
+
+                                                     <td> @Html.DisplayFor(modelItem => item.Quantity)</td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Unit_of_Measure)
+                                                    </td>                                                  
+                                                    @*<td>
+                                                        <input type="number" class="form-control" autocomplete="off" value="@Html.DisplayFor(modelItem => item.Quantity)" min="0" />
+                                                       
+                                                    </td>*@
+                                                    <td>
+                                                        <input type="number" class="form-control" autocomplete="off" value="@Html.DisplayFor(modelItem => item.Direct_Unit_Cost)" min="0" />
+                                                    </td>
+                                                    @*<td>
+                                                        <a class="btn btn-success" onclick="EditPricing('@item.Line_No','@item.No','@item.Description','@item.Unit_of_Measure','@item.Direct_Unit_Cost','@item.Quantity')"><i class="fa fa-share m-r-10"></i>Respond</a>
+
+                                                    </td>*@
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                    <div class="panel-footer">
+                                        <br />
+                                        <input type="button" id="btnSaveRFQ" class="btn btn-success pull-left" value="Submit Financial Response" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8 text-right m-b-30">
+                    @foreach (BidResponseDetailsModel item in Model.BidDetails)
+                    {
+                        <a href="@Url.Action("TenderRFQAttachDocument", "Home", new { tenderNo = @item.Invitation_For_Supply_No,Response=@item.No })" class="btn btn-success" )"><i class="fa fa-arrow"></i>Proceed to Documents Attachment</a>
+
+                    }
+                </div>
+
+                @*<button class="btn btn-primary nextBtn pull-right" type="button">Next</button>*@
+            </div>
+            <div id="edit_PriceLines" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                           <center><h4 class="modal-title">Edit Bid Response Pricing</h4></center> 
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6" style="display:none">
+                                        <div class="form-group">
+                                            <label class="control-label">Item Line Number: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="editilinetemnumber" name="editilinetemnumber" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Item No:</label>
+                                            <input class="form-control" type="text" id="edititemnumber" name="edititemnumber" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Item Descritpion:</label>
+                                            <input class="form-control" type="text" id="edititemdescription" name="edititemdescription" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Item Quantity.<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="bidedititemquantity" name="bidedititemquantity" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Unit of Measure.<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="editunitofmeasure" name="editunitofmeasure" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Unit Cost Excl VAT.<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="editdirectexvat" name="editdirectexvat">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Country/Origin.</label>
+                                            <input class="form-control" type="text" id="editdirectexvat" name="editdirectexvat">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Discount Amount.<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="editdirectexvat" name="editdirectexvat">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Brand.</label>
+                                            <input class="form-control" type="text" id="editdirectexvat" name="editdirectexvat">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Days to Delivery.</label>
+                                            <input class="form-control" type="text" id="editdirectexvat" name="editdirectexvat">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Remarks.<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="editdirectexvat" name="editdirectexvat">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="m-t-20 text-center">
+                                <button class="btn btn-primary pull-right btn_edit_pricingDetails" id="btn_edit_pricingDetails" name="btn_edit_pricingDetails" type="button">Save Pricing Details</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="edit_BidSecurityDetails" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Edit Bid Response Pricing</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Form of Bid Security : <span class="text-danger">*</span></label>
+                                            @Html.Action("TenderSecurityLists", "Home")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Issuer Institution Type <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="editissuertype" name="editissuertype">
+                                                <option value="">--Select Issuer Type--</option>
+                                                <option value="1">Bank</option>
+                                                <option value="2">Insurance</option>
+                                                <option value="3">Other Guarantor</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Security Type <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="editsecuritytypes" name="editsecuritytypes">
+                                                <option value="">--Select Security Type--</option>
+                                                <option value="1">Bid/Tender Security</option>
+                                                <option value="2">Performance/Contract Security</option>
+                                                <option value="3">Advance Payment Security</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Issuer/Guarantor Name </label>
+                                            <input class="form-control" type="text" id="editguarantorname" name="editguarantorname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Issuer Registered Offices: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="editissueroffices" name="iseditissuerofficessueroffices">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Description: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="editbiddescriptions" name="editbiddescriptions">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Security Amount(LCY): <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="editsecurityamounts" name="editsecurityamounts">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Security Effective Date: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" id="bideffectivedates" name="bideffectivedates">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Security Validity Expiry Date: <span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" id="editbidexpirydates" name="editbidexpirydates">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-t-20 text-center">
+                                        <button class="btn btn-primary btn_submitBidSecurity_Details" id="btn_submitBidSecurity_Details" name="btn_submitBidSecurity_Details" type="button">Save Bid Security Details</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-primary setup-content" id="step-3">
+                <div class="panel-heading">
+                    <h5 class="panel-title">Upload mandatory Documents</h5>
+                </div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active" style="background-color:gray">
+                            <a href="#tab_1_documents" data-toggle="tab"><p style="color:black"><strong>Required Documents</strong> </p></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_attach" data-toggle="tab"><p style="color:black">Attach Document </p></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_attached" data-toggle="tab"><p style="color:black">Attached Document </p></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab_1_documents">
+                            <div class="row">
+                                <p>You are required to submit scanned copies of the following sets of documents, as part of your Registration process. Click on the Attach Documents Link, when ready to attach the supporting documents.</></p>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Document ID</th>
+                                                    <th>Description</th>
+                                                    <th>Requirement Type</th>
+
+                                            </thead>
+                                            <tbody>
+                                                @foreach (RegistrationRequiredDocumentsModel item in Model.RequiredDocuments)
+                                                {
+                                                    RequireddocumentsCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @RequireddocumentsCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Procurement_Document_Type)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Description)
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Requirement_Type)
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_1_attach">
+                            <div class="row">
+                                <p>This Section enables you to upload scanned copies of the supporting documents required as part of this process.</p>
+                                <!-- The global progress bar -->
+                                <div class="progress progress-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Select Document Type: <span class="text-danger">*</span></label>
+                                        @Html.Action("DocumentTemplateDroplist", "Home")
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">External Document (Certificate No): <span class="text-danger">*</span></label>
+                                        <input class="form-control " type="text" id="externaltxtCertNo" name="externaltxtCertNo">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Issue Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon">
+                                            <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" id="datesOfIssues" name="datesOfIssues" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Expiry Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon">
+                                            <input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" id="datesOfexpiries" name="datesOfexpiries" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Select Document to Upload: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="file" id="inputFileselector" name="inputFileselector[]">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary button_upload_response_Documents" id="button_upload_response_Documents" name="button_upload_response_Documents" type="button">Upload Documents</button>
+                        </div>
+
+                        <div class="tab-pane fade " id="tab_1_attached">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Description</th>
+                                                    <th>Date Filed</th>
+                                                    <th>Issue Date</th>
+                                                    <th>Expiry Date</th>
+                                                    <th>File Name</th>
+                                                    <th>Download</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            @*<button class="btn btn-primary nextBtn pull-right" type="button">Next</button>*@
+                        </div>
+
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#declaration_form" class="btn btn-primary  pull-right">Submit Response</a>
+                  
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    @*<div id="declaration_form" class="modal custom-modal fade" role="dialog">
+      @foreach (BidResponseDetailsModel item in Model.BidDetails)
+      {
+            <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframeQuotation", "Home", new { bidresponseNo = @item.No })"></iframe>
+        }
+        <div class="modal-dialog" style="width:96%; height:50%">
+            <div class="modal-content modal-md" style="width:96%; height:50%">
+                <div class="modal-header">
+                   
+                </div>
+                <div class="col-sm-6" style="display:none">
+                    <div class="form-group">
+                        <label class="control-label">PrequalificationNo: <span class="text-danger">*</span></label>
+                        <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+                    </div>
+                </div>
+                <div class="modal-body card-box">
+               
+                    
+                    <div class="m-t-20">
+                        <center>
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                            <button class="btn btn-primary button_submit_tender_response pull-right" id="button_submit_tender_response" name="button_submit_tender_response" type="button">Submit Response</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+</div>
+
+
+

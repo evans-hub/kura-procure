@@ -1,0 +1,474 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewSubmittedOpenTenderResponses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int tenderCounter = 0;
+    int equipmentsCounter = 0;
+    int documentsCounter = 0;
+    int CategoriesCounter = 0;
+    int tenderDocuments = 0;
+    int BidPastExperienceCounter = 0;
+    int DocumentsCounters = 0;
+    int DownloadDocumentsCounter = 0;
+    int SerialCategoriesCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>Submitted Response</u></strong></h4>
+        </div>
+    </div>
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    @foreach (SingleTenderModel tenderdetail in Model.SingleTenders)
+    {
+        <div class="row" style="background-color:#D3D3D3">
+            <div class="col-xs-4">
+                <h6><strong><u>Tender General Details</u></strong></h6>
+            </div>
+            <div class="col-xs-8 text-right m-b-30">
+                <a href="#" onclick="TenderUpdate('@Url.Action("SubmitTenderResponse", "Home", new { tendernumber = @tenderdetail.Code })','tendernumber = @tenderdetail.Code')" class="btn btn-primary pull-right rounded"><i class="fa fa-plus"></i>Edit</a>
+            </div>
+        </div>
+    }
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_general_details" data-toggle="tab"><p style="color:black"><strong>Response General Details</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_procurement_categories" data-toggle="tab"><p style="color:black"><strong>Submitted Equipment Response</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_personel_documents" data-toggle="tab"><p style="color:black"><strong>Personnel Response</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_pastExperience_documents" data-toggle="tab"><p style="color:black"><strong>Past Experience </strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_required_documents" data-toggle="tab"><p style="color:black"><strong>Attached Documents</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_general_details">
+
+                @foreach (SubmittedTenderResponse item in Model.ResponseDetails)
+                {
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Invitation No:</label>
+                                <input class="form-control" type="text" id="tendernotice" name="tendernotice"  value="@item.InvitationNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Response No:</label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.ResponseNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor No:</label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.vendorNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Name:</label>
+                                <input class="form-control" type="text" id="vendorName" name="vendorName" value="@item.VendorName" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tender Description:</label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@item.tenderDescription" readonly>
+                            </div>
+                        </div>
+                       
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bidder Respresentative Name: </label>
+                                <input class="form-control" type="text" id="biddrerepname" name="biddrerepname" value="@item.BidRepName" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bidder Representative Designation:</label>
+                                <input class="form-control " type="text" id="bidderrepdesignations" name="bidderrepdesignations" value="@item.bidderRepDesignation" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bidder Representative Address:</label>
+                                <input class="form-control" type="text" id="bidderrepaddress" name="bidderrepaddress" value="@item.bidderRepAddress" required>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bidder Witness Name:</label>
+                                <input class="form-control" type="text" id="bidderwitnessname" name="bidderwitnessname" value="@item.BidderWittnesName" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tax Registration(PIN) No:</label>
+                                <input class="form-control " type="text" id="startdateoperations" name="startdateoperations" value="@item.VAT_Registration_No" readonly>
+
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bidder Witness Designation:<span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="bidderwitdesignation" name="bidderwitdesignation" value="@item.Bidder_Witness_Designation" required>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bid Charge Amount(LCY):</label>
+                                <input class="form-control " type="number" id="startdateoperations" name="startdateoperations" value="@item.Bid_Charge_LCY" readonly>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bidder Witness Address:</label>
+                                <input class="form-control " type="text" id="bidderwitnessaddress" name="bidderwitnessaddress" value="@item.Bidder_witness_Address" required>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bid Charge Code:</label>
+                                <input class="form-control " type="text" id="startdateoperations" name="startdateoperations" value="@item.Bid_Charge_Code" readonly>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Payment Reference:</label>
+                                <input class="form-control " type="text" id="paymentsreference" name="paymentsreference" value="@item.Payment_Reference_No">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bidder Type:</label>
+                                <input class="form-control " type="text" id="BidderType" name="BidderType" value="@item.BiddeType">
+                            </div>
+                        </div>
+                       
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Joint Venture Partner:</label>
+                                    <input class="form-control " type="text" id="jointventures" name="jointventures" value="@item.jointPartnerVenture">
+                                </div>
+                            </div>
+                     
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tender Document Source:</label>
+                                <input class="form-control " type="text" id="TenderDocumentSource" name="TenderDocumentSource" value="@item.TenderDocumentSources">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                }
+            </div>
+            <div class="tab-pane fade" id="tab_procurement_categories">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>Submitted Equipment Response</u></strong></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="bideresponseequipmentsfeedback" style="display: none" data-dismiss="alert"></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tbl_bid_equipments">
+                                            <thead>
+
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th> Equipment Type Category </th>
+                                                    <th> Description</th>
+                                                    <th> Ownership Type </th>
+                                                    <th> Equipment Serial No. </th>
+                                                    <th> Years of Previous Use</th>
+                                                    <th> Equipment Condition Code </th>
+                                                    <th> Equipment Quantity</th>
+                                                    
+                                                </tr>
+
+                                            </thead>
+                                            <tbody>
+                                                @foreach (BidEquipmentsSpecificationModel item in Model.BidEquipments)
+                                                {
+                                                    equipmentsCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @equipmentsCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Equipment_Type_Code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Description)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Ownership_Type)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Equipment_Serial)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Years_of_Previous_Use)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Equipment_Condition_Code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Qty_of_Equipment)
+                                                        </td>
+                                                      
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                     
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_personel_documents">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>Personnel Response</u></strong></h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="bideresponseequipmentsfeedback" style="display: none" data-dismiss="alert"></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tbl_bid_personnel">
+                                            <thead>
+
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th> Staff Name </th>
+                                                    <th> Proposed Project Role</th>
+                                                    <th> Required Project Role Type </th>
+                                                    <th> Staff category</th>
+                                                    <th> Email</th>
+                                                    <th> Employment Type</th>
+                                                  
+                                                </tr>
+
+                                            </thead>
+                                            <tbody>
+                                                @foreach (BidResponsePersonnel item in Model.BidPersonnel)
+                                                {
+                                                    equipmentsCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @equipmentsCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.StaffName)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.ProjectRoleCode)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.RequiredProfession)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.StaffCategory)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.EmailAddress)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.EmploymentType)
+                                                        </td>
+
+                                                      
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                          
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_pastExperience_documents">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>Past Experience </u></strong></h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                </div>
+                              
+                                <div id="pastexperiencefeedback" style="display: none" data-dismiss="alert"></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped custom-table datatable" id="tbl_past_experience">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th> Client Name</th>
+                                                        <th> Client Address</th>
+                                                        <th> Phone No.</th>
+                                                        <th> Country </th>
+                                                        <th> Contract Ref  No. </th>
+                                                        <th> Assignment Value </th>
+                                                        <th> Assignment Status </th>
+                                                   
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (BidPastExperienceModel item in Model.BidPastExperiencent)
+                                                    {
+                                                        BidPastExperienceCounter++;
+                                                        <tr>
+                                                            <td>
+                                                                @BidPastExperienceCounter
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Client_Name)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Address)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Phone_No)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Country_Region_Code)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Contract_Ref_No)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Assignment_Value_LCY)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Assignment_Status)
+                                                            </td>
+                                                      
+                                                        
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab_required_documents">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h3 class="panel-title"><strong><u>Attached Response Documents</u></strong></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Description</th>
+                                        <th>Date Filed</th>
+                                        <th>Issue Date</th>
+                                        <th>Expiry Date</th>
+                                        <th>File Name</th>
+                                        <th>Download</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)
+                                    {
+                                        documentsCounter++;
+                                        <tr>
+                                            <td>
+                                                @documentsCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Date_Filed)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Issue_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Expiry_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.File_Name)
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

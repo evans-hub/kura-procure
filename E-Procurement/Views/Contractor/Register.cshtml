@@ -1,0 +1,204 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+    <title>Kerra E-Procurement - i-RMS</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/CustomCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="/Contractor/HomePage" class="logo">
+                    <img src="~/assets/img/logo.png" width="200" height="60" alt="">
+                </a>
+            </div>
+            <div class="page-title-box pull-left">
+                <h3>i-RMS</h3>
+            </div>
+            <ul class="nav navbar-nav navbar-right user-menu pull-right">
+                <li>
+                    <a href="/Contractor/HomePage">Ongoing Projects</a>
+                </li>
+                <li>
+                    <a href="/Contractor/UpcomingProjects">Upcoming Projects</a>
+                </li>
+                <li>
+                    <a href="/Contractor/PlannedProjects">Planned Projects</a>
+                </li>
+                <li>
+                    <a href="/Contractor/CompletedProjects">Completed Projects</a>
+                </li>
+                <li>
+                    <a href="#">Key Achievements</a>
+                </li>
+                <li class="submenu dropdown">
+                    <a href="#"><span>Login</span> <span class="menu-arrow"></span></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Login</a>
+                        <a class="dropdown-item" href="#">Register</a>
+                        <a class="dropdown-item" href="#">Forgot Password</a>
+                    </div>
+                <li>
+                    <a href="#">Help desk</a>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="edit-profile.html">Edit Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="page-wrapper job-wrapper">
+            <div class="content container" style="width:100%">
+                <h2>Contractor Registration Request Form</h2>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 class="page-title">Provide your Company details</h4>
+                    </div>
+                </div>
+                <div class="main-wrapper">
+                    <div class="row">
+                        <div class="content container-fluid">
+                            <div class="content">
+                                <center><h2>CONTRACTOR REGISTRATION REQUEST</h2></center>
+                                <div class="panel-body">
+                                    <div id="feedback" style="display: none" data-dismiss="alert"></div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Registered Business Name: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="supplierbusinessname" id="supplierbusinessname">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Tax Registration (PIN) No: <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="text" name="taxregistration" id="taxregistration">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Contact Person (Name):: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" name="contactperson" id="contactperson">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Primary Email Address : <span class="text-danger">*</span></label>
+                                                <input class="form-control" type="email" name="supplieremailaddress" id="supplieremailaddress">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Mobile Phone No: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" name="phonenumber" id="phonenumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Terms and Conditions: <span class="text-danger">*</span></label>
+                                            <input class="form-control " type="checkbox" name="termsandconditions" id="termsandconditions">
+                                        </div>
+                                    </div>
+                                </div>
+                                <center>
+                                    <button class="btn btn-primary center-modal btn_supplierregister" id="btn_supplierregister" type="button">Submit Registration</button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container" style="width:100%">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">KeRRA is a State Corporation within the State Department of Infrastructure under the Ministry of Transport, Infrastructure, Housing and Urban Development and established through the Kenya Roads Act, 2007.While our Head Office is situated in Nairobi, the Authority has 30 Regional Administrative Units and Offices in each County. Our operations are further devolved to the Constituency level wherein we maintain roads in all 290 Constituencies guided by respective Constituency Roads Committees (CRCs); through the annual Roads Maintenance Levy Fund (RMLF) allocations.</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/category/c-language/">FAQs</a></li>
+                        <li><a href="http://scanfcode.com/category/front-end-development/">FeedBack</a></li>
+                        <li><a href="http://scanfcode.com/category/back-end-development/">Bidders Manual Kit</a></li>
+                        <li><a href="http://scanfcode.com/category/java-programming-language/">Downloads</a></li>
+                        <li><a href="http://scanfcode.com/category/android/">Announcements</a></li>
+                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container" style="width:100%">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">
+                    <p>Copyright:&copy; @DateTime.Now.Year - Kenya Rural Roads Authority.All Rights Reserved - <a href="#">Designed and Developed by Dynasoft Business Solutions</a>.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/supplierRegistration.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/sweetalert.min.js"></script>
+    <!-- Sweet Alert Js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+</body>
+</html>
+

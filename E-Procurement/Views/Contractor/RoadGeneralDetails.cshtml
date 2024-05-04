@@ -1,0 +1,385 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    ViewBag.Title = "RoadGeneralDetails";
+    int SectionsCounters = 0;
+    int StructuresCounter = 0;
+    int ConditionsCounter = 0;
+    int EnvironsCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>Welcome to the Contractors Hub</u></strong></h4>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_road_generaldetails" data-toggle="tab"><p style="color:black"><strong>Road Link General Details</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_sections" data-toggle="tab"><p style="color:black"><strong>Road Link Sections</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_structured" data-toggle="tab"><p style="color:black"><strong>Road Link Structures</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_conditions" data-toggle="tab"><p style="color:black"><strong>Road Link Condition</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_environs" data-toggle="tab"><p style="color:black"><strong>Road Link Environs</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_road_generaldetails">
+                    @foreach (RoadsInventoryModel item in Model.RoadLinkCode)
+                    {
+                  <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title">Road Link General Details</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Code:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@item.Road_Code" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Link Name:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@item.Link_Name" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Class: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.Road_Class_ID" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Category:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.Road_Category" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Primary Region: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.Primary_County_ID" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Start Chainage(KMs):<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.Start_Chainage_KM" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">End Chainage(KMs):<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.End_Chainage_KM" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Gazetted Road Length(KMs): <span class="text-danger">*</span></label>
+                                <input class="form-control datetimepicker" type="text" id="dateofincoperation" name="dateofincoperation" value="@item.Gazetted_Road_Length_KMs" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">No. of Road Sections:</label>
+                                <input class="form-control datetimepicker" type="text" id="startdateoperations" name="startdateoperations" value="@item.No_of_Road_Sections" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Surface Condition:</label>
+                                <input class="form-control datetimepicker" type="text" id="startdateoperations" name="startdateoperations" value="@item.General_Road_Surface_Condition" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Paved Road Length(KMs):</label>
+                                <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.Paved_Road_Length_Km" readonly>
+                            </div>
+                        </div>
+                      <div class="col-sm-6">
+                          <div class="form-group">
+                              <label class="control-label">Paved Road Length(%):</label>
+                              <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.Paved_Road_Length" readonly>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="form-group">
+                              <label class="control-label">UnPaved Road Length(%):</label>
+                              <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.Unpaved_Road_Length" readonly>
+                          </div>
+                      </div>
+                      <div class="col-sm-6">
+                          <div class="form-group">
+                              <label class="control-label">CarriageWay Type:</label>
+                              <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.Carriageway_Type" readonly>
+                          </div>
+                      </div>
+                    </div>
+                }
+               @foreach (RoadsInventoryModel item in Model.RoadLinkCode)
+               {
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title">Road Link Linear Referencing Informations</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Start Point Longitude:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorno" name="vendorno" value="@item.Start_Point_Longitude" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Start Point Latitude:<span class="text-danger">*</span> </label>
+                                <input class="form-control" type="text" id="businessname" name="businessname" value="@item.Start_Point_Latitude" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">End Point Longitude: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.End_Point_Longitude" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">End Point Latitude:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.End_Point_Latitude" readonly>
+                            </div>
+                      </div>                       
+                </div>                  
+                }              
+            </div>
+
+            <div class="tab-pane fade " id="tab_sections">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h3 class="panel-title">Road Link Sections</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Road Code</th>
+                                        <th>Road Section No.</th>
+                                        <th>Section Name</th>
+                                        <th>Road Class</th>
+                                        <th>Road Category</th>
+                                        <th>Start Chainage(Kms)</th>
+                                        <th>End Chainage(Kms)</th>
+                                        <th>Region</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (RoadSectionsModel item in Model.RoadSections)
+                                    {
+                                       SectionsCounters++;
+                                        <tr>
+                                            <td>
+                                                @SectionsCounters
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Code)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Section_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Section_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Class_Id)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Category)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Start_Chainage)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.End_Chainage)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Region)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Vendor Prequalification History Details*@
+            <div class="tab-pane fade " id="tab_structured">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h3 class="panel-title">Road Link Structures</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Road Code</th>
+                                        <th>Structure Code</th>
+                                        <th>Sturcture Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (RoadLinkStructuresModel item in Model.RoadStructures)
+                                    {
+                                        StructuresCounter++;
+                                        <tr>
+                                            <td>
+                                                @StructuresCounter
+                                            </td>
+
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Code)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Code)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </td>   
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*Vendor Financial Capability Details*@
+            <div class="tab-pane fade " id="tab_conditions">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title">Road Link Conditions</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Road Code</th>
+                                        <th>Road Section No.</th>
+                                        <th>Surface Type</th>
+                                        <th>Pavement Category</th>
+                                        <th>Start Chainage</th>
+                                        <th>End Chainage</th>
+                                        <th>Road Length</th>
+                                        <th>Road Class</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (RoadLinkConditionModel item in Model.RoadConditions)
+                                    {
+                                        ConditionsCounter++;
+                                        <tr>
+                                            <td>
+                                                @ConditionsCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Code)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Section_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Pavement_Surface_Type)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Pavement_Category)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Start_Chainage)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.End_Chainage)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Length_Kms)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Class_ID)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_environs">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title">Road Link Environs</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Road Code</th>
+                                        <th>Environ Category</th>
+                                        <th>Description</th>
+                                        <th>Location Details</th>
+                                        <th>County</th>
+                                        <th>Constituency</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (RoadLinkEnvironsModel item in Model.RoadEnvirons)
+                                    {
+                                        EnvironsCounter++;
+                                        <tr>
+                                            <td>
+                                                @EnvironsCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Code)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Road_Environ_Category)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Location_Details)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Constituency_ID)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Constituency_ID)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

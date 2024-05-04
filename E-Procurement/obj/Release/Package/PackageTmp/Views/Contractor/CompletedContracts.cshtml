@@ -1,0 +1,268 @@
+﻿@model  IEnumerable<E_Procurement.Models.Contractor.ContractsModel>
+@{
+    ViewBag.Title = "CompletedContracts";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int CompletedContractsCounter = 0;
+    int CancelledContractsCounter = 0;
+    int ActiveContractsCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>Contractor Completed Contracts</u></strong></h5>
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active" style="background-color:#D3D3D3">
+            <a href="#completed_contracts" data-toggle="tab"><p style="color:black"><strong>All Completed Contracts</strong></p> </a>
+        </li>
+        <li style="background-color:#D3D3D3">
+            <a href="#active_contracts" data-toggle="tab"><p style="color:black"><strong>All Active Contracts</strong> </p></a>
+        </li>
+        <li style="background-color:#D3D3D3">
+            <a href="#cancelled_contracts" data-toggle="tab"><p style="color:black"><strong>All Cancelled/Closed Contracts</strong></p> </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="completed_contracts">
+            <p>The following are the Contractor's Active Contracts </p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Contract Ref No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Project Commenced</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    CompletedContractsCounter++;
+                                    <tr>
+                                        <td>
+                                            @CompletedContractsCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_Code)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_End_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Value)
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="View('@Url.Action("ViewProjectContracts", "Contractor", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="active_contracts">
+            <p>The following are the Contractor's Completed Contracts </p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Contract Ref No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Project Commenced</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    ActiveContractsCounter++;
+                                    <tr>
+                                        <td>
+                                            @ActiveContractsCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_Code)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_End_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Value)
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="View('@Url.Action("ViewProjectContracts", "Contractor", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="cancelled_contracts">
+            <p>The following are the Contractor's Cancelled/Closed Contracts </p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Contract Ref No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Project Commenced</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    CancelledContractsCounter++;
+                                    <tr>
+                                        <td>
+                                            @CancelledContractsCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_Code)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_End_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Value)
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="View('@Url.Action("ViewProjectContracts", "Contractor", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

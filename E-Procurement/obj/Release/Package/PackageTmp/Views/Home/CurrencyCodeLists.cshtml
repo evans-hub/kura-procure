@@ -1,0 +1,15 @@
+﻿@model  IEnumerable<E_Procurement.Models.CurrencyModel>
+@{
+    Layout = null;
+}
+
+<select class="form-control select2" id="dropdownCurrencycodes" name="dropdownCurrencycodes" data_live_search="true">
+    <option value="">--Select Currency Codes---</option>
+    <optgroup label="Availlable Currency Codes Codes">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Description</option>
+        }
+    </optgroup>
+</select>
+

@@ -1,0 +1,61 @@
+﻿@model  IEnumerable<E_Procurement.Models.PrequalifiedCategoriesModel>
+@{
+    ViewBag.Title = "PrequalifiedCategories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int prequalificationsCounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i><strong>Prequalified Categories</strong></i></h5>
+            </div><br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Procurement Type</th>
+                            <th>Category Code</th>
+                            <th>Description</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       @foreach (var item in Model)
+                       {
+                           prequalificationsCounter++;
+                         <tr>
+                                <td>
+                                   @prequalificationsCounter
+                                </td>                               
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Procurement_Type)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Procurement_Category_Code)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Start_Date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.End_Date)
+                                </td>                            
+                        </tr>
+                       }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

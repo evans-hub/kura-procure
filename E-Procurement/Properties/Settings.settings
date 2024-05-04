@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="E_Procurement.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="E_Procurement_LiveQueries_eprocurementQueries" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.65:7047/BC200/WS/KURA%20LIVE/Codeunit/eprocurementQueries</Value>
+    </Setting>
+    <Setting Name="E_Procurement_LiveCodeunit_procurement" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.65:7047/BC200/WS/KURA%20LIVE/Codeunit/procurement</Value>
+    </Setting>
+    <Setting Name="E_Procurement_ProcurementTest_procurement" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.40:7047/BC200/WS/KURA%20LIVE/Codeunit/procurement</Value>
+    </Setting>
+    <Setting Name="E_Procurement_ProcurementQueriesTest_eprocurementQueries" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.1.40:7047/BC200/WS/KURA%20LIVE/Codeunit/eprocurementQueries</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

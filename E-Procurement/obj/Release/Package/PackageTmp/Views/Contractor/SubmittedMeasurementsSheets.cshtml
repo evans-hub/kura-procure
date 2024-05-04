@@ -1,0 +1,88 @@
+﻿@model  IEnumerable<E_Procurement.Models.Contractor.MeasurementSheetModel>
+@{
+    ViewBag.Title = "SubmittedMeasurementsSheets";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int MeasurementsCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>Submitted Project Measurements Sheets</u></strong></h5>
+        </div>
+    </div>
+    <p>The following are the Submitted Project Measurements Sheets</p>
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">Search by Regions</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">Search by Contract No</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="#" class="btn btn-success btn-block"> Search </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Project No</th>
+                            <th>Description</th>
+                            <th>Start Chainnage</th>
+                            <th>End Chainnage</th>
+                            <th>Region</th>
+                            <th>Road Section No</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            MeasurementsCounter++;
+                            <tr>
+                                <td>
+                                    @MeasurementsCounter
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Project_ID)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Works_Start_Chainage)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Works_End_Chainage)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Region_ID)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Road_Section_No)
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("", " ", new { OrderNumber = @item.Project_ID })" data-toggle="modal" class="btn btn-success"><i class="fa fa-eye m-r-10"></i> View</a>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+   

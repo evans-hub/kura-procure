@@ -1,0 +1,3031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="fnGetBankBranch">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bankCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBankBranch_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBankBranches">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bankCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBankBranches_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBankCodes">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetBankCodes_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidAuditedBalanceSheet">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidAuditedBalanceSheet_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidAuditedIncomeStatement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidAuditedIncomeStatement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidContractSecurity">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidContractSecurity_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidKeyStaffDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidKeyStaffDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidLitigationHistory">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidLitigationHistory_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidPastExperience">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidPastExperience_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseAttachedDocuments">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseAttachedDocuments_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseItemLines">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseItemLines_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseList">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="procurementMethod" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidResponseList_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidScoreRequirements">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="templateId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidScoreRequirements_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidScoringTemplate">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bidtemplate" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidScoringTemplate_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidSpecificationEquipment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidSpecificationEquipment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidStaff">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="responseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBidStaff_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetBusinessType">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetBusinessType_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetCalendarYearCodeList">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetCalendarYearCodeList_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetCommencementOrders">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetCommencementOrders_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetCompanySizeCodes">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetCompanySizeCodes_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetContractRequirements">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="tenderNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetContractRequirements_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetCountries">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetCountries_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetCurrency">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetCurrency_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetEprocurementDocuments">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="procurementProcess" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetEprocurementDocuments_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetEvaluationCriteria">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="templateId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetEvaluationCriteria_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFPRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="invitationNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFPRequest_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFPResponseLineRC">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="docNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="category" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFPResponseLineRC_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFSKeyStaff">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFSKeyStaff_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFSRequiredEquipment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="tenderNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFSRequiredEquipment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFSSecurity">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="ifsCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIFSSecurity_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIfpReqDocuments">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIfpReqDocuments_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIfpResponseLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="docNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="category" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIfpResponseLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIfsRequiredDocs">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIfsRequiredDocs_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetIndustryGroup">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetIndustryGroup_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetInvitationForPrequalification">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetInvitationForPrequalification_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetInvitationForRFQ">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetInvitationForRFQ_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetInvitationPrequalification">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetInvitationPrequalification_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetInviteTender">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetInviteTender_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetJobPlanningLines">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="jobNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetJobPlanningLines_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetJobTasks">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetJobTasks_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetJobs">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetJobs_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetLanguage">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetLanguage_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetMeasurements">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="contractorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetMeasurements_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetOldPerformanceGuarantees">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="contractorId" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetOldPerformanceGuarantees_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPCOInternalProjectTeam">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="orderNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPCOInternalProjectTeam_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPCOPlannedMeeting">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="noticeNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPCOPlannedMeeting_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPCORequiredDocument">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="noticeNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPCORequiredDocument_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPavementSurfaceEntry">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="roadCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPavementSurfaceEntry_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPortalUser">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="email" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="password" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPortalUser_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPostCodes">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetPostCodes_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetProcurementSetup">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetProcurementSetup_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetProjectMobilizationHeader">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="status" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetProjectMobilizationHeader_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetProjectRoleCodes">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetProjectRoleCodes_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetProjectStaffRoleCode">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetProjectStaffRoleCode_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetProjectWorks">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="contractorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetProjectWorks_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPurchaseHeader">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="payToVendor" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetPurchaseHeader_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFICategoryRequirements">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="categoryId" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFICategoryRequirements_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIPreqList">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIPreqList_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIPrequalificationCategory">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="invitationNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIPrequalificationCategory_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIResponseFiledDocument">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIResponseFiledDocument_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIResponse">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRFIResponse_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRegions">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetRegions_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetResponsibilityCenters">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="operatingUnitType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetResponsibilityCenters_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRoadEnviron">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetRoadEnviron_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRoadInventory">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="roadCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRoadInventory_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRoadSections">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="roadCode" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetRoadSections_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetShareholderDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetShareholderDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetStandardPurchaseLine">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetStandardPurchaseLine_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetSupplierCategory">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetSupplierCategory_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetSupplierRegistrationPeriods">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetSupplierRegistrationPeriods_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenderAddedNotice">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="tenderNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenderAddedNotice_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenderAddednumDocument">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="noticeNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenderAddednumDocument_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenderSecurityTypes">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="securityType" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenderSecurityTypes_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenderSourceDocument">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetTenderSourceDocument_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetTenders">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetTenders_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorBalanceSheet">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorBalanceSheet_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorBankAccount">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorBankAccount_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorBeneficiaries">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorBeneficiaries_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorDepartmentEntry">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumer" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorDepartmentEntry_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorFiledRegDocuments">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="procurementProcess" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorFiledRegDocuments_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorIncomeStatement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorIncomeStatement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorPastExperience">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorPastExperience_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorPrequalificationEntry">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorPrequalificationEntry_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorProfessionalStaff">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorProfessionalStaff_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorSpecialGroupCategory">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetVendorSpecialGroupCategory_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorStatement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendorStatement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendor">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetVendor_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetWEPContractorEqquipment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="contractorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetWEPContractorEqquipment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetWEPContractorTeam">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="contractorNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetWEPContractorTeam_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetWEPExecutionSchedule">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetWEPExecutionSchedule_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnGetWorkEquipmentCategories">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="fnGetWorkEquipmentCategories_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="fnGetBankBranch">
+    <part name="parameters" element="tns:fnGetBankBranch" />
+  </message>
+  <message name="fnGetBankBranch_Result">
+    <part name="parameters" element="tns:fnGetBankBranch_Result" />
+  </message>
+  <message name="fnGetBankBranches">
+    <part name="parameters" element="tns:fnGetBankBranches" />
+  </message>
+  <message name="fnGetBankBranches_Result">
+    <part name="parameters" element="tns:fnGetBankBranches_Result" />
+  </message>
+  <message name="fnGetBankCodes">
+    <part name="parameters" element="tns:fnGetBankCodes" />
+  </message>
+  <message name="fnGetBankCodes_Result">
+    <part name="parameters" element="tns:fnGetBankCodes_Result" />
+  </message>
+  <message name="fnGetBidAuditedBalanceSheet">
+    <part name="parameters" element="tns:fnGetBidAuditedBalanceSheet" />
+  </message>
+  <message name="fnGetBidAuditedBalanceSheet_Result">
+    <part name="parameters" element="tns:fnGetBidAuditedBalanceSheet_Result" />
+  </message>
+  <message name="fnGetBidAuditedIncomeStatement">
+    <part name="parameters" element="tns:fnGetBidAuditedIncomeStatement" />
+  </message>
+  <message name="fnGetBidAuditedIncomeStatement_Result">
+    <part name="parameters" element="tns:fnGetBidAuditedIncomeStatement_Result" />
+  </message>
+  <message name="fnGetBidContractSecurity">
+    <part name="parameters" element="tns:fnGetBidContractSecurity" />
+  </message>
+  <message name="fnGetBidContractSecurity_Result">
+    <part name="parameters" element="tns:fnGetBidContractSecurity_Result" />
+  </message>
+  <message name="fnGetBidKeyStaffDetails">
+    <part name="parameters" element="tns:fnGetBidKeyStaffDetails" />
+  </message>
+  <message name="fnGetBidKeyStaffDetails_Result">
+    <part name="parameters" element="tns:fnGetBidKeyStaffDetails_Result" />
+  </message>
+  <message name="fnGetBidLitigationHistory">
+    <part name="parameters" element="tns:fnGetBidLitigationHistory" />
+  </message>
+  <message name="fnGetBidLitigationHistory_Result">
+    <part name="parameters" element="tns:fnGetBidLitigationHistory_Result" />
+  </message>
+  <message name="fnGetBidPastExperience">
+    <part name="parameters" element="tns:fnGetBidPastExperience" />
+  </message>
+  <message name="fnGetBidPastExperience_Result">
+    <part name="parameters" element="tns:fnGetBidPastExperience_Result" />
+  </message>
+  <message name="fnGetBidResponseAttachedDocuments">
+    <part name="parameters" element="tns:fnGetBidResponseAttachedDocuments" />
+  </message>
+  <message name="fnGetBidResponseAttachedDocuments_Result">
+    <part name="parameters" element="tns:fnGetBidResponseAttachedDocuments_Result" />
+  </message>
+  <message name="fnGetBidResponseDetails">
+    <part name="parameters" element="tns:fnGetBidResponseDetails" />
+  </message>
+  <message name="fnGetBidResponseDetails_Result">
+    <part name="parameters" element="tns:fnGetBidResponseDetails_Result" />
+  </message>
+  <message name="fnGetBidResponseItemLines">
+    <part name="parameters" element="tns:fnGetBidResponseItemLines" />
+  </message>
+  <message name="fnGetBidResponseItemLines_Result">
+    <part name="parameters" element="tns:fnGetBidResponseItemLines_Result" />
+  </message>
+  <message name="fnGetBidResponseList">
+    <part name="parameters" element="tns:fnGetBidResponseList" />
+  </message>
+  <message name="fnGetBidResponseList_Result">
+    <part name="parameters" element="tns:fnGetBidResponseList_Result" />
+  </message>
+  <message name="fnGetBidScoreRequirements">
+    <part name="parameters" element="tns:fnGetBidScoreRequirements" />
+  </message>
+  <message name="fnGetBidScoreRequirements_Result">
+    <part name="parameters" element="tns:fnGetBidScoreRequirements_Result" />
+  </message>
+  <message name="fnGetBidScoringTemplate">
+    <part name="parameters" element="tns:fnGetBidScoringTemplate" />
+  </message>
+  <message name="fnGetBidScoringTemplate_Result">
+    <part name="parameters" element="tns:fnGetBidScoringTemplate_Result" />
+  </message>
+  <message name="fnGetBidSpecificationEquipment">
+    <part name="parameters" element="tns:fnGetBidSpecificationEquipment" />
+  </message>
+  <message name="fnGetBidSpecificationEquipment_Result">
+    <part name="parameters" element="tns:fnGetBidSpecificationEquipment_Result" />
+  </message>
+  <message name="fnGetBidStaff">
+    <part name="parameters" element="tns:fnGetBidStaff" />
+  </message>
+  <message name="fnGetBidStaff_Result">
+    <part name="parameters" element="tns:fnGetBidStaff_Result" />
+  </message>
+  <message name="fnGetBusinessType">
+    <part name="parameters" element="tns:fnGetBusinessType" />
+  </message>
+  <message name="fnGetBusinessType_Result">
+    <part name="parameters" element="tns:fnGetBusinessType_Result" />
+  </message>
+  <message name="fnGetCalendarYearCodeList">
+    <part name="parameters" element="tns:fnGetCalendarYearCodeList" />
+  </message>
+  <message name="fnGetCalendarYearCodeList_Result">
+    <part name="parameters" element="tns:fnGetCalendarYearCodeList_Result" />
+  </message>
+  <message name="fnGetCommencementOrders">
+    <part name="parameters" element="tns:fnGetCommencementOrders" />
+  </message>
+  <message name="fnGetCommencementOrders_Result">
+    <part name="parameters" element="tns:fnGetCommencementOrders_Result" />
+  </message>
+  <message name="fnGetCompanySizeCodes">
+    <part name="parameters" element="tns:fnGetCompanySizeCodes" />
+  </message>
+  <message name="fnGetCompanySizeCodes_Result">
+    <part name="parameters" element="tns:fnGetCompanySizeCodes_Result" />
+  </message>
+  <message name="fnGetContractRequirements">
+    <part name="parameters" element="tns:fnGetContractRequirements" />
+  </message>
+  <message name="fnGetContractRequirements_Result">
+    <part name="parameters" element="tns:fnGetContractRequirements_Result" />
+  </message>
+  <message name="fnGetCountries">
+    <part name="parameters" element="tns:fnGetCountries" />
+  </message>
+  <message name="fnGetCountries_Result">
+    <part name="parameters" element="tns:fnGetCountries_Result" />
+  </message>
+  <message name="fnGetCurrency">
+    <part name="parameters" element="tns:fnGetCurrency" />
+  </message>
+  <message name="fnGetCurrency_Result">
+    <part name="parameters" element="tns:fnGetCurrency_Result" />
+  </message>
+  <message name="fnGetEprocurementDocuments">
+    <part name="parameters" element="tns:fnGetEprocurementDocuments" />
+  </message>
+  <message name="fnGetEprocurementDocuments_Result">
+    <part name="parameters" element="tns:fnGetEprocurementDocuments_Result" />
+  </message>
+  <message name="fnGetEvaluationCriteria">
+    <part name="parameters" element="tns:fnGetEvaluationCriteria" />
+  </message>
+  <message name="fnGetEvaluationCriteria_Result">
+    <part name="parameters" element="tns:fnGetEvaluationCriteria_Result" />
+  </message>
+  <message name="fnGetIFPRequest">
+    <part name="parameters" element="tns:fnGetIFPRequest" />
+  </message>
+  <message name="fnGetIFPRequest_Result">
+    <part name="parameters" element="tns:fnGetIFPRequest_Result" />
+  </message>
+  <message name="fnGetIFPResponseLineRC">
+    <part name="parameters" element="tns:fnGetIFPResponseLineRC" />
+  </message>
+  <message name="fnGetIFPResponseLineRC_Result">
+    <part name="parameters" element="tns:fnGetIFPResponseLineRC_Result" />
+  </message>
+  <message name="fnGetIFSKeyStaff">
+    <part name="parameters" element="tns:fnGetIFSKeyStaff" />
+  </message>
+  <message name="fnGetIFSKeyStaff_Result">
+    <part name="parameters" element="tns:fnGetIFSKeyStaff_Result" />
+  </message>
+  <message name="fnGetIFSRequiredEquipment">
+    <part name="parameters" element="tns:fnGetIFSRequiredEquipment" />
+  </message>
+  <message name="fnGetIFSRequiredEquipment_Result">
+    <part name="parameters" element="tns:fnGetIFSRequiredEquipment_Result" />
+  </message>
+  <message name="fnGetIFSSecurity">
+    <part name="parameters" element="tns:fnGetIFSSecurity" />
+  </message>
+  <message name="fnGetIFSSecurity_Result">
+    <part name="parameters" element="tns:fnGetIFSSecurity_Result" />
+  </message>
+  <message name="fnGetIfpReqDocuments">
+    <part name="parameters" element="tns:fnGetIfpReqDocuments" />
+  </message>
+  <message name="fnGetIfpReqDocuments_Result">
+    <part name="parameters" element="tns:fnGetIfpReqDocuments_Result" />
+  </message>
+  <message name="fnGetIfpResponseLine">
+    <part name="parameters" element="tns:fnGetIfpResponseLine" />
+  </message>
+  <message name="fnGetIfpResponseLine_Result">
+    <part name="parameters" element="tns:fnGetIfpResponseLine_Result" />
+  </message>
+  <message name="fnGetIfsRequiredDocs">
+    <part name="parameters" element="tns:fnGetIfsRequiredDocs" />
+  </message>
+  <message name="fnGetIfsRequiredDocs_Result">
+    <part name="parameters" element="tns:fnGetIfsRequiredDocs_Result" />
+  </message>
+  <message name="fnGetIndustryGroup">
+    <part name="parameters" element="tns:fnGetIndustryGroup" />
+  </message>
+  <message name="fnGetIndustryGroup_Result">
+    <part name="parameters" element="tns:fnGetIndustryGroup_Result" />
+  </message>
+  <message name="fnGetInvitationForPrequalification">
+    <part name="parameters" element="tns:fnGetInvitationForPrequalification" />
+  </message>
+  <message name="fnGetInvitationForPrequalification_Result">
+    <part name="parameters" element="tns:fnGetInvitationForPrequalification_Result" />
+  </message>
+  <message name="fnGetInvitationForRFQ">
+    <part name="parameters" element="tns:fnGetInvitationForRFQ" />
+  </message>
+  <message name="fnGetInvitationForRFQ_Result">
+    <part name="parameters" element="tns:fnGetInvitationForRFQ_Result" />
+  </message>
+  <message name="fnGetInvitationPrequalification">
+    <part name="parameters" element="tns:fnGetInvitationPrequalification" />
+  </message>
+  <message name="fnGetInvitationPrequalification_Result">
+    <part name="parameters" element="tns:fnGetInvitationPrequalification_Result" />
+  </message>
+  <message name="fnGetInviteTender">
+    <part name="parameters" element="tns:fnGetInviteTender" />
+  </message>
+  <message name="fnGetInviteTender_Result">
+    <part name="parameters" element="tns:fnGetInviteTender_Result" />
+  </message>
+  <message name="fnGetJobPlanningLines">
+    <part name="parameters" element="tns:fnGetJobPlanningLines" />
+  </message>
+  <message name="fnGetJobPlanningLines_Result">
+    <part name="parameters" element="tns:fnGetJobPlanningLines_Result" />
+  </message>
+  <message name="fnGetJobTasks">
+    <part name="parameters" element="tns:fnGetJobTasks" />
+  </message>
+  <message name="fnGetJobTasks_Result">
+    <part name="parameters" element="tns:fnGetJobTasks_Result" />
+  </message>
+  <message name="fnGetJobs">
+    <part name="parameters" element="tns:fnGetJobs" />
+  </message>
+  <message name="fnGetJobs_Result">
+    <part name="parameters" element="tns:fnGetJobs_Result" />
+  </message>
+  <message name="fnGetLanguage">
+    <part name="parameters" element="tns:fnGetLanguage" />
+  </message>
+  <message name="fnGetLanguage_Result">
+    <part name="parameters" element="tns:fnGetLanguage_Result" />
+  </message>
+  <message name="fnGetMeasurements">
+    <part name="parameters" element="tns:fnGetMeasurements" />
+  </message>
+  <message name="fnGetMeasurements_Result">
+    <part name="parameters" element="tns:fnGetMeasurements_Result" />
+  </message>
+  <message name="fnGetOldPerformanceGuarantees">
+    <part name="parameters" element="tns:fnGetOldPerformanceGuarantees" />
+  </message>
+  <message name="fnGetOldPerformanceGuarantees_Result">
+    <part name="parameters" element="tns:fnGetOldPerformanceGuarantees_Result" />
+  </message>
+  <message name="fnGetPCOInternalProjectTeam">
+    <part name="parameters" element="tns:fnGetPCOInternalProjectTeam" />
+  </message>
+  <message name="fnGetPCOInternalProjectTeam_Result">
+    <part name="parameters" element="tns:fnGetPCOInternalProjectTeam_Result" />
+  </message>
+  <message name="fnGetPCOPlannedMeeting">
+    <part name="parameters" element="tns:fnGetPCOPlannedMeeting" />
+  </message>
+  <message name="fnGetPCOPlannedMeeting_Result">
+    <part name="parameters" element="tns:fnGetPCOPlannedMeeting_Result" />
+  </message>
+  <message name="fnGetPCORequiredDocument">
+    <part name="parameters" element="tns:fnGetPCORequiredDocument" />
+  </message>
+  <message name="fnGetPCORequiredDocument_Result">
+    <part name="parameters" element="tns:fnGetPCORequiredDocument_Result" />
+  </message>
+  <message name="fnGetPavementSurfaceEntry">
+    <part name="parameters" element="tns:fnGetPavementSurfaceEntry" />
+  </message>
+  <message name="fnGetPavementSurfaceEntry_Result">
+    <part name="parameters" element="tns:fnGetPavementSurfaceEntry_Result" />
+  </message>
+  <message name="fnGetPortalUser">
+    <part name="parameters" element="tns:fnGetPortalUser" />
+  </message>
+  <message name="fnGetPortalUser_Result">
+    <part name="parameters" element="tns:fnGetPortalUser_Result" />
+  </message>
+  <message name="fnGetPostCodes">
+    <part name="parameters" element="tns:fnGetPostCodes" />
+  </message>
+  <message name="fnGetPostCodes_Result">
+    <part name="parameters" element="tns:fnGetPostCodes_Result" />
+  </message>
+  <message name="fnGetProcurementSetup">
+    <part name="parameters" element="tns:fnGetProcurementSetup" />
+  </message>
+  <message name="fnGetProcurementSetup_Result">
+    <part name="parameters" element="tns:fnGetProcurementSetup_Result" />
+  </message>
+  <message name="fnGetProjectMobilizationHeader">
+    <part name="parameters" element="tns:fnGetProjectMobilizationHeader" />
+  </message>
+  <message name="fnGetProjectMobilizationHeader_Result">
+    <part name="parameters" element="tns:fnGetProjectMobilizationHeader_Result" />
+  </message>
+  <message name="fnGetProjectRoleCodes">
+    <part name="parameters" element="tns:fnGetProjectRoleCodes" />
+  </message>
+  <message name="fnGetProjectRoleCodes_Result">
+    <part name="parameters" element="tns:fnGetProjectRoleCodes_Result" />
+  </message>
+  <message name="fnGetProjectStaffRoleCode">
+    <part name="parameters" element="tns:fnGetProjectStaffRoleCode" />
+  </message>
+  <message name="fnGetProjectStaffRoleCode_Result">
+    <part name="parameters" element="tns:fnGetProjectStaffRoleCode_Result" />
+  </message>
+  <message name="fnGetProjectWorks">
+    <part name="parameters" element="tns:fnGetProjectWorks" />
+  </message>
+  <message name="fnGetProjectWorks_Result">
+    <part name="parameters" element="tns:fnGetProjectWorks_Result" />
+  </message>
+  <message name="fnGetPurchaseHeader">
+    <part name="parameters" element="tns:fnGetPurchaseHeader" />
+  </message>
+  <message name="fnGetPurchaseHeader_Result">
+    <part name="parameters" element="tns:fnGetPurchaseHeader_Result" />
+  </message>
+  <message name="fnGetRFICategoryRequirements">
+    <part name="parameters" element="tns:fnGetRFICategoryRequirements" />
+  </message>
+  <message name="fnGetRFICategoryRequirements_Result">
+    <part name="parameters" element="tns:fnGetRFICategoryRequirements_Result" />
+  </message>
+  <message name="fnGetRFIPreqList">
+    <part name="parameters" element="tns:fnGetRFIPreqList" />
+  </message>
+  <message name="fnGetRFIPreqList_Result">
+    <part name="parameters" element="tns:fnGetRFIPreqList_Result" />
+  </message>
+  <message name="fnGetRFIPrequalificationCategory">
+    <part name="parameters" element="tns:fnGetRFIPrequalificationCategory" />
+  </message>
+  <message name="fnGetRFIPrequalificationCategory_Result">
+    <part name="parameters" element="tns:fnGetRFIPrequalificationCategory_Result" />
+  </message>
+  <message name="fnGetRFIResponseFiledDocument">
+    <part name="parameters" element="tns:fnGetRFIResponseFiledDocument" />
+  </message>
+  <message name="fnGetRFIResponseFiledDocument_Result">
+    <part name="parameters" element="tns:fnGetRFIResponseFiledDocument_Result" />
+  </message>
+  <message name="fnGetRFIResponse">
+    <part name="parameters" element="tns:fnGetRFIResponse" />
+  </message>
+  <message name="fnGetRFIResponse_Result">
+    <part name="parameters" element="tns:fnGetRFIResponse_Result" />
+  </message>
+  <message name="fnGetRegions">
+    <part name="parameters" element="tns:fnGetRegions" />
+  </message>
+  <message name="fnGetRegions_Result">
+    <part name="parameters" element="tns:fnGetRegions_Result" />
+  </message>
+  <message name="fnGetResponsibilityCenters">
+    <part name="parameters" element="tns:fnGetResponsibilityCenters" />
+  </message>
+  <message name="fnGetResponsibilityCenters_Result">
+    <part name="parameters" element="tns:fnGetResponsibilityCenters_Result" />
+  </message>
+  <message name="fnGetRoadEnviron">
+    <part name="parameters" element="tns:fnGetRoadEnviron" />
+  </message>
+  <message name="fnGetRoadEnviron_Result">
+    <part name="parameters" element="tns:fnGetRoadEnviron_Result" />
+  </message>
+  <message name="fnGetRoadInventory">
+    <part name="parameters" element="tns:fnGetRoadInventory" />
+  </message>
+  <message name="fnGetRoadInventory_Result">
+    <part name="parameters" element="tns:fnGetRoadInventory_Result" />
+  </message>
+  <message name="fnGetRoadSections">
+    <part name="parameters" element="tns:fnGetRoadSections" />
+  </message>
+  <message name="fnGetRoadSections_Result">
+    <part name="parameters" element="tns:fnGetRoadSections_Result" />
+  </message>
+  <message name="fnGetShareholderDetails">
+    <part name="parameters" element="tns:fnGetShareholderDetails" />
+  </message>
+  <message name="fnGetShareholderDetails_Result">
+    <part name="parameters" element="tns:fnGetShareholderDetails_Result" />
+  </message>
+  <message name="fnGetStandardPurchaseLine">
+    <part name="parameters" element="tns:fnGetStandardPurchaseLine" />
+  </message>
+  <message name="fnGetStandardPurchaseLine_Result">
+    <part name="parameters" element="tns:fnGetStandardPurchaseLine_Result" />
+  </message>
+  <message name="fnGetSupplierCategory">
+    <part name="parameters" element="tns:fnGetSupplierCategory" />
+  </message>
+  <message name="fnGetSupplierCategory_Result">
+    <part name="parameters" element="tns:fnGetSupplierCategory_Result" />
+  </message>
+  <message name="fnGetSupplierRegistrationPeriods">
+    <part name="parameters" element="tns:fnGetSupplierRegistrationPeriods" />
+  </message>
+  <message name="fnGetSupplierRegistrationPeriods_Result">
+    <part name="parameters" element="tns:fnGetSupplierRegistrationPeriods_Result" />
+  </message>
+  <message name="fnGetTenderAddedNotice">
+    <part name="parameters" element="tns:fnGetTenderAddedNotice" />
+  </message>
+  <message name="fnGetTenderAddedNotice_Result">
+    <part name="parameters" element="tns:fnGetTenderAddedNotice_Result" />
+  </message>
+  <message name="fnGetTenderAddednumDocument">
+    <part name="parameters" element="tns:fnGetTenderAddednumDocument" />
+  </message>
+  <message name="fnGetTenderAddednumDocument_Result">
+    <part name="parameters" element="tns:fnGetTenderAddednumDocument_Result" />
+  </message>
+  <message name="fnGetTenderSecurityTypes">
+    <part name="parameters" element="tns:fnGetTenderSecurityTypes" />
+  </message>
+  <message name="fnGetTenderSecurityTypes_Result">
+    <part name="parameters" element="tns:fnGetTenderSecurityTypes_Result" />
+  </message>
+  <message name="fnGetTenderSourceDocument">
+    <part name="parameters" element="tns:fnGetTenderSourceDocument" />
+  </message>
+  <message name="fnGetTenderSourceDocument_Result">
+    <part name="parameters" element="tns:fnGetTenderSourceDocument_Result" />
+  </message>
+  <message name="fnGetTenders">
+    <part name="parameters" element="tns:fnGetTenders" />
+  </message>
+  <message name="fnGetTenders_Result">
+    <part name="parameters" element="tns:fnGetTenders_Result" />
+  </message>
+  <message name="fnGetVendorBalanceSheet">
+    <part name="parameters" element="tns:fnGetVendorBalanceSheet" />
+  </message>
+  <message name="fnGetVendorBalanceSheet_Result">
+    <part name="parameters" element="tns:fnGetVendorBalanceSheet_Result" />
+  </message>
+  <message name="fnGetVendorBankAccount">
+    <part name="parameters" element="tns:fnGetVendorBankAccount" />
+  </message>
+  <message name="fnGetVendorBankAccount_Result">
+    <part name="parameters" element="tns:fnGetVendorBankAccount_Result" />
+  </message>
+  <message name="fnGetVendorBeneficiaries">
+    <part name="parameters" element="tns:fnGetVendorBeneficiaries" />
+  </message>
+  <message name="fnGetVendorBeneficiaries_Result">
+    <part name="parameters" element="tns:fnGetVendorBeneficiaries_Result" />
+  </message>
+  <message name="fnGetVendorDepartmentEntry">
+    <part name="parameters" element="tns:fnGetVendorDepartmentEntry" />
+  </message>
+  <message name="fnGetVendorDepartmentEntry_Result">
+    <part name="parameters" element="tns:fnGetVendorDepartmentEntry_Result" />
+  </message>
+  <message name="fnGetVendorFiledRegDocuments">
+    <part name="parameters" element="tns:fnGetVendorFiledRegDocuments" />
+  </message>
+  <message name="fnGetVendorFiledRegDocuments_Result">
+    <part name="parameters" element="tns:fnGetVendorFiledRegDocuments_Result" />
+  </message>
+  <message name="fnGetVendorIncomeStatement">
+    <part name="parameters" element="tns:fnGetVendorIncomeStatement" />
+  </message>
+  <message name="fnGetVendorIncomeStatement_Result">
+    <part name="parameters" element="tns:fnGetVendorIncomeStatement_Result" />
+  </message>
+  <message name="fnGetVendorPastExperience">
+    <part name="parameters" element="tns:fnGetVendorPastExperience" />
+  </message>
+  <message name="fnGetVendorPastExperience_Result">
+    <part name="parameters" element="tns:fnGetVendorPastExperience_Result" />
+  </message>
+  <message name="fnGetVendorPrequalificationEntry">
+    <part name="parameters" element="tns:fnGetVendorPrequalificationEntry" />
+  </message>
+  <message name="fnGetVendorPrequalificationEntry_Result">
+    <part name="parameters" element="tns:fnGetVendorPrequalificationEntry_Result" />
+  </message>
+  <message name="fnGetVendorProfessionalStaff">
+    <part name="parameters" element="tns:fnGetVendorProfessionalStaff" />
+  </message>
+  <message name="fnGetVendorProfessionalStaff_Result">
+    <part name="parameters" element="tns:fnGetVendorProfessionalStaff_Result" />
+  </message>
+  <message name="fnGetVendorSpecialGroupCategory">
+    <part name="parameters" element="tns:fnGetVendorSpecialGroupCategory" />
+  </message>
+  <message name="fnGetVendorSpecialGroupCategory_Result">
+    <part name="parameters" element="tns:fnGetVendorSpecialGroupCategory_Result" />
+  </message>
+  <message name="fnGetVendorStatement">
+    <part name="parameters" element="tns:fnGetVendorStatement" />
+  </message>
+  <message name="fnGetVendorStatement_Result">
+    <part name="parameters" element="tns:fnGetVendorStatement_Result" />
+  </message>
+  <message name="fnGetVendor">
+    <part name="parameters" element="tns:fnGetVendor" />
+  </message>
+  <message name="fnGetVendor_Result">
+    <part name="parameters" element="tns:fnGetVendor_Result" />
+  </message>
+  <message name="fnGetWEPContractorEqquipment">
+    <part name="parameters" element="tns:fnGetWEPContractorEqquipment" />
+  </message>
+  <message name="fnGetWEPContractorEqquipment_Result">
+    <part name="parameters" element="tns:fnGetWEPContractorEqquipment_Result" />
+  </message>
+  <message name="fnGetWEPContractorTeam">
+    <part name="parameters" element="tns:fnGetWEPContractorTeam" />
+  </message>
+  <message name="fnGetWEPContractorTeam_Result">
+    <part name="parameters" element="tns:fnGetWEPContractorTeam_Result" />
+  </message>
+  <message name="fnGetWEPExecutionSchedule">
+    <part name="parameters" element="tns:fnGetWEPExecutionSchedule" />
+  </message>
+  <message name="fnGetWEPExecutionSchedule_Result">
+    <part name="parameters" element="tns:fnGetWEPExecutionSchedule_Result" />
+  </message>
+  <message name="fnGetWorkEquipmentCategories">
+    <part name="parameters" element="tns:fnGetWorkEquipmentCategories" />
+  </message>
+  <message name="fnGetWorkEquipmentCategories_Result">
+    <part name="parameters" element="tns:fnGetWorkEquipmentCategories_Result" />
+  </message>
+  <portType name="eprocurementQueries_Port">
+    <operation name="fnGetBankBranch">
+      <input name="fnGetBankBranch" message="tns:fnGetBankBranch" />
+      <output name="fnGetBankBranch_Result" message="tns:fnGetBankBranch_Result" />
+    </operation>
+    <operation name="fnGetBankBranches">
+      <input name="fnGetBankBranches" message="tns:fnGetBankBranches" />
+      <output name="fnGetBankBranches_Result" message="tns:fnGetBankBranches_Result" />
+    </operation>
+    <operation name="fnGetBankCodes">
+      <input name="fnGetBankCodes" message="tns:fnGetBankCodes" />
+      <output name="fnGetBankCodes_Result" message="tns:fnGetBankCodes_Result" />
+    </operation>
+    <operation name="fnGetBidAuditedBalanceSheet">
+      <input name="fnGetBidAuditedBalanceSheet" message="tns:fnGetBidAuditedBalanceSheet" />
+      <output name="fnGetBidAuditedBalanceSheet_Result" message="tns:fnGetBidAuditedBalanceSheet_Result" />
+    </operation>
+    <operation name="fnGetBidAuditedIncomeStatement">
+      <input name="fnGetBidAuditedIncomeStatement" message="tns:fnGetBidAuditedIncomeStatement" />
+      <output name="fnGetBidAuditedIncomeStatement_Result" message="tns:fnGetBidAuditedIncomeStatement_Result" />
+    </operation>
+    <operation name="fnGetBidContractSecurity">
+      <input name="fnGetBidContractSecurity" message="tns:fnGetBidContractSecurity" />
+      <output name="fnGetBidContractSecurity_Result" message="tns:fnGetBidContractSecurity_Result" />
+    </operation>
+    <operation name="fnGetBidKeyStaffDetails">
+      <input name="fnGetBidKeyStaffDetails" message="tns:fnGetBidKeyStaffDetails" />
+      <output name="fnGetBidKeyStaffDetails_Result" message="tns:fnGetBidKeyStaffDetails_Result" />
+    </operation>
+    <operation name="fnGetBidLitigationHistory">
+      <input name="fnGetBidLitigationHistory" message="tns:fnGetBidLitigationHistory" />
+      <output name="fnGetBidLitigationHistory_Result" message="tns:fnGetBidLitigationHistory_Result" />
+    </operation>
+    <operation name="fnGetBidPastExperience">
+      <input name="fnGetBidPastExperience" message="tns:fnGetBidPastExperience" />
+      <output name="fnGetBidPastExperience_Result" message="tns:fnGetBidPastExperience_Result" />
+    </operation>
+    <operation name="fnGetBidResponseAttachedDocuments">
+      <input name="fnGetBidResponseAttachedDocuments" message="tns:fnGetBidResponseAttachedDocuments" />
+      <output name="fnGetBidResponseAttachedDocuments_Result" message="tns:fnGetBidResponseAttachedDocuments_Result" />
+    </operation>
+    <operation name="fnGetBidResponseDetails">
+      <input name="fnGetBidResponseDetails" message="tns:fnGetBidResponseDetails" />
+      <output name="fnGetBidResponseDetails_Result" message="tns:fnGetBidResponseDetails_Result" />
+    </operation>
+    <operation name="fnGetBidResponseItemLines">
+      <input name="fnGetBidResponseItemLines" message="tns:fnGetBidResponseItemLines" />
+      <output name="fnGetBidResponseItemLines_Result" message="tns:fnGetBidResponseItemLines_Result" />
+    </operation>
+    <operation name="fnGetBidResponseList">
+      <input name="fnGetBidResponseList" message="tns:fnGetBidResponseList" />
+      <output name="fnGetBidResponseList_Result" message="tns:fnGetBidResponseList_Result" />
+    </operation>
+    <operation name="fnGetBidScoreRequirements">
+      <input name="fnGetBidScoreRequirements" message="tns:fnGetBidScoreRequirements" />
+      <output name="fnGetBidScoreRequirements_Result" message="tns:fnGetBidScoreRequirements_Result" />
+    </operation>
+    <operation name="fnGetBidScoringTemplate">
+      <input name="fnGetBidScoringTemplate" message="tns:fnGetBidScoringTemplate" />
+      <output name="fnGetBidScoringTemplate_Result" message="tns:fnGetBidScoringTemplate_Result" />
+    </operation>
+    <operation name="fnGetBidSpecificationEquipment">
+      <input name="fnGetBidSpecificationEquipment" message="tns:fnGetBidSpecificationEquipment" />
+      <output name="fnGetBidSpecificationEquipment_Result" message="tns:fnGetBidSpecificationEquipment_Result" />
+    </operation>
+    <operation name="fnGetBidStaff">
+      <input name="fnGetBidStaff" message="tns:fnGetBidStaff" />
+      <output name="fnGetBidStaff_Result" message="tns:fnGetBidStaff_Result" />
+    </operation>
+    <operation name="fnGetBusinessType">
+      <input name="fnGetBusinessType" message="tns:fnGetBusinessType" />
+      <output name="fnGetBusinessType_Result" message="tns:fnGetBusinessType_Result" />
+    </operation>
+    <operation name="fnGetCalendarYearCodeList">
+      <input name="fnGetCalendarYearCodeList" message="tns:fnGetCalendarYearCodeList" />
+      <output name="fnGetCalendarYearCodeList_Result" message="tns:fnGetCalendarYearCodeList_Result" />
+    </operation>
+    <operation name="fnGetCommencementOrders">
+      <input name="fnGetCommencementOrders" message="tns:fnGetCommencementOrders" />
+      <output name="fnGetCommencementOrders_Result" message="tns:fnGetCommencementOrders_Result" />
+    </operation>
+    <operation name="fnGetCompanySizeCodes">
+      <input name="fnGetCompanySizeCodes" message="tns:fnGetCompanySizeCodes" />
+      <output name="fnGetCompanySizeCodes_Result" message="tns:fnGetCompanySizeCodes_Result" />
+    </operation>
+    <operation name="fnGetContractRequirements">
+      <input name="fnGetContractRequirements" message="tns:fnGetContractRequirements" />
+      <output name="fnGetContractRequirements_Result" message="tns:fnGetContractRequirements_Result" />
+    </operation>
+    <operation name="fnGetCountries">
+      <input name="fnGetCountries" message="tns:fnGetCountries" />
+      <output name="fnGetCountries_Result" message="tns:fnGetCountries_Result" />
+    </operation>
+    <operation name="fnGetCurrency">
+      <input name="fnGetCurrency" message="tns:fnGetCurrency" />
+      <output name="fnGetCurrency_Result" message="tns:fnGetCurrency_Result" />
+    </operation>
+    <operation name="fnGetEprocurementDocuments">
+      <input name="fnGetEprocurementDocuments" message="tns:fnGetEprocurementDocuments" />
+      <output name="fnGetEprocurementDocuments_Result" message="tns:fnGetEprocurementDocuments_Result" />
+    </operation>
+    <operation name="fnGetEvaluationCriteria">
+      <input name="fnGetEvaluationCriteria" message="tns:fnGetEvaluationCriteria" />
+      <output name="fnGetEvaluationCriteria_Result" message="tns:fnGetEvaluationCriteria_Result" />
+    </operation>
+    <operation name="fnGetIFPRequest">
+      <input name="fnGetIFPRequest" message="tns:fnGetIFPRequest" />
+      <output name="fnGetIFPRequest_Result" message="tns:fnGetIFPRequest_Result" />
+    </operation>
+    <operation name="fnGetIFPResponseLineRC">
+      <input name="fnGetIFPResponseLineRC" message="tns:fnGetIFPResponseLineRC" />
+      <output name="fnGetIFPResponseLineRC_Result" message="tns:fnGetIFPResponseLineRC_Result" />
+    </operation>
+    <operation name="fnGetIFSKeyStaff">
+      <input name="fnGetIFSKeyStaff" message="tns:fnGetIFSKeyStaff" />
+      <output name="fnGetIFSKeyStaff_Result" message="tns:fnGetIFSKeyStaff_Result" />
+    </operation>
+    <operation name="fnGetIFSRequiredEquipment">
+      <input name="fnGetIFSRequiredEquipment" message="tns:fnGetIFSRequiredEquipment" />
+      <output name="fnGetIFSRequiredEquipment_Result" message="tns:fnGetIFSRequiredEquipment_Result" />
+    </operation>
+    <operation name="fnGetIFSSecurity">
+      <input name="fnGetIFSSecurity" message="tns:fnGetIFSSecurity" />
+      <output name="fnGetIFSSecurity_Result" message="tns:fnGetIFSSecurity_Result" />
+    </operation>
+    <operation name="fnGetIfpReqDocuments">
+      <input name="fnGetIfpReqDocuments" message="tns:fnGetIfpReqDocuments" />
+      <output name="fnGetIfpReqDocuments_Result" message="tns:fnGetIfpReqDocuments_Result" />
+    </operation>
+    <operation name="fnGetIfpResponseLine">
+      <input name="fnGetIfpResponseLine" message="tns:fnGetIfpResponseLine" />
+      <output name="fnGetIfpResponseLine_Result" message="tns:fnGetIfpResponseLine_Result" />
+    </operation>
+    <operation name="fnGetIfsRequiredDocs">
+      <input name="fnGetIfsRequiredDocs" message="tns:fnGetIfsRequiredDocs" />
+      <output name="fnGetIfsRequiredDocs_Result" message="tns:fnGetIfsRequiredDocs_Result" />
+    </operation>
+    <operation name="fnGetIndustryGroup">
+      <input name="fnGetIndustryGroup" message="tns:fnGetIndustryGroup" />
+      <output name="fnGetIndustryGroup_Result" message="tns:fnGetIndustryGroup_Result" />
+    </operation>
+    <operation name="fnGetInvitationForPrequalification">
+      <input name="fnGetInvitationForPrequalification" message="tns:fnGetInvitationForPrequalification" />
+      <output name="fnGetInvitationForPrequalification_Result" message="tns:fnGetInvitationForPrequalification_Result" />
+    </operation>
+    <operation name="fnGetInvitationForRFQ">
+      <input name="fnGetInvitationForRFQ" message="tns:fnGetInvitationForRFQ" />
+      <output name="fnGetInvitationForRFQ_Result" message="tns:fnGetInvitationForRFQ_Result" />
+    </operation>
+    <operation name="fnGetInvitationPrequalification">
+      <input name="fnGetInvitationPrequalification" message="tns:fnGetInvitationPrequalification" />
+      <output name="fnGetInvitationPrequalification_Result" message="tns:fnGetInvitationPrequalification_Result" />
+    </operation>
+    <operation name="fnGetInviteTender">
+      <input name="fnGetInviteTender" message="tns:fnGetInviteTender" />
+      <output name="fnGetInviteTender_Result" message="tns:fnGetInviteTender_Result" />
+    </operation>
+    <operation name="fnGetJobPlanningLines">
+      <input name="fnGetJobPlanningLines" message="tns:fnGetJobPlanningLines" />
+      <output name="fnGetJobPlanningLines_Result" message="tns:fnGetJobPlanningLines_Result" />
+    </operation>
+    <operation name="fnGetJobTasks">
+      <input name="fnGetJobTasks" message="tns:fnGetJobTasks" />
+      <output name="fnGetJobTasks_Result" message="tns:fnGetJobTasks_Result" />
+    </operation>
+    <operation name="fnGetJobs">
+      <input name="fnGetJobs" message="tns:fnGetJobs" />
+      <output name="fnGetJobs_Result" message="tns:fnGetJobs_Result" />
+    </operation>
+    <operation name="fnGetLanguage">
+      <input name="fnGetLanguage" message="tns:fnGetLanguage" />
+      <output name="fnGetLanguage_Result" message="tns:fnGetLanguage_Result" />
+    </operation>
+    <operation name="fnGetMeasurements">
+      <input name="fnGetMeasurements" message="tns:fnGetMeasurements" />
+      <output name="fnGetMeasurements_Result" message="tns:fnGetMeasurements_Result" />
+    </operation>
+    <operation name="fnGetOldPerformanceGuarantees">
+      <input name="fnGetOldPerformanceGuarantees" message="tns:fnGetOldPerformanceGuarantees" />
+      <output name="fnGetOldPerformanceGuarantees_Result" message="tns:fnGetOldPerformanceGuarantees_Result" />
+    </operation>
+    <operation name="fnGetPCOInternalProjectTeam">
+      <input name="fnGetPCOInternalProjectTeam" message="tns:fnGetPCOInternalProjectTeam" />
+      <output name="fnGetPCOInternalProjectTeam_Result" message="tns:fnGetPCOInternalProjectTeam_Result" />
+    </operation>
+    <operation name="fnGetPCOPlannedMeeting">
+      <input name="fnGetPCOPlannedMeeting" message="tns:fnGetPCOPlannedMeeting" />
+      <output name="fnGetPCOPlannedMeeting_Result" message="tns:fnGetPCOPlannedMeeting_Result" />
+    </operation>
+    <operation name="fnGetPCORequiredDocument">
+      <input name="fnGetPCORequiredDocument" message="tns:fnGetPCORequiredDocument" />
+      <output name="fnGetPCORequiredDocument_Result" message="tns:fnGetPCORequiredDocument_Result" />
+    </operation>
+    <operation name="fnGetPavementSurfaceEntry">
+      <input name="fnGetPavementSurfaceEntry" message="tns:fnGetPavementSurfaceEntry" />
+      <output name="fnGetPavementSurfaceEntry_Result" message="tns:fnGetPavementSurfaceEntry_Result" />
+    </operation>
+    <operation name="fnGetPortalUser">
+      <input name="fnGetPortalUser" message="tns:fnGetPortalUser" />
+      <output name="fnGetPortalUser_Result" message="tns:fnGetPortalUser_Result" />
+    </operation>
+    <operation name="fnGetPostCodes">
+      <input name="fnGetPostCodes" message="tns:fnGetPostCodes" />
+      <output name="fnGetPostCodes_Result" message="tns:fnGetPostCodes_Result" />
+    </operation>
+    <operation name="fnGetProcurementSetup">
+      <input name="fnGetProcurementSetup" message="tns:fnGetProcurementSetup" />
+      <output name="fnGetProcurementSetup_Result" message="tns:fnGetProcurementSetup_Result" />
+    </operation>
+    <operation name="fnGetProjectMobilizationHeader">
+      <input name="fnGetProjectMobilizationHeader" message="tns:fnGetProjectMobilizationHeader" />
+      <output name="fnGetProjectMobilizationHeader_Result" message="tns:fnGetProjectMobilizationHeader_Result" />
+    </operation>
+    <operation name="fnGetProjectRoleCodes">
+      <input name="fnGetProjectRoleCodes" message="tns:fnGetProjectRoleCodes" />
+      <output name="fnGetProjectRoleCodes_Result" message="tns:fnGetProjectRoleCodes_Result" />
+    </operation>
+    <operation name="fnGetProjectStaffRoleCode">
+      <input name="fnGetProjectStaffRoleCode" message="tns:fnGetProjectStaffRoleCode" />
+      <output name="fnGetProjectStaffRoleCode_Result" message="tns:fnGetProjectStaffRoleCode_Result" />
+    </operation>
+    <operation name="fnGetProjectWorks">
+      <input name="fnGetProjectWorks" message="tns:fnGetProjectWorks" />
+      <output name="fnGetProjectWorks_Result" message="tns:fnGetProjectWorks_Result" />
+    </operation>
+    <operation name="fnGetPurchaseHeader">
+      <input name="fnGetPurchaseHeader" message="tns:fnGetPurchaseHeader" />
+      <output name="fnGetPurchaseHeader_Result" message="tns:fnGetPurchaseHeader_Result" />
+    </operation>
+    <operation name="fnGetRFICategoryRequirements">
+      <input name="fnGetRFICategoryRequirements" message="tns:fnGetRFICategoryRequirements" />
+      <output name="fnGetRFICategoryRequirements_Result" message="tns:fnGetRFICategoryRequirements_Result" />
+    </operation>
+    <operation name="fnGetRFIPreqList">
+      <input name="fnGetRFIPreqList" message="tns:fnGetRFIPreqList" />
+      <output name="fnGetRFIPreqList_Result" message="tns:fnGetRFIPreqList_Result" />
+    </operation>
+    <operation name="fnGetRFIPrequalificationCategory">
+      <input name="fnGetRFIPrequalificationCategory" message="tns:fnGetRFIPrequalificationCategory" />
+      <output name="fnGetRFIPrequalificationCategory_Result" message="tns:fnGetRFIPrequalificationCategory_Result" />
+    </operation>
+    <operation name="fnGetRFIResponseFiledDocument">
+      <input name="fnGetRFIResponseFiledDocument" message="tns:fnGetRFIResponseFiledDocument" />
+      <output name="fnGetRFIResponseFiledDocument_Result" message="tns:fnGetRFIResponseFiledDocument_Result" />
+    </operation>
+    <operation name="fnGetRFIResponse">
+      <input name="fnGetRFIResponse" message="tns:fnGetRFIResponse" />
+      <output name="fnGetRFIResponse_Result" message="tns:fnGetRFIResponse_Result" />
+    </operation>
+    <operation name="fnGetRegions">
+      <input name="fnGetRegions" message="tns:fnGetRegions" />
+      <output name="fnGetRegions_Result" message="tns:fnGetRegions_Result" />
+    </operation>
+    <operation name="fnGetResponsibilityCenters">
+      <input name="fnGetResponsibilityCenters" message="tns:fnGetResponsibilityCenters" />
+      <output name="fnGetResponsibilityCenters_Result" message="tns:fnGetResponsibilityCenters_Result" />
+    </operation>
+    <operation name="fnGetRoadEnviron">
+      <input name="fnGetRoadEnviron" message="tns:fnGetRoadEnviron" />
+      <output name="fnGetRoadEnviron_Result" message="tns:fnGetRoadEnviron_Result" />
+    </operation>
+    <operation name="fnGetRoadInventory">
+      <input name="fnGetRoadInventory" message="tns:fnGetRoadInventory" />
+      <output name="fnGetRoadInventory_Result" message="tns:fnGetRoadInventory_Result" />
+    </operation>
+    <operation name="fnGetRoadSections">
+      <input name="fnGetRoadSections" message="tns:fnGetRoadSections" />
+      <output name="fnGetRoadSections_Result" message="tns:fnGetRoadSections_Result" />
+    </operation>
+    <operation name="fnGetShareholderDetails">
+      <input name="fnGetShareholderDetails" message="tns:fnGetShareholderDetails" />
+      <output name="fnGetShareholderDetails_Result" message="tns:fnGetShareholderDetails_Result" />
+    </operation>
+    <operation name="fnGetStandardPurchaseLine">
+      <input name="fnGetStandardPurchaseLine" message="tns:fnGetStandardPurchaseLine" />
+      <output name="fnGetStandardPurchaseLine_Result" message="tns:fnGetStandardPurchaseLine_Result" />
+    </operation>
+    <operation name="fnGetSupplierCategory">
+      <input name="fnGetSupplierCategory" message="tns:fnGetSupplierCategory" />
+      <output name="fnGetSupplierCategory_Result" message="tns:fnGetSupplierCategory_Result" />
+    </operation>
+    <operation name="fnGetSupplierRegistrationPeriods">
+      <input name="fnGetSupplierRegistrationPeriods" message="tns:fnGetSupplierRegistrationPeriods" />
+      <output name="fnGetSupplierRegistrationPeriods_Result" message="tns:fnGetSupplierRegistrationPeriods_Result" />
+    </operation>
+    <operation name="fnGetTenderAddedNotice">
+      <input name="fnGetTenderAddedNotice" message="tns:fnGetTenderAddedNotice" />
+      <output name="fnGetTenderAddedNotice_Result" message="tns:fnGetTenderAddedNotice_Result" />
+    </operation>
+    <operation name="fnGetTenderAddednumDocument">
+      <input name="fnGetTenderAddednumDocument" message="tns:fnGetTenderAddednumDocument" />
+      <output name="fnGetTenderAddednumDocument_Result" message="tns:fnGetTenderAddednumDocument_Result" />
+    </operation>
+    <operation name="fnGetTenderSecurityTypes">
+      <input name="fnGetTenderSecurityTypes" message="tns:fnGetTenderSecurityTypes" />
+      <output name="fnGetTenderSecurityTypes_Result" message="tns:fnGetTenderSecurityTypes_Result" />
+    </operation>
+    <operation name="fnGetTenderSourceDocument">
+      <input name="fnGetTenderSourceDocument" message="tns:fnGetTenderSourceDocument" />
+      <output name="fnGetTenderSourceDocument_Result" message="tns:fnGetTenderSourceDocument_Result" />
+    </operation>
+    <operation name="fnGetTenders">
+      <input name="fnGetTenders" message="tns:fnGetTenders" />
+      <output name="fnGetTenders_Result" message="tns:fnGetTenders_Result" />
+    </operation>
+    <operation name="fnGetVendorBalanceSheet">
+      <input name="fnGetVendorBalanceSheet" message="tns:fnGetVendorBalanceSheet" />
+      <output name="fnGetVendorBalanceSheet_Result" message="tns:fnGetVendorBalanceSheet_Result" />
+    </operation>
+    <operation name="fnGetVendorBankAccount">
+      <input name="fnGetVendorBankAccount" message="tns:fnGetVendorBankAccount" />
+      <output name="fnGetVendorBankAccount_Result" message="tns:fnGetVendorBankAccount_Result" />
+    </operation>
+    <operation name="fnGetVendorBeneficiaries">
+      <input name="fnGetVendorBeneficiaries" message="tns:fnGetVendorBeneficiaries" />
+      <output name="fnGetVendorBeneficiaries_Result" message="tns:fnGetVendorBeneficiaries_Result" />
+    </operation>
+    <operation name="fnGetVendorDepartmentEntry">
+      <input name="fnGetVendorDepartmentEntry" message="tns:fnGetVendorDepartmentEntry" />
+      <output name="fnGetVendorDepartmentEntry_Result" message="tns:fnGetVendorDepartmentEntry_Result" />
+    </operation>
+    <operation name="fnGetVendorFiledRegDocuments">
+      <input name="fnGetVendorFiledRegDocuments" message="tns:fnGetVendorFiledRegDocuments" />
+      <output name="fnGetVendorFiledRegDocuments_Result" message="tns:fnGetVendorFiledRegDocuments_Result" />
+    </operation>
+    <operation name="fnGetVendorIncomeStatement">
+      <input name="fnGetVendorIncomeStatement" message="tns:fnGetVendorIncomeStatement" />
+      <output name="fnGetVendorIncomeStatement_Result" message="tns:fnGetVendorIncomeStatement_Result" />
+    </operation>
+    <operation name="fnGetVendorPastExperience">
+      <input name="fnGetVendorPastExperience" message="tns:fnGetVendorPastExperience" />
+      <output name="fnGetVendorPastExperience_Result" message="tns:fnGetVendorPastExperience_Result" />
+    </operation>
+    <operation name="fnGetVendorPrequalificationEntry">
+      <input name="fnGetVendorPrequalificationEntry" message="tns:fnGetVendorPrequalificationEntry" />
+      <output name="fnGetVendorPrequalificationEntry_Result" message="tns:fnGetVendorPrequalificationEntry_Result" />
+    </operation>
+    <operation name="fnGetVendorProfessionalStaff">
+      <input name="fnGetVendorProfessionalStaff" message="tns:fnGetVendorProfessionalStaff" />
+      <output name="fnGetVendorProfessionalStaff_Result" message="tns:fnGetVendorProfessionalStaff_Result" />
+    </operation>
+    <operation name="fnGetVendorSpecialGroupCategory">
+      <input name="fnGetVendorSpecialGroupCategory" message="tns:fnGetVendorSpecialGroupCategory" />
+      <output name="fnGetVendorSpecialGroupCategory_Result" message="tns:fnGetVendorSpecialGroupCategory_Result" />
+    </operation>
+    <operation name="fnGetVendorStatement">
+      <input name="fnGetVendorStatement" message="tns:fnGetVendorStatement" />
+      <output name="fnGetVendorStatement_Result" message="tns:fnGetVendorStatement_Result" />
+    </operation>
+    <operation name="fnGetVendor">
+      <input name="fnGetVendor" message="tns:fnGetVendor" />
+      <output name="fnGetVendor_Result" message="tns:fnGetVendor_Result" />
+    </operation>
+    <operation name="fnGetWEPContractorEqquipment">
+      <input name="fnGetWEPContractorEqquipment" message="tns:fnGetWEPContractorEqquipment" />
+      <output name="fnGetWEPContractorEqquipment_Result" message="tns:fnGetWEPContractorEqquipment_Result" />
+    </operation>
+    <operation name="fnGetWEPContractorTeam">
+      <input name="fnGetWEPContractorTeam" message="tns:fnGetWEPContractorTeam" />
+      <output name="fnGetWEPContractorTeam_Result" message="tns:fnGetWEPContractorTeam_Result" />
+    </operation>
+    <operation name="fnGetWEPExecutionSchedule">
+      <input name="fnGetWEPExecutionSchedule" message="tns:fnGetWEPExecutionSchedule" />
+      <output name="fnGetWEPExecutionSchedule_Result" message="tns:fnGetWEPExecutionSchedule_Result" />
+    </operation>
+    <operation name="fnGetWorkEquipmentCategories">
+      <input name="fnGetWorkEquipmentCategories" message="tns:fnGetWorkEquipmentCategories" />
+      <output name="fnGetWorkEquipmentCategories_Result" message="tns:fnGetWorkEquipmentCategories_Result" />
+    </operation>
+  </portType>
+  <binding name="eprocurementQueries_Binding" type="tns:eprocurementQueries_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="fnGetBankBranch">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBankBranch" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBankBranch">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBankBranch_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBankBranches">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBankBranches" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBankBranches">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBankBranches_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBankCodes">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBankCodes" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBankCodes">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBankCodes_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidAuditedBalanceSheet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidAuditedBalanceSheet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidAuditedBalanceSheet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidAuditedBalanceSheet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidAuditedIncomeStatement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidAuditedIncomeStatement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidAuditedIncomeStatement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidAuditedIncomeStatement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidContractSecurity">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidContractSecurity" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidContractSecurity">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidContractSecurity_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidKeyStaffDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidKeyStaffDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidKeyStaffDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidKeyStaffDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidLitigationHistory">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidLitigationHistory" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidLitigationHistory">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidLitigationHistory_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidPastExperience">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidPastExperience" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidPastExperience">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidPastExperience_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidResponseAttachedDocuments">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidResponseAttachedDocuments" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidResponseAttachedDocuments">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidResponseAttachedDocuments_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidResponseDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidResponseDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidResponseDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidResponseDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidResponseItemLines">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidResponseItemLines" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidResponseItemLines">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidResponseItemLines_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidResponseList">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidResponseList" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidResponseList">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidResponseList_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidScoreRequirements">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidScoreRequirements" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidScoreRequirements">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidScoreRequirements_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidScoringTemplate">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidScoringTemplate" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidScoringTemplate">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidScoringTemplate_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidSpecificationEquipment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidSpecificationEquipment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidSpecificationEquipment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidSpecificationEquipment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBidStaff">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBidStaff" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBidStaff">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBidStaff_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetBusinessType">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetBusinessType" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetBusinessType">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetBusinessType_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetCalendarYearCodeList">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetCalendarYearCodeList" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetCalendarYearCodeList">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetCalendarYearCodeList_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetCommencementOrders">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetCommencementOrders" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetCommencementOrders">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetCommencementOrders_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetCompanySizeCodes">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetCompanySizeCodes" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetCompanySizeCodes">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetCompanySizeCodes_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetContractRequirements">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetContractRequirements" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetContractRequirements">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetContractRequirements_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetCountries">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetCountries" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetCountries">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetCountries_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetCurrency">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetCurrency" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetCurrency">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetCurrency_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetEprocurementDocuments">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetEprocurementDocuments" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetEprocurementDocuments">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetEprocurementDocuments_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetEvaluationCriteria">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetEvaluationCriteria" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetEvaluationCriteria">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetEvaluationCriteria_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIFPRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIFPRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIFPRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIFPRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIFPResponseLineRC">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIFPResponseLineRC" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIFPResponseLineRC">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIFPResponseLineRC_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIFSKeyStaff">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIFSKeyStaff" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIFSKeyStaff">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIFSKeyStaff_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIFSRequiredEquipment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIFSRequiredEquipment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIFSRequiredEquipment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIFSRequiredEquipment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIFSSecurity">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIFSSecurity" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIFSSecurity">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIFSSecurity_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIfpReqDocuments">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIfpReqDocuments" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIfpReqDocuments">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIfpReqDocuments_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIfpResponseLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIfpResponseLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIfpResponseLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIfpResponseLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIfsRequiredDocs">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIfsRequiredDocs" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIfsRequiredDocs">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIfsRequiredDocs_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetIndustryGroup">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetIndustryGroup" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetIndustryGroup">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetIndustryGroup_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetInvitationForPrequalification">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetInvitationForPrequalification" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetInvitationForPrequalification">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetInvitationForPrequalification_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetInvitationForRFQ">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetInvitationForRFQ" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetInvitationForRFQ">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetInvitationForRFQ_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetInvitationPrequalification">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetInvitationPrequalification" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetInvitationPrequalification">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetInvitationPrequalification_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetInviteTender">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetInviteTender" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetInviteTender">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetInviteTender_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetJobPlanningLines">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetJobPlanningLines" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetJobPlanningLines">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetJobPlanningLines_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetJobTasks">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetJobTasks" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetJobTasks">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetJobTasks_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetJobs">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetJobs" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetJobs">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetJobs_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetLanguage">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetLanguage" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetLanguage">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetLanguage_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetMeasurements">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetMeasurements" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetMeasurements">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetMeasurements_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetOldPerformanceGuarantees">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetOldPerformanceGuarantees" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetOldPerformanceGuarantees">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetOldPerformanceGuarantees_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetPCOInternalProjectTeam">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetPCOInternalProjectTeam" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetPCOInternalProjectTeam">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetPCOInternalProjectTeam_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetPCOPlannedMeeting">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetPCOPlannedMeeting" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetPCOPlannedMeeting">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetPCOPlannedMeeting_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetPCORequiredDocument">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetPCORequiredDocument" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetPCORequiredDocument">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetPCORequiredDocument_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetPavementSurfaceEntry">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetPavementSurfaceEntry" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetPavementSurfaceEntry">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetPavementSurfaceEntry_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetPortalUser">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetPortalUser" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetPortalUser">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetPortalUser_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetPostCodes">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetPostCodes" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetPostCodes">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetPostCodes_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetProcurementSetup">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetProcurementSetup" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetProcurementSetup">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetProcurementSetup_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetProjectMobilizationHeader">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetProjectMobilizationHeader" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetProjectMobilizationHeader">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetProjectMobilizationHeader_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetProjectRoleCodes">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetProjectRoleCodes" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetProjectRoleCodes">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetProjectRoleCodes_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetProjectStaffRoleCode">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetProjectStaffRoleCode" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetProjectStaffRoleCode">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetProjectStaffRoleCode_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetProjectWorks">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetProjectWorks" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetProjectWorks">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetProjectWorks_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetPurchaseHeader">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetPurchaseHeader" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetPurchaseHeader">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetPurchaseHeader_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRFICategoryRequirements">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRFICategoryRequirements" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRFICategoryRequirements">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRFICategoryRequirements_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRFIPreqList">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRFIPreqList" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRFIPreqList">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRFIPreqList_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRFIPrequalificationCategory">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRFIPrequalificationCategory" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRFIPrequalificationCategory">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRFIPrequalificationCategory_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRFIResponseFiledDocument">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRFIResponseFiledDocument" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRFIResponseFiledDocument">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRFIResponseFiledDocument_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRFIResponse">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRFIResponse" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRFIResponse">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRFIResponse_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRegions">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRegions" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRegions">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRegions_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetResponsibilityCenters">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetResponsibilityCenters" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetResponsibilityCenters">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetResponsibilityCenters_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRoadEnviron">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRoadEnviron" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRoadEnviron">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRoadEnviron_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRoadInventory">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRoadInventory" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRoadInventory">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRoadInventory_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetRoadSections">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetRoadSections" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetRoadSections">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetRoadSections_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetShareholderDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetShareholderDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetShareholderDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetShareholderDetails_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetStandardPurchaseLine">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetStandardPurchaseLine" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetStandardPurchaseLine">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetStandardPurchaseLine_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetSupplierCategory">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetSupplierCategory" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetSupplierCategory">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetSupplierCategory_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetSupplierRegistrationPeriods">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetSupplierRegistrationPeriods" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetSupplierRegistrationPeriods">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetSupplierRegistrationPeriods_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetTenderAddedNotice">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetTenderAddedNotice" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetTenderAddedNotice">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetTenderAddedNotice_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetTenderAddednumDocument">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetTenderAddednumDocument" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetTenderAddednumDocument">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetTenderAddednumDocument_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetTenderSecurityTypes">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetTenderSecurityTypes" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetTenderSecurityTypes">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetTenderSecurityTypes_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetTenderSourceDocument">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetTenderSourceDocument" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetTenderSourceDocument">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetTenderSourceDocument_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetTenders">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetTenders" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetTenders">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetTenders_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorBalanceSheet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorBalanceSheet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorBalanceSheet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorBalanceSheet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorBankAccount">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorBankAccount" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorBankAccount">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorBankAccount_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorBeneficiaries">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorBeneficiaries" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorBeneficiaries">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorBeneficiaries_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorDepartmentEntry">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorDepartmentEntry" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorDepartmentEntry">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorDepartmentEntry_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorFiledRegDocuments">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorFiledRegDocuments" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorFiledRegDocuments">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorFiledRegDocuments_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorIncomeStatement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorIncomeStatement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorIncomeStatement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorIncomeStatement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorPastExperience">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorPastExperience" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorPastExperience">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorPastExperience_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorPrequalificationEntry">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorPrequalificationEntry" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorPrequalificationEntry">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorPrequalificationEntry_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorProfessionalStaff">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorProfessionalStaff" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorProfessionalStaff">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorProfessionalStaff_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorSpecialGroupCategory">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorSpecialGroupCategory" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorSpecialGroupCategory">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorSpecialGroupCategory_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendorStatement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendorStatement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendorStatement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendorStatement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetVendor">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetVendor" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetVendor">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetVendor_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetWEPContractorEqquipment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetWEPContractorEqquipment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetWEPContractorEqquipment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetWEPContractorEqquipment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetWEPContractorTeam">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetWEPContractorTeam" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetWEPContractorTeam">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetWEPContractorTeam_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetWEPExecutionSchedule">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetWEPExecutionSchedule" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetWEPExecutionSchedule">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetWEPExecutionSchedule_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnGetWorkEquipmentCategories">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/eprocurementQueries:fnGetWorkEquipmentCategories" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnGetWorkEquipmentCategories">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnGetWorkEquipmentCategories_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="eprocurementQueries">
+    <port name="eprocurementQueries_Port" binding="tns:eprocurementQueries_Binding">
+      <address location="http://192.168.1.65:7047/BC200/WS/KURA%20LIVE/Codeunit/eprocurementQueries" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

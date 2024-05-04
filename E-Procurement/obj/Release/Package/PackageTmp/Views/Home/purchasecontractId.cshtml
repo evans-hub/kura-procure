@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<E_Procurement.Models.PurchaseContracts>
+@{
+
+    Layout = null;
+    int n = 0;
+}
+<select class="form-control select2" id="purchasecontractid" name="purchasecontractid" data_live_search="true">
+    <option value="">--Select Purchase Contract Id--</option>
+    <optgroup label="Purchase Contract List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.No">@item.Description</option>
+        }
+    </optgroup>
+</select>
+

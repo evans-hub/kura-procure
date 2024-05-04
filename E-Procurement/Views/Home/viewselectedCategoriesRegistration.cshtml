@@ -1,0 +1,85 @@
+﻿@model  IEnumerable<E_Procurement.Models.CategoryResponce>
+@{
+    ViewBag.Title = "viewselectedCategoriesRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int Counter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="card">
+                <div class="card-header text-center" data-background-color="darkgreen">
+                    <h6><i><strong>e-procurement </strong></i></h6>
+                </div><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Supplier Registration </a></li>
+                    <li class="breadcrumb-item active">Registration No = @ViewBag.invitationNo  </li>
+                    <li class="breadcrumb-item active"> Response No = @ViewBag.prequalificationNo </li>
+
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-heading" style="background-color:gray">
+                <h5 class="panel-title">Registration Category Responce</h5>
+            </div>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Category.</th>
+                                <th>Category Description</th>
+                                <th>Region</th>
+                                <th>Constituency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                Counter++;
+                                <tr>
+                                    <td>
+                                        @Counter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.categoryId)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.categoryDescription)
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.region)
+                                        @*<td><input type="checkbox" class="checkboxes" id="selectedcheckbox" name="selectedcheckbox" value=@item.categoryId /></td>*@
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.constituency)
+                                        @*<a href="@Url.Action("PrequalifiedresponsibilityCenters", "Home", new { documentNo= @item.documentNo,category=@item.categoryId})" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i>select Regions</a>*@
+
+                                    <td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="row">
+
+                    @*<a href="/Home/RFIResponseForm" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Back </a>*@
+
+                    <a href="@Url.Action("RegistrationFormResponce", "Home", new { InvitationNumber = ViewBag.invitationNo})" class="btn btn-primary pull-left rounded">Back</a>
+                    <a href="@Url.Action("RegistrationAttachDocuments", "Home", new { InvitationNumber = ViewBag.invitationNo,prequalificationNo=ViewBag.prequalificationNo})" class="btn btn-primary pull-right rounded">next</a>
+
+                    @*<button class="btn btn-primary prevBtn pull-left" type="button">Previous</button>*@
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

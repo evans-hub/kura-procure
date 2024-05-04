@@ -1,0 +1,494 @@
+﻿
+@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewPrequalifications";
+    Layout = "";
+    int tenderCounter = 0;
+    int DocumentsCounter = 0;
+    int purchaseLines = 0;
+    int CategoriesCounter = 0;
+    int tenderDocuments = 0;
+    int TenderDocuments = 0;
+    int DocumentsCounters = 0;
+    int DownloadDocumentsCounter = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+    <title>Kerra E-Procurement - E-Procurement</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/CustomCss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/material-dashboard-new.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/ladda-themeless.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="/Home/index" class="logo">
+                    <img src="~/assets/img/seeklogo.png" width="100" height="60" alt="">
+                </a>
+            </div>
+            @*<div class="page-title-box pull-left">
+                    <h3>Kenya Rural Roads Authority</h3>
+                </div>*@
+            <ul class="nav navbar-nav navbar-right user-menu pull-right">
+                <li>
+                    <a href="/Home/Register">e-Registration</a>
+                </li>
+                <li>
+                    <a href="/Home/InvitationforPrequalifications">e-Prequalification</a>
+                </li>
+                <li>
+                    <a href="/Home/eBidding">e-Bidding</a>
+                </li>                
+                <li>
+                    <a href="/Home/Login">Login</a>
+                </li>
+                <li>
+                    <a href="/Home/Register">Register</a>
+                </li>
+                <li>
+                    <a href="#">Help desk</a>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu pull-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="edit-profile.html">Edit Profile</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content container-fluid">
+            <div class="row">
+                <div class="card">
+                    <div class="card-header text-center" data-background-color="darkgreen">
+                        <h5 class="title"><i><strong>Invitation For Prequalification</strong></i></h5>
+                    </div><br />
+                </div>
+            </div>
+            @foreach (IFPRequestsModel invitation in Model.PrequalificationDetails)
+            {
+                <div class="row" style="background-color:#D3D3D3">
+                    <div class="col-xs-8 text-right m-b-30">
+                        <a href="@Url.Action("Login", "Home")" class="btn btn-primary rounded"><i class="fa fa-plus"></i>Apply for Prequalifications</a>
+                    </div>
+                </div>
+            }
+            <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="panel-body">
+                <ul class="nav nav-tabs">
+                    <li class="active" style="background-color:#D3D3D3">
+                        <a href="#tab_general_details" data-toggle="tab"><p style="color:black"><strong>General Details</strong> </p></a>
+                    </li>
+                    <li style="background-color:#D3D3D3">
+                        <a href="#tab_procurement_categories" data-toggle="tab"><p style="color:black"><strong>Procurement Categories</strong></p> </a>
+                    </li>
+                    <li style="background-color:#D3D3D3">
+                        <a href="#tab_required_documents" data-toggle="tab"><p style="color:black"><strong>Required Documents</strong></p> </a>
+                    </li>
+                    <li style="background-color:#D3D3D3">
+                        <a href="#tab_documents_downloads" data-toggle="tab"><p style="color:black"><strong>Documents</strong></p> </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="tab_general_details">
+                        <div class="row">
+                            @foreach (IFPRequestsModel invitation in Model.PrequalificationDetails)
+                            {
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>General Details</u></strong></h6>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">IFP Notice No:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="tenderdescription" value="@invitation.Code" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">External Document No:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@invitation.External_Document_No" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Description:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="procurementmethod" value="@invitation.Description" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Tender Summary:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="invitationtype" value="@invitation.Tender_Summary" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Prequalification Period Start Date.<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="mandatorymeeting" value="@invitation.Period_Start_Date" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Prequalification Period End Date:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="documentdate" value="@invitation.Period_End_Date" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Region Issuing Notice:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="enveloptype" value="@invitation.Region" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Application Fees(LCY):<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="externaldocumentno" value="@invitation.External_Document_No" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Date Published:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="sealedbids" value="@invitation.Submission_End_Date" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Submission Start Date:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="responsibilitycenter" value="@invitation.Submission_Start_Date" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Submission Start Time:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="tendervalidity" value="@invitation.Submission_Start_Time" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Submission End Date:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="locationcode" value="@invitation.Submission_End_Date" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Submission End Time:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="tenderexpirydate" value="@invitation.Submission_Start_Time" readonly>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab_procurement_categories">
+                        <div class="row">
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Procurement Categories</u></strong></h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>S.No</th>
+                                                    <th>Category ID</th>
+                                                    <th>Description</th>
+                                                    <th>Procurement Type</th>
+                                                    <th>Reserved for Special Group</th>
+                                                    <th>Location</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (PrequalifiedCategoriesModel item in Model.Categories)
+                                                {
+                                                    CategoriesCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @CategoriesCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Procurement_Category_Code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Description)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Procurement_Type)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Special_Group)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Application_Location)
+                                                        </td>
+
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab_required_documents">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h6 class="panel-title"><strong><u>Required Documents</u></strong></h6>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>S.No</th>
+                                                <th>Document Type</th>
+                                                <th>Document</th>
+                                                <th>Requirement Type</th>
+                                                <th>Special Group Requirement</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (PreQualificationRequiredDocuments item in Model.RequiredDocuments)
+                                            {
+                                                DocumentsCounter++;
+                                                <tr>
+                                                    <td>
+                                                        @DocumentsCounter
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Requirement_Type)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.SpecialGroupRequirement)
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab_documents_downloads">
+                        <div class="row">
+                            <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                <h6 class="panel-title"><strong><u>Document Downloads</u></strong></h6>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Document Type</th>
+                                                <th>Document</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (SharePointTModel documents in Model.AttachedDocuments)
+                                            {
+                                                tenderDocuments++;
+                                                <tr>
+                                                    <td>
+                                                        @tenderDocuments
+
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.FileName)
+
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-success" onclick="DowndloadTenderDocument('@documents.FileName')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                                    </td>
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            function Respond(url, uniquetenderno) {
+                var TenderNoticeNo = $('#tendernotice').val();
+                var RespondWizardForm = '@Url.Action("RespondTenderWizard", "Home")';
+                Swal.fire({
+                    title: "Confirm Tender Response?",
+                    text: "Are you sure you would like to Respond to this Tender?",
+                    type: "warning",
+                    showCancelButton: true,
+                    closeOnConfirm: true,
+                    confirmButtonText: "Yes, Proceed!",
+                    confirmButtonClass: "btn-success",
+                    confirmButtonColor: "#008000",
+                    position: "center"
+                }).then((result) => {
+                    if (result.value) {
+                        $.ajax({
+                            cache: false,
+                            type: 'GET',
+                            url: url,
+                            cache: false,
+                            processData: false,
+                        }).done(function (status) {
+                            var tendersponse = status.split('*');
+                            status = tendersponse[0];
+                            switch (status) {
+                                case "success":
+                                    Swal.fire
+                                   ({
+                                       title: "Tender Response Submitted!",
+                                       text: "Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!",
+                                       type: "success"
+                                   }).then(() => {
+                                       $("#responsesfeedback").css("display", "block");
+                                       $("#responsesfeedback").css("color", "green");
+                                       $('#responsesfeedback').attr("class", "alert alert-success");
+                                       $("#responsesfeedback").html("Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                       $("#responsesfeedback").css("display", "block");
+                                       $("#responsesfeedback").css("color", "green");
+                                       $("#responsesfeedback").html("Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                       window.location.href = RespondWizardForm;
+                                   });
+
+                                    break;
+                                case "found":
+                                    Swal.fire
+                                   ({
+                                       title: "Tender Response already Submitted!",
+                                       text: "Your Tender Response had already been successfully submitted.Kindly Proceed to fill in more Details!",
+                                       type: "success"
+                                   }).then(() => {
+                                       $("#responsesfeedback").css("display", "block");
+                                       $("#responsesfeedback").css("color", "green");
+                                       $('#responsesfeedback').attr("class", "alert alert-success");
+                                       $("#responsesfeedback").html("Your Tender Response had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                       $("#responsesfeedback").css("display", "block");
+                                       $("#responsesfeedback").css("color", "green");
+                                       $("#responsesfeedback").html("Your Tender Response had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                       window.location.href = RespondWizardForm;
+                                   });
+
+                                    break;
+                                default:
+                                    Swal.fire
+                                    ({
+                                        title: "Tender Response Error!!!",
+                                        text: status,
+                                        type: "error"
+                                    }).then(() => {
+                                        $("#responsesfeedback").css("display", "block");
+                                        $("#responsesfeedback").css("color", "red");
+                                        $('#responsesfeedback').addClass('alert alert-danger');
+                                        $("#responsesfeedback").html("Your Tender Response Details  could not submitted.Kindly try Again!" + status + "");
+                                    });
+                                    break;
+                            }
+                        }
+                    );
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        Swal.fire(
+                            'Tender Response Cancelled',
+                            'You cancelled your tender Response submission details!',
+                            'error'
+                        );
+                    }
+                });
+
+            };
+        </script>
+        </div>
+    <footer class="site-footer">
+        <div class="container" style="width:100%">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">KeRRA is a State Corporation within the State Department of Infrastructure under the Ministry of Transport, Infrastructure, Housing and Urban Development and established through the Kenya Roads Act, 2007.While our Head Office is situated in Nairobi, the Authority has 30 Regional Administrative Units and Offices in each County. Our operations are further devolved to the Constituency level wherein we maintain roads in all 290 Constituencies guided by respective Constituency Roads Committees (CRCs); through the annual Roads Maintenance Levy Fund (RMLF) allocations.</p>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Categories</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/category/c-language/">FAQs</a></li>
+                        <li><a href="http://scanfcode.com/category/front-end-development/">FeedBack</a></li>
+                        <li><a href="http://scanfcode.com/category/back-end-development/">Bidders Manual Kit</a></li>
+                        <li><a href="http://scanfcode.com/category/java-programming-language/">Downloads</a></li>
+                        <li><a href="http://scanfcode.com/category/android/">Announcements</a></li>
+                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container" style="width:100%">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">
+                    <p>Copyright:&copy; @DateTime.Now.Year - Kenya Rural Roads Authority.All Rights Reserved - <a href="#">Designed and Developed by Dynasoft Business Solutions</a>.</p>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/supplierRegistration.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/sweetalert.min.js"></script>
+    <!-- Sweet Alert Js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    </body>
+</html>
+

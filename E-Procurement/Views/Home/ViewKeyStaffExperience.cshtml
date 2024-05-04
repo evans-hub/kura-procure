@@ -1,0 +1,211 @@
+﻿
+@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewKeyStaffExperience";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int qualificationsCounter = 0;
+    int experienceCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>Details of key Professional Staff</i></h5>
+            </div>
+        </div>
+    </div>
+    <p>
+        Consultants and Contractors are required to provide a list of some of their key professional staff
+        (These details can then be used during e-bid submission process on this Portal)
+    </p>
+    <div class="row">
+        <div class="panel panel-primary" style="background-color:lightgray">
+            <h5><strong>Details of key Professional Staff</strong></h5>
+        </div>
+        <div class="col-md-12">
+            @foreach (ProfessionalStaffModel item in Model.ProffessionalStaff)
+            {
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Staff No:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vendorno" name="vendorno" value="@item.StaffNumber" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Staff Name:<span class="text-danger">*</span> </label>
+                            <input class="form-control" type="text" id="businessname" name="businessname" value="@item.StaffName" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Proffession:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.StaffProfession" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Current Designation:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.StaffDesignation" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Date of Birth:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.StaffDateofBirth" readonly>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Joining Date:<span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="vatregistration" name="vatregistration" value="@item.StaffJoiningDate" readonly>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Years with the Firm: <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.Years_With_the_Firm" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Phone Number:<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.StaffPhonenumber" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Nationality:<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.Country_Region_Code" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label class="control-label">Email: <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@item.StaffEmail" readonly>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-primary" style="background-color:lightgray">
+            <h5><strong>Staff Qualifications</strong></h5>
+        </div>
+        <p>The qualifications of each staff shall be captured under this section</p>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Qualification Category</th>
+                            <th>Qualification Name </th>
+                            <th>Institution </th>
+                            <th>Start Year </th>
+                            <th>End Year </th>
+                            <th>OutStanding Achievements  </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (ProffessionalStaffQualifications item in Model.QualificationsStaff)
+                        {
+                            qualificationsCounter++;
+                            <tr>
+                                <td>
+                                    @qualificationsCounter
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Qualification_Category)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Qualification_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Institution)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Start_Year)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.End_Year)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Outstanding_Achievements)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-primary" style="background-color:lightgray">
+            <h5><strong>Staff Experience</strong></h5>
+        </div>
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Experience Category</th>
+                            <th>Experience Summary </th>
+                            <th>Assigment Description </th>
+                            <th>Years of Experience </th>
+                            <th>Start Date </th>
+                            <th>End Date </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (ProffessionalStaffExperience item in Model.ExperienceStaff)
+                        {
+                            experienceCounter++;
+                            <tr>
+                                <td>
+                                    @experienceCounter
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Experience_Category)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Experience_Summary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Assignment_Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Years_of_Experience)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Start_Year)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.End_Year)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="form-actions">
+        <div class="row">
+            <div class="col-md-offset-5 col-md-8">
+                <a href="/Home/SupplierRegistration" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Backwards </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

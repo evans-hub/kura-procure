@@ -1,0 +1,14 @@
+﻿@model  IEnumerable<E_Procurement.Models.SupplierCategory>
+@{
+    Layout = null;
+}
+
+<select class="form-control select2" id="dropdownsupplierCategory" name="dropdownsupplierCategory" data_live_search="true">
+    <option value="">--Select Supplier category---</option>
+    <optgroup label="Special Group Categories">
+        @foreach (var item in Model)
+        {
+            <option value="@item.code">@item.description</option>
+        }
+    </optgroup>
+</select>

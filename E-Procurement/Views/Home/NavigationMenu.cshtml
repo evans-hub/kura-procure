@@ -1,0 +1,58 @@
+﻿
+
+    @{
+        Layout = null;
+    }
+
+<div class="header">
+    
+        <div class="header-left">
+            <a href="/Home/Index" class="logo">
+                <img src="~/assets/img/seeklogo.png" width="80" height="60" alt="">
+            </a>
+        </div>
+        <div class="page-title-box pull-left">
+            <h4 style="color:white">Welcome to Kenya Urban Roads Authority E-Procurement</h4>
+        </div>
+        <ul class="nav navbar-nav navbar-right user-menu pull-right">
+            <li>
+                <a href="/Home/Index">Home</a>
+            </li>
+            <li>
+                <a href="/Home/Register">Registration</a>
+            </li>
+
+            @*<li>
+                <a href="/Home/Login">Self Service</a>
+            </li>*@
+            @*<li>
+                <a href="/Contractor/HomePage">Contractors HUB</a>
+            </li>*@
+            <li class="submenu">
+                <a href="/Home/Login"><span>Login</span> <span class="menu-arrow"></span></a>
+                <ul style="display: none;">
+                    <li><a href="/Home/Login">Login</a></li>
+                    <li><a href="/Home/Register">Register</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Help desk</a>
+            </li>
+        </ul>
+        <div class="dropdown mobile-user-menu pull-right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+            <ul class="dropdown-menu pull-right">
+                <li><a href="profile.html">E-Registration</a></li>
+                <li><a href="edit-profile.html">E-Prequalification</a></li>
+                <li><a href="settings.html">E-Bidding</a></li>
+                <li><a href="login.html">Self Service</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html">Register</a></li>
+                <li><a href="login.html">Help desk</a></li>
+            </ul>
+        </div>
+
+   
+    
+</div>
+

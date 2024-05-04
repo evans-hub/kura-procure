@@ -1,0 +1,430 @@
+﻿
+@model  IEnumerable<E_Procurement.Models.BidResponseDetailsModel>
+@{
+    ViewBag.Title = "MyTransactions";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int tenderCounter = 0;
+    int OngoingCounter = 0;
+    int ClosedCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>My Transaction Hub</u></strong></h5>
+        </div>
+    </div>
+    <p>The Transaction Hub enables you to quickily access your Bid Responses, Purchase Contracts and Purchase Orders.</p>
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">No. of Bid Responses</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">No. of Purchase Contracts</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_bid_responses" data-toggle="tab"><p style="color:black"><strong>Bid Responses</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_purchase_orders" data-toggle="tab"><p style="color:black"><strong>Purchase Orders</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_purchase_contracts" data-toggle="tab"><p style="color:black"><strong>Purchase Contracts</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_bid_responses">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:lightgray">
+                        <h3 class="panel-title">Ongoing Bid Responses</h3>
+                    </div>
+                    <p>This section shows the Bid Responses that are at the Draft Stage and are yet to be submitted by the bidder.</p>
+                    <div class="row filter-row">
+                        <div class="col-sm-4 col-xs-6">
+                            <label class="control-label">Invitation Notice Type</label>
+                            <div class="form-group form-focus">
+                                <input type="text" class="form-control floating" />
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-xs-6">
+                            <label class="control-label">Location Code</label>
+                            <div class="form-group form-focus select-focus">
+                                <input type="text" class="form-control floating" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3  col-xs-6">
+                            <a href="#" class="btn btn-success btn-block"> Search </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Bid Response No.</th>
+                                        <th>Document Date</th>
+                                        <th>Bidder Type</th>
+                                        <th>Invitation for Supply</th>
+                                        <th>Tender Name</th>
+                                        <th>Location Code</th>
+                                        <th>Amount</th>
+                                        <th>Amount Including VAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        OngoingCounter++;
+                                        <tr>
+                                            <td>
+                                                @OngoingCounter
+                                            </td>
+                                            <td>
+                                               @Html.DisplayFor(modelItem => item.No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Document_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Bidder_type)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Invitation_For_Supply_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Location_Code)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Amount)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Amount_Including_VAT)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title">Closed Bid Responses</h3>
+                    </div>
+                    <p>
+                        This section shows the Bid Responses that have been submitted and are being/have been actioned on. These bids will be at different stages such as Submitted, Withdrawn, Opened, Evaluation, Completion or Cancelled, depending on the sourcing cycle.
+                    </p>
+                    <div class="row filter-row">
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="form-group form-focus">
+                                <label class="control-label">Invitation Notice Type</label>
+                                <input type="text" class="form-control floating" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="form-group form-focus select-focus">
+                                <label class="control-label">Location Code</label>
+                                <input type="text" class="form-control floating" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="form-group form-focus select-focus">
+                                <label class="control-label">Document Status</label>
+                                <input type="text" class="form-control floating" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3  col-xs-6">
+                            <a href="#" class="btn btn-success btn-block"> Search </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Bid Response No.</th>
+                                        <th>Document Date</th>
+                                        <th>Bidder Type</th>
+                                        <th>Invitation for Supply</th>
+                                        <th>Tender Name</th>
+                                        <th>Location Code</th>
+                                        <th>Amount</th>
+                                        <th>Amount Including VAT</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        ClosedCounter++;
+                                        <tr>
+                                            <td>
+                                                @ClosedCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Document_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Bidder_type)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Invitation_For_Supply_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Location_Code)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Amount)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Amount_Including_VAT)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade " id="tab_purchase_orders">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5>Purchase Orders</h5>
+                    </div>
+                    <p>
+                        This Section enables you to view and track the details of all Local Purchase Orders (LPOs) and Local Service Orders (LSOs)
+                        issued by the Procuring Entity (Buyer). Therefore, you are empowered to track all your purchase orders throught the entire
+                        procure-to-pay cycle.
+
+                    </p>
+
+                    <div class="col-md-12">
+                        <h5><strong><u>All Approved Purchase Orders</u></strong></h5>
+                        <p>You can view the list of all Approved purchase orders that have been issued by the Procuring Entity (The Buyer). Please note that an Advanced Search facility has been provided to enable you refine your search further. Once you select a given PO, you can view its related posted documents such as Posted Receipts and Posted Invoices. </p>
+                        <div class="row filter-row">
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="form-group form-focus">
+                                    <label class="control-label">Purchase Order Type</label>
+                                    <input type="text" class="form-control floating" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="form-group form-focus select-focus">
+                                    <label class="control-label">Location Code</label>
+                                    <input type="text" class="form-control floating" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="form-group form-focus select-focus">
+                                    <label class="control-label">Order No</label>
+                                    <input type="text" class="form-control floating" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3  col-xs-6">
+                                <a href="#" class="btn btn-success btn-block"> Search </a>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>No.</th>
+                                        <th>Region</th>
+                                        <th>Description</th>
+                                        <th>Document Date</th>
+                                        <th>Amount Including VAT</th>
+                                        <th>Currency Code</th>
+                                        <th>View Orders</th>
+                                        <th>View Invoices</th>
+                                        <th>View Receipts</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        tenderCounter++;
+                                        <tr>
+                                            <td>
+                                                @tenderCounter
+                                            </td>
+                                            <td>
+                                               @Html.DisplayFor(modelItem => item.No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Location_Code)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Document_Date)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Amount_Including_VAT)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Currency_Code)
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="View('@Url.Action("ViewSingleTender", "Home", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="View('@Url.Action("ViewSingleTender", "Home", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="View('@Url.Action("ViewSingleTender", "Home", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                            </td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_purchase_contracts">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5>Purchase Contracts/Agreements</h5>
+                    </div>
+                    <p>
+                        Purchase Contracts are purchase agreements you have made with the procuring entity (Buyer). On the Purchase Contracts page,
+                        you can review the details of those agreements, and the corresponding releases (purchase orders) that have been created for a
+                        particular agreement.
+                        You can use the search criteria to get a summarized list of purchase contracts/agreements. For each contract, you can select to
+                        view the releases created to date for that contract.
+
+
+                    </p>
+
+                    <div class="col-md-12">
+                        <h5><strong><u>Purchase Contracts/Agreements</u></strong></h5>
+                        <p>You can view the list of all purchase contracts/agreements that have been made with the Procuring Entity (The Buyer). Please note that you can view the details of each purchase contract by clicking on the CONTRACT DETAILS link. You can also view the Releases (Purchase Orders that have been raised against a given purchase contract) linked to a specific Purchase Contract by clicking on the VIEW ORDER RELEASES function. </p>
+                        <div class="row filter-row">
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="form-group form-focus">
+                                    <label class="control-label">Contract Type</label>
+                                    <input type="text" class="form-control floating" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="form-group form-focus select-focus">
+                                    <label class="control-label">Location Code</label>
+                                    <input type="text" class="form-control floating" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-xs-6">
+                                <div class="form-group form-focus select-focus">
+                                    <label class="control-label">Contract No</label>
+                                    <input type="text" class="form-control floating" />
+                                </div>
+                            </div>
+                            <div class="col-sm-3  col-xs-6">
+                                <a href="#" class="btn btn-success btn-block"> Search </a>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Contract No.</th>
+                                        <th>Contract Description</th>
+                                        <th>Contract Start Date</th>
+                                        <th>Contract End Date</th>
+                                        <th>Award Tender Sum</th>
+                                        <th>Region</th>
+                                        <th>Location Code</th>
+                                        <th>Tender ID</th>
+                                        <th>Contract Type</th>
+                                        <th>View Contract Details</th>
+                                        <th>View Order Realeses</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @*@foreach (var item in Model)
+                                    {
+                                        tenderCounter++;
+                                        <tr>
+                                            <td>
+                                                @tenderCounter
+                                            </td>
+                                            <td>
+                                                <a href=""><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tender_Name)
+
+                                            </td>
+                                            <td>
+                                                Nairobi
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Submission_End_Date)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Document_Date)
+                                            </td>
+                                            <td>
+                                                17,000,000,000,000
+                                            </td>
+                                            <td>
+                                                Yes
+                                            </td>
+                                            <td>
+                                                Yes
+                                            </td>
+                                            <td>
+                                                Yes
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="View('@Url.Action("ViewSingleTender", "Home", new { tendernumber = @item.Code })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="View('@Url.Action("ViewSingleTender", "Home", new { tendernumber = @item.Code })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                            </td>
+
+                                        </tr>
+                                    }*@
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<E_Procurement.Models.IndustryGroupModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="dropdowndustrygroup" name="dropdowndustrygroup" data_live_search="true">
+    <option value="">--Select Type---</option>
+    <optgroup label="Industry Group Categories">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Description</option>
+        }
+    </optgroup>
+</select>
+

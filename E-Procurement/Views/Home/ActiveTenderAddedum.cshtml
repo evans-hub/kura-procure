@@ -1,0 +1,88 @@
+﻿@model  IEnumerable<E_Procurement.Models.TenderAddendums>
+@{
+    ViewBag.Title = "ActiveTenderAddedum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int addendumCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>Active Addendum Notices</i></h5>
+            </div>
+        </div>
+    </div>
+    <p>The latest tender addendum notices, issued by the Procuring Entity, are listed here.</p>
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">Search by Regions</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">Search by Tener Notice Number</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="#" class="btn btn-success btn-block"> Search </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Addendum Notice No.</th>
+                            <th>Document Date</th>
+                            <th>Invitation Notice No.</th>
+                            <th>Description</th>
+                            <th>Tender Description</th>
+                            <th>Region</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            addendumCounter++;
+                            <tr>
+                                <td>
+                                    @addendumCounter
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("ViewSingleAddendumNotice", "Home", new { AddendumNumber = @item.Addendum_Notice_No })"><strong>@Html.DisplayFor(modelItem => item.Addendum_Notice_No)</strong></a>
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Document_Date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Invitation_Notice_No)                 
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tender_Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Responsibility_Center)
+                                </td>
+                                <td>
+                                    <a class="btn btn-success" href="@Url.Action("ViewSingleAddendumNotice", "Home", new { AddendumNumber = @item.Addendum_Notice_No })"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

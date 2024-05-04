@@ -1,0 +1,14 @@
+﻿@model IEnumerable<E_Procurement.Models.Contractor.ProjectTasksModel>
+@{
+
+    Layout = null;
+}
+<select class="form-control select2" id="projecttaskslinesdropdown" name="projecttaskslinesdropdown" data_live_search="true">
+    <option value="">--Select Project Tasks List--</option>
+    <optgroup label="Project Tasks List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Job_Task_No">@item.Description</option>
+        }
+    </optgroup>
+</select>

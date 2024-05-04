@@ -1,0 +1,16 @@
+﻿@model IEnumerable<E_Procurement.Models.ResponsibilityCenter>
+
+@{
+       Layout = null;
+}
+<select class="form-control select2" id="dropdownResponsibilityCenter" name="dropdownResponsibilityCenter" data_live_search="true">
+    <option value="">--Select Region---</option>
+    <optgroup label="All Regions List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.code">@item.name</option>
+        }
+    </optgroup>
+</select>
+
+

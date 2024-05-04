@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "ViewPrequalificationsConstituencies";
+    Layout = null;
+}
+<select class="form-control select2" id="dropdownRegions" name="dropdownRegions" data_live_search="true">
+    <option value="">--Select Constituency---</option>
+    <optgroup label="All Regions List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.CountyCode">@item.CountyName</option>
+        }
+    </optgroup>
+</select>

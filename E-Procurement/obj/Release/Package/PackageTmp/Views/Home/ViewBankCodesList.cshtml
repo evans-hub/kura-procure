@@ -1,0 +1,16 @@
+﻿
+@model IEnumerable<E_Procurement.Models.BankModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="bankcode" name="bankcode" data_live_search="true" onchange="return getSelectedBank30()">
+    <option value="">--Select Bank Codes---</option>
+    <optgroup label="All Bank Codes List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.BankCode">@item.BankName</option>
+        }
+    </optgroup>
+</select>
+

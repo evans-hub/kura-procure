@@ -1,0 +1,417 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewExpressionInterest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int tenderCounter = 0;
+    int addendumcounter = 0;
+    int purchaseLines = 0;
+    int SecurityCounter = 0;
+    int tenderDocuments = 0;
+    int equipmentsCounter = 0;
+    int evaluationsCunter = 0;
+    int AllstaffCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>General Contract Award Details</u></strong></h4>
+        </div>
+    </div>
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_overview" data-toggle="tab"><p style="color:black"><strong>General Details</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_major_works" data-toggle="tab"><p style="color:black"><strong>Major Work Deliverables</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_critical_details" data-toggle="tab"><p style="color:black"><strong>Critical Submission Details</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_documents_downloads" data-toggle="tab"><p style="color:black"><strong>Documents Downloads</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_overview">
+                <div class="row">
+                    @foreach (SingleTenderModel tenderdetail in Model.SingleTenders)
+                    {
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>General Details</u></strong></h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">EOI No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@tenderdetail.Tender_Summary" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Sealed Bids:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@tenderdetail.Code" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">External Document No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@tenderdetail.Procurement_Method" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Funding Source ID:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@tenderdetail.Invitation_Notice_Type" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Responsibility Center.<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="mandatorymeeting" value="@tenderdetail.Mandatory_Pre_bid_Visit_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Preference/Reservation Codes:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="documentdate" value="@tenderdetail.Document_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Location Code:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="enveloptype" value="@tenderdetail.Bid_Envelop_Type" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Financial Year Code:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="externaldocumentno" value="@tenderdetail.External_Document_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Description:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="sealedbids" value="@tenderdetail.Sealed_Bids" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Project ID:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="responsibilitycenter" value="@tenderdetail.Responsibility_Center" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Requisition Product Group:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendervalidity" value="@tenderdetail.Tender_Validity_Duration" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Works Category:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="locationcode" value="@tenderdetail.Location_Code" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Target Bidder Group:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderexpirydate" value="@tenderdetail.Tender_Validity_Expiry_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Code:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="requisitionproductgroup" value="@tenderdetail.Requisition_Product_Group" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Date Published:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="requisitionproductgroup" value="@tenderdetail.Requisition_Product_Group" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Bid Selection Method:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="requisitionproductgroup" value="@tenderdetail.Requisition_Product_Group" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Constituency ID:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="requisitionproductgroup" value="@tenderdetail.Requisition_Product_Group" readonly>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_major_works">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>Major Work Deliverables</u></strong></h3>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>S.No</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (BidSecurityModel item in Model.TenderSecurity)
+                                        {
+                                            SecurityCounter++;
+                                            <tr>
+                                                <td>
+                                                    @SecurityCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Form_of_Security)
+                                                </td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab_critical_details">
+                <div class="row">
+                    @foreach (SingleTenderModel tenderdetail in Model.SingleTenders)
+                    {
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>Critical Submission Details</u></strong></h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Submission Start Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@tenderdetail.Tender_Summary" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Address 2:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@tenderdetail.Tender_Summary" readonly>
+                            </div>
+                        </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Submission Start Time:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@tenderdetail.Code" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Post Code:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="procurementmethod" value="@tenderdetail.Procurement_Method" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Submission End Time:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="invitationtype" value="@tenderdetail.Invitation_Notice_Type" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">County/Region Code.<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="mandatorymeeting" value="@tenderdetail.Mandatory_Pre_bid_Visit_Date" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Bid Opening Date:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="documentdate" value="@tenderdetail.Document_Date" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Phone No:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="enveloptype" value="@tenderdetail.Bid_Envelop_Type" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Bid Opening Time:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="externaldocumentno" value="@tenderdetail.External_Document_No" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Email Contact:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="sealedbids" value="@tenderdetail.Sealed_Bids" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Bid Opening Venue:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="sealedbids" value="@tenderdetail.Sealed_Bids" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Tender Box Location:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="sealedbids" value="@tenderdetail.Sealed_Bids" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Procuring Entity Name/Contact:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="sealedbids" value="@tenderdetail.Sealed_Bids" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Procuring Tender Submission Address:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="sealedbids" value="@tenderdetail.Sealed_Bids" readonly>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Address:<span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="sealedbids" value="@tenderdetail.Sealed_Bids" readonly>
+                                </div>
+                            </div>
+                    }
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_documents_downloads">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h3 class="panel-title"><strong><u>Document Downloads</u></strong></h3>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>S.No</th>
+                                        <th>Description</th>
+                                        <th>Address/Link</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (BidSecurityModel item in Model.TenderSecurity)
+                                    {
+                                        SecurityCounter++;
+                                        <tr>
+                                            <td>
+                                                @SecurityCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Form_of_Security)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Security_Type)
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function Respond(url, uniquetenderno) {
+        var TenderNoticeNo = $('#tendernotice').val();
+        var RespondWizardForm = '@Url.Action("RespondTenderWizard", "Home")';
+        Swal.fire({
+            title: "Confirm Tender Response?",
+            text: "Are you sure you would like to Respond to this Tender?",
+            type: "warning",
+            showCancelButton: true,
+            closeOnConfirm: true,
+            confirmButtonText: "Yes, Proceed!",
+            confirmButtonClass: "btn-success",
+            confirmButtonColor: "#008000",
+            position: "center"
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    cache: false,
+                    type: 'GET',
+                    url: url,
+                    cache: false,
+                    processData: false,
+                }).done(function (status) {
+                    var tendersponse = status.split('*');
+                    status = tendersponse[0];
+                    switch (status) {
+                        case "success":
+                            Swal.fire
+                           ({
+                               title: "Tender Response Submitted!",
+                               text: "Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!",
+                               type: "success"
+                           }).then(() => {
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $('#responsesfeedback').attr("class", "alert alert-success");
+                               $("#responsesfeedback").html("Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $("#responsesfeedback").html("Your Tender Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                               window.location.href = RespondWizardForm;
+                           });
+
+                            break;
+                        case "found":
+                            Swal.fire
+                           ({
+                               title: "Tender Response already Submitted!",
+                               text: "Your Tender Response had already been successfully submitted.Kindly Proceed to fill in more Details!",
+                               type: "success"
+                           }).then(() => {
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $('#responsesfeedback').attr("class", "alert alert-success");
+                               $("#responsesfeedback").html("Your Tender Response had been successfully submitted.Kindly Proceed to fill in more Details!");
+                               $("#responsesfeedback").css("display", "block");
+                               $("#responsesfeedback").css("color", "green");
+                               $("#responsesfeedback").html("Your Tender Response had been successfully submitted.Kindly Proceed to fill in more Details!");
+                               window.location.href = RespondWizardForm;
+                           });
+
+                            break;
+                        default:
+                            Swal.fire
+                            ({
+                                title: "Tender Response Error!!!",
+                                text: status,
+                                type: "error"
+                            }).then(() => {
+                                $("#responsesfeedback").css("display", "block");
+                                $("#responsesfeedback").css("color", "red");
+                                $('#responsesfeedback').addClass('alert alert-danger');
+                                $("#responsesfeedback").html("Your Tender Response Details  could not submitted.Kindly try Again!" + status + "");
+                            });
+                            break;
+                    }
+                }
+            );
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Tender Response Cancelled',
+                    'You cancelled your tender Response submission details!',
+                    'error'
+                );
+            }
+        });
+
+    };
+</script>
+

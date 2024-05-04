@@ -1,0 +1,18 @@
+﻿
+@model IEnumerable<E_Procurement.Models.jobs>
+@{
+
+    Layout = null;
+    int n = 0;
+}
+<select class="form-control select2" id="projectid" name="projectid" data_live_search="true">
+    <option value="">--Select Project--</option>
+    <optgroup label="Projects List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.projectNo">@item.Description</option>
+        }
+    </optgroup>
+</select>
+
+

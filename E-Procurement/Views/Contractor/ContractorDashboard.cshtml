@@ -1,0 +1,195 @@
+﻿@model  IEnumerable<E_Procurement.Models.Contractor.ProjectTasksModel>
+@{
+    ViewBag.Title = "ContactorDashboard";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int AllTasksCounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="page-title">
+                Welcome <strong>@Session["fullname"]!</strong>
+
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <a href="/Home/ActiveTenderNotices">
+            <div class="col-lg-3 col-md-6 ">
+                <div class="small-box bg-green">
+                    <div class="dash-widget clearfix card-box small-box bg-green">
+                        <span class="dash-widget-icon"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+
+                        <div class="dash-widget-info">
+                            <h4>12</h4>
+                            <p>All Active Contracts</p>
+                        </div>
+                    </div>
+                    <a href="/Home/ActiveTenders" class="small-box-footer">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </a>
+        <a href="/Home/ClosedTenders">
+            <div class="col-lg-3 col-md-6">
+                <div class="small-box bg-red">
+                    <div class="dash-widget clearfix card-box small-box bg-red">
+                        <span class="dash-widget-icon" style="background-color:antiquewhite"><i class="fa fa-cubes" aria-hidden="true"></i></span>
+
+                        <div class="dash-widget-info">
+                            <h4>3</h4>
+                            <p>All Closed Contracts</p>
+                        </div>
+                    </div>
+                    <a href="/Home/ActiveTenders" class="small-box-footer bg-red">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </a>
+
+        <a href="/Home/ClosedTenders">
+            <div class="col-lg-3 col-md-6">
+                <div class="small-box bg-olive">
+                    <div class="dash-widget clearfix card-box small-box bg-olive">
+                        <span class="dash-widget-icon" style="background-color:antiquewhite"><i class="fa fa-cubes"></i></span>
+                        <div class="dash-widget-info">
+                            <h4>12</h4>
+                            <p>All Contract Awards</p>
+                        </div>
+                    </div>
+                    <a href="/Home/ActiveTenders" class="small-box-footer  bg-olive">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </a>
+        <a href="/Home/AnnouncementsList">
+            <div class="col-lg-3 col-md-6">
+                <div class="small-box bg-purple">
+                    <div class="dash-widget clearfix card-box small-box bg-purple">
+                        <span class="dash-widget-icon" style="background-color:antiquewhite"><i class="fa fa-user" aria-hidden="true"></i></span>
+                        <div class="dash-widget-info">
+                            <h4>12</h4>
+                            <p>Notices</p>
+                        </div>
+                    </div>
+                    <a href="/Home/ActiveTenders" class="small-box-footer">
+                        More info <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    <div class="main-wrapper">
+        <div class="row">         
+            <div class="content container-fluid">
+                <div class="row filter-row">
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Project Title.</label>
+                            <input type="text" class="form-control floating" />
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="form-group form-focus">
+                            <label class="control-label">Category:</label>
+                            <select class="select floating">
+                                <option value="">Select Category</option>
+                                <option value="">Goods</option>
+                                <option value="1">Works/Services</option>
+                                <option value="1">Consultancy Servivec</option>
+                                <option value="1">Works</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="form-group form-focus select-focus">
+                            <label class="control-label">Closing Date</label>
+                            <div class="cal-icon"><input class="form-control floating datetimepicker" type="text"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <a href="#" class="btn btn-success btn-block"> Search </a>
+                    </div>
+                </div>
+                <div class="row">
+                    @if (!Model.Any())
+                    {
+                        <div class="alert alert-danger"><h3>Ther are no Open Tenders for Public Participation. Kindly Check Again Later</h3></div>
+                    }
+                    else
+                    {
+                        <fieldset>
+                            <div class="col-md-12" style="color:black">
+                                <div class="table-responsive" style="color:black">
+                                    <table class="table table-striped custom-table datatable ">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Project No.</th>
+                                                <th>Region Code</th>
+                                                <th>Road Section</th>
+                                                <th>Start Point(KMs)</th>
+                                                <th>End Point(KMs)</th>
+                                                <th>Start Date</th>
+                                                <th>End Date</th>
+                                                <th>Completed Length(KMs)</th>
+                                                <th>View</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                AllTasksCounter++;
+                                                <tr>
+                                                    <td>
+                                                        @AllTasksCounter
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Job_No)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Region)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Start_Point_Km)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.End_Point_Km)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Start_Date)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.End_Date)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Completed_Length_Km)
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-success" onclick="View('@Url.Action("", " ", new { tendernumber = @item.Job_No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

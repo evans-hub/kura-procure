@@ -1,0 +1,460 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    ViewBag.Title = "ViewCompletedProject";
+    int PlanningCounter = 0;
+    int TasksCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>The following are the Contractor Completed Project Works</u></strong></h5>
+        </div>
+    </div>
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:lightgray">
+                <a href="#tab_project_overview" data-toggle="tab"><p style="color:black"><strong>Project General Details</strong> </p></a>
+            </li>
+            <li style="background-color:lightgray">
+                <a href="#tab_project_packages" data-toggle="tab"><p style="color:black"><strong>Project Packages</strong></p> </a>
+            </li>
+            <li style="background-color:lightgray">
+                <a href="#tab_project_activities" data-toggle="tab"><p style="color:black"><strong>Project Activities</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_project_overview">
+                <div class="panel panel-heading" style="background-color:lightgray">
+                    <h5><strong> General Details</strong></h5>
+                </div>
+
+                <div class="row">
+                    @foreach (ProjectWorksModel item in Model.Project)
+                    {
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Project No.:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Project Description:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@item.Description" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contract No.:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@item.Contract_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contractor No.:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Contractor_No" readonly>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contractor Name:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Contractor_Name" readonly>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Class:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Road_Class_ID" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Code:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Road_Code" readonly>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Road Lenghth(KM):<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Total_Road_Section_Length_KM" readonly>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Resident Engineer:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Project_Manager" readonly>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contract Start Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Contract_Start_Date" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contract End Date:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.Contract_End_Date" readonly>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+                @foreach (ContractorProfileModel item in Model.Vendors)
+                {
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h5><strong> Contractor Details</strong></h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contractor No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.Vendor_No" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contractor Name:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@item.Name" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Contractor Address:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@item.Address" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Post Code:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.PostaCode" readonly>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Primary E-Mail:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="invitationtype" value="@item.E_mail" readonly>
+                            </div>
+
+                        </div>
+                    </div>
+
+                }
+            </div>
+            <div class="tab-pane fade " id="tab_project_packages">
+                <div class="row">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h5><strong>Project Packages</strong></h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Task No</th>
+                                            <th>Description</th>
+                                            <th>Road Condition</th>
+                                            <th>Road Category</th>
+                                            <th>Surface Type</th>
+                                            <th>Start Date</th>
+                                            <th>End Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (ProjectTasksLinesModel item in Model.ProjectPackages)
+                                        {
+
+                                            TasksCounter++;
+                                            <tr>
+                                                <td>
+                                                    @TasksCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Job_Task_No)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Description)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Road_Condition)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Roads_Category)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Surface_Types)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Start_Date)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.End_Date)
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade " id="tab_project_activities">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h5><strong>Project Activities</strong></h5>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Task No.</th>
+                                        <th>Type</th>
+                                        <th>No</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Bill Item No..</th>
+                                        <th>Unit of Measure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (ProjectPlanningLinesModel item in Model.ProjectBillsItems)
+                                    {
+                                        PlanningCounter++;
+                                        <tr>
+                                            <td>
+                                                @PlanningCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Job_Task_No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Type)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.No)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Quantity)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Quantity)
+
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Unit_of_Measure)
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script type="text/javascript">
+        function Respond(url, uniquetenderno) {
+            var TenderNoticeNo = $('#tendernotice').val();
+            var RespondWizardForm = '@Url.Action("FileNewWorkExecutionPlan", "Contractor")';
+            Swal.fire({
+                title: "Confirm Work Execution Plan Submission?",
+                text: "Are you sure you would like to proceed with this Submission?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Proceed!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: RespondWizardForm,
+                        cache: false,
+                        processData: false,
+                    }).done(function (status) {
+                        var tendersponse = status.split('*');
+                        status = tendersponse[0];
+                        switch (status) {
+                            case "success":
+                                Swal.fire
+                               ({
+                                   title: "Work Execution Plan Submitted!",
+                                   text: "Your Work Execution Plan  have been successfully submitted.Kindly Proceed to fill in more Details!",
+                                   type: "success"
+                               }).then(() => {
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $('#responsesfeedback').attr("class", "alert alert-success");
+                                   $("#responsesfeedback").html("Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $("#responsesfeedback").html("Your Work Execution Plan Response have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   window.location.href = RespondWizardForm;
+                               });
+
+                                break;
+                            case "found":
+                                Swal.fire
+                               ({
+                                   title: "Work Execution Plan already Submitted!",
+                                   text: "Your Work Execution plan had already been successfully submitted.Kindly Proceed to fill in more Details!",
+                                   type: "success"
+                               }).then(() => {
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $('#responsesfeedback').attr("class", "alert alert-success");
+                                   $("#responsesfeedback").html("Your Work Execution plan had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $("#responsesfeedback").html("Your Work Execution plan been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   window.location.href = RespondWizardForm;
+                               });
+
+                                break;
+                            default:
+                                Swal.fire
+                                ({
+                                    title: "Work Execution Plan Submission Error!!!",
+                                    text: status,
+                                    type: "error"
+                                }).then(() => {
+                                    $("#responsesfeedback").css("display", "block");
+                                    $("#responsesfeedback").css("color", "red");
+                                    $('#responsesfeedback').addClass('alert alert-danger');
+                                    $("#responsesfeedback").html("Your Work Execution plan submission Details  could not submitted.Kindly try Again!" + status + "");
+                                });
+                                break;
+                        }
+                    }
+                );
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Work Execution Plan Cancelled',
+                        'You cancelled you work execution plan submission details!',
+                        'error'
+                    );
+                }
+            });
+
+        };
+    </script>
+    <script type="text/javascript">
+        function FileExecution(url) {
+            var RespondWizardForm = '@Url.Action("FileNewWorkExecutionPlan", "Contractor")';
+            Swal.fire({
+                title: "Confirm Work Execution Plan Response?",
+                text: "Are you sure you would like to File Work Execution Plan?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: true,
+                confirmButtonText: "Yes, Proceed!",
+                confirmButtonClass: "btn-success",
+                confirmButtonColor: "#008000",
+                position: "center"
+            }).then((result) => {
+                if (result.value) {
+                    $.ajax({
+                        cache: false,
+                        type: 'GET',
+                        url: url,
+                        cache: false,
+                        processData: false,
+                    }).done(function (status) {
+                        var tendersponse = status.split('*');
+                        status = tendersponse[0];
+                        switch (status) {
+                            case "success":
+                                Swal.fire
+                               ({
+                                   title: "Work Execution Plan Submitted!",
+                                   text: "Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!",
+                                   type: "success"
+                               }).then(() => {
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $('#responsesfeedback').attr("class", "alert alert-success");
+                                   $("#responsesfeedback").html("Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $("#responsesfeedback").html("Your Work Execution Plan have been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   window.location.href = RespondWizardForm;
+                               });
+
+                                break;
+                            case "found":
+                                Swal.fire
+                               ({
+                                   title: "Work Execution Plan already Submitted!",
+                                   text: "Your Work Execution Plan had already been successfully submitted.Kindly Proceed to fill in more Details!",
+                                   type: "success"
+                               }).then(() => {
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $('#responsesfeedback').attr("class", "alert alert-success");
+                                   $("#responsesfeedback").html("Your TWork Execution Plan had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   $("#responsesfeedback").css("display", "block");
+                                   $("#responsesfeedback").css("color", "green");
+                                   $("#responsesfeedback").html("Your Work Execution Plan had been successfully submitted.Kindly Proceed to fill in more Details!");
+                                   window.location.href = RespondWizardForm;
+                               });
+
+                                break;
+                            default:
+                                Swal.fire
+                                ({
+                                    title: "Work Execution Plan Response Error!!!",
+                                    text: status,
+                                    type: "error"
+                                }).then(() => {
+                                    $("#responsesfeedback").css("display", "block");
+                                    $("#responsesfeedback").css("color", "red");
+                                    $('#responsesfeedback').addClass('alert alert-danger');
+                                    $("#responsesfeedback").html("Your Work Execution Plan Details  could not submitted.Kindly try Again!" + status + "");
+                                });
+                                break;
+                        }
+                    }
+                );
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    Swal.fire(
+                        'Work Execution Plan Cancelled',
+                        'You cancelled your Work Execution Plan submission details!',
+                        'error'
+                    );
+                }
+            });
+
+        };
+    </script>

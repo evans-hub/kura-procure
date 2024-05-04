@@ -1,0 +1,16 @@
+﻿@model IEnumerable<E_Procurement.Models.DropdownListsModel>
+    @{
+        ViewBag.Title = "IncomeYearCodes";
+        Layout = null;
+        int n = 0;
+    }
+        <select class="form-control select2" id="incomesddlyearcodes" name="incomesddlyearcodes" data_live_search="true">
+            <option value="">--Select Year Code List--</option>
+            <optgroup label="Year Codes List">
+                @foreach (var item in Model)
+                {
+                    <option value="@item.Code">@item.Description</option>
+                }
+            </optgroup>
+        </select>
+

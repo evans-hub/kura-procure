@@ -1,0 +1,78 @@
+﻿
+@model  IEnumerable<E_Procurement.Models.SubmittedResponsesModel>
+@{
+    ViewBag.Title = "SubmittedRegistrationResponses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    int responsescounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i><strong>Submitted Registration</strong></i></h5>
+                <p>Welcome to Registration System</p>
+            </div><br />
+        </div>
+    </div>
+    <p>The e-Bidding Portal enables the tenderers to view all Active Invitation For Supply (IFS) Notices, download the related tender documents and allow for online submission of their bid responses.</p>
+    <h5><u>List of All Registration Submitted Responses</u></h5>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>No.</th>
+                            <th>Notice No.</th>
+                            <th>Description</th>
+                            <th>Submision Date</th>
+                            <th>Representative Name</th>
+                            <th>Designation</th>
+                            @*<th style="background-color:beige">Evaluation Score</th>*@
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            responsescounter++;
+                            <tr>
+                                <td>
+                                    @responsescounter
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("ViewSubmittedPrequalifications", "Home", new { IFPNumber = @item.Code })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RfiDocumentNo)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Documents_Date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Vendor_Representative_Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Vendor_Repr_Designation)
+                                </td>
+                                @*<td style="background-color:beige">
+                                    @Html.DisplayFor(modelItem => item.Final_Evaluation_Score)
+                                </td>*@
+                                <td>
+                                    <a href="@Url.Action("ViewSubmittedPrequalifications", "Home", new { IFPNumber = @item.Code })" class="btn btn-success"><i class="fa fa-eye m-r-10"></i> View</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,186 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    ViewBag.Title = "OngoingProjectWorks";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int ProjectCounter = 0;
+    int OngoingProjectCounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>All Ongoing & Completed Project Projects</u></strong></h5>
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="active" style="background-color:lightgray">
+            <a href="#ongoing_project_works" data-toggle="tab"><p style="color:black"><strong>Ongoing Project Works</strong></p> </a>
+        </li>
+        <li style="background-color:lightgray">
+            <a href="#completed_project_works" data-toggle="tab"><p style="color:black"><strong>Completed Project Works</strong> </p></a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="ongoing_project_works">
+            <p>The following are the Ongoing Project Works</p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Project No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Road Length(KMs)</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProjectWorksModel item in Model.OngoingWorks)
+                                {
+                                    OngoingProjectCounter++;
+                                    <tr>
+                                        <td>
+                                            @OngoingProjectCounter
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("ViewOngoingProject", "Contractor", new { ProjectNumber = @item.No })"><strong>@Html.DisplayFor(modelItem => item.No)</strong></a>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_ID)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Project_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Actual_Project_Costs)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Project_End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Road_Length_KM)
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("ViewOngoingProject", "Contractor", new { ProjectNumber = @item.No })" class="btn btn-success" )"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="completed_project_works">
+            <p>The following are the Completed Project Works</p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Project No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Road Length(KMs)</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProjectWorksModel item in Model.CompletedWorks)
+                                {
+                                    ProjectCounter++;
+                                    <tr>
+                                        <td>
+                                            @ProjectCounter
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("ViewOngoingProject", "Contractor", new { tendernumber = @item.No })"><strong>@Html.DisplayFor(modelItem => item.No)</strong></a>
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_ID)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Project_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Actual_Project_Costs)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Project_End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Road_Length_KM)
+                                        </td>
+                                        <td>
+                                            <a href="@Url.Action("ViewOngoingProject", "Contractor", new { tendernumber = @item.No })" class="btn btn-success" )"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

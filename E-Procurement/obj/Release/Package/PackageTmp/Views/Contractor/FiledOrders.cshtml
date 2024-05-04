@@ -1,0 +1,93 @@
+﻿@model  IEnumerable<E_Procurement.Models.Contractor.OrderToCommenceModel>
+@{
+    ViewBag.Title = "FiledOrders";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int tenderCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>Project Orders to Commence</u></strong></h5>
+        </div>
+    </div>
+    <p>The following are the Filed Project Works Orders to Commence.The Project Mobilization  is used to deploy project mobilization details such as Issued Project Commencement Orders & Submission of e-WEP(Work Execution Plans). The Contractor will be able to view all Upcoming Pre-Kickoff & Kick-off Meetings Schedule as part of the Project Commencement Order </p>
+    <div class="row filter-row">
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label">Search by Regions</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">Search by Contract No</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-6">
+            <a href="#" class="btn btn-success btn-block"> Search </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Notice No.</th>
+                            <th>Contract ID</th>
+                            <th>Project No</th>
+                            <th>Description</th>
+                            <th>Contractor No</th>
+                            <th>Road Code</th>
+                            <th>Road Section No</th>
+                            <th>View</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            tenderCounter++;
+                            <tr>
+                                <td>
+                                    @tenderCounter
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("ViewOrdertoCommence", "Contractor", new { OrderNumber = @item.Notice_No })"><strong>@Html.DisplayFor(modelItem => item.Notice_No)</strong></a>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Purchase_Contract_ID)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Project_ID)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Contractor_No)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Road_Code)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Road_Section_No)
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("ViewOrdertoCommence", "Contractor", new { OrderNumber = @item.Notice_No })" data-toggle="modal" class="btn btn-success"><i class="fa fa-eye m-r-10"></i> View</a>
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,69 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    Layout = null;
+    ViewBag.Title = "System Encoutered Exception";
+}
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="~/assets/css/material-dashboard-new.css">
+<link rel="stylesheet" type="text/css" href="~/assets/css/ladda-themeless.min.css">
+<div class="list-header clearfix">
+    <div class="card">
+        <div class="card-header text-center" data-background-color="darkgreen">
+            <h4 class="title"><i>E-Procurement Notifications </i></h4>
+        </div>
+    </div>
+</div>
+<div class="list-sfs-holder">
+    <div class="alert alert-error">
+        <h3>Sorry the System encountered an error while processing your request. Please contact the System Administrator for more Details.</h3>
+    </div>
+    @if (Model != null && HttpContext.Current.IsDebuggingEnabled)
+    {
+        <div class="row" style="margin-bottom:10px">
+            <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+                <div class="logo text-center" style="background-color:inherit;">
+                    <a href="/student/" class="simple-text">
+                        <img src="~/assets/img/logo1.png" class="simple-logo" />
+                    </a>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+                    <div class="card">
+                        <div class="card-header text-center" data-background-color="red">
+                            <h4 class="title"><i>E-Procurement Error</i></h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 hidden-xs hidden-sm">
+                                    <img  src="~/assets/img/error.png" style="width:100px" />
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                    <p>
+                                        <b>Exception:</b> @Model.Exception.Message<br />
+                                        <b>Controller:</b> @Model.ControllerName<br />
+                                        <b>Action:</b> @Model.ActionName
+                                    </p><br />
+                                    <p class="text-center">
+                                        <a href="/Home/RedirectonExecption" class="btn btn-danger">
+                                            Ok
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    }
+</div>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

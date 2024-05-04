@@ -1,0 +1,16 @@
+﻿@model IEnumerable<E_Procurement.Models.BusinessSizeModel>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="dropDownCompanysize" name="dropDownCompanysize" data_live_search="true">
+    <option value="">--Select Size---</option>
+    <optgroup label="Business Size List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Description</option>
+        }
+    </optgroup>
+</select>
+
+

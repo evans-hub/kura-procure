@@ -1,0 +1,205 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewSubmittedRFQResponses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int tenderCounter = 0;
+    int equipmentsCounter = 0;
+    int documentsCounter = 0;
+    int CategoriesCounter = 0;
+    int tenderDocuments = 0;
+    int BidPastExperienceCounter = 0;
+    int DocumentsCounters = 0;
+    int DocumentsCounter = 0;
+    int SerialCategoriesCounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h4 class="page-title"><strong><u>Submitted Response</u></strong></h4>
+        </div>
+    </div>
+    <div id="responsesfeedback" style="display: none" data-dismiss="alert"></div>
+    @foreach (SingleTenderModel tenderdetail in Model.SingleTenders)
+    {
+        <div class="row" style="background-color:#D3D3D3">
+            <div class="col-xs-4">
+                <h6><strong><u>Quotations General Details</u></strong></h6>
+            </div>
+            <div class="col-xs-8 text-right m-b-30">
+                <a href="#" onclick="UpdateRFQ('@Url.Action("SubmitQuotationResponse", "Home", new { tendernumber = @tenderdetail.Code })','tendernumber = @tenderdetail.Code')" class="btn btn-primary pull-right rounded"><i class="fa fa-plus"></i>Repond to this Quotation</a>
+
+            </div>
+        </div>
+    }
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li class="active" style="background-color:#D3D3D3">
+                <a href="#tab_general_details" data-toggle="tab"><p style="color:black"><strong>Response General Details</strong> </p></a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_procurement_categories" data-toggle="tab"><p style="color:black"><strong>Financial Response</strong></p> </a>
+            </li>
+            <li style="background-color:#D3D3D3">
+                <a href="#tab_required_documents" data-toggle="tab"><p style="color:black"><strong>Attached Documents</strong></p> </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="tab_general_details">
+
+                @foreach (SubmittedTenderResponse item in Model.ResponseDetails)
+                {
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Invitation No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@item.InvitationNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Response No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.ResponseNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor No:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="tenderdescription" value="@item.vendorNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor Name:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="vendorName" name="vendorName" value="@item.VendorName" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Tender Description:<span class="text-danger">*</span></label>
+                                <input class="form-control" type="text" id="procurementmethod" value="@item.tenderDescription" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            </div>
+            <div class="tab-pane fade" id="tab_procurement_categories">
+                <div class="row">
+                    <div class="row">
+                        <div class="panel panel-heading" style="background-color:#D3D3D3">
+                            <h3 class="panel-title"><strong><u>Submitted Financial Response</u></strong></h3>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Item Description</th>
+                                            <th>Location</th>
+                                            <th>Quantity</th>
+                                            <th>Direct Unit Cost Incl VAT</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (SubmittedTenderResponse item in Model.financialresponse)
+                                        {
+                                            SerialCategoriesCounter++;
+                                            <tr>
+                                                <td>
+                                                    @SerialCategoriesCounter
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.itemDescription)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.itemLocation)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.itemQuantity)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.directunitcost)
+                                                </td>
+
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tab_required_documents">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h3 class="panel-title"><strong><u>Attached Response Documents</u></strong></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped custom-table datatable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Description</th>
+                                        <th>Date Filed</th>
+                                        <th>Issue Date</th>
+                                        <th>Expiry Date</th>
+                                        <th>File Name</th>
+                                        <th>Download</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)
+                                    {
+                                        documentsCounter++;
+                                        <tr>
+                                            <td>
+                                                @documentsCounter
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Description)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Date_Filed)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Issue_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Expiry_Date)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.File_Name)
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

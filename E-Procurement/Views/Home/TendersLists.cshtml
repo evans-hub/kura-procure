@@ -1,0 +1,107 @@
+﻿@model  IEnumerable<E_Procurement.Models.TenderModel>
+@{
+    ViewBag.Title = "TendersLists";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int tendersCounter = 0;
+}
+        <div class="content container-fluid">
+            <div class="row">
+                
+                <div class="col-xs-4" style="width:100%">
+                    <h4 class="page-title">OPEN TENDER NOTICES</h4>
+                </div>
+            </div>
+            <div class="col-xs-4" style="width:100%">
+                <h4 class="page-title"><u>Welcome to e-Bidding System</u></h4>
+            </div>
+            <p>The e-Bidding Portal enables the tenderers to view all Active Invitation For Supply (IFS) Notices, download the related tender documents and allow for online submission of their bid responses.</p>
+            <h5><u>Open Tender Notices</u></h5>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Seacrh by  Procurement Method</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Product Group</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Work Category</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Expiry Date</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Notice No.</th>
+                                    <th>Tender No</th>
+                                    <th>Tender Name</th>
+                                    <th>Product Group</th>
+                                    <th>Submission End Date</th>
+                                    <th>View</th>
+                                    <th>Apply</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    tendersCounter++;
+                                <tr>
+                                    <td>
+                                        @tendersCounter
+                                    </td>
+                                    <td>
+                                        <a href="" ><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.External_Document_No)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Tender_Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Requisition_Product_Group)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-success" onclick="View('@Url.Action("", "Home", new { tendernumber = @item.Code })')"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                    </td>
+                                    <td>
+                                        <a href="#" data-toggle="modal" class="btn btn-success"><i class="fa fa-share m-r-10"></i> Apply</a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>

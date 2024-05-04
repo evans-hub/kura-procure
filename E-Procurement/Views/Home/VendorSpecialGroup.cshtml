@@ -1,0 +1,15 @@
+﻿@model  IEnumerable<E_Procurement.Models.SpecialGroupCategoryModel>
+@{
+    Layout = null;
+}
+
+<select class="form-control select2" id="dropdownspecialgoupCategory" name="dropdownspecialgoupCategory" data_live_search="true">
+    <option value="">--Select Special Group Category---</option>
+    <optgroup label="Special Group Categories">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Name</option>
+        }
+    </optgroup>
+</select>
+

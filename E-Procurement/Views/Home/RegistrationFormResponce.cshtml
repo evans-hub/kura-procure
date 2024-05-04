@@ -1,0 +1,2152 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "RegistrationFormResponce";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int goodsServicesrecords = 0;
+    int Servicesrecords = 0;
+    int Worksrecords = 0;
+    int documentsRecords = 0;
+    int attacheddocumentsCounter = 0;
+    int tenderCounter = 0;
+    int bankscounter = 0;
+    int directorCounters = 0;
+    int litigationcounter = 0;
+    int balancesheet = 0;
+    int staffcounter = 0;
+    int documentsCounter = 0;
+    int RequireddocumentsCounter = 0;
+    int pastexperiencecounter = 0;
+}
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h6><i><strong>Registration Response</strong></i></h6>
+            </div><br />
+        </div>
+    </div>
+    @foreach (IFPRequestsModel invitation in Model.Response)
+    {
+        <div class="row">
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Supplier Registration</a></li>
+                    <li class="breadcrumb-item active">Registration No= @invitation.RFI_Documents_No </li>
+                    <li class="breadcrumb-item active"> Response No = @invitation.PrequalificationNo</li>
+
+                </ol>
+            </div>
+        </div>
+    }
+    <div class="container">
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-1" type="button" class="btn btn-success btn-circle" data-toggle="tab" data-step="1"><Strong>1</Strong></a>
+                    <p><small>Communication Details</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-2" type="button" class="btn btn-default btn-circle" data-toggle="tab" data-step="2" disabled="disabled"><Strong>2</Strong></a>
+                    <p><small>Business Profile</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle" data-toggle="tab" data-step="3" disabled="disabled"><Strong>3</Strong></a>
+                    <p><small>Shareholders Details</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-4" type="button" class="btn btn-default btn-circle" data-toggle="tab" data-step="4" disabled="disabled"><Strong>4</Strong></a>
+                    <p><small>Beneficiary Details</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-5" type="button" class="btn btn-default btn-circle" data-toggle="tab" data-step="5" disabled="disabled"><Strong>4</Strong></a>
+                    <p><small>Litigation History</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-6" type="button" class="btn btn-default btn-circle" data-toggle="tab" data-step="6" disabled="disabled"><Strong>5</Strong></a>
+                    <p><small>Past Experience</small></p>
+                </div>
+                @*<div class="stepwizard-step col-xs-1">
+                    <a href="#step-6" type="button" class="btn btn-default btn-circle" data-toggle="tab" data-step="6" disabled="disabled"><Strong>6</Strong></a>
+                    <p><small>Audited Financial Statements</small></p>
+                </div>*@
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-7" type="button" class="btn btn-default btn-circle" data-toggle="tab" data-step="7" disabled="disabled"><Strong>6</Strong></a>
+                    <p><small>Key Staff/Personnel</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-8" type="button" class="btn btn-default btn-circle" data-step="8" disabled="disabled">7</a>
+                    <p><small>Registration Response (Section A)</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-1">
+                    <a href="#step-9" type="button" class="btn btn-default btn-circle" data-step="9" disabled="disabled">8</a>
+                    <p><small>Registration Response (Section B) </small></p>
+                </div>
+                @*<div class="stepwizard-step col-xs-1">
+                    <a href="#step-10" type="button" class="btn btn-default btn-circle" data-step="10" disabled="disabled">10</a>
+                    <p><small>Document Attachment</small></p>
+                </div>*@
+            </div>
+        </div>
+    </div>
+  
+    <div class="panel-body" style="width:100%">
+        <div class="tab-content">
+            <div class="panel-primary setup-content" id="step-1" style="width:100%">
+                <section class="content">
+                    <div class="panel panel-primary" style="width:100%">
+                        <div class="panel-heading">
+                            Communication Details
+                            <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 1 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="panel-body style="width:100%">
+                                    @foreach (VendorModel vendor in Model.Vendors)
+                                    {
+
+                                        <div class="panel panel-default">
+                                            <div class="box box-default">
+                                                <div class="box-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">P.O Box/Address: <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="poboxaddress" name="poboxaddress" value="@vendor.PoBox">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Postal Code:<span class="text-danger">*</span></label>
+                                                                @Html.Action("PostalCodeList", "Home")
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+
+                                                            <label class="control-label">Physical Location / Address 2 :</label>
+                                                            @*<input class="form-control " type="text" id="physicallocation" name="physicallocation" value="@vendor.Physical_location">*@
+
+                                                            <div class="form-group">
+                                                                <label class="control-label">Building /House No:<span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="housenumber" name="housenumber" value="@vendor.HouseNo" />
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="control-label">Floor No:<span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="floornumber" name="floornumber" value="@vendor.FloorNo" />
+                                                            </div>
+
+
+                                                            <div class="form-group">
+                                                                <label class="control-label">Plot No:</label>
+                                                                <input type="text" class="form-control" id="plotnumber" name="plotnumber" value="@vendor.PlotNo" />
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="control-label">Street / Road:<span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="streetnumber" name="streetnumber" value="@vendor.StreetorRoad" />
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">City:<span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="postcity" name="postcity" value="@vendor.City" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Country:<span class="text-danger">*</span></label>
+                                                                @Html.Action("CountriesList", "Home")
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Website URL:</label>
+                                                                <input type="text" class="form-control" id="weburl" name="weburl" value="@vendor.WebUrl" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Tel No:<span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="telephonenumber" name="telephonenumber" value="@Session["PhoneNumber"]" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Email No:<span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" id="faxnumber" name="faxnumber" value="@Session["email"]" readonly />
+                                                            </div>
+                                                        </div>
+                                                        <center>
+                                                            <button class="btn btn-primary saveCommunicationDetails" id="saveCommunicationDetails" name="saveCommunicationDetails" type="button">Save Details</button>
+                                                        </center>
+                                                        <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-2">
+            <div class="panel-heading" style="background-color:#006400">
+                Business Profile
+                <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 2 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+            </div>
+            <div id="feedback" style="display: none" data-dismiss="alert"></div>
+            <div class="panel-body">
+                @foreach (VendorModel vendor in Model.Vendors)
+                {
+                    <div class="panel panel-default">
+                        <div class="box box-default">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Company size Code: <span class="text-danger">*</span></label>
+                                            @Html.Action("CompanySize", "Home")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Industry Group: : <span class="text-danger">*</span></label>
+                                            @*@Html.Action("IndustryGroups", "Home")*@
+                                            @Html.Action("supplierCategories", "Home")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Nominal Capital(Kes):<span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="nominalcapital" name="nominalcapital" value="@vendor.NominalCap" />
+                                        </div>
+                                    </div>
+                                    @*<div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Dealership Type:<span class="text-danger">*</span></label>
+                                                <select data-live-search="true" class="form-control input-circle select2" id="txtDealertype" name="txtDealertype">
+                                                    <option value="">--Select Dealer Type--</option>
+                                                    <option value="1">Manufacturer</option>
+                                                    <option value="2">Distributor</option>
+                                                    <option value="3">Partner</option>
+                                                    <option value="4">Reseller</option>
+                                                    <option value="5">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>*@
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Maximum Value of Business you can handle at one time(Kes):<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="maxibizvalues" name="maxibizvalues" value="@vendor.MaxBizValue" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Mobile No:<span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="mobilenumber" name="mobilenumber" value="@vendor.Phone_No" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Nature of Business:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="natureofbusiness" name="natureofbusiness" value="@vendor.NatureofBz" />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <center>
+                            <button class="btn btn-primary btn_suppliercompleteregister" id="btn_suppliercompleteregister" type="button">Save Details</button>
+                            <button class="btn btn-primary nextBtn pull-right" type="button" id="nextBtn" name="nextBtn">Next</button>
+                        </center>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-3">
+            <div class="panel-heading">
+                Directors/Shareholders Details
+                <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 3 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+            </div>
+            <div class="panel panel-default">
+                <div class="box box-default">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                            </div>
+                            <div class="col-xs-8 text-right m-b-30">
+                                <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_shareholders"><i class="fa fa-plus"></i> Add Shareholder</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="shareholdersfeedback" style="display: none" data-dismiss="alert"></div>
+                                    <h5>Please provide the complete list of Directors/shareholders. Total ownership must be 100% before submission.</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tbl_shareholder_Details" style="width:96%">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th> Director Code </th>
+                                                    <th> Director Name </th>
+                                                    <th> Nationality</th>
+                                                    <th> Citizenship </th>
+                                                    <th> Ownership (%) </th>
+                                                    <th> Phone Number </th>
+                                                    <th> Edit </th>
+                                                    <th> Delete </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (DirectorModel directors in Model.StakeholdersDetails)
+                                                {
+                                                    directorCounters++;
+                                                    <tr>
+                                                        <td>
+                                                            @directorCounters
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Entry_No)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Fullname)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Nationality)
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.CitizenshipType)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.OwnershipPercentage)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Phonenumber)
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-success" onclick="EditShareholdersDetails('@directors.Fullname','@directors.IdNumber','@directors.Nationality','@directors.CitizenshipType','@directors.OwnershipPercentage','@directors.Phonenumber','@directors.Address','@directors.Email')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-danger" onclick="DeleteShareholder('@Url.Action("DeleteShareholdersDetails", "Home", new { shareholderCode = @directors.Entry_No })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary prevBtn pull-left" type="button">Previous</button>
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="add_shareholders" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog" style="width:100%">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-content modal-lg" style="width:96%">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Shareholder Details</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="m-b-30">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Shareholder Type <span class="text-danger">*</span></label>
+                                        <select data-live-search="true" class="form-control input-circle select2" id="shareholdertype" name="shareholdertype"  onchange="showDiv('hidden_div', this); showDiv2('hidden_div2', this)">
+                                            <option value="">--Select Shareholder Type--</option>
+                                            <option value="0">Person</option>
+                                            <option value="1">Company</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label"> Name : <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="directorname" name="directorname">
+                                    </div>
+                                </div>
+                                <div id="hidden_div" style="display:none">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Company Registration Number<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="registrationNo" name="registrationNo">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Entity Type<span class="text-danger">*</span></label>
+                                            @Html.Action("EntityType", "Home")
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">KRA Pin.<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="kraPin" name="kraPin">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Company Type <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="companytype" name="companytype">
+                                                <option value="">--Select Company Type--</option>
+                                                <option value="1">Local</option>
+                                                <option value="2">Foreign</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="hidden_div2" style="display:block">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">ID / Passport Number: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="idnumbers" name="idnumbers">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Nationallity </label>
+                                            <input class="form-control" type="text" id="nationality" name="ownershippercentage">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Citizenship Type <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="citizenship" name="citizenship">
+                                                <option value="">--Select Citizenship Type--</option>
+                                                <option value="1">Birth</option>
+                                                <option value="2">Naturalization</option>
+                                                <option value="3">Registration</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Ownership Percentage(%) </label>
+                                            <input class="form-control" type="text" id="ownershippercentage" name="ownershippercentage">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Phone Number: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="phonenumbers" name="phonenumbers">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Address: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="shareholderaddress" name="shareholderaddress">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Email Address: <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="emailaddress" name="emailaddress">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            <div class="m-t-20 text-center">
+                                <button class="btn btn-primary btn_submitShareholders_Details" id="btn_submitShareholders_Details" name="btn_submitShareholders_Details" type="button">Save Shareholder Details</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="delete_shareholders_modal" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modal-md">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Shareholders Details</h4>
+                    </div>
+                    <div class="modal-body card-box">
+                        <p>Are you sure want to delete this Shareholder?</p>
+                        <div class="m-t-20">
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-4">
+            <div class="panel-heading">
+                Beneficiary Details
+                <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 4 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+            </div>
+            <div class="panel panel-default">
+                <div class="box box-default">
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                            </div>
+                            <div class="col-xs-8 text-right m-b-30">
+                                <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_beneficiaries"><i class="fa fa-plus"></i> Add Beneficiaries</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="shareholdersfeedback" style="display: none" data-dismiss="alert"></div>
+                                    <h5>Please provide the complete list of Beneficiaries.</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tbl_Beneficiary_Details" style="width:96%">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Beneficiary Name </th>
+                                                    <th>Beneficiary Type</th>
+                                                    <th>ID/Passport Number</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Email </th>
+                                                    <th>Allocated Shares </th>
+                                                    <th> Edit </th>
+                                                    <th> Delete </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (BeneficiarryModel directors in Model.Beneficiaries)
+                                                {
+                                                    directorCounters++;
+                                                    <tr>
+                                                        <td>
+                                                            @directorCounters
+                                                        </td>
+                                                        @*<td>
+                                                            @Html.DisplayFor(modelItem => directors.Entry_No)
+                                                        </td>*@
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Name)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.BeneficiaryType)
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.idpassportNumber)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Phonenumber)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.Email)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => directors.AllocatedShares)
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-success" onclick="EditBeneficiaryDetails('@directors.Name','@directors.BeneficiaryType','@directors.idpassportNumber','@directors.Phonenumber','@directors.Email','@directors.AllocatedShares','@directors.BeneficiaryType')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-danger" onclick="DeleteBeneficiary('@Url.Action("DeleteBeneficiaryDetails", "Home", new { beneficiaryCode = @directors.Entry_No })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary prevBtn pull-left" type="button">Previous</button>
+                    <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="add_beneficiaries" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog" style="width:100%">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-content modal-lg" style="width:96%">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add Beneficiary Details</h5>
+
+                    </div>
+                    <div class="modal-body">
+                        <form class="m-b-30">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Beneficiary Type <span class="text-danger">*</span></label>
+                                        <select data-live-search="true" class="form-control input-circle select2" id="beneficiarytype" name="beneficiarytype">
+                                            <option value="">--Select Beneficiary Type--</option>
+                                            <option value="0">Director</option>
+                                            <option value="1">Shareholder</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label"> Beneficiary Name : <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="beneficiaryname" name="beneficiaryname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">ID Type <span class="text-danger">*</span></label>
+                                        <select data-live-search="true" class="form-control input-circle select2" id="IdType" name="IdType">
+                                            <option value="">--Select Id Type--</option>
+                                            <option value="0">National Id</option>
+                                            <option value="1">Passport</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">ID Number: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="beneficiaryidnumbers" name="beneficiaryidnumbers">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Phone Number </label>
+                                        <input class="form-control" type="text" id="beneficiaryPhoneNumber" name="beneficiaryPhoneNumber">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Email Address: <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="beneficiaryemailaddress" name="beneficiaryemailaddress">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Allocated Shares </label>
+                                        <input class="form-control" type="text" id="allocatedShares" name="allocatedShares">
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="m-t-20 text-center">
+                                <button class="btn btn-primary btn_submitBeneficiaries_Details" id="btn_submitBeneficiaries_Details" name="btn_submitBeneficiaries_Details" type="button">Save Beneficiary Details</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="delete_shareholders_modal" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modal-md">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Beneficiaries Details</h4>
+                    </div>
+                    <div class="modal-body card-box">
+                        <p>Are you sure want to delete this Beneficiary?</p>
+                        <div class="m-t-20">
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-5">
+            <div class="panel-heading">
+                Litigation History Details  (<Strong style="color:antiquewhite"><u><i>NB:This is not Mandatory</i></u></Strong>)
+                <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 4 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-8 text-right m-b-30">
+                        <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_litigation"><i class="fa fa-plus"></i> Add Litigation History</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Please provide a summary of any litigation and arbitration history for your Organization</h5>
+                            <div class="table-responsive">
+                                <div id="litigationfeedback" style="display: none" data-dismiss="alert"></div>
+                                <table class="table table-striped custom-table datatable" id="tbl_litigation_history">
+                                    <thead>
+                                        <tr>
+                                            <th>Dispute Code </th>
+                                            <th>Category of Dispute </th>
+                                            <th>Description of Dispute matter</th>
+                                            <th>Dispute Party</th>
+                                            <th>Dispute Amount</th>
+                                            <th>Year</th>
+                                            <th>Award Type</th>
+                                            <th>Edit </th>
+                                            <th>Delete </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (LitigationModel item in Model.litigationhistory)
+                                        {
+                                            litigationcounter++;
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Entry_No)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.CategoryofDispute)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.DisputeDescription)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.TheotherDisputeparty)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.DisputeAmount)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Year)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.AwardType)
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success" onclick="EditLitigationsDetails('@item.CategoryofDispute','@item.DisputeDescription','@item.TheotherDisputeparty','@item.DisputeAmount','@item.Year','@item.AwardType')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger" onclick="DeleteLitigation('@Url.Action("DeleteLitigationHistoryDetails", "Home", new { litigationCode = @item.Entry_No })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary prevBtn pull-left" type="button">Previous</button>
+            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+            <div id="add_litigation" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-content modal-lg" style="width:96%">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Litigation History</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="m-b-30">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Category of Dispute: <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="disputecategory" name="disputecategory">
+                                                <option value="">--Select Category of Dispute--</option>
+                                                <option value="1">Litigation</option>
+                                                <option value="2">Arbitration</option>
+                                                <option value="3">Mediation</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Description of Dispute Matter:</label>
+                                            <input class="form-control" type="text" id="disputedescription" name="disputedescription">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Dispute Amount: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="number" id="disputeamounts" name="disputeamounts">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Dispute Parties<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="disputeparties" name="disputeparties">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Year</label>
+                                            <input class="form-control" type="number" id="litigationyear" name="litigationyear">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Award Type: <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="awardtype" name="awardtype">
+                                                <option value="">--Select Award Type--</option>
+                                                <option value="1">Pending verdict</option>
+                                                <option value="2">Won</option>
+                                                <option value="3">Lost</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="m-t-20 text-center">
+                                    <button class="btn btn-primary btn_litigation_history" id="btn_litigation_history" name="btn_litigation_history" type="button">Save Litigation History</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="delete_litigation_modal" class="modal custom-modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content modal-md">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Delete Litigation History Details</h4>
+                        </div>
+                        <div class="modal-body card-box">
+                            <p>Are you sure want to delete this Litigation History?</p>
+                            <div class="m-t-20">
+                                <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-6">
+            <div class="panel-heading">
+                Past Experience     (<Strong style="color:antiquewhite"><u><i>NB:This is not Mandatory</i></u></Strong>)
+                <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 5 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-8 text-right m-b-30">
+                        <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_pastexperience"><i class="fa fa-plus"></i> Add Past Experience</a>
+                        <button class="btn btn-primary nextBtn pull-left " type="button">Skip</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="pastexperiencefeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable" id="tbl_past_Experience">
+                                    <thead>
+                                        <tr>
+                                            <th>Experience </th>
+                                            <th> Client Name </th>
+                                            <th> Address </th>
+                                            <th> Assignment / Project </th>
+                                            <th> Project Start Date </th>
+                                            <th> Project End Date </th>
+                                            <th> Edit </th>
+                                            <th> Delete </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (PastExperienceModel item in Model.PastExperience)
+                                        {
+                                            pastexperiencecounter++;
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Entry_No)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Client_Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Address)
+
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Assignment_Project_Name)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Assignment_Start_Date)
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Assignment_End_Date)
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-success" onclick="EditPastExperienceDetails('@item.Client_Name','@item.Address','@item.Assignment_Project_Name','@item.Assignment_Start_Date','@item.Assignment_End_Date','@item.Total_Nominal_Value','@item.Contract_Ref_No','@item.Project_Scope_Summary')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                </td>
+                                                <td>
+                                                    <a class="btn btn-danger" onclick="DeletePastExpeience('@Url.Action("DeletePastExperienceDetails", "Home", new { pastExperienceCode = @item.Entry_No })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary prevBtn  pull-left" type="button">Previous</button>
+            <button class="btn btn-primary nextBtn  pull-right" type="button">Next</button>
+        </div>
+        <div id="add_pastexperience" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-content modal-lg" style="width:96%">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Past Experience</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="m-b-30">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label"> Client Name: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="clientname" name="clientname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Assignment / Project: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="projectassignment" name="projectassignment">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Project Start Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="projectstartdate" name="projectstartdate"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Address:<span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="experienceaddress" name="experienceaddress">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Project End Date:<span class="text-danger">*</span></label>
+                                        <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="projectenddate" name="projectenddate"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Project Scope Summary: <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="projectscopes" name="projectscopes">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Project Value: <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="projectvalue" name="projectvalue">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Contract Ref No: <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="contractRef" name="contractRef">
+                                    </div>
+                                </div>
+                                <div class="m-t-20 text-center">
+                                    <button class="btn btn-primary btn_past_experience" id="btn_past_experience" name="btn_past_experience" type="button">Save Past Experience</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="delete_pastexperience_modal" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modal-md">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Litigation History Details</h4>
+                    </div>
+                    <div class="modal-body card-box">
+                        <p>Are you sure want to delete this Litigation History?</p>
+                        <div class="m-t-20">
+                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-11">
+            <div class="panel-heading">
+                Audited Financial Statements
+                <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 6 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="active" style="background-color:#D3D3D3">
+                            <a href="#tab_balance_sheet" data-toggle="tab"><p style="color:black"> Balance Sheet Summary</p></a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_income_statement" data-toggle="tab"><p style="color:black">Income Statement Summary</p> </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab_balance_sheet">
+                            <div id="balancesheetfeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Year Code: <span class="text-danger">*</span></label>
+                                    @Html.Action("YearCodesList", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Current Assets Value: <span class="text-danger">*</span></label>
+                                    <input class="form-control " type="number" id="totalcurrentassets" name="totalcurrentassets">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Fixed Assets Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="totalfixedassets" name="totalfixedassets" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Current Liabilities Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="totalcurrentliabilities" name="totalcurrentliabilities" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Long-Term Liabilities Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="totallongtermliabilities" name="totallongtermliabilities" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Owner's Equity Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="totalownersequity" name="totalownersequity" />
+                                </div>
+                            </div>
+                            <diV class="row">
+                                <center><button class="btn btn-primary  btn_balancesheet_details" id="btn_balancesheet_details" name="btn_balancesheet_details" type="button">Save Balance Sheet Details</button></center>
+                            </diV>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tab_balancesheet_details">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th> Year Code </th>
+                                                    <th> Total Current Assets</th>
+                                                    <th> Total Fixed Assets</th>
+                                                    <th> Total Current Liabilities </th>
+                                                    <th> Total Long-Term Liabilities </th>
+                                                    <th>Total Owner's Equity</th>
+                                                    <th>Edit  </th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (BalanceSheetTModel item in Model.balancesheet)
+                                                {
+                                                    balancesheet++;
+                                                    <tr>
+                                                        <td>
+                                                            @balancesheet
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Audit_Year_Code_Reference)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Current_Assets_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Fixed_Assets_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Current_Liabilities_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Long_term_Liabilities_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Owners_Equity_LCY)
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-success" onclick="EditBalanceSheetDetails('@item.Audit_Year_Code_Reference','@item.Current_Assets_LCY','@item.Fixed_Assets_LCY','@item.Current_Liabilities_LCY','@item.Long_term_Liabilities_LCY','@item.Owners_Equity_LCY')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-danger" onclick="DeleteBanlanceSheet('@Url.Action("DeleteBalanceSheetDetails", "Home", new { yearCode = @item.Audit_Year_Code_Reference })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary prevBtn  pull-left" type="button">Previous</button>
+                            <button class="btn btn-primary nextBtn  pull-right" type="button">Next</button>
+                        </div>
+                        <div id="edit_balance_sheet_details" class="modal custom-modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <div class="modal-content modal-lg" style="width:96%">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Balance Sheet Details</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="m-b-30">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Year Code: <span class="text-danger">*</span></label>
+                                                        @Html.Action("EditBalanceSheetYearCodeList", "Home")
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Current Assets Value: <span class="text-danger">*</span></label>
+                                                        <input class="form-control " type="number" id="edittotalcurrentassets" name="edittotalcurrentassets">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Fixed Assets Value:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="edittotalfixedassets" name="edittotalfixedassets" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Current Liabilities Value:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="edittotalcurrentliabilities" name="edittotalcurrentliabilities" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Long-Term Liabilities Value:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="edittotallongtermliabilities" name="edittotallongtermliabilities" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Owner's Equity/Capital Value:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="edittotalownersequity" name="edittotalownersequity" />
+                                                    </div>
+                                                </div>
+                                                <div class="m-t-20 text-center">
+                                                    <center>
+                                                        <button class="btn btn-primary editbtn_balancesheet_details" id="editbtn_balancesheet_details" name="editbtn_balancesheet_details" type="button">Save Balance Sheet</button>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="tab_income_statement">
+                            <div id="incometstatementfeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Year Code: <span class="text-danger">*</span></label>
+                                    @Html.Action("IncomeYearCodesList", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Revenue Value: <span class="text-danger">*</span></label>
+                                    <input class="form-control " type="number" id="totalrevenue" name="totalrevenue">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Cost of Goods Sold Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="totalcogs" name="totalcogs" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Total Operating Expenses Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="totaloperatingexpenses" name="totaloperatingexpenses" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label"> Other Non-Operating Revenue/Expense Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="othernonoperatingexpenses" name="othernonoperatingexpenses" />
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Interest Expense Value:<span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="interstexpense" name="interstexpense" />
+                                </div>
+                            </div>
+                            <diV class="row">
+                                <center><button class="btn btn-primary  btn_incomestatement_details" id="btn_incomestatement_details" name="btn_incomestatement_details" type="button">Save Income Statement</button></center>
+                            </diV>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable" id="tb_incomestattement_Details">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th> Year Code </th>
+                                                    <th> Total Revenue</th>
+                                                    <th> Total Cost of Goods Sold</th>
+                                                    <th> Total Operating Expenses </th>
+                                                    <th> Other Non-Operating Revenue/Expense </th>
+                                                    <th> Interest Expense </th>
+                                                    <th>Edit</th>
+                                                    <th>Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (IncomeStatementTModel item in Model.incomestatement)
+                                                {
+                                                    tenderCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @tenderCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Audit_Year_Code_Reference)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Total_Revenue_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Total_COGS_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Total_Operating_Expenses_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Other_Non_operating_Re_Exp_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Interest_Expense_LCY)
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-success" onclick="EditIncomeStatementDetails('@item.Audit_Year_Code_Reference','@item.Total_Revenue_LCY','@item.Total_COGS_LCY','@item.Total_Operating_Expenses_LCY','@item.Other_Non_operating_Re_Exp_LCY','@item.Interest_Expense_LCY')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-danger" onclick="DeleteIncome('@Url.Action("DeleteIncomeStatementDetails", "Home", new { yearCode = @item.Audit_Year_Code_Reference })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary prevBtn  pull-left" type="button">Previous</button>
+                            <button class="btn btn-primary nextBtn  pull-right" type="button">Next</button>
+                        </div>
+                        <div id="edit_incomestatement_details" class="modal custom-modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <div class="modal-content modal-lg" style="width:96%">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Income Statement Details</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="m-b-30">
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Year Code: <span class="text-danger">*</span></label>
+                                                        @Html.Action("EditIncomeYearCodeList", "Home")
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Revenue: <span class="text-danger">*</span></label>
+                                                        <input class="form-control " type="number" id="edittotalrevenue" name="edittotalrevenue">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Cost of Goods Sold:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="edittotalcogs" name="edittotalcogs" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Total Operating Expenses:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="edittotaloperatingexpenses" name="edittotaloperatingexpenses" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label"> Other Non-Operating Revenue/Expense:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="editothernonoperatingexpenses" name="editothernonoperatingexpenses" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label class="control-label">Interest Expense:<span class="text-danger">*</span></label>
+                                                        <input type="number" class="form-control" id="editinterstexpense" name="editinterstexpense" />
+                                                    </div>
+                                                </div>
+                                                <div class="m-t-20 text-center">
+                                                    <center>
+                                                        <button class="btn btn-primary editbtn_incomestatement_details" id="editbtn_incomestatement_details" name="editbtn_incomestatement_details" type="button">Save Income Statement</button>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-7">
+            <div class="panel-heading">
+                Details of Key Professional Staff
+                <span class="pull-right"><i class="fa fa-chevron-left"></i>Step 7 of 8 <i class="fa fa-chevron-right"></i></span><span class="clearfix"></span>
+
+            </div>
+            <div id="keyprofessionalfeedback" style="display: none" data-dismiss="alert"></div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Staff Number: <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="staffnumber" name="staffnumber">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label"> Staff Name: <span class="text-danger">*</span></label>
+                        <input class="form-control " type="text" id="keystaffname" name="keystaffname">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label"> Profession:<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="staffprofession" name="staffprofession" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Employment Type: <span class="text-danger">*</span></label>
+                        <select data-live-search="true" class="form-control input-circle select2" id="emplymentType" name="emplymentType">
+                            <option value="">--Select employment Type--</option>
+                            <option value="0">Permanent</option>
+                            <option value="1">Casual</option>
+                            <option value="2">Contract</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Current Designation:<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control " id="currentDesignation" name="currentDesignation" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Date of Birth:<span class="text-danger">*</span></label>
+                        <div class="cal-icon">
+                            <div class="cal-icon">
+                                <input type="text" class="form-control datetimepicker" id="personnneldob" name="personnneldob" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Joining Date:<span class="text-danger">*</span></label>
+                        <div class="cal-icon"><input type="text" class="form-control datetimepicker" id="personneljoiningDate" name="personneljoiningDate" /></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Years with the Firm:<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="yearswithfarm" name="yearswithfarm" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Phone No:<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="personnelphonenumber" name="personnelphonenumber" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Nationality:<span class="text-danger">*</span></label>
+                        @Html.Action("KeyStaffCountriesList", "Home")
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Email Address:<span class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="personnelemailaddress" name="personnelemailaddress" />
+                    </div>
+                </div>
+                <center>
+                    <button class="btn btn-primary btn_keypersonnel_Details" id="btn_keypersonnel_Details" name="btn_keypersonnel_Details" type="button">Save Key Personnel </button>
+                </center>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable" id="tbl_keystaff_details">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Staff No.</th>
+                                    <th>Name</th>
+                                    <th>DOB</th>
+                                    <th>Phone No.</th>
+                                    <th>Nationality</th>
+                                    <th>Email</th>
+                                    <th>Experience  </th>
+                                    <th>Edit  </th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProfessionalStaffModel item in Model.VendorProfessionalStaff)
+                                {
+                                    staffcounter++;
+                                    <tr>
+                                        <td>
+                                            @staffcounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StaffNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StaffName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StaffDateofBirth)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StaffPhonenumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Country_Region_Code)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.StaffEmail)
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="@Url.Action("ViewKeyStaffExperience", "Home", new { staffnumber = @item.StaffNumber })')"><i class="fa fa-share m-r-10"></i>View</a>
+
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="EditKeyStaffDetails('@item.StaffNumber','@item.StaffName','@item.StaffDateofBirth','@item.StaffPhonenumber','@item.Country_Region_Code','@item.StaffEmail')"><i class="fa fa-pencil m-r-10"></i>Edit</a>
+
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger" onclick="DeleteStaff('@Url.Action("DeleteKeyProffessionalStaffDetails", "Home", new { staffnumber = @item.StaffNumber })')"><i class="fa fa-trash m-r-10"></i>Delete</a>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary prevBtn  pull-left" type="button">Previous</button>
+            <button class="btn btn-primary nextBtn  pull-right" type="button">Next</button>
+        </div>
+        <div id="edit_professionalkeystaff_details" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-content modal-lg" style="width:96%">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Proffessional Key Staff Details</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="m-b-30">
+                            <div class="row">
+                                <div class="panel-body">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Staff Number: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="editstaffnumber" name="editstaffnumber">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Staff Name: <span class="text-danger">*</span></label>
+                                            <input class="form-control " type="text" id="editkeystaffname" name="editkeystaffname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Profession:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="editstaffprofession" name="editstaffprofession" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Employment Type: <span class="text-danger">*</span></label>
+                                            <select data-live-search="true" class="form-control input-circle select2" id="emplymentType" name="emplymentType">
+                                                <option value="">--Select emplyment Type--</option>
+                                                <option value="0">Permanent</option>
+                                                <option value="1">Casual</option>
+                                                <option value="2">Contract</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Current Designation:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control " id="editcurrentDesignation" name="editcurrentDesignation" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Date of Birth:<span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <div class="cal-icon">
+                                                    <input type="text" class="form-control datetimepicker" id="editpersonnneldob" name="editpersonnneldob" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Joining Date:<span class="text-danger">*</span></label>
+                                            <div class="cal-icon"><input type="text" class="form-control datetimepicker" id="editpersonneljoiningDate" name="editpersonneljoiningDate"/></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Years with the Firm:<span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="edityearswithfarm" name="edityearswithfarm" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Phone No:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="editpersonnelphonenumber" name="editpersonnelphonenumber" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Nationality:<span class="text-danger">*</span></label>
+                                            @Html.Action("KeyStaffCountriesList", "Home")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Email Address:<span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="editpersonnelemailaddress" name="editpersonnelemailaddress" />
+                                        </div>
+                                    </div>
+                                    <center>
+                                        <button class="btn btn-primary btn_keypersonnel_Details" id="btn_keypersonnel_Details" name="btn_keypersonnel_Details" type="button">Save Key Personnel </button>
+                                    </center>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form role="form">
+            <div class="panel panel-primary setup-content" id="step-8">
+                <div class="panel-heading" style="background-color:darkseagreen">
+                    <h6>Registration Response (Section A)</h6>
+                </div>
+                <p>Please ensure you select the Registration Invitation Notice No. that you want to respond to. The system shall automatically assign an Application tracking number for your Registration response</p>
+
+                <div class="panel-body">
+                    <div id="rfiresponsesfeedback" style="display: none; background-color:antiquewhite" data-dismiss="alert"></div>
+                    @foreach (IFPRequestsModel response in Model.Response)
+                    {
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Registration Application No:</label>
+                                <input maxlength="100" type="text" required="required" class="form-control" id="preapplicationo" name="preapplicationo" value="@response.PrequalificationNo" readonly />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Supplier No:</label>
+                                <input type="text" required="required" class="form-control" value="@Session["vendorNo"]" readonly />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Supplier Name:</label>
+                                <input type="text" required="required" class="form-control" value="@Session["name"]" readonly />
+                            </div>
+                        </div>
+                        @*<div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Registration Period:</label>
+                                @Html.Action("RegistrationPeriod", "Home")
+                            </div>
+                        </div>*@
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Registration Invitation Notice No:</label>
+                                        <input maxlength="100" type="text" required="required" id="prequaliinvitno" name="prequaliinvitno" class="form-control" value="@response.Code" readonly />
+                                    </div>
+                                </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Supplier Representative Name:</label>
+                                            <input maxlength="100" type="text" required="required" class="form-control" id="vendrepresentativename" name="vendrepresentativename" placeholder="Enter Vendor Representative Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Supplier Representative Title:</label>
+                                            <input maxlength="100" type="text" required="required" class="form-control" id="vendrepresentativetitle" name="vendrepresentativetitle" placeholder="Enter Vendor Representative Title" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Company headquarters:</label>
+                                            @Html.Action("ViewPrequalificationsRegions", "Home")
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Region Code:</label>
+                                            <input type="text" required="required" class="form-control" id="regionCode" name="regionCode" value="@response.Region" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Region description :</label>
+                                            <input type="text" required="required" class="form-control" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Constituency Code:</label>
+                                            <input type="text" required="required" id="constituencyCode" name="constituencyCode" value="@response.constituency" class="form-control" readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Constituency Description :</label>
+                                            <input type="text" required="required" class="form-control" readonly />
+                                        </div>
+                                    </div>
+                    }
+                    <center><button class="btn btn-primary btn_submit_response_generaldetails" id="btn_submit_response_generaldetails" name="btn_submit_response_generaldetails" type="button">save detail</button></center>
+                    <button class="btn btn-primary nextBtn pull-right nextBtnrfiresponse" type="button" id="nextBtnrfiresponse" name="nextBtnrfiresponse" style="display:none">Next </button>
+                </div>
+
+            </div>
+            <div class="panel panel-primary setup-content" id="step-9" style="width:100%">
+                <div class="panel-heading" style="background-color:darkseagreen">
+                    <h6>Registration Response (Section B)</h6>
+                </div>
+                <p>Please select the Procurement Categories that you would wish to be Registered under</p>
+                <div class="panel-body">
+                   
+                    <div class="row">
+                        @foreach (IFPRequestsModel response in Model.Response)
+                        {
+                            <div class="col-sm-6" style="display:none">
+                                <div class="form-group">
+                                    <label class="control-label">Region Code:</label>
+                                    <input type="text" required="required" class="form-control" id="regionCode" name="regionCode" value="@response.Region" readonly />
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="display:none">
+                                <div class="form-group">
+                                    <label class="control-label">Constituency Code:</label>
+                                    <input type="text" required="required" id="constituencyCode" name="constituencyCode" value="@response.constituency" class="form-control" readonly />
+                                </div>
+                            </div>
+                        }
+                                                    <div class="panel-heading" style="background-color:darkseagreen">
+                                <h6>Works (Projects)</h6>
+                            </div><br />
+                            <div id="worksfeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="col-md-12">
+                                <div style="display: none;background-color:antiquewhite" id="rfisubmitallworkscategories" class="rfisubmitallworkscategories" name="rfisubmitallworkscategories">
+                                    <center><button type="button" class="btn btn-success btn_saveallWorkscategoriesIFR" id="btn_saveallWorkscategoriesIFR" name="btn_saveallWorkscategoriesIFR">Add to cart</button></center>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable selectedprequalificationsWorks" id="selectedprequalificationsWorks">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                               
+                                                <th>Procurement Category</th>
+                                                <th>Description</th>
+                                                <th>select</th>
+                                                @*<th>Special Group Reservation</th>*@
+                                                @*<th>Applicable Locations</th>*@
+                                                <th>Action</th>
+                                                @*<th>Register in all regions</th>*@
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (WorksModel Works in Model.Works)
+                                            {
+                                                Worksrecords++;
+                                                <tr>
+                                                    <td>
+                                                        @Worksrecords
+                                                    </td>
+                                                  
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => Works.Prequalification_Category_ID)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => Works.Description)
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" style="-ms-transform: scale(2);-moz-transform:scale(2);-webkit-transform:scale(2);-o-transform:scale(2);transform:scale(2);padding:10px" id="worksselected" name="worksselected" class="checkboxes" value=@Works.Prequalification_Category_ID />
+                                                    </td>
+                                                    @*<td>
+                                                        @Html.DisplayFor(modelItem => Works.SpecialGroupReservations)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => Works.Applicable_Location)
+                                                    </td>*@
+                                                    <td>
+                                                        <a href="@Url.Action("ViewRFISpecificRequirement", "Home", new { CategoryID = @Works.Prequalification_Category_ID })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i>Specific Requirement</a>
+                                                    </td>
+                                                    @*<td>
+                                                        <input type="checkbox" class="checkboxes" id="selectedcheckbox" name="selectedcheckbox" value=@Works.Prequalification_Category_ID />
+                                                    </td>*@
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div style="display: none;background-color:antiquewhite" id="rfiresponsefeedback" class="rfiresponsefeedback" name="rfiresponsefeedback">
+                                <center><button type="button" class="btn btn-success btn_apply_goodsIFR" id="btn_apply_goodsIFR" name="btn_apply_goodsIFR">Add to Cart</button></center>
+                            </div>
+
+
+                            <div class="panel-heading" style="background-color:darkseagreen">
+                                <h6>Goods (Supply of Items & Assets)</h6>
+                            </div><br />
+                            <p>Please select the Procurement Categories that you would wish to be registered under</p>
+                            <div id="goodsfeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable selectedprequalifcationGoods" id="selectedprequalifcationGoods" name="selectedprequalifcationGoods">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                               
+                                                <th>Procurement Category</th>
+                                                <th>Description</th>
+                                                <th>select</th>
+                                                @*<th>Special Group Reservation</th>
+                                                <th>Applicable Locations</th>*@
+                                                <th>Specific Requirement</th>
+                                                @*<th>Register in all regions</th>*@
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (GoodsServicesModel goodsServices in Model.GoodsServices)
+                                            {
+                                                goodsServicesrecords++;
+                                                <tr>
+                                                    <td>
+                                                        @goodsServicesrecords
+                                                    </td>
+                                                    
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => goodsServices.Prequalification_Category_ID)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => goodsServices.Description)
+                                                    </td>
+                                                    <td>
+                                                        <input type="checkbox" style="-ms-transform: scale(2);-moz-transform:scale(2);-webkit-transform:scale(2);-o-transform:scale(2);transform:scale(2);padding:10px" class="checkboxes" id="selectedrecordid" name="selectedrecordid" value=@goodsServices.Prequalification_Category_ID />
+                                                    </td>
+                                                    @*<td>
+                                                        @Html.DisplayFor(modelItem => goodsServices.SpecialGroupReservations)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => goodsServices.Applicable_Location)
+                                                    </td>*@
+                                                    <td>
+                                                        <a href="@Url.Action("ViewRFISpecificRequirement", "Home", new { CategoryID = @goodsServices.Prequalification_Category_ID })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i>Specific Requirement</a>
+                                                    </td>
+                                                    @*<td>
+                                                        <input type="checkbox" class="checkboxes" id="selectedcheckbox" name="selectedcheckbox" value=@goodsServices.Prequalification_Category_ID />*@
+                                                        @*<a href="@Url.Action("TenderResponseForm", "Home", new { tendernumber = @goodsServices.Prequalification_Category_ID })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i> Apply</a>
+                                                    </td>*@
+                                                    @*<td>@Html.Action("selectRegion", "Home")</td>*@
+
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    <div class="row">
+                        <div class="panel-heading" style="background-color:darkseagreen">
+                            <h6>Services (Consulting/Non-Consulting Services)</h6>
+                        </div>
+                        <p>Please select the Procurement Categories that you would wish to be Registered under</p>
+                        <div id="servicesfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="col-md-12">
+                            <div style="display: none;background-color:antiquewhite" id="rfisubmitallServicescategories" class="rfisubmitallServicescategories" name="rfisubmitallServicescategories">
+                                <center><button type="button" class="btn btn-success btn_saveallServicescategoriesIFR" id="btn_saveallServicescategoriesIFR" name="btn_saveallServicescategoriesIFR">Add to cart</button></center>
+                            </div><br />
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable selectedprequalificationsservices" id="selectedprequalificationsservices" name="selectedprequalificationsservices">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            
+                                            <th>Procurement Category</th>
+                                            <th>Description</th>
+                                            <th>select</th>
+                                            @*<th>Special Group Reservation</th>
+                                            <th>Applicable Locations</th>*@                                            
+                                            <th>Action</th>
+                                            @*<th>Register in all regions</th>*@
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (ServicesModel Services in Model.Services)
+                                        {
+                                            Servicesrecords++;
+                                            <tr>
+                                                <td>
+                                                    @Servicesrecords
+                                                </td>
+                                                
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => Services.Prequalification_Category_ID)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => Services.Description)
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" style="-ms-transform: scale(2);-moz-transform:scale(2);-webkit-transform:scale(2);-o-transform:scale(2);transform:scale(2);padding:10px" id="servicesselected" name="servicesselected" class="checkboxes" value=@Services.Prequalification_Category_ID />
+                                                </td>
+                                                @*<td>
+                                                    @Html.DisplayFor(modelItem => Services.SpecialGroupReservations)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => Services.Applicable_Location)
+                                                </td>*@
+                                                <td>
+                                                    <a href="@Url.Action("ViewRFISpecificRequirement", "Home", new { CategoryID = @Services.Prequalification_Category_ID })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i>Specific Requirement</a>
+                                                </td>
+                                                @*<td>
+                                                    <input type="checkbox" class="checkboxes" id="selectedcheckbox" name="selectedcheckbox" value=@Services.Prequalification_Category_ID />                                                   
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="checkboxes" id="selectedcheckbox" name="selectedcheckbox" value=@Services.Prequalification_Category_ID />
+                                                </td>*@
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                  
+                    <br /><br /><br />
+                    @*<button class="btn btn-primary nextBtn pull-right" type="button">Continue</button>*@
+                    <div class="col-xs-8 text-right m-b-30">
+                        @foreach (IFPRequestsModel invitation in Model.Response)
+                        {
+                            <a href="@Url.Action("viewselectedCategoriesRegistration", "Home", new { prequalificationNo = @invitation.PrequalificationNo,InvitationNumber=@invitation.RFI_Documents_No })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i>View Selected Categories</a>
+
+                        }
+                    </div>
+                </div>
+            </div>
+         
+            @*<div class="panel-primary setup-content" id="step-10">
+                <div class="panel-heading" style="background-color:#006400">
+                    <h6>Documents Attachment</h6>
+                </div>
+                <h6>Mandatory Documents Attachments</h6>
+                <div id="feedback" style="display: none" data-dismiss="alert"></div>
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active" style="background-color:gray">
+                            <a href="#tab_1_1" data-toggle="tab"><h3 class="panel-title" style="color:black">Required Registration Documents</h3></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_2" data-toggle="tab"><h3 class="panel-title" style="color:black">Attach Documents</h3></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_3" data-toggle="tab"><h3 class="panel-title" style="color:black">View Attached Documents</h3></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="tab_1_1">
+                        <div class="row">
+                            <div class="panel-heading" style="background-color:darkseagreen">
+                                <h6>Mandatory Dcouments</h6>
+                            </div>
+                            <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Doc ID</th>
+                                                <th>Description</th>
+                                                <th>Requirement Type</th>
+                                                <th>Special Group Requirement</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (DocumentsTModel documents in Model.RequiredDocuments)
+                                            {
+                                                documentsRecords++;
+                                                <tr>
+                                                    <td>
+                                                        @documentsRecords
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.Description)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.Requirement_Type)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.SpecialGroupRequirement)
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab_1_2">
+                        <div class="row">
+                            <div class="panel-heading" style="background-color:darkseagreen">
+                                <h6>Attach Documents </h6>
+                            </div>
+                            <div id="attachprequalificationdocumentsfeedback" style="display: none" data-dismiss="alert"></div>
+                            <div class="col-md-12">
+                                <p>This Section enables you to upload scanned copies of the supporting documents required as part of this Registration process.</p>
+                                <div class="progress progress-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Select Document Type: <span class="text-danger">*</span></label>
+                                        @Html.Action("PrequalificationDropDownListDocs", "Home")
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Document No./Certificate No: <span class="text-danger">*</span></label>
+                                        <input class="form-control " type="text" id="documentstxtCertNo" name="documentstxtCertNo">
+                                    </div>
+                                </div>
+                                <div id="documentuploads">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Issue Date:<span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" id="documentsdateOfIssues" name="documentsdateOfIssues" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Expiry Date:<span class="text-danger">*</span></label>
+                                            <div class="cal-icon">
+                                                <input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" id="documentsdateOfexpiries" name="documentsdateOfexpiries" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Select Document to Upload: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="file" id="PrequalificationinputFileselectors" name="PrequalificationinputFileselectors[]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <center>
+                            <button class="btn btn-primary btn_uploadPrequalifiationsdocuments" type="button" id="btn_uploadPrequalifiationsdocuments" name="btn_uploadPrequalifiationsdocuments">Upload Document</button>
+
+                        </center>
+                    </div>
+
+
+                    <div id="declaration_form" class="modal custom-modal fade" role="dialog">
+                        @foreach (IFPRequestsModel invitation in Model.Response)
+                        {
+                            <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframe", "Home", new { PrequalificationNumber = @invitation.PrequalificationNo })"></iframe>
+                        }
+                        <div class="modal-dialog" style="width:96%; height:50%">
+                            <div class="modal-content modal-md" style="width:96%; height:50%">
+                                <div class="modal-header">
+                                    <h3 class="modal-title"><strong>Vendor Registration Declaration</strong></h3>
+                                </div>
+                                <div class="modal-body card-box">
+                                    <p>
+                                        I certify that the information I am about to provided is true and complete to
+                                        the best of my knowledge. I am aware that this self declaration statement is
+                                        subject to review and verification and if such information has been falsified I
+                                        may be terminated from the Registration Process for fraud
+                                        and/or perjury
+                                    </p>
+                                    <br />
+                                    <div class="invalid-feedback">
+                                        You must agree before submitting.<a href="~/Downloads/Terms and Conditions.pdf">Read Terms & Condition</a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="checkbox" name="termsandconditions" id="termsandconditions"> <span class="text-danger">*</span><label class="control-label">Accept Terms and Conditions</label>
+
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <hr />
+                                    <div class="m-t-20">
+                                        <center>
+                                            <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                            <button type="submit" class="btn btn-success btn_PrequalifiationsDeclaration" id="btn_PrequalifiationsDeclaration" name="btn_PrequalifiationsDeclaration">Submit Prequalification</button>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab_1_3">
+                        <div class="row">
+                            <div class="panel-heading" style="background-color:darkseagreen">
+                                <h6>View Attached Documents</h6>
+                            </div>
+                            <p>This Section enables you to view the uploaded/Attached documents.</p>
+                            @*<div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Description</th>
+                                                <th>Date Filed</th>
+                                                <th>Issue Date</th>
+                                                <th>Expiry Date</th>
+                                                <th>File Name</th>
+                                                <th>Download</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (PreQualificationRequiredDocuments item in Model.PrequalificationUploadedDocuments)
+                                            {
+                                                attacheddocumentsCounter++;
+                                                <tr>
+                                                    <td>
+                                                        @attacheddocumentsCounter
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Description)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Date_Filed)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Issue_Date)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.Expiry_Date)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => item.File_Name)
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
+
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <a href="#" data-toggle="modal" data-target="#declaration_form" class="btn btn-primary  pull-right">Submit Registration Details</a>
+            </div>*@
+        </form>
+    </div>
+
+</div>
+@*@if (Model.ShowDialog)
+{
+    <div id="dialog" title="Test dialog">
+        <p>Hello world</p>
+    </div>
+
+    <script>show();</script>
+}*@
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+@*<script>
+ //   function calculateyearswithFarm() {
+    function show() {
+        $("#dialog").dialog();
+    }
+</script>*@

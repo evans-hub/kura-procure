@@ -1,0 +1,213 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "PerfGuaranteeDocAttach";
+    int attacheddocumentsCounter = 0;
+    int documentsRecords = 0;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="content container-fluid">
+    <div class="panel panel-body">
+        <div class="row">
+            <div class="card">
+                <div class="card-header text-center" data-background-color="darkgreen">
+                    <h6><i><strong>e-procurement </strong></i></h6>
+                </div><br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6" style="display:none">
+                <div class="form-group">
+                    <label class="control-label">Response No: <span class="text-danger">*</span></label>
+                    <input class="form-control " type="text" id="responseNumber" name="responseNumber" value=@Session["Response"] readonly>
+                  
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Performance Guarantee Supporting Documents</a></li>
+                    <li class="breadcrumb-item active">Response =@Session["Response"] </li>
+                   
+
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-heading" style="background-color:gray">
+                <h5 class="panel-title">Documents Attachment</h5>
+            </div>
+            <div id="feedback" style="display: none" data-dismiss="alert"></div>          
+            <br />
+            <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable" id="tbl_prequalified_documents">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Doc ID</th>
+                                <th>Description</th>
+                                <th>Prn Number</th>
+                             
+                                <td>Attach Document</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (IfsDocumentTModel item in Model.RequiredDocuments)
+                            {
+                                documentsRecords++;
+                                <tr>
+                                    <td>
+                                        @documentsRecords
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.prnNo)
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary pull-right rounded" onclick="AttachDocumentsContract('@item.Document_No','@item.Procurement_Document_Type_ID','@item.prnNo','@item.Requirement_Type','@documentsRecords')"><i class="fa fa-pencil m-r-10"></i>Attach Document</a>
+                                        @*<a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#AttachDocuments"><i class="fa fa-plus"></i> Attach Document</a>*@
+                                    </td>
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @*<div class="panel-footer">
+                        <br />
+                        <input type="button" id="btnSavePrequalifiedDocuments" class="btn btn-success pull-left btnSavePrequalifiedDocuments" name="btnSavePrequalifiedDocuments" value="Submit Documents" />
+                    </div>*@
+                </div>
+            </div>
+        </div>
+
+     
+   
+        
+
+        <div class="row">
+            <div class="panel-heading" style="background-color:darkseagreen">
+                <h6>View Attached Documents</h6>
+            </div>
+            <p>This Section enables you to view the uploaded/Attached documents.</p>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                               
+                                <th>File Category</th>
+                                @*<th>Download</th>*@
+                                @*<th>Delete</th>*@
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+
+                                @foreach (IfsDocumentTModel documents in Model.UploadedDocument)
+                                    {
+                            attacheddocumentsCounter++;
+                            <tr>
+                                <td>
+                                    @attacheddocumentsCounter
+                                </td>                              
+                                <td>
+                                    @Html.DisplayFor(modelItem => documents.Description)
+                                </td>
+
+                            
+                                @*<td>
+                                    <a class="btn btn-danger" onclick="DocumentsDeletePerformance('@Url.Action("DeleteperformancedDocfromSharepoint", "Home", new { filename = @documents.filelink, docNo = @Session["Response"]})')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+                                </td>*@
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+            <button class="btn btn-primary button_submit_performance_response pull-right" id="button_submit_performance_response" name="button_submit_performance_response" type="button">Submit Response</button>
+    </div>
+
+
+    
+
+</div>
+<div id="AttachDocumentsContracts" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog" style="width:100%">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <h5 class="modal-title">Attach Documents</h5>
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Document No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="DocNo" name="DocNo" readonly>
+                            </div>
+                        </div>
+                    
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">PRN No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="prnno" name="prnno" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">index No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="indexNo" name="indexNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Procurement Document Type: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="ProcDocType" name="ProcDocType" readonly>
+                            </div>
+                        </div>                    
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Requirement Type: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="RequirementType" name="RequirementType" readonly>
+                            </div>
+                        </div>
+                  
+                      
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Select Document to Upload: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="file" id="inputFileselector" name="inputFileselector[]">
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary btnUploadPerformanceGuarantDocuments" type="button" id="btnUploadPerformanceGuarantDocuments" name="btnUploadPerformanceGuarantDocuments">Upload Document</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

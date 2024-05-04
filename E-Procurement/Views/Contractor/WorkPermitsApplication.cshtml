@@ -1,0 +1,273 @@
+﻿@using E_Procurement.Models.Contractor
+@model dynamic
+@{
+    ViewBag.Title = "WorkPermitsApplication";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int ActiveContractsCounter = 0;
+    int CompletedContractsCounter = 0;
+    int CancalledContractsCounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>Work Permit Applications</u></strong></h5>
+        </div>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="active_contracts">
+            <p>The following are the Work Permit Applications</p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Contract Ref No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Project Commenced</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ContractsModel item in Model.VendorActiveContracts)
+                                {
+                                    ActiveContractsCounter++;
+                                    <tr>
+                                        <td>
+                                            @ActiveContractsCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_Code)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_End_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Value)
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="View('@Url.Action("ViewProjectContracts", "Contractor", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="completed_contracts">
+            <p>The following are the Contractor's Completed Contracts </p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Contract Ref No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Project Commenced</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ContractsModel item in Model.CancelledContracts)
+                                {
+                                    CancalledContractsCounter++;
+                                    <tr>
+                                        <td>
+                                            @CancalledContractsCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_Code)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_End_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Value)
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="View('@Url.Action("ViewProjectContracts", "Contractor", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="cancelled_contracts">
+            <p>The following are the Contractor's Cancelled/Closed Contracts </p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Contract Ref No.</th>
+                                    <th>Description</th>
+                                    <th>Region</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Contract Value(Ksh)</th>
+                                    <th>Project Commenced</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ContractsModel item in Model.VendorActiveContracts)
+                                {
+                                    CompletedContractsCounter++;
+                                    <tr>
+                                        <td>
+                                            @CompletedContractsCounter
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Region_Code)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Start_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_End_Date)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Contract_Value)
+                                        </td>
+                                        <td>
+                                            Yes
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" onclick="View('@Url.Action("ViewProjectContracts", "Contractor", new { tendernumber = @item.No })')"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+        function View(url) {
+            console.log(JSON.stringify(url))
+            $.ajax({
+                cache: false,
+                type: 'GET',
+                url: url,
+                success: function (response) {
+                    window.location.href = url;
+                }
+            });
+        }
+</script>

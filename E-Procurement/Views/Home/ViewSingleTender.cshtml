@@ -1,0 +1,889 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "ViewSingleTender";
+    Layout = "";
+    int addendumcounter = 0;
+    int tenderDocuments = 0;
+    int purchaseLines = 0;
+    int AllstaffCounter = 0;
+    int equipmentsCounter = 0;
+    int evaluationsCunter = 0;
+    int SecurityCounter = 0;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/img/favicon.png">
+    <title>E-Procurement</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/CustomCss.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/Custom_tabs_1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        @Html.Action("NavigationMenu", "Home")
+        <div class="page-wrapper job-wrapper">
+            <div class="container" style="width:100%">
+                <div class="row">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/assets/img/tenders.jpg" width="1400" height="200">
+                        </div>
+                    </div>
+                </div>
+                @foreach (SingleTenderModel tenderdetail in Model.SingleTenders)
+                {
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3 class="page-title"><strong><u>Tender Reference No:</u></strong>@tenderdetail.External_Document_No</h3>
+                        </div>
+                        <div class="row pull-right">
+                            <div class="col-xs-8 text-right m-b-30">
+                                <a href="@Url.Action("Login", "Home")" class="btn btn-primary pull-right rounded"><i class="fa fa-plus"></i>Apply for this Tender</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            <div class="content" style="width:100%">
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active" style="background-color:#D3D3D3">
+                            <a href="#tab_overview" data-toggle="tab"><p style="color:black"><strong>General Tender Overview</strong> </p></a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_purchase_items" data-toggle="tab"><p style="color:black"><strong>Purchase Items/Services</strong></p> </a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_tender_requirements" data-toggle="tab"><p style="color:black"><strong>Tender Requirements</strong></p> </a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_project_works" data-toggle="tab"><p style="color:black"><strong>Tender Project Works</strong></p> </a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_evaluation_creteria" data-toggle="tab"><p style="color:black"><strong>Tender Evaluation Criteria</strong></p> </a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_addendums" data-toggle="tab"><p style="color:black"><strong>Tender Addendums</strong></p> </a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_tender_documents" data-toggle="tab"><p style="color:black"><strong>All Tender Documents</strong></p> </a>
+                        </li>
+                        <li style="background-color:#D3D3D3">
+                            <a href="#tab_tender_requireddocuments" data-toggle="tab"><p style="color:black"><strong>Required Documents</strong></p> </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active in" id="tab_overview">
+                            @foreach (SingleTenderModel tenderdetail in Model.SingleTenders)
+                            {
+                                <div class="row">
+                                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                        <h6><strong><u>Tender General Details</u></strong></h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Tender Description:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="tenderdescription" value="@tenderdetail.Description" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Tender Notice No:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="tendernotice" name="tendernotice" value="@tenderdetail.Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Procurement Method:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="procurementmethod" value="@tenderdetail.Procurement_Method" readonly>
+                                        </div>
+                                    </div>
+                                    @*<div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Mandatory Prebid Meeting:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="mandatorymeeting" value="@tenderdetail.Mandatory_Pre_bid_Visit_Date" readonly>
+                                        </div>
+                                    </div>*@
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Document Date:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="documentdate" value="@tenderdetail.Document_Date" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Envelope Type:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="enveloptype" value="@tenderdetail.Bid_Envelop_Type" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">External Document No:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="externaldocumentno" value="@tenderdetail.External_Document_No" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Tender Validity Duration(in Days):<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="tendervalidity" value="@tenderdetail.Tender_Validity_Duration" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Location Name:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="locationcode" value="@tenderdetail.Location_Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Tender Validity Expiry Date:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="tenderexpirydate" value="@tenderdetail.Tender_Validity_Expiry_Date" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Requisition Product Group:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="requisitionproductgroup" value="@tenderdetail.Requisition_Product_Group" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Mandatory Special Group Reserve:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="specialgroupreserv" value="@tenderdetail.Mandatory_Special_Group_Reserv" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Target Bidder Group: <span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="targetbidergrup" value="@tenderdetail.Target_Bidder_Group" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Selection Method:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="bidselectionmethod" value="@tenderdetail.Bid_Selection_Method" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                        <h6 class="panel-title"><strong><u>Critical Submission Details</u></strong></h6>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Submission End Date:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="submissiondate" value="@tenderdetail.Submission_Start_Date" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Address 2:<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="address" value="@tenderdetail.Address" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Submission End Time: <span class="text-danger">*</span></label>
+                                            <input class="form-control " type="text" id="submissiondendtime" value="@tenderdetail.Submission_EndTime" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Postal Code:</label>
+                                            <input class="form-control " type="text" id="postcodes" value="@tenderdetail.Post_Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Pre Bid Meeting Date:</label>
+                                            <div class="cal-icon"><input class="form-control datetimepicker" type="text" id="startdateoperations" name="startdateoperations" value="@tenderdetail.Mandatory_Pre_bid_Visit_Date" readonly></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">City:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.City" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Pre-Bid Meeting Address:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Prebid_Meeting_Address" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Country:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Country_Region_Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Opening Date:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Bid_Opening_Date" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Phone Number:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Phone_No" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Opening Time:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Bid_Opening_Time" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Opening Venue:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Bid_Opening_Venue" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Tender Box Location:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Tender_Box_Location_Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Procuring Entity Name:</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Procuring_Entity_Name_Contact" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Primary Tender Submission Address</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Primary_Tender_Submission" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Address</label>
+                                            <input type="text" class="form-control" id="cretificateofincorperation" name="cretificateofincorperation" value="@tenderdetail.Primary_Tender_Submission" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="tab-pane fade " id="tab_purchase_items">
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Purchase Lines</u></strong></h6>
+                                </div>
+                                <p>The bidder shall be required to provide pricing information for the Goods and Services listed below. Please note the following:<br /> 1. The bidder must quote for the full quantity on each line.<br /> 2. The Price Quote Model is used to determine how the pricing for each line shall be done.<br /> a) Bidder Pricing-This means that the bidder is allowed to set their best price for each line. There is no restriction on the amount that the bidder can quote in this case.<br /> b) Flat Amount from Buyer-This option is used when the Procuring Entity (The Buyer) has defined a specific standard amount that all bidders shall adopt for a specific purchase line. In this case, the bidder cannot quote more than the set standard amount/limit.</p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped custom-table datatable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Type</th>
+                                                        <th>Item No.</th>
+                                                        <th>Description</th>
+                                                        <th>Quantity Required</th>
+                                                        <th>Unit of Meassure</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (PurchaseCodeLinesModel item in Model.TenderPurchaseLines)
+                                                    {
+                                                        purchaseLines++;
+                                                        <tr>
+                                                            <td>
+                                                                @purchaseLines
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Type)
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.No)
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Quantity)
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Unit_of_Measure_Code)
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="tab_addendums">
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Tender Addendum</u></strong></h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped custom-table datatable">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Addendum Notice No.</th>
+                                                        <th>Addendum Date</th>
+                                                        <th>Description</th>
+                                                        <th>Addendum Instructions</th>
+                                                        <th>View</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (SingleTenderAddendumModel item in Model.ViewTenderAddendums)
+                                                    {
+                                                        addendumcounter++;
+                                                        <tr>
+                                                            <td>
+                                                                @addendumcounter
+                                                            </td>
+                                                            <td>
+                                                                <a href="@Url.Action("ViewSingleAddendumNotice", "Home", new { AddendumNumber = @item.Addendum_Notice_No })"><strong>@Html.DisplayFor(modelItem => item.Addendum_Notice_No)</strong></a>
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Document_Date)
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Description)
+
+                                                            </td>
+                                                            <td>
+                                                                @Html.DisplayFor(modelItem => item.Addendum_Instructions)
+
+                                                            </td>
+                                                            <td>
+                                                                <a class="btn btn-success" onclick="@Url.Action("ViewSingleAddendumNotice", "Home", new { AddendumNumber = @item.Addendum_Notice_No }))"><i class="fa fa-eye m-r-10"></i> View</a>
+
+                                                            </td>
+
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="tab_tender_requirements">
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Bid/Tender Security Requirements</u></strong></h6>
+                                </div>
+                                <p>The section below lists the accepted forms of Bid/Tender security that the tenderer can submit. Please take note of the validity dates, mimimum value/Amount (In local currency) and the issuing institutions that are acceptable</p>
+
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Forms of Security.</th>
+                                                    <th>Security Type</th>
+                                                    <th>Nature of Security</th>
+                                                    <th>Description</th>
+                                                    <th>Minimum Bid Security Amounts(K.E.S)</th>
+                                                    <th>Bid Security Validity Expiry Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (BidSecurityModel item in Model.TenderSecurity)
+                                                {
+                                                    SecurityCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @SecurityCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Form_of_Security)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Security_Type)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Nature_of_Security)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Description)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Security_Amount_LCY)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Bid_Security_Validity_Expiry)
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Tender Processing Fees</u></strong></h6>
+                                </div>
+                                @foreach (SingleTenderModel tenderdetails in Model.SingleTenders)
+                                {
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Charge Code:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="bidchergecode" value="@tenderdetails.Bid_Charge_Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bank Account Name:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bankaccountname" value="@tenderdetails.Bank_Account_Name" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Charge:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bidcharge" name="bidcharge" value="@tenderdetails.Bid_Charge_LCY" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Charge bank Branch:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bankbranch" name="bankbranch" value="@tenderdetails.Bid_Charge_Bank_Branch" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Charge Bank Code:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bankcode" name="bankcode" value="@tenderdetails.Bid_Charge_Bank_Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bid Charge Bank Account No:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="acountnumber" name="acountnumber" value="@tenderdetails.Bid_Charge_Bank_A_C_No" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Bank Name:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="banknames" name="banknames" value="@tenderdetails.Bank_Name" readonly>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="tab_tender_requireddocuments">
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Tender Required Documents</u></strong></h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Document Type ID</th>
+                                                    <th>Description</th>
+                                                    <th>Requirement Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (IfsDocumentTModel item in Model.TenderDocument)
+                                                {
+                                                    tenderDocuments++;
+                                                    <tr>
+                                                        <td>
+                                                            @tenderDocuments
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Description)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Requirement_Type)
+
+                                                        </td>
+
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="tab_project_works">
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Personnel Specifications</u></strong></h6>
+                                </div>
+                                <p>This section summarizes the personnel requirements for this Tender. Please take note of the minimum number of staff required for each Project Role and their minimum qualification and experience requirements</p>
+
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Staff No.</th>
+                                                    <th>Description</th>
+                                                    <th>Staff Category</th>
+                                                    <th>Minimum No. of Staff Required</th>
+                                                    <th>Required Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (TenderKeyStaffModel item in Model.TenderskeystaffDetails)
+                                                {
+                                                    AllstaffCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @AllstaffCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Staff_Role_Code)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Title_Designation_Description)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Staff_Category)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Min_No_of_Recomm_Staff)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Requirement_Type)
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Equipment Specifications</u></strong></h6>
+                                </div>
+                                <p>This section provides the details of the equipment that a contractor is required to provide for the Project Works. Please take note of the minimum quantity for each equipment type. The contractor is required to provide documents that support the ownership or lease of each equipment, as part of their bid response</p>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Equipment Type Code.</th>
+                                                    <th>Category</th>
+                                                    <th>Description</th>
+                                                    <th>Minimum Required Quantity</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (IfsRequiredEquipmentsModel item in Model.RequredDocuemnts)
+                                                {
+                                                    equipmentsCounter++;
+                                                    <tr>
+                                                        <td>
+                                                            @equipmentsCounter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Equipment_Type_Code)
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Category)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Description)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Minimum_Required_Qty)
+
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade " id="tab_evaluation_creteria">
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Bid Scoring Template</u></strong></h6>
+                                </div>
+                                <p>
+                                    Kindly take note of the following:<br />
+                                    1. The evaluation of all tender responses shall be based on weighted average scoring of technical & financial proposals.<br />
+                                    2. Preliminary evaluation, technical evaluation and financial evaluation shall strictly be done as per the guidelines provided in the Public Procurement & Assets Disposal Act (PPADA). <br />
+                                    3. Unless stated otherwise, the default bid selection method applicable to this Tender shall be the Quality and Cost Based Selection method (QCBS).
+                                </p>
+                                @foreach (TenderEvalCriteriaModel item in Model.TenderEvaluationCreteria)
+                                {
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Template ID:<span class="text-danger">*</span></label>
+                                            <input class="form-control" type="text" id="bidchergecode" value="@item.Code" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Description:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bankaccountname" value="@item.Description" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Total Technical Evaluation Core %:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bidcharge" name="bidcharge" value="@item.Total_Technical_Evaluation" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Total Financial Evaluation Core %:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bankbranch" name="bankbranch" value="@item.Total_Financial_Evaluation" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Total Preliminary (Mandatory Checks Score %):<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="bankcode" name="bankcode" value="@item.Total_Preliminary_Checks_Score" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Total Weighted Score:<span class="text-danger">*</span> </label>
+                                            <input class="form-control" type="text" id="acountnumber" name="acountnumber" value="@item.V5_EXCELLENT_Text_Bid_Score" readonly>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            @*<div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Summarized Evaluation Criteria</u></strong></h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Preliminary Evaluatione</th>
+                                                    <th>Technical Evaluation</th>
+                                                    <th>Financial Evaluation</th>
+                                                    <th>Total Weighted Score (%)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (TenderEvalCriteriaModel item in Model.TenderEvaluationCreteria)
+                                                {
+                                                    evaluationsCunter++;
+                                                    <tr>
+                                                        <td>
+                                                            @evaluationsCunter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Total_Preliminary_Checks_Score)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Total_Technical_Evaluation)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.Total_Financial_Evaluation)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.V5_EXCELLENT_Text_Bid_Score)
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>*@
+                            <div class="row">
+                                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                    <h6 class="panel-title"><strong><u>Summarized Evaluation Criteria</u></strong></h6>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Evaluation Type</th>
+                                                    <th>Evaluation Requirement</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (TenderEvalCriteriaModel item in Model.TenderEvaluationSummery)
+                                                {
+                                                    evaluationsCunter++;
+                                                    <tr>
+                                                        <td>
+                                                            @evaluationsCunter
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.EvaluationType)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.EvaluationRequirement)
+                                                        </td>
+                                                      </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        @*Vendor Financial Capability Details*@
+                        <div class="tab-pane fade " id="tab_tender_documents">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                                        <h6 class="panel-title">Download Tender Documents</h6>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>File Name</th>
+                                                    <th>Download </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @*@foreach (SharePointTModel documents in Model.UploadedDocument)
+                                                {
+                                                    tenderDocuments++;
+                                                    <tr>
+                                                        <td>
+                                                            @tenderDocuments
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => documents.FileName)
+                                                        </td>
+                                                        <td>
+                                                            <a class="btn btn-success" onclick="DowndloadTender('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { tenderNumber = @item.Code })')"><i class="fa fa-share m-r-10"></i> Download</a>
+                                                            @foreach (SingleTenderModel tenderdetail in Model.SingleTenders)
+                                                            {
+
+                                                                <a href="@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { tenderNumber = @tenderdetail.Code, filenames= @documents.FileName, })" class="btn btn-success" )"><i class="fa fa-download"></i>Download</a>
+                                                            }
+
+                                                        </td>
+                                                    </tr>
+                                                }*@
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+            </div>
+            </div>
+        </div>
+    <footer class="site-footer">
+        @Html.Action("NavigationFooter", "Home")
+    </footer>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $("#getting-started")
+        .countdown("2020/01/01", function (event) {
+            $(this).text(
+              event.strftime('%D days %H:%M:%S')
+            );
+        });
+    </script>
+    <div class="sidebar-overlay" data-reff="#sidebar"></div>
+    <script type="text/javascript" src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/jquery.slimscroll.js"></script>
+    <script type="text/javascript" src="~/assets/js/select2.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="~/assets/js/app.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/jquery.countdown.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/jquery.countdown.min.js"></script>
+    <script src="~/assets/customJs/jquery.countdown.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/DataSearch.js"></script>
+    <!-- Sweet Alert Js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script type="text/javascript" src="~/assets/customJs/DownloadTenderDocuments.js"></script>
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date($("#submissiondate").val()).getTime();
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Display the result in the element with id="demo"
+            document.getElementById("demo").innerHTML = days + "  Days ," + hours + "  Hours ,"
+            + minutes + "   Minutes ," + seconds + "   Seconds, ";
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "Duration for this Tender Expired";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

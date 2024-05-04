@@ -1,0 +1,16 @@
+﻿
+@model IEnumerable<E_Procurement.Models.Contractor.CountriesModel>
+
+@{
+    ViewBag.Title = "WorkRegionList";
+    Layout = null;
+}
+<select class="form-control select2" id="dropdownRegionsList" name="dropdownRegionsList" data_live_search="true">
+    <option value="">--Select Region---</option>
+    <optgroup label="All Regions List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.CountyCode">@item.CountyName</option>
+        }
+    </optgroup>
+</select>

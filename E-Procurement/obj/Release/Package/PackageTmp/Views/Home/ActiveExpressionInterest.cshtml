@@ -1,0 +1,95 @@
+﻿@model  IEnumerable<E_Procurement.Models.IFPRequestsModel>
+@{
+    ViewBag.Title = "ActiveExpressionInterest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int EOICounter = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>Active Expression of Interest (EOI) Notices</i></h5>
+            </div>
+        </div>
+    </div>
+    <p>The following Open Tender Notices are strictly reserved for Special-Group Suppliers (Youth, Women and Persons With Disabilities) under the AGPO Preference and Reservation Scheme.</p>
+    <div class="row filter-row">
+        <div class="col-sm-3   col-xs-6">
+            <div class="form-group form-focus">
+                <label class="control-label"> Search by Region</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-3   col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">Search by Work Category</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-3  col-xs-6">
+            <div class="form-group form-focus select-focus">
+                <label class="control-label">Search by Tender Expiry Date</label>
+                <input type="text" class="form-control floating" />
+            </div>
+        </div>
+        <div class="col-sm-3  col-xs-6">
+            <a href="#" class="btn btn-success btn-block"> Search </a>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-striped custom-table datatable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Notice No.</th>
+                            <th>External Document No.</th>
+                            <th>Region</th>
+                            <th>Description</th>
+                            <th>Tender Summary</th>
+                            <th>Submission Start Date</th>
+                            <th>Submission End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            EOICounter++;
+                            <tr>
+                                <td>
+                                    @EOICounter
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("ViewExpressionInterest", "Home", new { tendernumber = @item.Code })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.External_Document_No)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Region)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Tender_Summary)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Submission_Start_Date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Submission_End_Date)
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

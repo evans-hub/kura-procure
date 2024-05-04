@@ -1,0 +1,391 @@
+﻿@using E_Procurement.Models
+@model dynamic
+@{
+    ViewBag.Title = "NewMeasurementsSheets";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int goodsServicesrecords = 0;
+    int Servicesrecords = 0;
+    int Worksrecords = 0;
+    int documentsRecords = 0;
+    int attacheddocumentsCounter = 0;
+}
+<div class="content" style="width:96%">
+    <div class="row">
+        <center><h4>Project Measurements Sheet</h4></center>
+    </div>
+    <div class="container">
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-1" type="button" class="btn btn-success btn-circle">Step 1</a>
+                    <p><small> General Details</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">Step 2</a>
+                    <p><small> Measurements & Payments </small></p>
+                </div>
+                <div class="stepwizard-step col-xs-3">
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">Step 3</a>
+                    <p><small> Document Attachment</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body" style="width:100%">
+        <div class="panel panel-primary setup-content" id="step-1">
+            <div class="panel-heading" style="background-color:#006400">
+                <h3 class="panel-title">Project Measurements Sheet General Details</h3>
+            </div>
+            <br /><br />
+            <div class="panel-body">
+                <div id="rfiresponsesfeedback" style="display: none; background-color:antiquewhite" data-dismiss="alert"></div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Project No:</label>
+                        @Html.Action("ProjectsViewLists", "Contractor")
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Measurement Sheet Description:</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Work Start Chainage:</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Work End Chainage:</label>
+                        <input maxlength="100" type="text" required="required" id="prequaliinvitno" name="prequaliinvitno" class="form-control" value="" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Contract No:</label>
+                        <input maxlength="100" type="text" required="required" class="form-control" id="vendrepresentativename" name="vendrepresentativename" value="@Session["vendorNo"]" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Project Start Date:</label>
+                        <input maxlength="100" type="text" required="required" id="prequaliinvitno" name="prequaliinvitno" class="form-control" value="" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Project Engineer:</label>
+                        <input maxlength="100" type="text" required="required" id="prequaliinvitno" name="prequaliinvitno" class="form-control" value="" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Project Manager:</label>
+                        <input maxlength="100" type="text" required="required" id="prequaliinvitno" name="prequaliinvitno" class="form-control" value="" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Project Representative:</label>
+                        <input maxlength="100" type="text" required="required" id="prequaliinvitno" name="prequaliinvitno" class="form-control" value="" readonly />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label class="control-label">Total Section Length(KM):</label>
+                        <input maxlength="100" type="text" required="required" id="prequaliinvitno" name="prequaliinvitno" class="form-control" value="" readonly />
+                    </div>
+                </div>
+            </div>
+            <center><button class="btn btn-primary btn_submit_response_generaldetails" id="btn_submit_response_generaldetails" name="btn_submit_response_generaldetails" type="button">Submit Details</button></center>
+            <button class="btn btn-primary nextBtn pull-right nextBtnrfiresponse" type="button" id="nextBtnrfiresponse" name="nextBtnrfiresponse" style="display:none">Next </button>
+
+        </div>
+
+        <div class="panel panel-primary setup-content" id="step-2">
+            <div class="panel-heading" style="background-color:#006400">
+                <h5>Measurement and Payment</h5>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                    </div>
+                    <div class="col-xs-8 text-right m-b-30">
+                        <a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#add_measurement_values"><i class="fa fa-plus"></i> Add New Measurements</a>
+                    </div>
+
+                    <div class="row">
+                        <div id="goodsfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable selectedprequalifcationGoods" id="selectedprequalifcationGoods" name="selectedprequalifcationGoods">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Bill Category Code</th>
+                                            <th>Bill No</th>
+                                            <th>Unit of Measure</th>
+                                            <th>Measurement Type</th>
+                                            <th>Measured Quantity</th>
+                                            <th>Contract Quantity</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br /><br /><br />
+            <button class="btn btn-primary nextBtn pull-right" type="button">Continue</button>
+
+        </div>
+        <div id="add_measurement_values" class="modal custom-modal fade" role="dialog">
+            <div class="modal-dialog" style="width:100%">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-content modal-lg" style="width:96%">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Measurement Lines</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="m-b-30">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Bill Category: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="bankcode" name="bankcode">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Bill No:</label>
+                                        <input class="form-control" type="text" id="bankname" name="bankname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Unit of Measure: <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="bankname" name="bankname">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Measurement Type. <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="bankaccountno" name="bankaccountno">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Linear/Unit Quantity. <span class="text-danger">*</span></label>
+                                        <input class="form-control" type="text" id="bankaccountno" name="bankaccountno">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Lenght(M): <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="bankbranchno" name="bankbranchno">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Width(M): <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="phonenumber" name="phonenumber">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Width(M): <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="phonenumber" name="phonenumber">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Post Code: <span class="text-danger">*</span></label>
+                                        @Html.Action("BankCodesList", "Home")
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="m-t-20 text-center">
+                            <button class="btn btn-primary btn_submitVendorBanks" id="btn_submitVendorBanks" name="btn_submitVendorBanks" type="button">Submit Bank Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-primary setup-content" id="step-3">
+            <div class="panel-heading" style="background-color:#006400">
+                <h3 class="panel-title">Documents Attachment</h3>
+            </div>
+            <h3>Mandatory Documents Attachments</h3>
+            <div id="feedback" style="display: none" data-dismiss="alert"></div>
+            <div class="panel-body">
+                <ul class="nav nav-tabs">
+                    <li class="active" style="background-color:gray">
+                        <a href="#tab_1_1" data-toggle="tab">  <h3 class="panel-title" style="color:black">Required Registration Documents</h3></a>
+                    </li>
+                    <li style="background-color:gray">
+                        <a href="#tab_1_2" data-toggle="tab"><h3 class="panel-title" style="color:black">Attach Documents </h3></a>
+                    </li>
+                    <li style="background-color:gray">
+                        <a href="#tab_1_3" data-toggle="tab"><h3 class="panel-title" style="color:black">View Attached Documents </h3></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab_1_1">
+                    <div class="row">
+                        <div class="panel-heading">
+                            <h4>MANDATORY DOCUMENTS</h4>
+                        </div>
+                        <div class="col-md-12">
+                            <h5>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</h5>
+
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Doc ID</th>
+                                            <th>Description</th>
+                                            <th>Requirement Type</th>
+                                            <th>Special Group Requirement</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_1_2">
+                    <div class="row">
+                        <div class="panel-heading">
+                            <h4>Attach Documents </h4>
+                        </div>
+                        <div id="attachprequalificationdocumentsfeedback" style="display: none" data-dismiss="alert"></div>
+                        <div class="col-md-12">
+                            <h5>This Section enables you to upload scanned copies of the supporting documents required as part of this Registration process.</h5>
+                            <div class="progress progress-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Select Document Type: <span class="text-danger">*</span></label>
+                                    @Html.Action("PrequalificationDropDownListDocs", "Home")
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">External Document (Certificate No): <span class="text-danger">*</span></label>
+                                    <input class="form-control " type="text" id="documentstxtCertNo" name="documentstxtCertNo">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Issue Date:<span class="text-danger">*</span></label>
+                                    <div class="cal-icon">
+                                        <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" id="documentsdateOfIssues" name="documentsdateOfIssues" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Expiry Date:<span class="text-danger">*</span></label>
+                                    <div class="cal-icon">
+                                        <input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" id="documentsdateOfexpiries" name="documentsdateOfexpiries" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label">Select Document to Upload: <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="file" id="PrequalificationinputFileselectors" name="PrequalificationinputFileselectors[]">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <center>
+                        <button class="btn btn-primary btn_uploadPrequalifiationsdocuments" type="button" id="btn_uploadPrequalifiationsdocuments" name="btn_uploadPrequalifiationsdocuments">Submit Details</button>
+                        <a href="#" data-toggle="modal" data-target="#declaration_form" class="btn btn-primary  pull-right">Submit Prequalification Details</a>
+                    </center>
+                </div>
+                <div id="declaration_form" class="modal custom-modal fade" role="dialog">
+                    <div class="modal-dialog" style="width:96%">
+                        <div class="modal-content modal-md" style="width:96%">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Vendor Prequalification Declaration</h4>
+                            </div>
+                            <div class="modal-body card-box">
+                                <p>
+                                    Canvassing or giving of false information will lead to automatic disqualification.
+                                    The Kenya Rural Roads Authority has the right to accept or reject any prequalification and is not bound to give reasons for its decision.
+                                    Women, Youth and Persons living with disability are encouraged to apply.
+                                    After issuing letters to the successful bidders, the procurement officer and Finance representative will have to make a sight visit to all the suppliers so as to know their respective places of business so that the Kenya Rural Roads Authority may avoid dealing with brokers/briefcase suppliers.
+                                </p>
+                                <br />
+                                <h4><strong><u>Applicants shall be informed of the results, immediately after completion of the process.</u></strong></h4>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Accept Terms and Conditions:<input type="checkbox" name="termsandconditions" id="termsandconditions"> <span class="text-danger">*</span></label>
+
+                                    </div>
+                                </div>
+                                <br />
+                                <hr />
+                                <div class="m-t-20">
+                                    <center>
+                                        <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                                        <button type="submit" class="btn btn-success btn_PrequalifiationsDeclaration" id="btn_PrequalifiationsDeclaration" name="btn_PrequalifiationsDeclaration">Submit Prequalification</button>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab_1_3">
+                    <div class="row">
+                        <div class="panel-heading">
+                            <h4>View Attached Documents</h4>
+                        </div>
+                        <h5>This Section enables you to view the uploaded/Attached documents.</h5>
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Description</th>
+                                            <th>Date Filed</th>
+                                            <th>Issue Date</th>
+                                            <th>Expiry Date</th>
+                                            <th>File Name</th>
+                                            <th>Download</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </form>
+    </div>
+
+</div>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+

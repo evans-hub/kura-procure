@@ -1,0 +1,140 @@
+﻿@model  IEnumerable<E_Procurement.Models.TenderVDerbarmentTModel>
+@{
+    ViewBag.Title = "DebarmentList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int debarmentCounter = 0;
+}
+
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="card">
+            <div class="card-header text-center" data-background-color="darkgreen">
+                <h5 class="title"><i>Vendor Debarment as per PPADA</i></h5>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-xs-4" style="width:100%">
+                <h5> <strong><u>Public Procurement & Disposal Act Revised Edition 2016 on Debarment</u></strong></h5>
+                <p>
+                    Section 41 of the Public Procurement and Asset Disposal Act (PPADA) Revised Edition 2016 provides guidelines
+                    and grounds for vendor debarment in Kenya.
+                    (1) The PPRA Review Board shall debar a person from participating in procurement or asset disposal
+                    proceedings on the ground that the person—
+                    (a) has committed an offence under this Act;
+                    (b) has committed an offence relating to procurement under any other Act or Law of Kenya or any other
+                    jurisdiction;
+                    (c) has breached a contract for a procurement by a public entity including poor performance;
+                    (d) has, in procurement or asset disposal proceedings, given false information about his or her qualifications;
+                    (e) has refused to enter into a written contract as required under section 135 of this Act;
+                    (f) has breached a code of ethics issued by the Authority pursuant to section 181 of this Act or the code of ethics
+                    of the relevant profession regulated by an Act of Parliament;
+                    (g) has defaulted on his or her tax obligations;
+                    (h) is guilty of corrupt or fraudulent practices; or
+                    (i) is guilty of a serious violation of fair employment laws and practices.
+                    (2) Without limiting the generality of subsection (1) the Board may debar a person from participating in any
+                    procurement process if that person—
+                    (a) has breached the requirements of the tender securing declaration form in the tender documents; or
+                    (b) has not performed according to professionally regulated procedures.
+                    (3) The Authority, may also debar a person from participating in procurement or asset disposal proceedings—
+                    (a) on the recommendation of a law enforcement organ with an investigative mandate;
+                    (b) on grounds prescribed by the Authority in Regulations.
+                    (4) A debarment under this section shall be for a specified period of time of not less than three years.
+                    A copy of the Public Procurement and Asset Disposal Act can be downloaded from the <a href="http://ppra.go.ke/">Public Procurment Regulatory Authority Website</a>
+                </p>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>Ineligible Firms and Individuals</u></strong></h5>
+        </div>
+        <div class="row filter-row">
+            <div class="col-sm-2 col-xs-6">
+                <div class="form-group form-focus">
+                    <label class="control-label"> From Date</label>
+                    <div class="cal-icon"><input class="form-control datetimepicker floating" type="text"></div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-6">
+                <div class="form-group form-focus">
+                    <label class="control-label">To Date</label>
+                    <div class="cal-icon"><input class="form-control datetimepicker floating" type="text"></div>
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-6">
+                <div class="form-group form-focus select-focus">
+                    <label class="control-label">Debarment Reason Code</label>
+                    <input type="text" class="form-control floating" />
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-6">
+                <div class="form-group form-focus select-focus">
+                    <label class="control-label">Search by Name</label>
+                    <input type="text" class="form-control floating" />
+                </div>
+            </div>
+            <div class="col-sm-2 col-xs-6">
+                <a href="#" class="btn btn-danger btn-block"> Clear </a>
+            </div><div class="col-sm-2 col-xs-6">
+                <a href="#" class="btn btn-success btn-block"> Search </a>
+            </div>
+        </div>
+    </div>
+    <p>
+        Kenya Rural Roads Authority (The Procuring Entity) shall not procure from, contract with, or engage a tenderer
+        who is debarred from participating in public procurement proceedings pursuant to the Public Procurement and
+        Disposal Act (PPADA) and its Regulations.<br />
+        The debarment list below is based on information provided by the Public Procurement Regulatory Authority
+        (PPRA) and other cross-debarment development partners such as the World Bank.   </p>
+    
+    <div class="row">
+        <div class="col-md-12">
+                <div class="table-responsive" s>
+                    <table class="table table-striped custom-table datatable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Firm Name</th>
+                                <th>Description</th>
+                                <th>Debarment Reason Code</th>
+                                <th>Inelligibility Start Date</th>
+                                <th>Inelligibility End Date</th>
+                                <th>Reinstatement Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                debarmentCounter++;
+                                <tr>
+                                    <td>
+                                        @debarmentCounter
+                                    </td>
+                                    <td >
+                                        @Html.DisplayFor(modelItem => item.Firm_Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Reason_Code)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Ineligibility_Start_Date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Ineligibility_End_Date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Reinstatement_Date)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+

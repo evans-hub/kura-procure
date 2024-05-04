@@ -1,0 +1,105 @@
+﻿@model  IEnumerable<E_Procurement.Models.Contractor.WorkExecutionPlanModel>
+@{
+    ViewBag.Title = "PendingExecutionsPlans";
+    Layout = "~/Views/Shared/_ContractorLayout.cshtml";
+    int Executionplans = 0;
+}
+
+<div class="content container-fluid">
+    <div class="row">
+        <div class="col-xs-4" style="width:100%">
+            <h5><strong><u>Pending  Engineer's Works Executions Plans</u></strong></h5>
+        </div>
+        <p>
+        Once the Project has Commenced, the Contractor is required to file/submit the following Key Reports/Activities
+        Daily Work Records,Deliverables  Register,View Published Meetings Appointments, File Minnutes fro Project Meetings,File Work Confirmation Notices, View Inspection Request and Corrective Orders,View approved Payment Certificate.
+
+        </p>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade active in" id="general_details">
+            <p>The following are the Pending   Engineer's Works Executions Plans</p>
+            <div class="row filter-row">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus">
+                        <label class="control-label">Search by Regions</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="form-group form-focus select-focus">
+                        <label class="control-label">Search by Contract No</label>
+                        <input type="text" class="form-control floating" />
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>No.</th>
+                                    <th>Order No.</th>
+                                    <th>Description</th>
+                                    <th>Contract No</th>
+                                    <th>Project No</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Road Code</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    Executionplans++;
+                                    <tr>
+                                        <td>
+                                            @Executionplans
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Document_No)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Commencement_Order_ID)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Purchase_Contract_ID)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Project_ID)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Project_Start_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Project_End_Date)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Road_Code)
+                                        </td>
+                                        <td>
+                                            <a href="" data-toggle="modal" class="btn btn-success"><i class="fa fa-eye m-r-10"></i> View</a>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

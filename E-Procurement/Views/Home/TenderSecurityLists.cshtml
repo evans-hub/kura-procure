@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<E_Procurement.Models.TenderSecurityTypes>
+
+@{
+    Layout = null;
+}
+<select class="form-control select2" id="ddformofsecurity" name="ddformofsecurity" data_live_search="true" onchange="return getSelectedBidSecurity()">
+    <option value="">--Select Security Types---</option>
+    <optgroup label="All Security Types List">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Description</option>
+        }
+    </optgroup>
+</select>

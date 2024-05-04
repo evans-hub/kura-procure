@@ -1,0 +1,15 @@
+﻿@model  IEnumerable<E_Procurement.Models.LanguageModel>
+@{
+    Layout = null;
+}
+
+<select class="form-control select2" id="dropdownlanguagecodes" name="dropdownlanguagecodes" data_live_search="true">
+    <option value="">--Select Language---</option>
+    <optgroup label="Availlable Language Codes">
+        @foreach (var item in Model)
+        {
+            <option value="@item.Code">@item.Name</option>
+        }
+    </optgroup>
+</select>
+
