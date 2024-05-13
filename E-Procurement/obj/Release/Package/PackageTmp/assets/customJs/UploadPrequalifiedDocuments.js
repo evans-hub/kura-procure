@@ -192,7 +192,7 @@ $("body").on("click", "#button_upload_response_Documents_Tender", function () {
     //  $(".btnSavePrequalifiedDocuments").click(function () {
 
     //Loop through the Table rows and build a JSON array.
-    var DocumentNo = $("#preapplicationo").val();
+    var DocumentNo = $("#Invresponse").val();
     var financials = new Array();
     var formDt = new FormData();
     $("#tbl_prequalified_documents TBODY TR").each(function () {
@@ -200,6 +200,7 @@ $("body").on("click", "#button_upload_response_Documents_Tender", function () {
         var finance = {};
         var i = 0;
         finance.procurementDocumentType = row.find('td:eq(1)').text().trim();
+        finance.description = row.find('td:eq(2)').text().trim();
         //var browsedDoc = row.find("TD input").eq(0).files[0];
         //var input = row.attr("id", "PrequalificationinputFileselectors" + i++).find(".PrequalificationinputFileselectors").val();
         //var browsedDoc = row.attr("id", "PrequalificationinputFileselectors" + i++).find(".PrequalificationinputFileselectors").val();
@@ -213,7 +214,6 @@ $("body").on("click", "#button_upload_response_Documents_Tender", function () {
         finance.certificateNo = row.find("TD input").eq(2).val();
         finance.issueDate = row.find("TD input").eq(1).val();
         finance.applicationNO = DocumentNo;
-
         //formDt.append("browsedfile", browsedDoc);
         financials.push(finance);
     });

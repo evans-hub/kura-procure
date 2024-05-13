@@ -71,7 +71,7 @@
                                     @Html.DisplayFor(modelItem => item.Submission_Start_Date)
                                 </td>
                                 <td>
-                                    <a href="@Url.Action("RFQResponseForm", "Home", new { tendernumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-download m-r-10"></i>Download</a>
+                                    <a href="@Url.Action("DisplayPdfInIframeTender", "Home", new { tendernumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-download m-r-10"></i>Download</a>
                                 </td>
                                 <td>
                                     <a href="@Url.Action("RFQResponseForm", "Home", new { tendernumber = @item.Code })" class="btn btn-success" )"><i class="fa fa-share m-r-10"></i>Apply</a>

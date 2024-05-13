@@ -381,8 +381,8 @@ namespace E_Procurement.Controllers
                     {
                         string[] arr = info[i].Split('*');
 
-                        //if (arr[0] != "" && DateTime.Parse(arr[0]) >= today && arr[12] == "RFQ")
-                        //{
+                        if (arr[0] != "" && DateTime.Parse(arr[0]) >= today && arr[12] == "RFQ")
+                        {
                             ActiveRfqModel tender = new ActiveRfqModel();
                             tender.Code = arr[6];
                             tender.Procurement_Method = arr[12];
@@ -409,7 +409,7 @@ namespace E_Procurement.Controllers
                             tender.Submission_End_Date = DateTime.Parse(arr[0]);
                             tender.Published = true;
                             list.Add(tender);
-                        //}
+                        }
 
                     }
 
@@ -1047,7 +1047,7 @@ namespace E_Procurement.Controllers
                 //  model.Response = RegistrationResponseDetails(tenderNo, vendorNo);
                 model.BidDetails = GetBidResponseDetails(tenderNo, vendorNo);
                 ViewBag.TenderNo = Response;
-                model.AttachedBiddDocuments = GetBidAttachedDocumentsDetails(tenderNo, vendorNo);
+                model.AttachedBiddDocuments = GetBidAttachedDocumentsDetails(Response, vendorNo);
 
 
                 return View(model);
@@ -1854,7 +1854,7 @@ namespace E_Procurement.Controllers
                 foreach (prequalifiedDocuments financedetail in finance)
                 {
 
-
+                    
                     var vendorNo = Convert.ToString(Session["vendorNo"]);
                     var nav = new NavConnection().ObjNav();
                     string storedFilename = "";
@@ -1862,6 +1862,7 @@ namespace E_Procurement.Controllers
                     int errCounter = 0, succCounter = 0;
                     DateTime startdate, enddate;
                     CultureInfo usCulture = new CultureInfo("es-ES");
+                    
                     DateTime dtofIssue = DateTime.Now;
                     DateTime expiryDate = DateTime.Now;
                     if (financedetail.issueDate == null && financedetail.expirydate == null)
@@ -1883,6 +1884,11 @@ namespace E_Procurement.Controllers
 
                     if (financedetail.procurementDocumentType.Contains("/"))
                         financedetail.procurementDocumentType = financedetail.procurementDocumentType.Replace("/", "_");
+                    string desc = financedetail.description;
+                    if (string.IsNullOrEmpty(desc)) {
+                        desc = "";
+                    }
+
 
                     FileInfo fi = new FileInfo(financedetail.browsedDoc);
 
@@ -1892,11 +1898,12 @@ namespace E_Procurement.Controllers
                     string ext0 = fi.Extension;
                     string savedF0 = vendorNo + "_" + fileName0 + ext0;
 
-                    bool up2Sharepoint = _UploadSupplierTenderDocumentToSharepoint(financedetail.applicationNO, financedetail.browsedDoc, financedetail.procurementDocumentType);
-                    if (up2Sharepoint == true)
-                    {
+                    //bool up2Sharepoint = _UploadSupplierTenderDocumentToSharepoint(financedetail.applicationNO, financedetail.browsedDoc, financedetail.procurementDocumentType);
+                    //if (up2Sharepoint == true)
+                    //{
+
                         string filename = vendorNo + "_" + fileName0;
-                        string sUrl = ConfigurationManager.AppSettings["S_URL"];
+                        string sUrl = ConfigurationManager.AppSettings["FilesLocation"];
                         string defaultlibraryname = "Procurement%20Documents/";
                         string customlibraryname = "Tender Bid Reponses";
                         string sharepointLibrary = defaultlibraryname + customlibraryname;
@@ -1910,9 +1917,9 @@ namespace E_Procurement.Controllers
                             financedetail.certificateNo = "";
                         }
 
-                        //                    string fsavestatus = nav.FnInsertBidReponseDocuments(vendorNo, typauploadselect, filedescription, certificatenumber, dtofIssue, expiryDate, filename, BidResponseNumber);
+                        // string fsavestatus = nav.FnInsertBidReponseDocuments(vendorNo, typauploadselect, filedescription, certificatenumber, dtofIssue, expiryDate, filename, BidResponseNumber);
 
-                        string fsavestatus = nav.fnInsertBidReponseDocuments(vendorNo, financedetail.procurementDocumentType, "", financedetail.certificateNo, dtofIssue, expiryDate, filename, financedetail.applicationNO, sharepointlink);
+                        string fsavestatus = nav.fnInsertBidReponseDocuments(vendorNo, financedetail.procurementDocumentType, desc, financedetail.certificateNo, dtofIssue, expiryDate, filename, financedetail.applicationNO, sharepointlink);
                         var splitanswer = fsavestatus.Split('*');
                         results = splitanswer[0];
                         //switch (splitanswer[0])
@@ -1922,11 +1929,11 @@ namespace E_Procurement.Controllers
                         //    default:
                         //        return Json("danger*" + succCounter, JsonRequestBehavior.AllowGet);
                         //}
-                    }
-                    else
-                    {
-                        return Json("sharepointError*", JsonRequestBehavior.AllowGet);
-                    }
+                    //}
+                    //else
+                    //{
+                    //    return Json("sharepointError*", JsonRequestBehavior.AllowGet);
+                    //}
                 }
             }
             catch (Exception ex)
@@ -3161,6 +3168,10 @@ namespace E_Procurement.Controllers
             else
             {
                 var vendorNo = Session["vendorNo"].ToString();
+                Session["res"] = responseNumber;
+                Session["tend"] = tenderNo;
+                ViewBag.tends = tenderNo;
+                ViewBag.ress = responseNumber;
                 dynamic model = new ExpandoObject();
                 model.ResponseDetails = GetResponseGeneralDetails(responseNumber, vendorNo);
                 model.financialresponse = GetFinancialResponse(responseNumber, vendorNo);
@@ -3506,16 +3517,22 @@ namespace E_Procurement.Controllers
                     bidresponseNo = Session["RFQBideResponseNumber"].ToString();
                 }
 
-                String status = nav.FnGenerateRFQPreviewReport(vendorNo, bidresponseNo);
+                String status = nav.FnGenerateRFQPreviewReportBid(vendorNo, bidresponseNo);
 
 
             }
             catch
             {
+                //BidResponse
 
             }
 
-            string filePath = "~/Downloads/" + bidresponseNo + ".pdf";
+            //string filePath = "~/Downloads/" + bidresponseNo + ".pdf";
+            //
+            string fp = "C:/inetpub/wwwroot/ProcurementLive/Downloads/BidResponse/";
+            string fileName = $"{bidresponseNo}.pdf";
+            string filePath = Path.Combine(fp, fileName);
+            //
             var contentDisposition = new System.Net.Mime.ContentDisposition
             {
                 FileName = bidresponseNo + ".pdf",
@@ -3526,7 +3543,7 @@ namespace E_Procurement.Controllers
 
         }
         [HttpGet]
-        public ActionResult DisplayPdfInIframeTender(string bidresponseNo)
+        public ActionResult DisplayPdfInIframeTender(string tendernumber)
         {
 
             try
@@ -3535,12 +3552,12 @@ namespace E_Procurement.Controllers
 
                 var vendorNo = Session["vendorNo"].ToString();
 
-                if (bidresponseNo == null)
+                if (tendernumber == null)
                 {
-                    bidresponseNo = Session["BideResponseNumber"].ToString();
+                    tendernumber = Session["BideResponseNumber"].ToString();
                 }
 
-                String status = nav.FnGenerateRFQPreviewReport(vendorNo, bidresponseNo);
+                String status = nav.FnGenerateRFQPreviewReport1(vendorNo, tendernumber);
 
 
             }
@@ -3549,22 +3566,33 @@ namespace E_Procurement.Controllers
 
             }
 
+            tendernumber = Regex.Replace(tendernumber, ":", "");
+            //string path = "~/Downloads/RFQ/";
+            //if (!Directory.Exists(path))
+            //{
+            //    Directory.CreateDirectory(path);
+            //}
+            //string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads", "RFQ");
 
-            bidresponseNo = Regex.Replace(bidresponseNo, ":", "");
-            string path = "~/Downloads/RFQ/";
-            if (!Directory.Exists(path))
-            {
-                Directory.CreateDirectory(path);
-            }
+            //if (!Directory.Exists(path))
+            //{
+            //    Directory.CreateDirectory(path);
+            //}
 
-            string filePath = "~/Downloads/RFQ/" + bidresponseNo + ".pdf";
+           // string fp = "C:/inetpub/wwwroot/ProcurementLive/Downloads/RFQ/";
+           //// string filePath = "~/Downloads/RFQ/" + tendernumber + ".pdf";
+           // string filePath = fp + tendernumber + ".pdf";
+            string fp = "C:/inetpub/wwwroot/ProcurementLive/Downloads/RFQ/";
+            string fileName = $"{tendernumber}.pdf"; 
+            string filePath = Path.Combine(fp, fileName);
             var contentDisposition = new System.Net.Mime.ContentDisposition
             {
-                FileName = bidresponseNo + ".pdf",
+                FileName = tendernumber + ".pdf",
                 Inline = true
             };
             Response.Headers.Add("Content-Disposition", contentDisposition.ToString());
             return File(filePath, System.Net.Mime.MediaTypeNames.Application.Pdf);
+
 
         }
         private static List<RegistrationDocumentsModel> AlreadyRegisteredDocumentsDetails(string vendorNo)
@@ -8590,7 +8618,7 @@ namespace E_Procurement.Controllers
 
         public JsonResult SelectedBidSecurity(string postcode)
         {
-            List<TenderSecurityTypes> list = new List<TenderSecurityTypes>();
+            List<Models.TenderSecurityTypes> list = new List<Models.TenderSecurityTypes>();
 
             try
             {
@@ -11933,50 +11961,59 @@ namespace E_Procurement.Controllers
                 }
             }
         }
-        public JsonResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
-        {
-            var vendorNo = Convert.ToString(Session["vendorNo"]);
-            var sharepointUrl = ConfigurationManager.AppSettings["S_URL"];
-            using (ClientContext ctx = new ClientContext(sharepointUrl))
-            {
-                string password = ConfigurationManager.AppSettings["S_PWD"];
-                string account = ConfigurationManager.AppSettings["S_USERNAME"];
-                string domainname = ConfigurationManager.AppSettings["S_DOMAIN"];
-                var secret = new SecureString();
-                foreach (char c in password)
-                {
-                    secret.AppendChar(c);
-                }
-                try
-                {
-                    ctx.Credentials = new NetworkCredential(account, secret, domainname);
-                    ctx.Load(ctx.Web);
-                    ctx.ExecuteQuery();
 
-                    Uri uri = new Uri(sharepointUrl);
-                    string sSpSiteRelativeUrl = uri.AbsolutePath;
-                    string filePath = sSpSiteRelativeUrl + "Procurement Documents/Tender Bid Reponses/" + vendorNo + "/" + filename;
-                    var file = ctx.Web.GetFileByServerRelativeUrl(filePath);
-                    ctx.Load(file, f => f.Exists);
-                    file.DeleteObject();
-                    ctx.ExecuteQuery();
-                    var nav = new NavConnection().ObjNav();
-                    var deleteDoc = nav.FnDelBidRespDocument(vendorNo, entryNo);
-
-                    if (!file.Exists)
-                    {
-                        return Json("filenotfound*", JsonRequestBehavior.AllowGet);
-                    }
-                    return Json("success*", JsonRequestBehavior.AllowGet);
-                }
-                catch (Exception ex)
-                {
-                    return Json("danger*" + ex.Message, JsonRequestBehavior.AllowGet);
-                }
-            }
+public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
+    {
+        var vendorNo = Convert.ToString(Session["vendorNo"]);
+        //string responseNumber = Session["res"].ToString();
+        //string tenderNo = Session["tend"].ToString();
+        var nav = new NavConnection().ObjNav();
+        var deleteDoc = nav.FnDelBidRespDocument(vendorNo, entryNo);
+            return Json(deleteDoc, JsonRequestBehavior.AllowGet);
         }
 
-        public JsonResult DeleteperformancedDocfromSharepoint(string filename, string docNo)
+
+    //var sharepointUrl = ConfigurationManager.AppSettings["S_URL"];
+    //using (ClientContext ctx = new ClientContext(sharepointUrl))
+    //{
+    //    string password = ConfigurationManager.AppSettings["S_PWD"];
+    //    string account = ConfigurationManager.AppSettings["S_USERNAME"];
+    //    string domainname = ConfigurationManager.AppSettings["S_DOMAIN"];
+    //    var secret = new SecureString();
+    //    foreach (char c in password)
+    //    {
+    //        secret.AppendChar(c);
+    //    }
+    //    try
+    //    {
+    //        ctx.Credentials = new NetworkCredential(account, secret, domainname);
+    //        ctx.Load(ctx.Web);
+    //        ctx.ExecuteQuery();
+
+    //        Uri uri = new Uri(sharepointUrl);
+    //        string sSpSiteRelativeUrl = uri.AbsolutePath;
+    //        string filePath = sSpSiteRelativeUrl + "Procurement Documents/Tender Bid Reponses/" + vendorNo + "/" + filename;
+    //        var file = ctx.Web.GetFileByServerRelativeUrl(filePath);
+    //        ctx.Load(file, f => f.Exists);
+    //        file.DeleteObject();
+    //        ctx.ExecuteQuery();
+    //        var nav = new NavConnection().ObjNav();
+    //        var deleteDoc = nav.FnDelBidRespDocument(vendorNo, entryNo);
+
+    //        if (!file.Exists)
+    //        {
+    //            return Json("filenotfound*", JsonRequestBehavior.AllowGet);
+    //        }
+    //        return Json("success*", JsonRequestBehavior.AllowGet);
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        return Json("danger*" + ex.Message, JsonRequestBehavior.AllowGet);
+    //    }
+    //}
+    //}
+
+    public JsonResult DeleteperformancedDocfromSharepoint(string filename, string docNo)
         {
             var vendorNo = Convert.ToString(Session["vendorNo"]);
             var sharepointUrl = ConfigurationManager.AppSettings["S_URL"];
@@ -12563,6 +12600,135 @@ namespace E_Procurement.Controllers
                 return RedirectToAction("Login", "Home");
             }
 
+        }
+
+        [HandleError]
+        public ActionResult ClosedRFQs()
+        {
+            if (Session["vendorNo"] == null)
+            {
+                RedirectToAction("Login", "Home");
+            }
+
+            List<ActiveRfqModel> list = new List<ActiveRfqModel>();
+            try
+            {
+                var nav = new NavConnection().queries();
+                string vendorNo = Session["vendorNo"].ToString();
+                var today = DateTime.Today;
+                var result = nav.fnGetInvitationForRFQ(vendorNo);
+                String[] info = result.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                if (info != null)
+                {
+                    for (int i = 0; i < info.Length; i++)
+                    {
+                        string[] arr = info[i].Split('*');
+
+                        if (arr[0] != "" && DateTime.Parse(arr[0]) >= today && arr[12] == "RFQ" && arr[14] =="Closed")
+                        {
+                            ActiveRfqModel tender = new ActiveRfqModel();
+                            tender.Code = arr[6];
+                            tender.Procurement_Method = arr[12];
+                            tender.Solicitation_Type = arr[1];
+                            tender.External_Document_No = arr[2];
+                            tender.Procurement_Type = arr[11];
+                            tender.Procurement_Category_ID = arr[3];
+                            tender.Project_ID = arr[4];
+                            tender.Tender_Name = arr[5];
+                            tender.Tender_Summary = arr[7];
+                            tender.Description = arr[8];
+                            if (arr[13] != "")
+                            {
+                                tender.Document_Date = DateTime.Parse(arr[13]);
+
+                            }
+                            if (arr[10] != "")
+                            {
+                                tender.Submission_Start_Date = DateTime.Parse(arr[10]);
+
+                            }
+                            tender.Status = arr[9];
+                            tender.Name = arr[5];
+                            tender.Submission_End_Date = DateTime.Parse(arr[0]);
+                            tender.Published = true;
+                            list.Add(tender);
+                        }
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return View(list);
+        }
+
+        [HandleError]
+        public ActionResult AwardedQuotations()
+        {
+            if (Session["vendorNo"] == null)
+            {
+                RedirectToAction("Login", "Home");
+            }
+
+            List<ActiveRfqModel> list = new List<ActiveRfqModel>();
+            try
+            {
+                var nav = new NavConnection().queries();
+                string vendorNo = Session["vendorNo"].ToString();
+                var today = DateTime.Today;
+                var result = nav.fnGetInvitationForRFQ(vendorNo);
+
+                String[] info = result.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                if (info != null)
+                {
+                    for (int i = 0; i < info.Length; i++)
+                    {
+                        string[] arr = info[i].Split('*');
+
+                        if (arr[0] != "" && DateTime.Parse(arr[0]) >= today && arr[12] == "RFQ" && arr[14] == "Published")
+                        {
+                            ActiveRfqModel tender = new ActiveRfqModel();
+                            tender.Code = arr[6];
+                            tender.Procurement_Method = arr[12];
+                            tender.Solicitation_Type = arr[1];
+                            tender.External_Document_No = arr[2];
+                            tender.Procurement_Type = arr[11];
+                            tender.Procurement_Category_ID = arr[3];
+                            tender.Project_ID = arr[4];
+                            tender.Tender_Name = arr[5];
+                            tender.Tender_Summary = arr[7];
+                            tender.Description = arr[8];
+                            if (arr[13] != "")
+                            {
+                                tender.Document_Date = DateTime.Parse(arr[13]);
+
+                            }
+                            if (arr[10] != "")
+                            {
+                                tender.Submission_Start_Date = DateTime.Parse(arr[10]);
+
+
+                            }
+                            tender.Status = arr[9];
+                            tender.Name = arr[5];
+                            tender.Submission_End_Date = DateTime.Parse(arr[0]);
+                            tender.Published = true;
+                            list.Add(tender);
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return View(list);
         }
 
 

@@ -1854,3 +1854,301 @@ D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procuremen
 D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procur.FDAA3862.Up2Date
 D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.dll
 D:\Portal\Kura e-Procurement\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.pdb
+C:\BB\eprocurementv1\E-Procurement\bin\ApplicationInsights.config
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\csc.exe
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\vbc.exe
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe
+C:\BB\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+C:\BB\eprocurementv1\E-Procurement\bin\E-Procurement.dll.config
+C:\BB\eprocurementv1\E-Procurement\bin\E-Procurement.dll
+C:\BB\eprocurementv1\E-Procurement\bin\E-Procurement.pdb
+C:\BB\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.dll
+C:\BB\eprocurementv1\E-Procurement\bin\EntityFramework.dll
+C:\BB\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Owin.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Spatial.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Helpers.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Http.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Mvc.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Optimization.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Razor.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.WebPages.dll
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.dll
+C:\BB\eprocurementv1\E-Procurement\bin\WebGrease.dll
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.pdb
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.pdb
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Spatial.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Http.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Helpers.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Mvc.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Optimization.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.Razor.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.WebPages.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+C:\BB\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.pdb
+C:\BB\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.xml
+C:\BB\eprocurementv1\E-Procurement\bin\EntityFramework.xml
+C:\BB\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+C:\BB\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\BB\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\de\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\es\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\fr\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\it\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ja\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ko\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\ru\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+C:\BB\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.csprojResolveAssemblyReference.cache
+C:\BB\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.dll
+C:\BB\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.pdb
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ApplicationInsights.config
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\csc.exe
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\System.Collections.Immutable.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\System.Reflection.Metadata.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\vbc.exe
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\roslyn\VBCSCompiler.exe.config
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\E-Procurement.dll.config
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\E-Procurement.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\E-Procurement.pdb
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\EntityFramework.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.Agent.Intercept.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Web.Infrastructure.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Owin.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Spatial.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Helpers.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Http.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Mvc.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Optimization.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Razor.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.WebPages.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\WebGrease.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.DependencyCollector.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.Web.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AI.WindowsServer.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.ApplicationInsights.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.pdb
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.OData.Versioning.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.pdb
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.WebApi.Versioning.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Data.Edm.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Data.OData.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Data.Services.Client.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.OData.Core.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.OData.Edm.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Spatial.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Net.Http.Formatting.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Spatial.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Http.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Helpers.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Mvc.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Optimization.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.Razor.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.WebPages.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Deployment.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\System.Web.WebPages.Razor.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Antlr3.Runtime.pdb
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Newtonsoft.Json.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\EntityFramework.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\EntityFramework.SqlServer.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Core.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Facebook.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Cookies.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.OAuth.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Google.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.Twitter.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\de\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\es\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\fr\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\it\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ja\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ko\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ru\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\de\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\es\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\fr\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\it\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ja\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ko\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\ru\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hans\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\bin\zh-Hant\System.Spatial.resources.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.dll
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.pdb
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.csproj.AssemblyReference.cache
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\obj\Debug\E-Procurement.csproj.CoreCompileInputs.cache
+F:\procurement any\eprocurementv1\eprocurementv1\E-Procurement\obj\Debug\E-Procur.FDAA3862.Up2Date

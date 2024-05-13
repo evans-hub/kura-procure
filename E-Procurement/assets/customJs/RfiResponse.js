@@ -1340,8 +1340,162 @@
         });
 
     });
+    $(".button_submit_tender_response_tender_wizard").click(function () {
+        //Swal Message
+        Swal.fire({
+            title: "Confirm Bid Response Submission?",
+            text: "Are you sure you would like to proceed with Bid Response submission?",
+            type: "warning",
+            showCancelButton: true,
+            closeOnConfirm: true,
+            confirmButtonText: "Yes, Proceed!",
+            confirmButtonClass: "btn-success",
+            confirmButtonColor: "#008000",
+            position: "center"
 
-  
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "/Home/ActiveTenderNotices",
+                    type: "POST",
+                    data: "",
+                    contentType: "application/json",
+                    cache: false,
+                    processData: false
+                }).done(function () {
+                    Swal.fire
+                           ({
+                               title: "Tender Response Submitted!",
+                               text: status,
+                               type: "success"
+                           }).then(() => {
+                               $("#bideresponsesubmissionfeedback").css("display", "block");
+                               $("#bideresponsesubmissionfeedback").css("color", "green");
+                               $('#bideresponsesubmissionfeedback').attr("class", "alert alert-success");
+                               $("#bideresponsesubmissionfeedback").html("Your Tender Response Details have been successfully submitted.");
+                               $("#bideresponsesubmissionfeedback").css("display", "block");
+                               $("#bideresponsesubmissionfeedback").css("color", "green");
+                               $("#bideresponsesubmissionfeedback").html("Your Tender Response Details have been successfully submitted.!");
+                               window.location.href = "/Home/ActiveTenderNotices"
+                           });
+
+                }
+                );
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Tender Response Details Cancelled',
+                    'You cancelled your Tender Response submission details!',
+                    'error'
+                );
+            }
+        });
+
+    });
+    $(".button_submit_tender_response_tender_rfq").click(function () {
+        //Swal Message
+        Swal.fire({
+            title: "Confirm Bid Response Submission?",
+            text: "Are you sure you would like to proceed with Bid Response submission?",
+            type: "warning",
+            showCancelButton: true,
+            closeOnConfirm: true,
+            confirmButtonText: "Yes, Proceed!",
+            confirmButtonClass: "btn-success",
+            confirmButtonColor: "#008000",
+            position: "center"
+
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "/Home/ActiveRFQs",
+                    type: "POST",
+                    data: "",
+                    contentType: "application/json",
+                    cache: false,
+                    processData: false
+                }).done(function () {
+                    Swal.fire
+                           ({
+                               title: "Tender Response Submitted!",
+                               text: status,
+                               type: "success"
+                           }).then(() => {
+                               $("#bideresponsesubmissionfeedback").css("display", "block");
+                               $("#bideresponsesubmissionfeedback").css("color", "green");
+                               $('#bideresponsesubmissionfeedback').attr("class", "alert alert-success");
+                               $("#bideresponsesubmissionfeedback").html("Your Tender Response Details have been successfully submitted.");
+                               $("#bideresponsesubmissionfeedback").css("display", "block");
+                               $("#bideresponsesubmissionfeedback").css("color", "green");
+                               $("#bideresponsesubmissionfeedback").html("Your Tender Response Details have been successfully submitted.!");
+                               window.location.href = "/Home/ActiveTenderNotices"
+                           });
+
+                }
+                );
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Tender Response Details Cancelled',
+                    'You cancelled your Tender Response submission details!',
+                    'error'
+                );
+            }
+        });
+
+    });
+
+
+    $(".button_submit_tender_response_attach_document").click(function () {
+        //Swal Message
+        Swal.fire({
+            title: "Confirm Bid Response Submission?",
+            text: "Are you sure you would like to proceed with Bid Response submission?",
+            type: "warning",
+            showCancelButton: true,
+            closeOnConfirm: true,
+            confirmButtonText: "Yes, Proceed!",
+            confirmButtonClass: "btn-success",
+            confirmButtonColor: "#008000",
+            position: "center"
+
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "/Home/ActiveTenderNotices",
+                    type: "POST",
+                    data: "",
+                    contentType: "application/json",
+                    cache: false,
+                    processData: false
+                }).done(function () {
+                    Swal.fire
+                           ({
+                               title: "Tender Response Submitted!",
+                               text: status,
+                               type: "success"
+                           }).then(() => {
+                               $("#bideresponsesubmissionfeedback").css("display", "block");
+                               $("#bideresponsesubmissionfeedback").css("color", "green");
+                               $('#bideresponsesubmissionfeedback').attr("class", "alert alert-success");
+                               $("#bideresponsesubmissionfeedback").html("Your Tender Response Details have been successfully submitted.");
+                               $("#bideresponsesubmissionfeedback").css("display", "block");
+                               $("#bideresponsesubmissionfeedback").css("color", "green");
+                               $("#bideresponsesubmissionfeedback").html("Your Tender Response Details have been successfully submitted.!");
+                               window.location.href = "/Home/ActiveTenderNotices"
+                           });
+
+                }
+                );
+            } else if (result.dismiss === Swal.DismissReason.cancel) {
+                Swal.fire(
+                    'Tender Response Details Cancelled',
+                    'You cancelled your Tender Response submission details!',
+                    'error'
+                );
+            }
+        });
+
+    });
+
     //Supplier BidEquipments Reponse Function
     $(".btn_editEquipments").click(function () {
         //Set data to be sent

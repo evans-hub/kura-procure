@@ -46,6 +46,8 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade active in" id="tab_general_details">
+                <p>tendorNo=@ViewBag.tends</p>
+                <p>response No=@ViewBag.ress</p>
 
                 @foreach (SubmittedTenderResponse item in Model.ResponseDetails)
                 {
@@ -158,6 +160,7 @@
                                 <tbody>
                                     @foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)
                                     {
+                                        
                                         documentsCounter++;
                                         <tr>
                                             <td>
@@ -179,12 +182,12 @@
                                                 @Html.DisplayFor(modelItem => item.File_Name)
                                             </td>
                                             <td>
-                                                <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
+                                                <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DisplayPdfInIframeTender", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
 
                                             </td>
                                             <td>
-                                                <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
-
+                                                <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+                                            
                                             </td>
                                         </tr>
                                     }

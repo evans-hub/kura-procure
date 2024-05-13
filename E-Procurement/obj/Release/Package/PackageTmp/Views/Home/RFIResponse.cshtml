@@ -35,7 +35,7 @@
                                         @rficounter
                                     </td>
                                     <td>
-                                        <a href="@Url.Action("ViewPrequalifications", "Home", new { InvitationNumber = @item.Code,scoringTemplate=item.bidscoringTemplate })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
+                                        <a href="@Url.Action("ViewPrequalifications", "Home", new { InvitationNumber = @item.Code,scoringTemplate=@item.bidscoringTemplate })"><strong>@Html.DisplayFor(modelItem => item.Code)</strong></a>
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Description)

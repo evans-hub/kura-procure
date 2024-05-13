@@ -2,6 +2,35 @@
 <definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/procurement" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/procurement" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/procurement" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="fngetDWRWorkExecutionPlanNumber">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="dailyworkrecordno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fngetDWRWorkExecutionPlanNumber_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fngetDailyWorkRecordDocumentDate">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fngetDailyWorkRecordDocumentDate_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
       <element name="fngetDailyWorkRecordProjectNumber">
         <complexType>
           <sequence>
@@ -159,6 +188,48 @@
         <complexType>
           <sequence>
             <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnEditBidResponseInsertBalanceSheet">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bidresponseNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="yearCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="totalCurrentAssets" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="totalFixedAssets" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="totalCurrentLiability" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="totalLongtermliabilty" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="totalOwnersequity" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="vendorNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnEditBidResponseInsertBalanceSheet_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnEditInsertIncomestatementDetails">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="bidresponsenumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="yearCode" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="totalRevenue" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="totaCostofsoldgoods" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="totaOperatingexpenses" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="othernoneOperevenue" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="interestExpense" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="vendorNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="fnEditInsertIncomestatementDetails_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
           </sequence>
         </complexType>
       </element>
@@ -2533,35 +2604,6 @@
           </sequence>
         </complexType>
       </element>
-      <element name="fngetDWRWorkExecutionPlanNumber">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="dailyworkrecordno" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="fngetDWRWorkExecutionPlanNumber_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="fngetDailyWorkRecordDocumentDate">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="documentno" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="fngetDailyWorkRecordDocumentDate_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
       <element name="FnAddDirectors">
         <complexType>
           <sequence>
@@ -2779,6 +2821,36 @@
         </complexType>
       </element>
       <element name="FnGeneratePreviousIPC_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGenerateRFQPreviewReport1">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bidrsponseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGenerateRFQPreviewReport1_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGenerateRFQPreviewReportBid">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="vendorNumber" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="bidrsponseNumber" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="FnGenerateRFQPreviewReportBid_Result">
         <complexType>
           <sequence>
             <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
@@ -4516,50 +4588,20 @@
           <sequence />
         </complexType>
       </element>
-      <element name="fnEditBidResponseInsertBalanceSheet">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="bidresponseNumber" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="yearCode" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="totalCurrentAssets" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="totalFixedAssets" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="totalCurrentLiability" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="totalLongtermliabilty" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="totalOwnersequity" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="vendorNo" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="fnEditBidResponseInsertBalanceSheet_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="fnEditInsertIncomestatementDetails">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="bidresponsenumber" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="yearCode" type="string" />
-            <element minOccurs="1" maxOccurs="1" name="totalRevenue" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="totaCostofsoldgoods" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="totaOperatingexpenses" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="othernoneOperevenue" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="interestExpense" type="decimal" />
-            <element minOccurs="1" maxOccurs="1" name="vendorNo" type="string" />
-          </sequence>
-        </complexType>
-      </element>
-      <element name="fnEditInsertIncomestatementDetails_Result">
-        <complexType>
-          <sequence>
-            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
-          </sequence>
-        </complexType>
-      </element>
     </schema>
   </types>
+  <message name="fngetDWRWorkExecutionPlanNumber">
+    <part name="parameters" element="tns:fngetDWRWorkExecutionPlanNumber" />
+  </message>
+  <message name="fngetDWRWorkExecutionPlanNumber_Result">
+    <part name="parameters" element="tns:fngetDWRWorkExecutionPlanNumber_Result" />
+  </message>
+  <message name="fngetDailyWorkRecordDocumentDate">
+    <part name="parameters" element="tns:fngetDailyWorkRecordDocumentDate" />
+  </message>
+  <message name="fngetDailyWorkRecordDocumentDate_Result">
+    <part name="parameters" element="tns:fngetDailyWorkRecordDocumentDate_Result" />
+  </message>
   <message name="fngetDailyWorkRecordProjectNumber">
     <part name="parameters" element="tns:fngetDailyWorkRecordProjectNumber" />
   </message>
@@ -4625,6 +4667,18 @@
   </message>
   <message name="sendEmail_Result">
     <part name="parameters" element="tns:sendEmail_Result" />
+  </message>
+  <message name="fnEditBidResponseInsertBalanceSheet">
+    <part name="parameters" element="tns:fnEditBidResponseInsertBalanceSheet" />
+  </message>
+  <message name="fnEditBidResponseInsertBalanceSheet_Result">
+    <part name="parameters" element="tns:fnEditBidResponseInsertBalanceSheet_Result" />
+  </message>
+  <message name="fnEditInsertIncomestatementDetails">
+    <part name="parameters" element="tns:fnEditInsertIncomestatementDetails" />
+  </message>
+  <message name="fnEditInsertIncomestatementDetails_Result">
+    <part name="parameters" element="tns:fnEditInsertIncomestatementDetails_Result" />
   </message>
   <message name="fnGetEvalCritScores">
     <part name="parameters" element="tns:fnGetEvalCritScores" />
@@ -5376,18 +5430,6 @@
   <message name="fngetContractNo_Result">
     <part name="parameters" element="tns:fngetContractNo_Result" />
   </message>
-  <message name="fngetDWRWorkExecutionPlanNumber">
-    <part name="parameters" element="tns:fngetDWRWorkExecutionPlanNumber" />
-  </message>
-  <message name="fngetDWRWorkExecutionPlanNumber_Result">
-    <part name="parameters" element="tns:fngetDWRWorkExecutionPlanNumber_Result" />
-  </message>
-  <message name="fngetDailyWorkRecordDocumentDate">
-    <part name="parameters" element="tns:fngetDailyWorkRecordDocumentDate" />
-  </message>
-  <message name="fngetDailyWorkRecordDocumentDate_Result">
-    <part name="parameters" element="tns:fngetDailyWorkRecordDocumentDate_Result" />
-  </message>
   <message name="FnAddDirectors">
     <part name="parameters" element="tns:FnAddDirectors" />
   </message>
@@ -5471,6 +5513,18 @@
   </message>
   <message name="FnGeneratePreviousIPC_Result">
     <part name="parameters" element="tns:FnGeneratePreviousIPC_Result" />
+  </message>
+  <message name="FnGenerateRFQPreviewReport1">
+    <part name="parameters" element="tns:FnGenerateRFQPreviewReport1" />
+  </message>
+  <message name="FnGenerateRFQPreviewReport1_Result">
+    <part name="parameters" element="tns:FnGenerateRFQPreviewReport1_Result" />
+  </message>
+  <message name="FnGenerateRFQPreviewReportBid">
+    <part name="parameters" element="tns:FnGenerateRFQPreviewReportBid" />
+  </message>
+  <message name="FnGenerateRFQPreviewReportBid_Result">
+    <part name="parameters" element="tns:FnGenerateRFQPreviewReportBid_Result" />
   </message>
   <message name="FnGenerateRFQPreviewReport">
     <part name="parameters" element="tns:FnGenerateRFQPreviewReport" />
@@ -6096,19 +6150,15 @@
   <message name="fnDownloadRfQPTDoc_Result">
     <part name="parameters" element="tns:fnDownloadRfQPTDoc_Result" />
   </message>
-  <message name="fnEditBidResponseInsertBalanceSheet">
-    <part name="parameters" element="tns:fnEditBidResponseInsertBalanceSheet" />
-  </message>
-  <message name="fnEditBidResponseInsertBalanceSheet_Result">
-    <part name="parameters" element="tns:fnEditBidResponseInsertBalanceSheet_Result" />
-  </message>
-  <message name="fnEditInsertIncomestatementDetails">
-    <part name="parameters" element="tns:fnEditInsertIncomestatementDetails" />
-  </message>
-  <message name="fnEditInsertIncomestatementDetails_Result">
-    <part name="parameters" element="tns:fnEditInsertIncomestatementDetails_Result" />
-  </message>
   <portType name="procurement_Port">
+    <operation name="fngetDWRWorkExecutionPlanNumber">
+      <input name="fngetDWRWorkExecutionPlanNumber" message="tns:fngetDWRWorkExecutionPlanNumber" />
+      <output name="fngetDWRWorkExecutionPlanNumber_Result" message="tns:fngetDWRWorkExecutionPlanNumber_Result" />
+    </operation>
+    <operation name="fngetDailyWorkRecordDocumentDate">
+      <input name="fngetDailyWorkRecordDocumentDate" message="tns:fngetDailyWorkRecordDocumentDate" />
+      <output name="fngetDailyWorkRecordDocumentDate_Result" message="tns:fngetDailyWorkRecordDocumentDate_Result" />
+    </operation>
     <operation name="fngetDailyWorkRecordProjectNumber">
       <input name="fngetDailyWorkRecordProjectNumber" message="tns:fngetDailyWorkRecordProjectNumber" />
       <output name="fngetDailyWorkRecordProjectNumber_Result" message="tns:fngetDailyWorkRecordProjectNumber_Result" />
@@ -6152,6 +6202,14 @@
     <operation name="sendEmail">
       <input name="sendEmail" message="tns:sendEmail" />
       <output name="sendEmail_Result" message="tns:sendEmail_Result" />
+    </operation>
+    <operation name="fnEditBidResponseInsertBalanceSheet">
+      <input name="fnEditBidResponseInsertBalanceSheet" message="tns:fnEditBidResponseInsertBalanceSheet" />
+      <output name="fnEditBidResponseInsertBalanceSheet_Result" message="tns:fnEditBidResponseInsertBalanceSheet_Result" />
+    </operation>
+    <operation name="fnEditInsertIncomestatementDetails">
+      <input name="fnEditInsertIncomestatementDetails" message="tns:fnEditInsertIncomestatementDetails" />
+      <output name="fnEditInsertIncomestatementDetails_Result" message="tns:fnEditInsertIncomestatementDetails_Result" />
     </operation>
     <operation name="fnGetEvalCritScores">
       <input name="fnGetEvalCritScores" message="tns:fnGetEvalCritScores" />
@@ -6653,14 +6711,6 @@
       <input name="fngetContractNo" message="tns:fngetContractNo" />
       <output name="fngetContractNo_Result" message="tns:fngetContractNo_Result" />
     </operation>
-    <operation name="fngetDWRWorkExecutionPlanNumber">
-      <input name="fngetDWRWorkExecutionPlanNumber" message="tns:fngetDWRWorkExecutionPlanNumber" />
-      <output name="fngetDWRWorkExecutionPlanNumber_Result" message="tns:fngetDWRWorkExecutionPlanNumber_Result" />
-    </operation>
-    <operation name="fngetDailyWorkRecordDocumentDate">
-      <input name="fngetDailyWorkRecordDocumentDate" message="tns:fngetDailyWorkRecordDocumentDate" />
-      <output name="fngetDailyWorkRecordDocumentDate_Result" message="tns:fngetDailyWorkRecordDocumentDate_Result" />
-    </operation>
     <operation name="FnAddDirectors">
       <input name="FnAddDirectors" message="tns:FnAddDirectors" />
       <output name="FnAddDirectors_Result" message="tns:FnAddDirectors_Result" />
@@ -6716,6 +6766,14 @@
     <operation name="FnGeneratePreviousIPC">
       <input name="FnGeneratePreviousIPC" message="tns:FnGeneratePreviousIPC" />
       <output name="FnGeneratePreviousIPC_Result" message="tns:FnGeneratePreviousIPC_Result" />
+    </operation>
+    <operation name="FnGenerateRFQPreviewReport1">
+      <input name="FnGenerateRFQPreviewReport1" message="tns:FnGenerateRFQPreviewReport1" />
+      <output name="FnGenerateRFQPreviewReport1_Result" message="tns:FnGenerateRFQPreviewReport1_Result" />
+    </operation>
+    <operation name="FnGenerateRFQPreviewReportBid">
+      <input name="FnGenerateRFQPreviewReportBid" message="tns:FnGenerateRFQPreviewReportBid" />
+      <output name="FnGenerateRFQPreviewReportBid_Result" message="tns:FnGenerateRFQPreviewReportBid_Result" />
     </operation>
     <operation name="FnGenerateRFQPreviewReport">
       <input name="FnGenerateRFQPreviewReport" message="tns:FnGenerateRFQPreviewReport" />
@@ -7133,17 +7191,27 @@
       <input name="fnDownloadRfQPTDoc" message="tns:fnDownloadRfQPTDoc" />
       <output name="fnDownloadRfQPTDoc_Result" message="tns:fnDownloadRfQPTDoc_Result" />
     </operation>
-    <operation name="fnEditBidResponseInsertBalanceSheet">
-      <input name="fnEditBidResponseInsertBalanceSheet" message="tns:fnEditBidResponseInsertBalanceSheet" />
-      <output name="fnEditBidResponseInsertBalanceSheet_Result" message="tns:fnEditBidResponseInsertBalanceSheet_Result" />
-    </operation>
-    <operation name="fnEditInsertIncomestatementDetails">
-      <input name="fnEditInsertIncomestatementDetails" message="tns:fnEditInsertIncomestatementDetails" />
-      <output name="fnEditInsertIncomestatementDetails_Result" message="tns:fnEditInsertIncomestatementDetails_Result" />
-    </operation>
   </portType>
   <binding name="procurement_Binding" type="tns:procurement_Port">
     <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="fngetDWRWorkExecutionPlanNumber">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fngetDWRWorkExecutionPlanNumber" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fngetDWRWorkExecutionPlanNumber">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fngetDWRWorkExecutionPlanNumber_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fngetDailyWorkRecordDocumentDate">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fngetDailyWorkRecordDocumentDate" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fngetDailyWorkRecordDocumentDate">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fngetDailyWorkRecordDocumentDate_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
     <operation name="fngetDailyWorkRecordProjectNumber">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fngetDailyWorkRecordProjectNumber" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="fngetDailyWorkRecordProjectNumber">
@@ -7240,6 +7308,24 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="sendEmail_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnEditBidResponseInsertBalanceSheet">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fnEditBidResponseInsertBalanceSheet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnEditBidResponseInsertBalanceSheet">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnEditBidResponseInsertBalanceSheet_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="fnEditInsertIncomestatementDetails">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fnEditInsertIncomestatementDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="fnEditInsertIncomestatementDetails">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="fnEditInsertIncomestatementDetails_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
@@ -8368,24 +8454,6 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
-    <operation name="fngetDWRWorkExecutionPlanNumber">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fngetDWRWorkExecutionPlanNumber" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="fngetDWRWorkExecutionPlanNumber">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="fngetDWRWorkExecutionPlanNumber_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="fngetDailyWorkRecordDocumentDate">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fngetDailyWorkRecordDocumentDate" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="fngetDailyWorkRecordDocumentDate">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="fngetDailyWorkRecordDocumentDate_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
     <operation name="FnAddDirectors">
       <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:FnAddDirectors" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       <input name="FnAddDirectors">
@@ -8509,6 +8577,24 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="FnGeneratePreviousIPC_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGenerateRFQPreviewReport1">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:FnGenerateRFQPreviewReport1" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGenerateRFQPreviewReport1">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGenerateRFQPreviewReport1_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="FnGenerateRFQPreviewReportBid">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:FnGenerateRFQPreviewReportBid" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="FnGenerateRFQPreviewReportBid">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="FnGenerateRFQPreviewReportBid_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>
@@ -9445,24 +9531,6 @@
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </input>
       <output name="fnDownloadRfQPTDoc_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="fnEditBidResponseInsertBalanceSheet">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fnEditBidResponseInsertBalanceSheet" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="fnEditBidResponseInsertBalanceSheet">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="fnEditBidResponseInsertBalanceSheet_Result">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </output>
-    </operation>
-    <operation name="fnEditInsertIncomestatementDetails">
-      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/procurement:fnEditInsertIncomestatementDetails" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      <input name="fnEditInsertIncomestatementDetails">
-        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
-      </input>
-      <output name="fnEditInsertIncomestatementDetails_Result">
         <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
       </output>
     </operation>

@@ -48,3 +48,5 @@
 
     $('div.setup-panel div a.btn-primary').trigger('click');
 });
+
+

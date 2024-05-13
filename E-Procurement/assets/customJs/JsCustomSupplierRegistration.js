@@ -1970,7 +1970,7 @@ function DocumentsDeleteBidResp(url) {
                                 $("#deletekeydocumentsuploadfeedback").css("display", "block");
                                 $("#deletekeydocumentsuploadfeedback").css("color", "green");
                             });
-                            window.location.href = "/Home/TenderAttachDocument?tenderNo=" + DocNo + "&Response=" + response;
+                            window.location.href = "/Home/TenderRFQAttachDocument?tenderNo=" + DocNo + "&Response=" + response;
                             vendorUploadedDocuments.init();
                             break;
                         case "filenotfound":

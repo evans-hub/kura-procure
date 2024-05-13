@@ -637,7 +637,6 @@
     <Content Include="assets\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="assets\bootstrap\dist\fonts\glyphicons-halflings-regulard41d.eot" />
-    <Content Include="Downloads\Terms and Conditions.pdf" />
     <EntityDeploy Include="DBContext\ApplicationContext.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ApplicationContext.Designer.cs</LastGenOutput>
@@ -645,6 +644,7 @@
     <Content Include="DBContext\ApplicationContext.edmx.diagram">
       <DependentUpon>ApplicationContext.edmx</DependentUpon>
     </Content>
+    <Content Include="Downloads\RFQ\RFQ0010.pdf" />
     <None Include="Properties\PublishProfiles\E-Procurement.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

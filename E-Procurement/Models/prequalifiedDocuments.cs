@@ -14,6 +14,7 @@ namespace E_Procurement.Models
         public string applicationNO { get; set; }
         public string issueDate { get; set; }
         public string procurementDocumentType { get; set; }
+        public string description { get; set; }
 
 
     }

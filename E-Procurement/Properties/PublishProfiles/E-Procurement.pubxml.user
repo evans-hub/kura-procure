@@ -6,8 +6,8 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\KURA Published\Kura E-procurement</_PublishTargetUrl>
-    <History>True|2024-05-02T12:33:16.4161905Z;True|2024-05-02T15:03:27.7696745+03:00;</History>
+    <_PublishTargetUrl>C:\procurement published</_PublishTargetUrl>
+    <History>True|2024-05-09T12:57:42.7780765Z;True|2024-05-07T12:09:49.2527346+03:00;True|2024-05-07T11:23:09.8696153+03:00;True|2024-05-02T15:33:16.4161905+03:00;True|2024-05-02T15:03:27.7696745+03:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -15,526 +15,526 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/css/bootstrap.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/fonts/glyphicons-halflings-regular.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/fonts/glyphicons-halflings-regular.svg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/fonts/glyphicons-halflings-regulard41d.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/bootstrap/dist/js/bootstrap.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/AdminLTE.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/AdminLTE.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/bootstrap-datetimepicker.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/bootstrap-tagsinput.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/bootstrap.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/bootstrap.min1.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/bootstrap.min4.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/components.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/CustomAdminLTE.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/CustomCss.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/Custome_Tabs.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/Custom_tabs_1.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/Custom_tab_2.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/dataTables.bootstrap.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/font-awesome.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/fullcalendar.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/ladda-themeless.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/line-awesome.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/material-dashboard-new.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/MaterialCards.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/plugins.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/select2.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/css/style.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/BulkUploads.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/08/2024 12:55:16</publishTime>
     </File>
     <File Include="assets/customJs/BulkUploadsRFq.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/CompleteSupplierRegistration.js">
-      <publishTime>04/12/2024 12:27:35</publishTime>
+      <publishTime>04/12/2024 12:27:34</publishTime>
     </File>
     <File Include="assets/customJs/Customjs.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/07/2024 11:15:22</publishTime>
     </File>
     <File Include="assets/customJs/Custom_tabs_1.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/Custom_tab_2.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/DataSearch.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/DownloadTenderDocuments.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/EditingSupplierDetails.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/InputsValidations.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/jquery.countdown.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/jquery.countdown.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/JsCustomSupplierRegistration.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/08/2024 14:59:32</publishTime>
     </File>
     <File Include="assets/customJs/JsCustomTenderResponse.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/JsSubmittedPrequalifications.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/JsViewPurchaseOrders.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/JsViewSingleTender.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/NoticeofCompletedWorks.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/ProjectWorkExecutionPlan.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/ResetPassword.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/RfiResponse.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/08/2024 16:04:22</publishTime>
     </File>
     <File Include="assets/customJs/supplierRegistration.js">
       <publishTime>04/15/2024 14:19:00</publishTime>
     </File>
     <File Include="assets/customJs/sweetalert.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/UploadPrequalifiedDocuments.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/09/2024 14:55:47</publishTime>
     </File>
     <File Include="assets/customJs/VendorPrequalifications.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/Wizard.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/customJs/WorkExecutionPlans.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/datatables.net-bs/css/dataTables.bootstrap.min.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/datatables.net-bs/js/dataTables.bootstrap.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/datatables.net/js/jquery.dataTables.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont3e6e.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont3e6e.html">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont3e6e.svg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont3e6e.ttf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfont3e6e.woff">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/fontawesome-webfontd41d.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/glyphicons-halflings-regular.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/glyphicons-halflings-regular.html">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/glyphicons-halflings-regular.svg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/glyphicons-halflings-regular.woff">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/glyphicons-halflings-regulard41d.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/line-awesome0176.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/line-awesomeeb4f.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/line-awesomeeb4f.html">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/line-awesomeeb4f.svg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/line-awesomeeb4f.ttf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/fonts/line-awesomeeb4f.woff">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/attachment.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/calander.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/favicon.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/logo.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/logo2.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/logo3.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/placeholder.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/roadLink.png">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/roadlink2.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/roadsbanner.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/tenders.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/user-02.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/user-03.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/user-04.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/user-05.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/user-06.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/user.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/img/video-call.jpg">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/app.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/bootstrap-datetimepicker.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/bootstrap-tagsinput.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/bootstrap.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/chart.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/Customjs.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/dataTables.bootstrap.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/dropfiles.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/fullcalendar.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/jquery-3.2.1.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/jquery-ui.min.html">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/jquery.dataTables.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/jquery.fullcalendar.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/jquery.slimscroll.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/moment.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/select2.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/js/task.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/morris/morris.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/morris/morris.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/raphael/raphael-min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/summernote/dist/font/summernote291f.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/summernote/dist/font/summernote291f.ttf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/summernote/dist/font/summernote291f.woff">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/summernote/dist/font/summernoted41d.eot">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/summernote/dist/summernote.css">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/plugins/summernote/dist/summernote.min.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="assets/Search/DashboardSearchJs.js">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/de/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/E-Procurement.dll">
-      <publishTime>05/02/2024 15:03:17</publishTime>
+      <publishTime>05/09/2024 15:57:35</publishTime>
     </File>
     <File Include="bin/E-Procurement.pdb">
-      <publishTime>05/02/2024 15:03:17</publishTime>
+      <publishTime>05/09/2024 15:57:35</publishTime>
     </File>
     <File Include="bin/E-Procurement.XmlSerializers.dll">
-      <publishTime>05/02/2024 15:03:21</publishTime>
+      <publishTime>05/09/2024 15:57:39</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/es/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/fr/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/fr/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/it/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/it/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/it/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/it/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/ja/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/ja/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/ko/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/ko/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.OData.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.OData.Versioning.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.OData.Versioning.pdb">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.WebApi.Versioning.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.WebApi.Versioning.pdb">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.Data.Edm.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.Data.OData.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/Microsoft.Data.Services.Client.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
@@ -633,73 +633,73 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/ru/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Spatial.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/zh-Hans/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/zh-Hans/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/zh-Hans/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/zh-Hant/Microsoft.Data.Edm.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/zh-Hant/Microsoft.Data.OData.resources.dll">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="bin/zh-Hant/Microsoft.Data.Services.Client.resources.dll">
       <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="bin/zh-Hant/System.Spatial.resources.dll">
-      <publishTime>04/08/2024 14:37:07</publishTime>
+      <publishTime>04/08/2024 14:37:06</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>04/08/2024 14:37:02</publishTime>
@@ -715,6 +715,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="DBContext/ApplicationContext.edmx.diagram">
       <publishTime>04/08/2024 14:37:02</publishTime>
+    </File>
+    <File Include="Downloads/RFQ/RFQ0010.pdf">
+      <publishTime>05/07/2024 13:41:08</publishTime>
     </File>
     <File Include="Downloads/Terms and Conditions.pdf">
       <publishTime>04/08/2024 14:37:02</publishTime>
@@ -738,7 +741,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>04/08/2024 14:37:05</publishTime>
+      <publishTime>04/08/2024 14:37:04</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.9-build00167.js">
       <publishTime>04/08/2024 14:37:02</publishTime>
@@ -792,760 +795,760 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/17/2022 15:28:41</publishTime>
     </File>
     <File Include="Uploads/Colaborator Card/CONT001/CONT001_CERT OF REGISTRATION.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/Colaborator Card/CONT001/CONT001_CONFIDENTIAL BUSINESS QUESTIONNARE.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/Colaborator Card/CONT001/CONT001_KRAPIN.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/Colaborator Card/CONT001/CONT001_TAX COMPLIANT CERT.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/CONT001/LONGHORN PORTAL STATUS REPORT.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/CONT001/RAM COMPARISON.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/CONT001/Shawn Mbuvi~NACOSTI_SIGNOFF.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/CONT001/Shawn Mbuvi~Weekly Planner_June_17th.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/IFPs/Downloads/IFP000002/New Project 2_2.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/IFPs/Downloads/IFP000002/V4 Procurement &amp; Sourcing Design Blueprint_30th April 2020.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/RfQs/VEND1063/NACOST_19_20RFQ_0064/LONGHORN PORTAL STATUS REPORT.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/RfQs/VEND1063/NACOST_19_20RFQ_0064/RAM COMPARISON.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/RfQs/VEND1063/NACOST_19_20RFQ_0064/Shawn Mbuvi~NACOSTI_SIGNOFF.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/RfQs/VEND1063/NACOST_19_20RFQ_0064/Shawn Mbuvi~Weekly Planner_July_30th.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Uploads/RfQs/VEND1063/NACOST_19_20RFQ_0064/Shawn Mbuvi~Weekly Planner_June_17th.pdf">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/ForgotPassword.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/SendCode.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/VerifyCode.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/AccidentandIncidents.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ActiveContracts.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ActiveTenderNotices.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/AllTasks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ApprovedDailyWorkRecords.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ApprovedExecutionsPlans.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ApprovedMeasurementsSheets.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ApprovedWorkExecutionPlans.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/CancelledContracts.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/CommencementOrders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/CompletedContracts.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/CompletedProjects.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/CompletedProjectWorks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/CompletedTasks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ContractorDashboard.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ContractorEquipmentTypeLists.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ContractorLogin.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ContractorPostCodesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ContractorProfile.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ContractorStaffCountryList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/DailyProjectReports.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/DraftDailyWorkRecords.cshtml">
       <publishTime>08/13/2020 20:31:58</publishTime>
     </File>
     <File Include="Views/Contractor/DraftDailyWorksRecords.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/DraftMeasurementsSheets.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/DraftStatusReports.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/DraftsWorkExecutionPlans.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/DraftWorkExecutionPlans.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/EmergencyDrillLog.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ExecutiveMeetings.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/FiledOrders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/FileNewWorkExecutionPlan.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/HealthandSafetyMeetings.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/HomePage.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/InductionBriefingLogs.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/IssuedCorrectiveOrders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/Login.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/MyAccount.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/MyStatement.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/MyTransactions.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/NavigationFooter.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/NavigationMenu.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/NewDailyWorkRecords.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/NewMeasurementsSheets.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/NewProjectMeetingRegister.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/NoticeofCompletedWorks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/OngoingProjectWorks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/OpenTasks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/PendingCommencementsOrders.cshtml">
       <publishTime>08/05/2020 18:04:06</publishTime>
     </File>
     <File Include="Views/Contractor/PendingCommencementWorksOrders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/PendingEngineerApprovalsWorkPlans.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/PendingEngineerDailyWorks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/PendingExecutionsPlans.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/PendingTasks.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/PlannedProjects.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ProjectsMeetings.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ProjectsPendingMinutes.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ProjectStaffRoleCodeList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ProjectsViewLists.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ProjectTasksList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ProjectUpcomingMeetings.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/Register.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/RegisterUpcomingMeeting.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ResetPassword.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/RoadGeneralDetails.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/RoadsInventory.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/SubmittedMeasurementsSheets.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/UpcomingMeetingsAppointments.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/UpcomingProjects.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewCompletedProject.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewContractDetails.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewOngoingProject.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewOrdertoCommence.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewProjectContracts.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewProjects.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewUpcomingMeeting.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/ViewWorkExecutionPlan.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/WeeklyProjectReports.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/WorkPermitsApplication.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/WorkRegionList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/WorksConfirmationNotices.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/WorksExecutionPlans.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/WorksInspectionsRegister.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Contractor/WorkSiteInspections.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ActiveExpressionInterest.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ActiveRFQs.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/07/2024 11:19:50</publishTime>
     </File>
     <File Include="Views/Home/ActiveTenderAddedum.cshtml">
       <publishTime>04/23/2024 11:18:24</publishTime>
     </File>
     <File Include="Views/Home/ActiveTenderNotices.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/AddendumDetailsInject.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/AnnouncementsList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/AppliedQuotations.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/08/2024 15:39:16</publishTime>
     </File>
     <File Include="Views/Home/AwardedQuotations.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/07/2024 18:03:44</publishTime>
     </File>
     <File Include="Views/Home/BankCodesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/BusinessTypes.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ChangePassword.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ClosedRFQs.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/07/2024 18:00:04</publishTime>
     </File>
     <File Include="Views/Home/ClosedTenders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/CompanySize.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/constituencies.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ContractAwards.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/CountriesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/CurrencyCodeLists.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Dashboard.cshtml">
-      <publishTime>04/15/2024 14:46:57</publishTime>
+      <publishTime>04/15/2024 14:46:56</publishTime>
     </File>
     <File Include="Views/Home/DebarmentList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/DocumentsSourcesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/DocumentTemplateDroplist.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/eBidding.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/EditBalanceSheetYearCodeList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/EditIncomeYearCodeList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/EditResponseEquipmentsInject.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/EditSupplierProfile.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/EntityType.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ePrequalifications.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/EquipmentCategoriesLists.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Error.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/FormOfSecurity.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Guarantee.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/IncomeYearCodes.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/IncomeYearCodesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>04/16/2024 15:51:42</publishTime>
     </File>
     <File Include="Views/Home/IndustryGroups.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/InvitationforPrequalifications.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/KeyPersonnelExperience.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/KeyStaffCountriesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/LanguageCode.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Login.cshtml">
-      <publishTime>04/16/2024 15:50:21</publishTime>
+      <publishTime>04/16/2024 15:50:20</publishTime>
     </File>
     <File Include="Views/Home/MyAccount.cshtml">
-      <publishTime>04/17/2024 10:07:29</publishTime>
+      <publishTime>04/17/2024 10:07:28</publishTime>
     </File>
     <File Include="Views/Home/MyStatement.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/MyTransactions.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/NavigationFooter.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/NavigationMenu.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/NotFound.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/OpenPerfomanceGuarantee.cshtml">
       <publishTime>04/23/2024 11:40:28</publishTime>
     </File>
     <File Include="Views/Home/OpenRFQs.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PastExperienceCountries.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PerfGuaranteeDocAttach.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PostalCodeList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PrequalificationAttachedDocuments.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PrequalificationConstituencies.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PrequalificationDropDownListDocs.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PrequalifiedCategories.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PrequalifiedresponsibilityCenters.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/PrequalifiesCategories.cshtml">
       <publishTime>08/05/2020 17:17:18</publishTime>
     </File>
     <File Include="Views/Home/ProjectRole.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Projects.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/purchasecontractId.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RegionsList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/Register.cshtml">
       <publishTime>04/16/2024 15:51:06</publishTime>
     </File>
     <File Include="Views/Home/RegisterDocumentTemplateDroplist.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RegistrationAttachDocuments.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RegistrationCategories.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RegistrationForm.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RegistrationFormResponce.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RegistrationPeriod.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ResetPassword.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RespondQuotationWizard.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/RespondTenderWizard.cshtml">
-      <publishTime>05/02/2024 11:59:42</publishTime>
+      <publishTime>05/08/2024 15:56:16</publishTime>
     </File>
     <File Include="Views/Home/RFIResponse.cshtml">
-      <publishTime>04/23/2024 12:54:33</publishTime>
+      <publishTime>05/07/2024 13:18:00</publishTime>
     </File>
     <File Include="Views/Home/RFIResponseForm.cshtml">
       <publishTime>04/18/2024 11:54:08</publishTime>
     </File>
     <File Include="Views/Home/RFQResponseForm.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/06/2024 12:08:42</publishTime>
     </File>
     <File Include="Views/Home/RgistrationAttachedDocuments.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/selectRegion.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/SharepointConnectionError.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/SingleTender.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/SpecialGroupTenders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/SubmittedRegistrationResponses.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/SubmittedResponses.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/submittedRFQ.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/SubmittedTenders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/supplierCategories.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/supplierDocuments.cshtml">
-      <publishTime>04/12/2024 10:25:09</publishTime>
+      <publishTime>04/12/2024 10:25:08</publishTime>
     </File>
     <File Include="Views/Home/SupplierProfile.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/SupplierRegistration.cshtml">
-      <publishTime>04/17/2024 10:04:03</publishTime>
+      <publishTime>04/17/2024 10:04:02</publishTime>
     </File>
     <File Include="Views/Home/SuppliersCategoriesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/TenderAttachDocument.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/08/2024 15:54:48</publishTime>
     </File>
     <File Include="Views/Home/TenderDocumentTemplateDroplist.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/TenderEvaluationCriteriaInject.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/TenderResponseForm.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/TenderRFQAttachDocument.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/09/2024 14:57:39</publishTime>
     </File>
     <File Include="Views/Home/TendersbyClosingDates.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/TendersbyRegions.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/TenderSecurityLists.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/TendersLists.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/VendorBanksCountryList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/VendorSpecialGroup.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewActiveTender.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewAwadedContracts.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewBankCodesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewEprequalifcations.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewExpressionInterest.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewKeyStaffExperience.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewPrequalifications.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewPrequalificationsAdvert.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewPrequalificationsConstituencies.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewPrequalificationsRegions.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewPurchaseContract.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewPurchaseOrders.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewRegistration.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewRFISpecificRequirement.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewSelectedCategories.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/viewselectedCategoriesRegistration.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewSelectedRegistrationCategories.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewSingleAddendumNotice.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewSingleTender.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewSubmittedOpenTenderResponses.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewSubmittedPrequalifications.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Home/ViewSubmittedRFQResponses.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>05/08/2024 14:46:56</publishTime>
     </File>
     <File Include="Views/Home/YearCodesList.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Manage/SetPassword.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Shared/_ContractorLayout.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/17/2024 08:54:59</publishTime>
+      <publishTime>04/17/2024 08:54:58</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Web References/Eprocurement/Reference.map">
       <publishTime>02/28/2023 09:05:40</publishTime>
     </File>
     <File Include="Web References/LiveCodeunit/Reference.map">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Web References/LiveQueries/Reference.map">
-      <publishTime>04/08/2024 14:37:03</publishTime>
+      <publishTime>04/08/2024 14:37:02</publishTime>
     </File>
     <File Include="Web References/procurementCodeunit/Reference.map">
       <publishTime>05/14/2023 10:03:38</publishTime>
@@ -1566,7 +1569,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/25/2023 15:24:07</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/02/2024 15:43:25</publishTime>
+      <publishTime>05/09/2024 15:57:40</publishTime>
     </File>
   </ItemGroup>
 </Project>
