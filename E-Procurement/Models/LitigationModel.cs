@@ -1,7 +1,7 @@
 ﻿namespace E_Procurement.Models
 {
     public class LitigationModel
-    {
+    { public string docNo { get; set; }
         public string DisputeDescription { get; set; }
         public string CategoryofDispute { get; set; }
         public string Year { get; set; }

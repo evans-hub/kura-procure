@@ -985,8 +985,8 @@ namespace E_Procurement.Controllers
                 model.Response = ResponseDetails(InvitationNumber, vendorNo);
                 model.RequiredDocuments = RequiredDocumentsDetails(InvitationNumber, vendorNo);
                 model.SpecificRequiredDocuments = SpecificRequiredDocuments(InvitationNumber, vendorNo);
-                // model.PrequalificationUploadedDocuments = PrequalificationUploaded(prequalificationNo, vendorNo);
-                // model.UploadedDocument = AttachedPrequalificationDocuments(prequalificationNo);
+                model.PrequalificationUploadedDocuments = PrequalificationUploaded(prequalificationNo, vendorNo);
+               // model.UploadedDocument = AttachedPrequalificationDocuments(prequalificationNo);
                 //model.PrequalificationUploadedDocuments = AttachedPrequalificationDocuments(prequalificationNo);
 
                 return View(model);
@@ -3084,6 +3084,7 @@ namespace E_Procurement.Controllers
                 model.RequiredDocuments = PrequalificationsRequiredDocumentsDetails(InvitationNumber);
                 //  model.AttachedDocuments = PopulatePrequalificationDocuments(InvitationNumber);
                 model.RFI_SCORING_TEMPLATE = EvaluationTemplate(scoringTemplate);
+                Session["inviteNo"] = InvitationNumber;
                 return View(model);
             }
 
@@ -5441,9 +5442,15 @@ namespace E_Procurement.Controllers
             try
             {
                 var vendorNo = Session["vendorNo"].ToString();
+                string docNo = Session["inviteNo"].ToString();
                 var nav = new NavConnection().ObjNav();
-
-                var status = nav.fnInsertLitigationHistoryDetails(vendorNo, litigationmodels.DisputeDescription, Convert.ToInt32(litigationmodels.CategoryofDispute), litigationmodels.Year, litigationmodels.TheotherDisputeparty, Convert.ToDecimal(litigationmodels.DisputeAmounts), Convert.ToInt32(litigationmodels.AwardType));
+                decimal amount = Convert.ToDecimal(litigationmodels.DisputeAmounts);
+                string description = litigationmodels.DisputeDescription;
+                int category = Convert.ToInt32(litigationmodels.CategoryofDispute);
+                string year=litigationmodels.Year;
+                string party = litigationmodels.TheotherDisputeparty;
+                int type = Convert.ToInt32(litigationmodels.AwardType);
+                var status = nav.fnInsertLitigationHistoryDetails(docNo,vendorNo, description, category, year, party, amount, type);
                 var res = status.Split('*');
                 switch (res[0])
                 {
@@ -7702,7 +7709,7 @@ namespace E_Procurement.Controllers
                                 model.litigationhistory = GetVendorLitigationHistoryDetails(vendorNo);
                                 model.Works = WorksDetails(InvitationNumber, vendorNo);
                                 // model.RequiredDocuments = RequiredDocumentsDetails(InvitationNumber, vendorNo);
-                                // model.PrequalificationUploadedDocuments = PrequalificationUploaded(InvitationNumber, vendorNo);
+                                 model.PrequalificationUploadedDocuments = PrequalificationUploaded(InvitationNumber, vendorNo);
                                 return View(model);
                             }
 
@@ -12270,69 +12277,36 @@ public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
             //    return alldocuments;
 
         }
-        private static List<SharePointTModel> AttachedPrequalificationDocuments(string prequalificationNo)
-        {
-            List<SharePointTModel> alldocuments = new List<SharePointTModel>();
-            using (ClientContext ctx = new ClientContext(ConfigurationManager.AppSettings["S_URL"]))
-            {
-                string password = ConfigurationManager.AppSettings["S_PWD"];
-                string account = ConfigurationManager.AppSettings["S_USERNAME"];
-                string domainname = ConfigurationManager.AppSettings["S_DOMAIN"];
-                var secret = new SecureString();
+        //private static List<DocumentsTModel> AttachedPrequalificationDocuments(string prequalificationNo)
+        //{
+        //    List<DocumentsTModel> list = new List<DocumentsTModel>();
+        //    try
+        //    {
+        //        var nav = new NavConnection().queries();
+        //        var query = nav.fnGetBidResponseAttachedDocuments(prequalificationNo);
+        //        String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+        //        if (info != null)
+        //        {
+        //            for (int i = 0; i < info.Length; i++)
+        //            {
+        //                String[] arr = info[i].Split('*');
+        //                DocumentsTModel documents = new DocumentsTModel();
+        //                documents.Procurement_Document_Type_ID = arr[0];
+        //                documents.Description = arr[3];
+        //                documents.category = Convert.ToString(arr[4]);
+        //                list.Add(documents);
+        //            }
+        //        }
 
-                var arraydocs = new List<string>();
+        //    }
+        //    catch (Exception e)
+        //    {
 
-                foreach (char c in password)
-                {
-                    secret.AppendChar(c);
-                }
-                ctx.Credentials = new NetworkCredential(account, secret, domainname);
-                ctx.Load(ctx.Web);
-                ctx.ExecuteQuery();
-                List list = ctx.Web.Lists.GetByTitle("Procurement Documents");
-                //Get Unique IttNumber
-                string uniqueittpnumber = prequalificationNo;
-                uniqueittpnumber = uniqueittpnumber.Replace('/', '_');
-                uniqueittpnumber = uniqueittpnumber.Replace(':', '_');
-
-                ctx.Load(list);
-                ctx.Load(list.RootFolder);
-                ctx.Load(list.RootFolder.Folders);
-                ctx.Load(list.RootFolder.Files);
-                ctx.ExecuteQuery();
-
-                FolderCollection allFolders = list.RootFolder.Folders;
-                List<string> allFiles = new List<string>();
-                foreach (Folder folder in allFolders)
-                {
-                    if (folder.Name == "Invitation For Prequalification")
-                    {
-
-                        ctx.Load(folder.Folders);
-                        ctx.ExecuteQuery();
-                        var uniqueittpnumberFolders = folder.Folders;
-                        foreach (Folder noticefolder in uniqueittpnumberFolders)
-                        {
-                            if (noticefolder.Name == uniqueittpnumber)
-                            {
-                                ctx.Load(noticefolder.Files);
-                                ctx.ExecuteQuery();
-                                FileCollection ittnumberFiles = noticefolder.Files;
-                                foreach (Microsoft.SharePoint.Client.File file in ittnumberFiles)
-                                {
-                                    ctx.ExecuteQuery();
-                                    alldocuments.Add(new SharePointTModel { FileName = file.Name });
-
-                                }
-                            }
-                        }
-
-                    }
-
-                }
-                return alldocuments;
-            }
-        }
+        //        throw;
+        //    }
+        //    return list;
+        //}
+        
         private static List<SharePointTModel> PopulateSupplierRegistrationDocuments(string ittpnumber)
         {
             List<SharePointTModel> alldocuments = new List<SharePointTModel>();
@@ -12730,7 +12704,10 @@ public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
             }
             return View(list);
         }
-
+        public FilePathResult GetFileFromDisk(string fileName, string directoryPath)
+        {
+            return File("C:\\PORTAL DOCUMENTS\\Procurement Documents\\PrequalificationDocs\\VEND00470\\output.pdf", "multipart/form-data", fileName);
+        }
 
 
 
