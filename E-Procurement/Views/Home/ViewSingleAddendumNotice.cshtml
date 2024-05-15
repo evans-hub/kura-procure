@@ -209,9 +209,12 @@
     <div class="form-actions">
         <div class="row">
             <div class="col-md-offset-5 col-md-8">
-                <a href="/Home/ActiveTenderAddedum" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Backwards </a>
+                @foreach (SingleAddendumNoticeModel addendumsdetails in Model.Addendum)
+                {
 
-            </div>
+                    <a href="@Url.Action("RFQResponseForm", "Home", new { tendernumber =addendumsdetails.Invitation_Notice_No})" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Backwards </a>
+                }
+                </div>
         </div>
     </div>
 </div>

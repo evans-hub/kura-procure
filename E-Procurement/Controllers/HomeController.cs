@@ -1796,7 +1796,8 @@ namespace E_Procurement.Controllers
                 model.TenderDocument = GetRequiredTenderDocuments(tendernumber);
                 model.RequiredDocuments = GetRequiredTenderDocuments(tendernumber);
                 model.RequredDocuemnts = GetIFSRequiredEquipments(tendernumber);
-              //model.UploadedDocument = PopulateTenderDocumentsfromSpTable(tendernumber);
+                model.AttachedBiddDocuments = GetBidAttachedDocumentsDetails(tendernumber, vendorNo);
+                //model.UploadedDocument = PopulateTenderDocumentsfromSpTable(tendernumber);
                 return View(model);
             }
 
@@ -1897,7 +1898,7 @@ namespace E_Procurement.Controllers
                     string fileName0 = fi.Name;
                     string ext0 = fi.Extension;
                     string savedF0 = vendorNo + "_" + fileName0 + ext0;
-
+                    
                     //bool up2Sharepoint = _UploadSupplierTenderDocumentToSharepoint(financedetail.applicationNO, financedetail.browsedDoc, financedetail.procurementDocumentType);
                     //if (up2Sharepoint == true)
                     //{
@@ -1910,8 +1911,9 @@ namespace E_Procurement.Controllers
                         financedetail.applicationNO = financedetail.applicationNO.Replace('/', '_');
                         financedetail.applicationNO = financedetail.applicationNO.Replace(':', '_');
                         //Sharepoint File Link
+                        
                         string sharepointlink = sUrl + sharepointLibrary + "/" + financedetail.applicationNO + "/" + filename;
-
+                    
                         if (financedetail.certificateNo == null)
                         {
                             financedetail.certificateNo = "";
@@ -12704,11 +12706,23 @@ public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
             }
             return View(list);
         }
-        public FilePathResult GetFileFromDisk(string fileName, string directoryPath)
-        {
-            return File("C:\\PORTAL DOCUMENTS\\Procurement Documents\\PrequalificationDocs\\VEND00470\\output.pdf", "multipart/form-data", fileName);
-        }
+       
 
+        public ActionResult DownloadDocuments(string filename)
+        {
+            
+           
+            string filePath = @"C:\PORTAL DOCUMENTS\Procurement Documents\PrequalificationDocs\VEND00470\" + filename;
+
+            if (System.IO.File.Exists(filePath))
+            {
+                return File(filePath, MimeMapping.GetMimeMapping(filePath), filename);
+            }
+            else
+            {
+                return HttpNotFound();
+            }
+        }
 
 
     }

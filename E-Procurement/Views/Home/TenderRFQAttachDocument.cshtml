@@ -254,7 +254,7 @@
                                 <th>Issue Date</th>
                                 <th>Expiry Date</th>
                                 <th>File Name</th>
-                                @*<th>Download</th>*@
+                                <th>Download</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
@@ -281,12 +281,12 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.File_Name)
                                     </td>
-                                    @*<td>
+                                    <td>
                                         <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
 
-                                    </td>*@
+                                    </td>
                                     <td>
-                                        <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+                                        <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name, entryNo = item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
                                         @*<a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>*@
 
                                     </td>
@@ -305,10 +305,10 @@
 
 </div>
 <div id="declaration_form" class="modal custom-modal fade" role="dialog">
-    @*@foreach (BidResponseDetailsModel item in Model.BidDetails)
-        {*@
+    <a href="@Url.Action("DisplayPdfInIframeQuotation", "Home", new { bidresponseNo = @ViewBag.invitationNo })">ddd</a>
     <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframeQuotation", "Home", new { bidresponseNo = @ViewBag.invitationNo })"></iframe>
-    @*}*@
+   
+        
     <div class="modal-dialog" style="width:96%; height:50%">
         <div class="modal-content modal-md" style="width:96%; height:50%">
             <div class="modal-header">

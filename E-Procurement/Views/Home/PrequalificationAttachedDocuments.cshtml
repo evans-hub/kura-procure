@@ -183,6 +183,7 @@
                                 <tr>
                                     <th>#</th>
                                    <th>Description</th>
+                                    <th>File Name</th>
                                     <th>Download</th>
                                     <th>Delete</th>
                                 </tr>
@@ -199,8 +200,18 @@
                                             @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
                                         </td>
                                         <td>
-                                            <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("GetFileFromDisk", "Home")')"><i class="fa fa-download m-r-10"></i>Download</a>
+                                            @{ 
+                                                string filename = documents.File_Name;
+                                                string[] parts = filename.Split('_');
+                                                string splitFileName = parts[1];
+                                            }
+                                           @splitFileName
+
                                         </td>
+                                        <td>
+                                            <a class="btn btn-success" href="@Url.Action("DownloadDocuments", "Home", new {filename=splitFileName})"><i class="fa fa-download m-r-10"></i>Download</a>
+                                        </td>
+
                                         <td>
                                             <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @documents.Document_No })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
                                         </td>
