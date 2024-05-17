@@ -3060,7 +3060,7 @@ $(document).ready(function () {
                                         $("#attachprequalificationdocumentsfeedback").css("display", "block");
                                         $("#attachprequalificationdocumentsfeedback").css("color", "green");
                                     });
-                                window.location.href = "/Home/TenderAttachDocument?tenderNo=" + DocNo + "&Response=" + response;
+                                window.location.href = "/Home/TenderRFQAttachDocument?tenderNo=" + DocNo + "&Response=" + response;
                                 // RegistrationDocuments.init();
                                 break;
                             case "browsedfilenull":

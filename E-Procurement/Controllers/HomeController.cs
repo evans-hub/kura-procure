@@ -12810,10 +12810,12 @@ public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
 
 
             string filePath = link;
+            string[] info = filename.Split('_');
+            string actualFilename = info[1];
 
             if (System.IO.File.Exists(filePath))
             {
-                return File(filePath, MimeMapping.GetMimeMapping(filePath), filename);
+                return File(filePath, MimeMapping.GetMimeMapping(filePath), actualFilename);
             }
             else
             {

@@ -72,7 +72,7 @@
                                         @Html.DisplayFor(modelItem => item.instructions)
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary pull-right rounded" onclick="AttachDocumentsTender('@item.Document_No','@item.Procurement_Document_Type_ID','@item.Description','@item.Requirement_Type','@ViewBag.invitationNo')"><i class="fa fa-pencil m-r-10"></i>Attach Document</a>
+                                        <a class="btn btn-primary pull-right rounded" onclick="AttachDocumentsRfq('@item.Document_No','@item.Procurement_Document_Type_ID','@item.Description','@item.Requirement_Type','@ViewBag.invitationNo')"><i class="fa fa-pencil m-r-10"></i>Attach Document</a>
                                         @*<a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#AttachDocuments"><i class="fa fa-plus"></i> Attach Document</a>*@
                                     </td>
 
@@ -103,8 +103,8 @@
                                 <th>procurement Document type </th>
                                 <th>Description</th>
                                 <th>File</th>
-                                @*<th>Download</th>*@
-                                @*<th>Delete</th>*@
+                                <th>Download</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -128,12 +128,12 @@
                                         @Html.DisplayFor(modelItem => item.File_Name)
                                     </td>
 
-                                    @*<td>
-                                            <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
-                                        </td>*@
-                                    @*<td>
+                                    <td>
+                                            <a class="btn btn-success" href="@Url.Action("DownloadDocuments","Home",new { filename=item.File_Name,link=item.Document_Link})"><i class="fa fa-download m-r-10"></i>Download</a>
+                                        </td>
+                                    <td>
                                             <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=@item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
-                                        </td>*@
+                                        </td>
                                 </tr>
                             }
                         </tbody>
