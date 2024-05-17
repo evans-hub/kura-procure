@@ -557,6 +557,7 @@ $(document).ready(function () {
             "TheotherDisputeparty": $("#disputeparties").val(),
             "DisputeAmounts": $("#disputeamounts").val(),
             "AwardType": $("#awardtype").val(),
+            "docNo": $("#inviteNO").val(),
         }
         //Swal Message
         Swal.fire({

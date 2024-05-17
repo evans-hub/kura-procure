@@ -3704,6 +3704,7 @@ namespace E_Procurement.Controllers
                         documents.File_Name = arr[8];
                         documents.File_Type = arr[9];
                         documents.File_Extension = arr[10];
+                        documents.Document_Link = arr[11];
                         list.Add(documents);
                     }
                 }
@@ -6704,7 +6705,7 @@ namespace E_Procurement.Controllers
             try
             {
                 var nav = new NavConnection().queries();
-                var query = nav.fnGetTenderAddedNotice(AddendumNumber);
+                var query = nav.fnGetTenderAddedNotice1(AddendumNumber);
                 String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
@@ -6712,8 +6713,8 @@ namespace E_Procurement.Controllers
                     {
                         String[] arr = info[i].Split('*');
                         SingleAddendumNoticeModel tender = new SingleAddendumNoticeModel();
-                        if (arr[22] == "Published" && arr[10] == "Released")
-                        {
+                        //if (arr[22] == "Published" && arr[10] == "Released")
+                        //{
                             tender.Addendum_Notice_No = arr[0];
                             tender.Document_Date = Convert.ToString(arr[2]);
                             tender.Description = arr[6];
@@ -6763,7 +6764,7 @@ namespace E_Procurement.Controllers
                             tender.Original_Prebid_Meeting_Date = Convert.ToString(arr[15]);
 
                             list.Add(tender);
-                        }
+                        //}
 
 
                     }
