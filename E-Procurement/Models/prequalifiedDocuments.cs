@@ -15,6 +15,7 @@ namespace E_Procurement.Models
         public string issueDate { get; set; }
         public string procurementDocumentType { get; set; }
         public string description { get; set; }
+        public HttpPostedFile PostedFile { get; set; }
 
 
     }

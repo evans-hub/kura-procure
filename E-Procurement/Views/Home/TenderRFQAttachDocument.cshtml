@@ -1,4 +1,4 @@
-﻿@using E_Procurement.Models
+﻿﻿@using E_Procurement.Models
 @model dynamic
 @{
     ViewBag.Title = "TenderRFQAttachDocument";
@@ -49,12 +49,8 @@
                                 <th>#</th>
                                 <th>Doc ID</th>
                                 <th>Description</th>
-                                @*<th>Requirement Type</th>*@
-
-                                <th>Select file</th>
-                                <td>Issue Date</td>
-                                <td>Certificate No</td>
-                                <td>Expiry Date</td>
+                                <th>Instructions To bidders</th>
+                                <td>Attach Document</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -71,108 +67,230 @@
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Description)
                                     </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.instructions)
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary pull-right rounded" onclick="AttachDocumentsTender('@item.Document_No','@item.Procurement_Document_Type_ID','@item.Description','@item.Requirement_Type','@ViewBag.invitationNo')"><i class="fa fa-pencil m-r-10"></i>Attach Document</a>
+                                        @*<a href="#" class="btn btn-primary pull-right rounded" data-toggle="modal" data-target="#AttachDocuments"><i class="fa fa-plus"></i> Attach Document</a>*@
+                                    </td>
+
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    @*<div class="panel-footer">
+                            <br />
+                            <input type="button" id="btnSavePrequalifiedDocuments" class="btn btn-success pull-left btnSavePrequalifiedDocuments" name="btnSavePrequalifiedDocuments" value="Submit Documents" />
+                        </div>*@
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel-heading" style="background-color:darkseagreen">
+                <h6>View Attached Documents</h6>
+            </div>
+            <p>This Section enables you to view the uploaded/Attached documents.</p>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>procurement Document type </th>
+                                <th>Description</th>
+                                <th>File</th>
+                                @*<th>Download</th>*@
+                                @*<th>Delete</th>*@
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)
+                            {
+
+                                @*@foreach (SharePointTModel documents in Model.UploadedDocument)
+                                    {*@
+                                attacheddocumentsCounter++;
+                                <tr>
+                                    <td>
+                                        @attacheddocumentsCounter
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.File_Name)
+                                    </td>
+
                                     @*<td>
-                                            @Html.DisplayFor(modelItem => documents.Requirement_Type)
+                                            <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
                                         </td>*@
                                     @*<td>
-                                            @Html.DisplayFor(modelItem => documents.SpecialGroupRequirement)
-                                        </td>*@
-                                    <td>
-                                        @*<input class="form-control" type="file">*@
-                                        <input class="form-control PrequalificationinputFileselectors" type="file" name="PrequalificationinputFileselectors[]">
-                                    </td>
-                                    <td>
-                                        <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" />
-
-                                    </td>
-                                    <td>
-                                        <input class="form-control" type="text">
-
-                                    </td>
-                                    <td><input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" /></td>
-                                    @*<td>
-                                            <a class="btn btn-success" onclick="EditPricing('@item.Line_No','@item.No','@item.Description','@item.Unit_of_Measure','@item.Direct_Unit_Cost','@item.Quantity')"><i class="fa fa-share m-r-10"></i>Respond</a>
-
+                                            <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=@item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
                                         </td>*@
                                 </tr>
                             }
                         </tbody>
                     </table>
-                    <div class="panel-footer">
-                        <br />
-                        <button class="btn btn-primary button_upload_response_Documents_Tender" id="button_upload_response_Documents_Tender" name="button_upload_response_Documents_Tender" type="button">Upload Documents</button>
-                    </div>
                 </div>
             </div>
         </div>
 
 
-        @*<button class="btn btn-primary nextBtn pull-right" type="button">Next</button>*@
 
 
-        @*<div class="panel-body">
-                <ul class="nav nav-tabs">
-                    <li class="active" style="background-color:gray">
-                        <a href="#tab_1_1" data-toggle="tab"><h3 class="panel-title" style="color:black">Required Registration Documents</h3></a>
-                    </li>
-                    <li style="background-color:gray">
-                        <a href="#tab_1_2" data-toggle="tab"><h3 class="panel-title" style="color:black">Attach Documents</h3></a>
-                    </li>
-                    <li style="background-color:gray">
-                        <a href="#tab_1_3" data-toggle="tab"><h3 class="panel-title" style="color:black">View Attached Documents</h3></a>
-                    </li>
-                </ul>
+        @*<div class="row">
+            <div class="panel panel-heading" style="background-color:gray">
+                <h5 class="panel-title">Documents Attachment</h5>
             </div>
-            <div class="tab-content">
-                <div class="tab-pane fade active in" id="tab_1_1">
-                    <div class="row">
-                        <div class="panel-heading" style="background-color:darkseagreen">
-                            <h6>Mandatory Dcouments</h6>
-                        </div>
-                        <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
-                        <div class="col-md-12">
-                            <div class="table-responsive">
-                                <table class="table table-striped custom-table datatable">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Doc ID</th>
-                                            <th>Description</th>
-                                            <th>Requirement Type</th>
-                                            <th>Special Group Requirement</th>
+            <div id="feedback" style="display: none" data-dismiss="alert"></div>
+
+            <div class="col-sm-6" style="display:none">
+                <div class="form-group">
+                    <label class="control-label">Response No: <span class="text-danger">*</span></label>
+                    <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.TenderNo" readonly>
+                </div>
+            </div>
+            <br />
+            <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped custom-table datatable" id="tbl_prequalified_documents">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Doc ID</th>
+                                <th>Description</th>
+                                @*<th>Requirement Type</th>
+
+                                <th>Select file</th>
+                                <td>Issue Date</td>
+                                <td>Certificate No</td>
+                                <td>Expiry Date</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @foreach (IfsDocumentTModel item in Model.RequiredDocuments)
+                           {
+                               documentsRecords++;
+                                <tr>
+                                    <td>
+                                        @documentsRecords
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
+                                    @*<td>
+                                            @Html.DisplayFor(modelItem => documents.Requirement_Type)
+                                        </td>*@
+        @*<td>
+                @Html.DisplayFor(modelItem => documents.SpecialGroupRequirement)
+            </td>*@
+        <td>
+            @*<input class="form-control" type="file">
+                                                <input class="form-control PrequalificationinputFileselectors" type="file" name="PrequalificationinputFileselectors[]">
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" />
+
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text">
+
+                                            </td>
+                                            <td><input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" /></td>
+                                            @*<td>
+                                                    <a class="btn btn-success" onclick="EditPricing('@item.Line_No','@item.No','@item.Description','@item.Unit_of_Measure','@item.Direct_Unit_Cost','@item.Quantity')"><i class="fa fa-share m-r-10"></i>Respond</a>
+
+                                                </td>
                                         </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (DocumentsTModel documents in Model.RequiredDocuments)
-                                        {
-                                            documentsRecords++;
-                                            <tr>
-                                                <td>
-                                                    @documentsRecords
-                                                </td>
-                                                <td>
-                                                    @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
-                                                </td>
-                                                <td>
-                                                    @Html.DisplayFor(modelItem => documents.Description)
-                                                </td>
-                                                <td>
-                                                    @Html.DisplayFor(modelItem => documents.Requirement_Type)
-                                                </td>
-                                                <td>
-                                                    @Html.DisplayFor(modelItem => documents.SpecialGroupRequirement)
-                                                </td>
-                                            </tr>
-                                        }
-                                    </tbody>
-                                </table>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="panel-footer">
+                                <br />
+                                <button class="btn btn-primary button_upload_response_Documents_Tender" id="button_upload_response_Documents_Tender" name="button_upload_response_Documents_Tender" type="button">Upload Documents</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row">*@
-        <a href="#" data-toggle="modal" data-target="#declaration_form" class="btn btn-primary  pull-right">Submit Response</a>
+                </div>*@
 
-        @*<button class="btn btn-primary button_submit_tender_response pull-right" id="button_submit_tender_response" name="button_submit_tender_response" type="button">Submit Response</button>*@
+
+            @*<button class="btn btn-primary nextBtn pull-right" type="button">Next</button>*@
+
+
+            @*<div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li class="active" style="background-color:gray">
+                            <a href="#tab_1_1" data-toggle="tab"><h3 class="panel-title" style="color:black">Required Registration Documents</h3></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_2" data-toggle="tab"><h3 class="panel-title" style="color:black">Attach Documents</h3></a>
+                        </li>
+                        <li style="background-color:gray">
+                            <a href="#tab_1_3" data-toggle="tab"><h3 class="panel-title" style="color:black">View Attached Documents</h3></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="tab_1_1">
+                        <div class="row">
+                            <div class="panel-heading" style="background-color:darkseagreen">
+                                <h6>Mandatory Dcouments</h6>
+                            </div>
+                            <p>You are required to submit scanned copies of the following sets of documents, as part of the  process. Click on the Attach Documents Link</p>
+                            <div class="col-md-12">
+                                <div class="table-responsive">
+                                    <table class="table table-striped custom-table datatable">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Doc ID</th>
+                                                <th>Description</th>
+                                                <th>Requirement Type</th>
+                                                <th>Special Group Requirement</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (DocumentsTModel documents in Model.RequiredDocuments)
+                                            {
+                                                documentsRecords++;
+                                                <tr>
+                                                    <td>
+                                                        @documentsRecords
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.Description)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.Requirement_Type)
+                                                    </td>
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => documents.SpecialGroupRequirement)
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">*@
+            <a href="#" data-toggle="modal" data-target="#declaration_form" class="btn btn-primary  pull-right">Submit Response</a>
+
+            @*<button class="btn btn-primary button_submit_tender_response pull-right" id="button_submit_tender_response" name="button_submit_tender_response" type="button">Submit Response</button>*@
     </div>
 
 
@@ -237,31 +355,31 @@
 
             </center>
         </div>*@
-    <div class="tab-pane" id="tab_1_3">
-        <div class="row">
-            <div class="panel-heading" style="background-color:darkseagreen">
-                <h6>View Attached Documents</h6>
-            </div>
-            <p>This Section enables you to view the uploaded/Attached documents.</p>
-            <div class="col-md-12">
-                <div class="table-responsive">
-                    <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Description</th>
-                                <th>Date Filed</th>
-                                <th>Issue Date</th>
-                                <th>Expiry Date</th>
-                                <th>File Name</th>
-                                <th>Download</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)
-                            {
-                                attacheddocumentsCounter++;
+    @*<div class="tab-pane fade" id="tab_1_3">
+            <div class="row">
+                <div class="panel-heading" style="background-color:darkseagreen">
+                    <h6>View Attached Documents</h6>
+                </div>
+                <p>This Section enables you to view the uploaded/Attached documents.</p>
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Description</th>
+                                    <th>Date Filed</th>
+                                    <th>Issue Date</th>
+                                    <th>Expiry Date</th>
+                                    <th>File Name</th>
+                                    <th>Download</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                             @foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)
+                             {
+                                 attacheddocumentsCounter++;
                                 <tr>
                                     <td>
                                         @attacheddocumentsCounter
@@ -286,29 +404,28 @@
 
                                     </td>
                                     <td>
-                                        <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name, entryNo = item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
-                                        @*<a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>*@
+                                        <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
 
                                     </td>
                                 </tr>
-                            }
-                        </tbody>
-                    </table>
+                             }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-    </div>
+            </div>
+        </div>*@
 
 
 
 
 </div>
 <div id="declaration_form" class="modal custom-modal fade" role="dialog">
-    <a href="@Url.Action("DisplayPdfInIframeQuotation", "Home", new { bidresponseNo = @ViewBag.invitationNo })">ddd</a>
-    <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframeQuotation", "Home", new { bidresponseNo = @ViewBag.invitationNo })"></iframe>
-   
-        
+    @*@foreach (BidResponseDetailsModel item in Model.BidDetails)
+         {
+             <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframeTender", "Home", new { bidresponseNo = @ViewBag.invitationNo })"></iframe>
+        }*@
     <div class="modal-dialog" style="width:96%; height:50%">
         <div class="modal-content modal-md" style="width:96%; height:50%">
             <div class="modal-header">
@@ -321,15 +438,104 @@
                 </div>
             </div>
             <div class="modal-body card-box">
+                <strong>Preview Bid Response</strong>
+                <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframeQuotation", "Home", new { bidresponseNo = @ViewBag.invitationNo })"></iframe>
 
 
                 <div class="m-t-20">
                     <center>
                         <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
-                        <button class="btn btn-primary button_submit_tender_response_tender_rfq pull-right" id="button_submit_tender_response_tender_rfq" name="button_submit_tender_response_tender_rfq" type="button">Submit Response</button>
+                        <button class="btn btn-primary button_submit_tender_response_attach_document pull-right" id="button_submit_tender_response_attach_document" name="button_submit_tender_response_attach_document" type="button">Submit Response</button>
                     </center>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div id="AttachDocumentsTend" class="modal custom-modal fade" role="dialog">
+    <div class="modal-dialog" style="width:100%">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="modal-content modal-lg" style="width:96%">
+            <div class="modal-header">
+                <h5 class="modal-title">Attach Documents</h5>
+            </div>
+            <div class="modal-body">
+                <form class="m-b-30">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Document No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="DocNo" name="DocNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Response No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="responseNumber" name="responseNumber" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Procurement Document Type: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="ProcDocType" name="ProcDocType" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Description: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="description" name="description" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Requirement Type: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="RequirementType" name="RequirementType" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Vendor No: <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="preapplicationo" name="preapplicationo" value="@ViewBag.prequalificationNo" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Issuance Date: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control datetimepicker" placeholder="Enter Issuance Date" id="issuedates" name="issuedates" />
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label"> Certificate No/ Reference No : <span class="text-danger">*</span></label>
+                                <input class="form-control " type="text" id="certificatenumber" name="certificatenumber">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Expiry Date<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control datetimepicker" placeholder="Enter Expiry Date" id="documentexpirydates" name="documentexpirydates" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Select Document to Upload: <span class="text-danger">*</span></label>
+                                <input class="form-control" type="file" id="inputFileselector" name="inputFileselector[]">
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="m-t-20 text-center">
+                        <button class="btn btn-primary btnUploadRfqResponseDocuments" type="button" id="btnUploadRfqResponseDocuments" name="btnUploadRfqResponseDocuments">Upload Document</button>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>

@@ -2281,6 +2281,16 @@ function AttachSupplierDocuments(Document_No, Procurement_Document_Type, Descrip
     $("#RequirementType").val(Requirement_Type);
     $("#AttachDocumentsModal").modal();
 }
+
+function AttachDocumentsRfq(Document_No, Procurement_Document_Type, Description, Requirement_Type, ResponseNo) {
+    $("#DocNo").val(Document_No);
+    $("#responseNumber").val(ResponseNo);
+    $("#ProcDocType").val(Procurement_Document_Type);
+    $("#description").val(Description);
+    $("#RequirementType").val(Requirement_Type);
+    $("#AttachDocumentsTend").modal();
+
+}
 function AttachDocumentsTender(Document_No, Procurement_Document_Type, Description, Requirement_Type,ResponseNo) {
     $("#DocNo").val(Document_No);
     $("#responseNumber").val(ResponseNo);

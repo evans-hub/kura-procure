@@ -201,24 +201,14 @@ $("body").on("click", "#button_upload_response_Documents_Tender", function () {
         var i = 0;
         finance.procurementDocumentType = row.find('td:eq(1)').text().trim();
         finance.description = row.find('td:eq(2)').text().trim();
-        //var browsedDoc = row.find("TD input").eq(0).files[0];
-        //var input = row.attr("id", "PrequalificationinputFileselectors" + i++).find(".PrequalificationinputFileselectors").val();
-        //var browsedDoc = row.attr("id", "PrequalificationinputFileselectors" + i++).find(".PrequalificationinputFileselectors").val();
         finance.browsedDoc = row.attr("id", "PrequalificationinputFileselectors" + i++).find(".PrequalificationinputFileselectors").val().replace(/C:\\fakepath\\/i, '');
-        //var fileName = e.target.files[0].name;
-
-        //finance.browsedDoc = row.find('TD input[type="file"]').eq(0).val().replace(/C:\\fakepath\\/i, '');
-        //var browsedDoc = row.find('TD input[type="file"]').eq(0).val().replace(/C:\\fakepath\\/i, '');
-        //finance.browsedDoc = x.target.files[0].name;
         finance.expirydate = row.find("TD input").eq(3).val();
         finance.certificateNo = row.find("TD input").eq(2).val();
         finance.issueDate = row.find("TD input").eq(1).val();
         finance.applicationNO = DocumentNo;
-        //formDt.append("browsedfile", browsedDoc);
         financials.push(finance);
     });
     console.log(JSON.stringify(financials))
-    // console.log(JSON.stringify({ formdata: formDt }));
     Swal.fire({
         title: "Bid Response Documents Upload",
         text: "Proceed to upload all the selected document once?",

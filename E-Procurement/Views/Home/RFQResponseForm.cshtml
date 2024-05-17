@@ -473,7 +473,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="tab_1_3">
+            <!--<div class="tab-pane" id="tab_1_3">
                 <div class="row">
                     <div class="panel-heading" style="background-color:darkseagreen">
                         <h6>Download Tender Documents</h6>
@@ -494,38 +494,38 @@
                                         <th>Delete</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    @foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)
-                                    {
+                                <tbody>-->
+                                    @*foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)*@
+                                    <!--{
                                         attacheddocumentsCounter++;
                                         <tr>
                                             <td>
-                                                @attacheddocumentsCounter
+                                               attacheddocumentsCounter
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Description)
+                                                Html.DisplayFor(modelItem => item.Description)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Date_Filed)
+                                               Html.DisplayFor(modelItem => item.Date_Filed)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Issue_Date)
+                                                Html.DisplayFor(modelItem => item.Issue_Date)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Expiry_Date)
+                                                Html.DisplayFor(modelItem => item.Expiry_Date)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.File_Name)
+                                               Html.DisplayFor(modelItem => item.File_Name)
                                             </td>
                                             <td>
-                                            <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
+                                            <a class="btn btn-success" onclick="DownloadDocument('Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
 
                                         </td>
                                             <td>
-                                                <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+                                                <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = item.File_Name,entryNo=item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>-->
                                                 @*<a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>*@
 
-                                            </td>
+                                            <!--</td>
                                         </tr>
                                     }
                                 </tbody>
@@ -534,7 +534,7 @@
                     </div>
 
                 </div>
-            </div>
+            </div>-->
 
             <!--<div class="row">
                 <div class="col-md-12">

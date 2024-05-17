@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Security;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -3686,7 +3687,7 @@ namespace E_Procurement.Controllers
             {
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetBidResponseAttachedDocuments(BidResponseNumber, vendorNo);
-                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -10893,6 +10894,101 @@ namespace E_Procurement.Controllers
                 return Json("danger*" + ex.Message, JsonRequestBehavior.AllowGet);
             }
         }
+        public JsonResult FnUploadRfqBidResponseDocument(string BidResponseNumber, HttpPostedFileBase browsedfile, string prodocType,
+           string filedescription, string certificatenumber, string dateofissue, string expirydate)
+        {
+            try
+            {
+                var vendorNo = Convert.ToString(Session["vendorNo"]);
+                var nav = new NavConnection().ObjNav();
+                string storedFilename = "";
+                CultureInfo usCulture = new CultureInfo("en-ES");
+                int errCounter = 0, succCounter = 0;
+                DateTime dtofIssue = DateTime.Now;
+                DateTime expiryDate = DateTime.Now;
+                if (dateofissue == null && expirydate == null)
+                {
+                    dtofIssue = DateTime.Parse(dateofissue, usCulture.DateTimeFormat);
+                    expiryDate = DateTime.Parse(expirydate, usCulture.DateTimeFormat);
+                }
+
+
+                if (browsedfile == null)
+                {
+                    errCounter++;
+                    return Json("danger*browsedfilenull", JsonRequestBehavior.AllowGet);
+                }
+
+                if (vendorNo.Contains(":"))
+                    vendorNo = vendorNo.Replace(":", "[58]");
+                vendorNo = vendorNo.Replace("/", "[47]");
+
+                if (filedescription.Contains("/"))
+                    filedescription = filedescription.Replace("/", "_");
+
+                if (prodocType.Contains("/"))
+                    prodocType = prodocType.Replace("/", "_");
+
+
+                string fileName0 = Path.GetFileName(browsedfile.FileName);
+                string ext0 = _getFileextension(browsedfile);
+                string savedF0 = vendorNo + "_" + prodocType + ext0;
+
+                // saving file in local server
+                string folder = ConfigurationManager.AppSettings["FilesLocation"] + "Procurement Documents/Bid Documents/";
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                if (Directory.Exists(folder))
+                {
+                    String documentDirectory = folder + vendorNo + "/";
+                    Boolean createDirectory = true;
+                    try
+                    {
+                        if (!Directory.Exists(documentDirectory))
+                        {
+                            Directory.CreateDirectory(documentDirectory);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        createDirectory = false;
+                    }
+                    if (createDirectory)
+                    {
+                        string fileLink = documentDirectory + browsedfile.FileName;
+                        string filename = vendorNo + "_" + fileName0;
+                        browsedfile.SaveAs(fileLink);
+                        string fsavestatus = nav.fnInsertBidReponseDocuments(vendorNo, prodocType, filedescription, certificatenumber, dtofIssue, expiryDate, filename, BidResponseNumber, fileLink);
+                        var splitanswer = fsavestatus.Split('*');
+                        switch (splitanswer[0])
+                        {
+                            case "success":
+                                return Json("success*" + succCounter, JsonRequestBehavior.AllowGet);
+                            default:
+                                return Json("danger*" + succCounter, JsonRequestBehavior.AllowGet);
+                        }
+                    }
+                    else
+                    {
+                        return Json("sharepointError*", JsonRequestBehavior.AllowGet);
+                    }
+
+                }
+                else
+                {
+                    return Json("sharepointerror*", JsonRequestBehavior.AllowGet);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Json("danger*" + ex.Message, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+
 
 
 
@@ -12709,11 +12805,11 @@ public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
         }
        
 
-        public ActionResult DownloadDocuments(string filename)
+        public ActionResult DownloadDocuments(string filename,string link)
         {
-            
-           
-            string filePath = @"C:\PORTAL DOCUMENTS\Procurement Documents\PrequalificationDocs\VEND00470\" + filename;
+
+
+            string filePath = link;
 
             if (System.IO.File.Exists(filePath))
             {
