@@ -29,5 +29,7 @@ namespace E_Procurement.Models
         public string File_Name { get; set; }
         public string File_Type { get; set; }
         public string File_Extension { get; set; }
+        public string Document_Link { get; set; }
+        public string entryNo { get; set; }
     }
 }

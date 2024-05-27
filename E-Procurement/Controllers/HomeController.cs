@@ -3372,7 +3372,7 @@ namespace E_Procurement.Controllers
             {
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetRFIResponseFiledDocument(vendorNo, IFPNumber);
-                String[] result = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] result = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
                 if (result != null)
                 {
                     for (int i = 0; i < result.Length; i++)
@@ -3507,7 +3507,41 @@ namespace E_Procurement.Controllers
             return File(filePath, System.Net.Mime.MediaTypeNames.Application.Pdf);
 
         }
+        [HttpGet]
+        public ActionResult DisplayPdfInIframeQuotationResponse(string bidresponseNo)
+        {
 
+            try
+            {
+                var nav = new NavConnection().ObjNav();
+                var vendorNo = Session["vendorNo"].ToString();
+                if (bidresponseNo == null)
+                {
+                    bidresponseNo = Session["RFQBideResponseNumber"].ToString();
+                }
+
+                String status = nav.FnGenerateRFQPreviewReportBidResponse(vendorNo, bidresponseNo);
+
+
+            }
+            catch
+            {
+               
+
+            }
+            string fp = "C:/inetpub/wwwroot/ProcurementLive/Downloads/BidResponseReport/";
+            string fileName = $"{bidresponseNo}.pdf";
+            string filePath = Path.Combine(fp, fileName);
+            //
+            var contentDisposition = new System.Net.Mime.ContentDisposition
+            {
+                FileName = bidresponseNo + ".pdf",
+                Inline = true
+            };
+            Response.Headers.Add("Content-Disposition", contentDisposition.ToString());
+            return File(filePath, System.Net.Mime.MediaTypeNames.Application.Pdf);
+
+        }
         [HttpGet]
         public ActionResult DisplayPdfInIframeQuotation(string bidresponseNo)
         {
@@ -3647,7 +3681,7 @@ namespace E_Procurement.Controllers
             {
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetRFIResponseFiledDocument(vendorNo, PrequalificationNo);
-                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -3666,6 +3700,8 @@ namespace E_Procurement.Controllers
                             documents.File_Name = arr[5];
                             documents.File_Type = arr[6];
                             documents.File_Extension = arr[4];
+                            documents.Document_Link = arr[10];
+                            documents.entryNo = arr[11];
                             list.Add(documents);
                         }
 
@@ -4668,7 +4704,7 @@ namespace E_Procurement.Controllers
                 var nav = new NavConnection().queries();
 
                 var query = nav.fnGetRFIResponseFiledDocument(vendorNo, PrequalificationNumber);
-                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -6714,8 +6750,8 @@ namespace E_Procurement.Controllers
                     {
                         String[] arr = info[i].Split('*');
                         SingleAddendumNoticeModel tender = new SingleAddendumNoticeModel();
-                        //if (arr[22] == "Published" && arr[10] == "Released")
-                        //{
+                        if (arr[22] == "Published" && arr[10] == "Released")
+                        {
                             tender.Addendum_Notice_No = arr[0];
                             tender.Document_Date = Convert.ToString(arr[2]);
                             tender.Description = arr[6];
@@ -6765,7 +6801,7 @@ namespace E_Procurement.Controllers
                             tender.Original_Prebid_Meeting_Date = Convert.ToString(arr[15]);
 
                             list.Add(tender);
-                        //}
+                        }
 
 
                     }
@@ -8070,7 +8106,7 @@ namespace E_Procurement.Controllers
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetIfpReqDocuments(tenderresponseNumber, "Invitation for Prequalification");
 
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8127,7 +8163,7 @@ namespace E_Procurement.Controllers
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetIfpReqDocuments(tenderresponseNumber, "Invitation for Prequalification");
 
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8185,7 +8221,7 @@ namespace E_Procurement.Controllers
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetIfpReqDocuments(tenderresponseNumber, "Invitation for Prequalification");
 
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8242,7 +8278,7 @@ namespace E_Procurement.Controllers
 
                 var query = nav.fnGetIfpReqDocuments(tenderresponseNumber, "Invitation for Prequalification");
 
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8335,7 +8371,7 @@ namespace E_Procurement.Controllers
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetIfpReqDocuments("", "Invitation for Prequalification");
 
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8371,7 +8407,7 @@ namespace E_Procurement.Controllers
                 var TenderNumber = Request.QueryString["respondtendernumber"];
                 var query = nav.fnGetIfpReqDocuments(TenderNumber, "");
 
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8408,7 +8444,7 @@ namespace E_Procurement.Controllers
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetIfpReqDocuments(InvitationNumber, "Invitation for Prequalification");
 
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8789,7 +8825,7 @@ namespace E_Procurement.Controllers
             {
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetIfpReqDocuments("", "Invitation For Prequalification");
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -8826,7 +8862,7 @@ namespace E_Procurement.Controllers
             {
                 var nav = new NavConnection().queries();
                 var query = nav.fnGetIfpReqDocuments(SelectedDocument, "");
-                String[] info = query.Split(new string[] { "::::" }, StringSplitOptions.RemoveEmptyEntries);
+                String[] info = query.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
                 if (info != null)
                 {
                     for (int i = 0; i < info.Length; i++)
@@ -12067,8 +12103,17 @@ namespace E_Procurement.Controllers
                 }
             }
         }
-
-public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
+        
+            public ActionResult DeletePrequlificationRespDoc(string Document_No, int entryNo)
+        {
+            var vendorNo = Convert.ToString(Session["vendorNo"]);
+            //string responseNumber = Session["res"].ToString();
+            //string tenderNo = Session["tend"].ToString();
+            var nav = new NavConnection().ObjNav();
+            var deleteDoc = nav.FnDelBidRespDocument(vendorNo, entryNo);
+            return Json(deleteDoc, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
     {
         var vendorNo = Convert.ToString(Session["vendorNo"]);
         //string responseNumber = Session["res"].ToString();
@@ -12810,9 +12855,15 @@ public ActionResult DeleteBidRespDocfromSharepoint(string filename, int entryNo)
 
 
             string filePath = link;
-            string[] info = filename.Split('_');
-            string actualFilename = info[1];
-
+            string actualFilename = "";
+            if (filename.Contains("_"))
+            {
+                string[] info = filename.Split('_');
+                 actualFilename = info[1];
+            }
+            else {
+                 actualFilename = filename;
+            }
             if (System.IO.File.Exists(filePath))
             {
                 return File(filePath, MimeMapping.GetMimeMapping(filePath), actualFilename);

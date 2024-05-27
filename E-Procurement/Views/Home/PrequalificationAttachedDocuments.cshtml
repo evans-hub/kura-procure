@@ -200,20 +200,21 @@
                                             @Html.DisplayFor(modelItem => documents.Procurement_Document_Type_ID)
                                         </td>
                                         <td>
-                                            @{ 
+                                            @{
                                                 string filename = documents.File_Name;
                                                 string[] parts = filename.Split('_');
                                                 string splitFileName = parts[1];
                                             }
-                                           @splitFileName
+                                            @splitFileName
 
                                         </td>
                                         <td>
-                                            <a class="btn btn-success" href="@Url.Action("DownloadDocuments", "Home", new {filename=splitFileName})"><i class="fa fa-download m-r-10"></i>Download</a>
+                                            <a class="btn btn-success" href="@Url.Action("DownloadDocuments", "Home", new {filename=splitFileName,link=documents.Document_Link})"><i class="fa fa-download m-r-10"></i>Download</a>
                                         </td>
+                                       
 
                                         <td>
-                                            <a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @documents.Document_No })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+                                            <a class="btn btn-danger" href="@Url.Action("DeletePrequlificationRespDoc", "Home", new {entryNo=documents.entryNo })"><i class="fa fa-delete m-r-10"></i>Delete</a>
                                         </td>
                                     </tr>
                                 }
@@ -361,10 +362,10 @@
 
 
 <div id="declaration_form" class="modal custom-modal fade" role="dialog">
-    @foreach (IFPRequestsModel invitation in Model.Response)
+    @*@foreach (IFPRequestsModel invitation in Model.Response)
     {
         <iframe style="width:90%; height:50%" src="@Url.Action("DisplayPdfInIframe", "Home", new { PrequalificationNumber = @invitation.PrequalificationNo })"></iframe>
-    }
+    }*@
     <div class="modal-dialog" style="width:96%; height:50%">
         <div class="modal-content modal-md" style="width:96%; height:50%">
             <div class="modal-header">
@@ -390,7 +391,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
-                        <input type="checkbox" name="termsandconditions" id="termsandconditions"> <span class="text-danger">*</span><label class="control-label">Accept Terms and Conditions</label>
+                        <input type="checkbox" name="termsandconditions" id="termsandconditions"> <span class="text-danger">*</span><label class="control-label"><a href="www.google.com">Accept Terms and Conditions</a></label>
 
                     </div>
                 </div>

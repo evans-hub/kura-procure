@@ -87,21 +87,21 @@
                             </ul>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i class="fa fa-th"></i> <span>E-Prequalification</span> <span class="menu-arrow"></span></a>
+                            <a href="#"><i class="fa fa-th"></i> <span>Registration</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
-                                <li><a href="/Home/RFIResponse">Invitation for Prequalification</a></li>
+                                <li><a href="/Home/RFIResponse">Invitation for Registration</a></li>
                                 <li><a href="/Home/SubmittedResponses">Submitted Responses</a></li>
                                 <li><a href="/Home/PrequalifiedCategories">Prequalified Categories</a></li>
                             </ul>
                         </li>
-                        <li class="submenu">
+                        @*<li class="submenu">
                             <a href="#"><i class="fa fa-th"></i> <span>Registration</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li><a href="/Home/RegistrationForm">Invitation for Registration</a></li>
                                 <li><a href="/Home/SubmittedRegistrationResponses">Submitted Responses</a></li>
                                 <li><a href="/Home/RegistrationCategories">Registered Categories</a></li>
                             </ul>
-                        </li>
+                        </li>*@
                         <li class="submenu">
                             <a href="#"><i class="fa fa-th"></i> <span>Tenders</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
@@ -201,11 +201,12 @@
             $('.datatable').DataTable()
             $('#testing1').DataTable({
                 'paging': true,
-                'lengthChange': false,
-                'searching': false,
+                'lengthChange': true,
+                'searching': true,
                 'ordering': true,
                 'info': true,
-                'autoWidth': false
+                'autoWidth': true,
+                'bDestroy': true
             })
         })
     </script>
