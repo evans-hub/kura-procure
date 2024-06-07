@@ -2015,6 +2015,177 @@ function DocumentsDeleteBidResp(url) {
 }
 
 
+function DocumentsDeleteBidTendorAttachments(url) {
+
+    var DocNo = $("#preapplicationo").val();
+    var response = $("#Invresponse").val();
+
+
+    Swal.fire({
+        title: "Response Document Deletion",
+        text: "Proceed to delete the selected document?",
+        type: "warning",
+        showCancelButton: true,
+        closeOnConfirm: true,
+        confirmButtonText: "Yes, Delete!",
+        confirmButtonClass: "btn-success",
+        confirmButtonColor: "#008000",
+        position: "center"
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                cache: false,
+                type: 'GET',
+                url: url,
+                success: function (status) {
+                    var registerstatus = status.split('*');
+                    status = registerstatus[0];
+                    console.log(JSON.stringify(status))
+                    switch (status) {
+                        case "success":
+                            Swal.fire
+                            ({
+                                title: "Files Deleted!",
+                                text: "File Deleted Successfully!",
+                                type: "success"
+                            }).then(() => {
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "green");
+                                $('#deletekeydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                $("#deletekeydocumentsuploadfeedback").html("Selected File has been Deleted Successfully!");
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "green");
+                            });
+                            window.location.href = "/Home/ViewSubmittedRFQResponses?V=" + response + "&tenderNo=" + DocNo;
+                            vendorUploadedDocuments.init();
+                            break;
+                        case "filenotfound":
+                            Swal.fire
+                            ({
+                                title: "File to Be Deleted Not Found!",
+                                text: "File to be Deleted Could not be Found!",
+                                type: "error"
+                            }).then(() => {
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "red");
+                                $('#deletekeydocumentsuploadfeedback').attr("class", "alert alert-danger");
+                                $("#deletekeydocumentsuploadfeedback").html("Selected File could not be found!");
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "green");
+                            });
+                            break;
+                        default:
+                            Swal.fire
+                            ({
+                                title: "Document Deletion Error!!!",
+                                text: "File Could not be deleted.Kindly Tray Again Later",
+                                type: "error"
+                            }).then(() => {
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").html("Selected File Could Not be Deleted. Kindly Try Again Later!");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "red");
+                                $('#deletekeydocumentsuploadfeedback').addClass('alert alert-danger');
+                            });
+                            break;
+                    }
+                }
+            })
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire(
+                'Document Deletion Cancelled',
+                'You cancelled your documents deletion!',
+                'error'
+            );
+        }
+    });
+}
+function DocumentsDeleteBidRespView(url) {
+
+    var DocNo = $("#preapplicationo").text().replace('tendorNo=', '').trim();
+    var response = $("#Invresponse").text().replace('response No=', '').trim();
+
+
+    Swal.fire({
+        title: "Response Document Deletion",
+        text: "Proceed to delete the selected document?",
+        type: "warning",
+        showCancelButton: true,
+        closeOnConfirm: true,
+        confirmButtonText: "Yes, Delete!",
+        confirmButtonClass: "btn-success",
+        confirmButtonColor: "#008000",
+        position: "center"
+    }).then((result) => {
+        if (result.value) {
+            $.ajax({
+                cache: false,
+                type: 'GET',
+                url: url,
+                success: function (status) {
+                    var registerstatus = status.split('*');
+                    status = registerstatus[0];
+                    console.log(JSON.stringify(status))
+                    switch (status) {
+                        case "success":
+                            Swal.fire
+                            ({
+                                title: "Files Deleted!",
+                                text: "File Deleted Successfully!",
+                                type: "success"
+                            }).then(() => {
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "green");
+                                $('#deletekeydocumentsuploadfeedback').attr("class", "alert alert-success");
+                                $("#deletekeydocumentsuploadfeedback").html("Selected File has been Deleted Successfully!");
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "green");
+                            });
+                            window.location.href = "/Home/ViewSubmittedRFQResponses?responseNumber=" + response + "&tenderNo=" + DocNo;
+                            vendorUploadedDocuments.init();
+                            break;
+                        case "filenotfound":
+                            Swal.fire
+                            ({
+                                title: "File to Be Deleted Not Found!",
+                                text: "File to be Deleted Could not be Found!",
+                                type: "error"
+                            }).then(() => {
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "red");
+                                $('#deletekeydocumentsuploadfeedback').attr("class", "alert alert-danger");
+                                $("#deletekeydocumentsuploadfeedback").html("Selected File could not be found!");
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "green");
+                            });
+                            break;
+                        default:
+                            Swal.fire
+                            ({
+                                title: "Document Deletion Error!!!",
+                                text: "File Could not be deleted.Kindly Tray Again Later",
+                                type: "error"
+                            }).then(() => {
+                                $("#deletekeydocumentsuploadfeedback").css("display", "block");
+                                $("#deletekeydocumentsuploadfeedback").html("Selected File Could Not be Deleted. Kindly Try Again Later!");
+                                $("#deletekeydocumentsuploadfeedback").css("color", "red");
+                                $('#deletekeydocumentsuploadfeedback').addClass('alert alert-danger');
+                            });
+                            break;
+                    }
+                }
+            })
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire(
+                'Document Deletion Cancelled',
+                'You cancelled your documents deletion!',
+                'error'
+            );
+        }
+    });
+}
+
+
+
 function DocumentsDeletePerformance(url) {
 
    
@@ -2280,6 +2451,16 @@ function AttachSupplierDocuments(Document_No, Procurement_Document_Type, Descrip
     $("#description").val(Description);
     $("#RequirementType").val(Requirement_Type);
     $("#AttachDocumentsModal").modal();
+}
+
+function AttachDocumentsRfq(Document_No, Procurement_Document_Type, Description, Requirement_Type, ResponseNo) {
+    $("#DocNo").val(Document_No);
+    $("#responseNumber").val(ResponseNo);
+    $("#ProcDocType").val(Procurement_Document_Type);
+    $("#description").val(Description);
+    $("#RequirementType").val(Requirement_Type);
+    $("#AttachDocumentsTend").modal();
+
 }
 function AttachDocumentsTender(Document_No, Procurement_Document_Type, Description, Requirement_Type,ResponseNo) {
     $("#DocNo").val(Document_No);

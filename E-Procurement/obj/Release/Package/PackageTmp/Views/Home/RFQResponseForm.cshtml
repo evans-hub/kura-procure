@@ -12,6 +12,7 @@
     int evaluationsCunter = 0;
     int AllstaffCounter = 0;
     int AllTenderDocuments = 0;
+    int attacheddocumentsCounter = 0;
 }
 <div class="content container-fluid">
     <div class="row">
@@ -429,91 +430,153 @@
                 </div>*@
          
 
-            <div class="tab-pane fade " id="tab_tender_documents">
-                <div class="row">
-                    <div class="panel panel-heading" style="background-color:#D3D3D3">
-                        <h6 class="panel-title"><strong><u>Tender Required Documents</u></strong></h6>
+        <div class="tab-pane fade " id="tab_tender_documents">
+            <div class="row">
+                <div class="panel panel-heading" style="background-color:#D3D3D3">
+                    <h6 class="panel-title"><strong><u>Tender Required Documents</u></strong></h6>
+                </div>
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table id="example2" class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Document Type ID</th>
+                                    <th>Description</th>
+                                    <th>Requirement Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (IfsDocumentTModel item in Model.TenderDocument)
+                                {
+                                    tenderDocuments++;
+                                    <tr>
+                                        <td>
+                                            @tenderDocuments
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Requirement_Type)
+
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                     </div>
+                </div>
+            </div>
+            <!--<div class="tab-pane" id="tab_1_3">
+                <div class="row">
+                    <div class="panel-heading" style="background-color:darkseagreen">
+                        <h6>Download Tender Documents</h6>
+                    </div>
+                    <p>This Section enables you to view the uploaded/Attached documents.</p>
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table class="table table-striped custom-table datatable">
+                            <table class="table table-striped custom-table datatable" id="tbl_prequalification_documents">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Document Type ID</th>
                                         <th>Description</th>
-                                        <th>Requirement Type</th>
+                                        <th>Date Filed</th>
+                                        <th>Issue Date</th>
+                                        <th>Expiry Date</th>
+                                        <th>File Name</th>
+                                        <th>Download</th>
+                                        <th>Delete</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    @foreach (IfsDocumentTModel item in Model.TenderDocument)
-                                    {
-                                        tenderDocuments++;
+                                <tbody>-->
+                                    @*foreach (AttachedBidDocuments item in Model.AttachedBiddDocuments)*@
+                                    <!--{
+                                        attacheddocumentsCounter++;
                                         <tr>
                                             <td>
-                                                @tenderDocuments
+                                               attacheddocumentsCounter
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Procurement_Document_Type_ID)
+                                                Html.DisplayFor(modelItem => item.Description)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Description)
-
+                                               Html.DisplayFor(modelItem => item.Date_Filed)
                                             </td>
                                             <td>
-                                                @Html.DisplayFor(modelItem => item.Requirement_Type)
-
+                                                Html.DisplayFor(modelItem => item.Issue_Date)
                                             </td>
+                                            <td>
+                                                Html.DisplayFor(modelItem => item.Expiry_Date)
+                                            </td>
+                                            <td>
+                                               Html.DisplayFor(modelItem => item.File_Name)
+                                            </td>
+                                            <td>
+                                            <a class="btn btn-success" onclick="DownloadDocument('Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
 
+                                        </td>
+                                            <td>
+                                                <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = item.File_Name,entryNo=item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>-->
+                                                @*<a class="btn btn-danger" onclick="DocumentsDelete('@Url.Action("DeleteRegDocfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-delete m-r-10"></i>Delete</a>*@
+
+                                            <!--</td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
                         </div>
                     </div>
+
                 </div>
+            </div>-->
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-heading" style="background-color:#D3D3D3">
-                            <h6 class="panel-title">Download Tender Documents</h6>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-striped custom-table datatable">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>File Name</th>
-                                        <th>Download </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @*@foreach (SharePointTModel documents in Model.UploadedDocument)
-                                    {
-                                        AllTenderDocuments++;
-                                    <tr>
-                                        <td>
-                                            @AllTenderDocuments
+            <!--<div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-heading" style="background-color:#D3D3D3">
+                        <h6 class="panel-title">Download Tender Documents</h6>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped custom-table datatable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>File Name</th>
+                                    <th>Download </th>
+                                </tr>
+                            </thead>
+                            <tbody>-->
+                                @*@foreach (SharePointTModel documents in Model.UploadedDocument)
+                            {
+                                AllTenderDocuments++;
+                            <tr>
+                                <td>
+                                    @AllTenderDocuments
 
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => documents.FileName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => documents.FileName)
 
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-success" onclick="DowndloadTenderDocument('@documents.FileName')"><i class="fa fa-download m-r-10"></i>Download</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-success" onclick="DowndloadTenderDocument('@documents.FileName')"><i class="fa fa-download m-r-10"></i>Download</a>
 
-                                        </td>
+                                </td>
 
-                                    </tr>
-                                    }*@
-                                </tbody>
-                            </table>
-                        </div>
+                            </tr>
+                            }*@
+                            <!--</tbody>
+                        </table>
                     </div>
                 </div>
-              
-            </div>
+            </div>-->
+
+        </div>
 
 
           

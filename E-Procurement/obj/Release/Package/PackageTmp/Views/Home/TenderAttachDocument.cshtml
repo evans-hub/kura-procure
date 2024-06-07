@@ -103,7 +103,7 @@
                                 <th>procurement Document type </th>
                                 <th>Description</th>
                                 <th>File</th>
-                                @*<th>Download</th>*@
+                               <th>Download</th>
                                 @*<th>Delete</th>*@
                             </tr>
                         </thead>
@@ -127,13 +127,12 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.File_Name)
                                 </td>
-                                
-                                @*<td>
-                    <a class="btn btn-success" onclick="DownloadDocument('@Url.Action("DownloadRegDocumentsfromSharepoint", "Home", new { filename = @item.File_Name })')"><i class="fa fa-download m-r-10"></i>Download</a>
-                </td>*@
-                                @*<td>
-                                    <a class="btn btn-danger" onclick="DocumentsDeleteBidResp('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=@item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
-                                </td>*@
+                                <td>
+                                    <a class="btn btn-success" href="@Url.Action("DownloadDocuments","Home",new { filename=item.File_Name,link=item.Document_Link})"><i class="fa fa-download m-r-10"></i>Download</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-danger" onclick="DocumentsDeleteBidTendorAttachments('@Url.Action("DeleteBidRespDocfromSharepoint", "Home", new { filename = @item.File_Name,entryNo=@item.entryNumber })')"><i class="fa fa-delete m-r-10"></i>Delete</a>
+                                </td>
                             </tr>
                             }
                         </tbody>

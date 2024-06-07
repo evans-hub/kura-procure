@@ -56,7 +56,11 @@
             <div class="form-actions">
                 <div class="row">
                     <div class="col-md-offset-5 col-md-8">
-                        <a href="/Home/RFIResponse" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Back </a>
+                        @{ 
+                            var invitationRFIDocumentsNo = ViewBag.InvitationRFIDocumentsNo;
+                        }
+                        <a href="@Url.Action("RFIResponseForm", "Home", new {InvitationNumber=invitationRFIDocumentsNo})" class="btn btn-primary pull-left"><i class="fas fa fa-angle-left"></i> &nbsp;Back </a>
+                       
                     </div>
                 </div>
             </div>
